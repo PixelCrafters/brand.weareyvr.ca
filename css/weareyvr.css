@@ -5973,6 +5973,9 @@ body > footer {
   padding: 1.75em 0;
   line-height: 1;
 }
+.guide {
+  background-color: #eeeeee;
+}
 .guide .jumbotron h1,
 .guide .jumbotron .h1 {
   font-weight: 200;
@@ -5981,9 +5984,8 @@ body > footer {
 }
 .lmo-co {
   padding: 0;
-  margin-left: -15px;
-  margin-top: 30px;
-  border-radius: 11.25px;
+  margin: 30px 0 0;
+  border-radius: 12px;
 }
 .lmo-co .row {
   display: table;
@@ -5994,15 +5996,9 @@ body > footer {
   display: table-cell;
   height: 334px;
 }
-.lmo-co [class*="col-"]:not(:first-child):not(:last-child) {
-  border-top: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-}
 .lmo-co [class*="col-"]:last-child {
-  border-top: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
-  border-bottom-right-radius: 11.25px;
-  border-top-right-radius: 11.25px;
+  border-bottom-right-radius: 12px;
+  border-top-right-radius: 12px;
 }
 .lmo-co dl {
   margin-bottom: 0;
@@ -6013,7 +6009,7 @@ body > footer {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font-size: 12px;
-  margin-bottom: 3.75px;
+  margin-bottom: 4px;
 }
 .lmo-co dt:not(:first-child) {
   margin-top: 15px;
@@ -6021,37 +6017,30 @@ body > footer {
 .lmo-co dd {
   font-size: 15px;
 }
-.lmo-co-logo,
-.lmo-co-stats {
-  padding: 0;
-  background-color: #fff;
-}
 .lmo-co-logo {
-  border-bottom-left-radius: 11.25px;
-  background-color: #fff;
-  border-top-left-radius: 11.25px;
-  padding: 0;
+  border-bottom-left-radius: 12px;
+  border-top-left-radius: 12px;
+  padding-bottom: 7.5px;
   margin: auto;
-  vertical-align: bottom;
+  vertical-align: middle;
   display: block;
+  background-color: #fff;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .lmo-co-logo:last-child {
-  border-bottom-left-radius: 11.25px;
+  border-bottom-left-radius: 12px;
 }
 .lmo-co-logo img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  vertical-align: middle;
-}
-.lmo-co-logo .lmo-co-logo-img {
-  width: 100%;
-  height: 128px;
 }
 .lmo-co-content {
   background-color: #fff;
   vertical-align: top;
-  padding: 0 15px 0 20px;
+  padding: 0 45px 0 30px;
 }
 .lmo-co-content p {
   font-family: "Arnhem Pro", ArnhemPro, Arnhem, Georgia, serif;
@@ -6060,7 +6049,7 @@ body > footer {
   -o-font-feature-settings: "onum" 1;
   -webkit-font-feature-settings: "onum" 1;
   font-feature-settings: "onum" 1;
-  font-size: 106.25%;
+  font-size: 19px;
 }
 .lmo-co-content p a {
   background-position: 0 95%;
@@ -6097,33 +6086,28 @@ h4.lmo-co-content p,
 }
 .lmo-co-content h2 {
   margin: 15px 0;
+  font-size: 78px;
+  font-weight: 200;
+  margin-left: -0.05em;
 }
 .lmo-co-stats {
   border-left: 1px solid #eeeeee;
-  border-bottom-right-radius: 11.25px;
-  border-top-right-radius: 11.25px;
+  border-bottom-right-radius: 12px;
+  border-top-right-radius: 12px;
   vertical-align: bottom;
+  padding: 0;
+  background-color: #fff;
 }
 .lmo-co-stats-section {
-  padding: 11.25px;
-  padding-left: 18.75px;
+  padding: 15px;
+  padding-left: 19px;
 }
 .lmo-co-photos {
-  padding-bottom: 15px;
-}
-.lmo-co-logo .lmo-co-photos {
-  background-color: #fff;
-  border: 1px solid #eeeeee;
-  border-bottom-left-radius: 11.25px;
-  vertical-align: bottom;
-  margin-bottom: 0;
-}
-.lmo-co-stats .lmo-co-photos {
   border-bottom: 1px solid #eeeeee;
 }
 .lmo-co-photos dd {
   display: inline-block;
-  margin: 0 4px 0 0;
+  margin: 0 3px 0 0;
 }
 .lmo-co-photos dd:first-of-type {
   margin-left: -2px;
@@ -6145,7 +6129,8 @@ h4.lmo-co-content p,
   margin-left: -0.5em;
   margin-right: 0.5em;
   border-radius: 1em;
-  padding: 2.5px 7.5px;
+  font-size: 13px;
+  padding: 3px 8px;
 }
 dd.lmo-co-number {
   -moz-font-feature-settings: "lnum" 1;
@@ -6153,7 +6138,7 @@ dd.lmo-co-number {
   -o-font-feature-settings: "lnum" 1;
   -webkit-font-feature-settings: "lnum" 1;
   font-feature-settings: "lnum" 1;
-  font-size: 44.849999999999994px;
+  font-size: 45px;
   text-indent: -0.1em;
   font-weight: 200;
   -webkit-font-smoothing: antialiased;
@@ -6193,10 +6178,10 @@ a.lmo-co-find-jobs {
   font-weight: bold;
   font-family: Fort, Verdana, sans-serif;
   border-radius: 0;
-  border-bottom-right-radius: 11.25px;
+  border-bottom-right-radius: 12px;
   display: block;
-  margin: 0 -1px -1px 0;
-  padding: 7.5px;
+  margin: 0;
+  padding: 15px 7.5px;
   font-size: 26px;
   color: #fff;
   vertical-align: bottom;
@@ -6231,20 +6216,20 @@ fieldset[disabled] a.lmo-co-find-jobs {
   box-shadow: none;
 }
 #lmo-co-harp h2 {
-  color: #610505;
+  color: #610514;
 }
 #lmo-co-harp a {
-  color: #cc0000;
+  color: #a02c3f;
 }
 #lmo-co-harp dt {
-  color: #a65959;
+  color: #a65966;
 }
 #lmo-co-harp a.lmo-co-find-jobs {
   color: #ffffff;
-  background-color: #ff0000;
+  background-color: #d1586c;
 }
 #lmo-co-harp .lmo-co-categories dd {
-  border: 1px solid #f5e0e0;
+  border: 1px solid #f5e0e4;
 }
 #lmo-co-harp .lmo-co-logo {
   background-image: -webkit-linear-gradient(top, #d1586c 0%, #cc52b4 100%);
@@ -6253,25 +6238,22 @@ fieldset[disabled] a.lmo-co-find-jobs {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd1586c', endColorstr='#ffcc52b4', GradientType=0);
 }
 #lmo-co-bex h2 {
-  color: #056111;
+  color: #611f05;
 }
 #lmo-co-bex a {
-  color: #00cc1b;
+  color: #cc3a00;
 }
 #lmo-co-bex dt {
-  color: #478550;
+  color: #a66f59;
 }
 #lmo-co-bex a.lmo-co-find-jobs {
-  color: #000000;
-  background-color: #00cc1b;
+  color: #ffffff;
+  background-color: #ff6629;
 }
 #lmo-co-bex .lmo-co-categories dd {
-  border: 1px solid #e0f5e3;
+  border: 1px solid #f5e6e0;
 }
 #lmo-co-bex .lmo-co-logo {
-  background-image: -webkit-linear-gradient(top, #d1586c 0%, #cc52b4 100%);
-  background-image: linear-gradient(to bottom, #d1586c 0%, #cc52b4 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd1586c', endColorstr='#ffcc52b4', GradientType=0);
+  background-image: url(../img/bex-home-bg-hue.jpg);
 }
 /*# sourceMappingURL=weareyvr.css.map */
