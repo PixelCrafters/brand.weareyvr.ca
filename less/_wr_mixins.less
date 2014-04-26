@@ -1,0 +1,27 @@
+// Typography
+
+.font-feature-settings(@font-feature-list) {
+	-moz-font-feature-settings: @font-feature-list;
+	-ms-font-feature-settings: @font-feature-list;
+	-o-font-feature-settings: @font-feature-list;
+	-webkit-font-feature-settings: @font-feature-list;
+	font-feature-settings: @font-feature-list;
+}
+
+.tabular-lining {
+	@font-feature-list: "tnum" 1, "lnum" 1;
+	-moz-font-feature-settings: @font-feature-list;
+	-ms-font-feature-settings: @font-feature-list;
+	-o-font-feature-settings: @font-feature-list;
+	-webkit-font-feature-settings: @font-feature-list;
+	font-feature-settings: @font-feature-list;
+	text-rendering: optimizeSpeed; // disable kerning;
+}
+
+// Colours
+
+@grey-darker:	@gray-darker; // otherwise, constant annoying typos
+@grey-dark:		@gray-dark;
+@grey:			@gray;
+@grey-light:	@gray-light;
+@grey-lighter:	@gray-lighter;
