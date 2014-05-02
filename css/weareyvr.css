@@ -265,7 +265,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: Fort, Verdana, sans-serif;
+  font-family: "Fort", Fort, "Helvetica Neue", HelveticaNeue, Helvetica, Verdana, sans-serif;
   font-size: 15px;
   line-height: 1.428571429;
   color: #333333;
@@ -5772,6 +5772,66 @@ button.close {
     display: none !important;
   }
 }
+@font-face {
+  font-family: 'ArnhemPro';
+  src: url('../fonts/ArnhemPro-Blond.woff') format('woff'), url('../fonts/ArnhemPro-Blond.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ArnhemPro';
+  src: url('../fonts/ArnhemPro-BlondItalic.woff') format('woff'), url('../fonts/ArnhemPro-BlondItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'ArnhemPro';
+  src: url('../fonts/ArnhemPro-SemiBold.woff') format('woff'), url('../fonts/ArnhemPro-SemiBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ArnhemPro';
+  src: url('../fonts/ArnhemPro-SemiBoldItalic.woff') format('woff'), url('../fonts/ArnhemPro-SemiBoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Fort';
+  src: url('../fonts/Fort-Extralight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Fort';
+  src: url('../fonts/Fort-ExtralightItalic.otf') format('opentype');
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Fort';
+  src: url('../fonts/Fort-Book.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Fort';
+  src: url('../fonts/Fort-BookItalic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Fort';
+  src: url('../fonts/Fort-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Fort';
+  src: url('../fonts/Fort-BoldItalic.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic;
+}
 .tabular-lining {
   -moz-font-feature-settings: "tnum" 1, "lnum" 1;
   -ms-font-feature-settings: "tnum" 1, "lnum" 1;
@@ -5780,21 +5840,62 @@ button.close {
   font-feature-settings: "tnum" 1, "lnum" 1;
   text-rendering: optimizeSpeed;
 }
+.serif {
+  font-family: "Arnhem Pro", ArnhemPro, Arnhem, Georgia, serif;
+  -moz-font-feature-settings: "onum" 1;
+  -ms-font-feature-settings: "onum" 1;
+  -o-font-feature-settings: "onum" 1;
+  -webkit-font-feature-settings: "onum" 1;
+  font-feature-settings: "onum" 1;
+}
+.sans-serif {
+  font-family: "Fort", Fort, "Helvetica Neue", HelveticaNeue, Helvetica, Verdana, sans-serif;
+}
 .btn {
   border-style: none;
   background-color: #10988b;
   color: #fff;
-  -webkit-font-smoothing: antialiased;
+  font-family: "Fort", Fort, "Helvetica Neue", HelveticaNeue, Helvetica, Verdana, sans-serif;
   font-weight: bold;
-  font-family: Fort, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transition-property: box-shadow, text-shadow;
+  transition-property: box-shadow, text-shadow;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+.btn:hover {
+  color: #fff;
+  background-color: #10988b;
+  text-shadow: 0 0 10px #fff;
+  -webkit-transition-property: box-shadow, text-shadow;
+  transition-property: box-shadow, text-shadow;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+.btn:active {
+  box-shadow: 0 5em 1px 0 rgba(0, 0, 0, 0.5) inset;
+  -webkit-transition-property: box-shadow, text-shadow;
+  transition-property: box-shadow, text-shadow;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
 }
 .form-control,
 .input-group-addon {
   background-color: rgba(238, 238, 238, 0.6);
   border-color: transparent;
   box-shadow: none;
-  -webkit-transition: background-color ease-in-out .15s;
-  transition: background-color ease-in-out .15s;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
 }
 .form-control:focus,
 .input-group-addon:focus {
@@ -5802,8 +5903,12 @@ button.close {
   box-shadow: none;
   border-style: solid;
   border-color: rgba(238, 238, 238, 0.9);
-  -webkit-transition: background-color ease-in-out .15s;
-  transition: background-color ease-in-out .15s;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
 }
 input[type="search"] {
   border-radius: 17.5px;
@@ -5875,11 +5980,14 @@ section.row:last-of-type {
 body > .navbar + * {
   margin-top: 50px;
 }
+a:link,
+a:visited,
 a:hover,
 a:active {
   text-decoration: none;
 }
 p a:not(.btn) {
+  padding-bottom: 0.125em;
   background-image: -webkit-linear-gradient(top, transparent 0%, rgba(84, 84, 84, 0.8) 100%);
   background-image: linear-gradient(to bottom, transparent 0%, rgba(84, 84, 84, 0.8) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#cc545454', GradientType=0);
@@ -5887,26 +5995,15 @@ p a:not(.btn) {
   background-repeat: repeat-x;
   background-position: 0 90%;
   text-shadow: 1px 0 #ffffff, 2px 0 #ffffff, -1px 0 #ffffff, -2px 0 #ffffff;
-  -webkit-transition: background-position 0.15s;
-  transition: background-position 0.15s;
+  -webkit-transition: background-position ease-out 0.15s;
+  transition: background-position ease-out 0.15s;
 }
 p a:not(.btn):hover,
 p a:not(.btn):active {
   background-position: 0 100%;
 }
-.sans-serif {
-  font-family: Fort, Verdana, sans-serif;
-}
-.serif {
-  font-family: "Arnhem Pro", ArnhemPro, Arnhem, Georgia, serif;
-  -moz-font-feature-settings: "onum" 1;
-  -ms-font-feature-settings: "onum" 1;
-  -o-font-feature-settings: "onum" 1;
-  -webkit-font-feature-settings: "onum" 1;
-  font-feature-settings: "onum" 1;
-}
 .serif a {
-  background-position: 0 95%;
+  background-position: 0 90%;
 }
 p .serif {
   font-size: 106.25%;
@@ -5953,13 +6050,18 @@ h4,
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font-weight: normal;
-  font-size: 27px;
+  font-size: 20.76923076923077px;
   line-height: 1.33;
   margin-top: 17.955000000000002px;
   margin-bottom: 17.955000000000002px;
 }
 .lead:first-child {
   margin-top: 0;
+}
+@media (min-width: 768px) {
+  .lead {
+    font-size: 27px;
+  }
 }
 p {
   max-width: 45em;
@@ -5971,34 +6073,54 @@ body > footer {
   font-size: 13px;
   margin: 0;
   padding: 1.75em 0;
-  line-height: 1;
 }
 .guide {
   background-color: #eeeeee;
 }
+.guide .jumbotron {
+  background-color: #fff;
+}
 .guide .jumbotron h1,
 .guide .jumbotron .h1 {
   font-weight: 200;
-  font-size: 125px;
   line-height: 0.9;
 }
+@media (min-width: 992px) {
+  .guide .jumbotron h1,
+  .guide .jumbotron .h1 {
+    font-size: 125px;
+  }
+}
+body.guide > footer {
+  background-color: #fff;
+}
 .lmo-co {
-  padding: 0;
-  margin: 30px 0 0;
   border-radius: 12px;
 }
 .lmo-co .row {
   display: table;
   height: 334px;
+  margin: 0 0 1em;
 }
-.lmo-co [class*="col-"] {
-  float: none;
-  display: table-cell;
-  height: 334px;
+@media (min-width: 768px) {
+  .lmo-co {
+    padding: 0;
+    margin: 30px 0 0;
+  }
+  .lmo-co [class*="col-"] {
+    float: none;
+    display: table-cell;
+    height: 334px;
+  }
+  .lmo-co [class*="col-"]:last-child {
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 12px;
+  }
 }
-.lmo-co [class*="col-"]:last-child {
-  border-bottom-right-radius: 12px;
-  border-top-right-radius: 12px;
+@media (min-width: 768px) and (max-width: 767px) {
+  .lmo-co [class*="col-"] {
+    margin: 0;
+  }
 }
 .lmo-co dl {
   margin-bottom: 0;
@@ -6018,10 +6140,7 @@ body > footer {
   font-size: 15px;
 }
 .lmo-co-logo {
-  border-bottom-left-radius: 12px;
-  border-top-left-radius: 12px;
   padding-bottom: 7.5px;
-  margin: auto;
   vertical-align: middle;
   display: block;
   background-color: #fff;
@@ -6037,10 +6156,24 @@ body > footer {
   margin-left: auto;
   margin-right: auto;
 }
+@media (min-width: 768px) {
+  .lmo-co-logo {
+    border-bottom-left-radius: 12px;
+    border-top-left-radius: 12px;
+  }
+}
+@media (max-width: 767px) {
+  .lmo-co-logo {
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    padding: 3em 0;
+  }
+}
 .lmo-co-content {
   background-color: #fff;
   vertical-align: top;
   padding: 0 45px 0 30px;
+  position: relative;
 }
 .lmo-co-content p {
   font-family: "Arnhem Pro", ArnhemPro, Arnhem, Georgia, serif;
@@ -6052,7 +6185,7 @@ body > footer {
   font-size: 19px;
 }
 .lmo-co-content p a {
-  background-position: 0 95%;
+  background-position: 0 90%;
 }
 p .lmo-co-content p {
   font-size: 106.25%;
@@ -6084,44 +6217,141 @@ h4.lmo-co-content p,
   -webkit-font-feature-settings: "lnum" 1;
   font-feature-settings: "lnum" 1;
 }
+@media (max-width: 991px) {
+  .lmo-co-content p {
+    font-size: 17px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .lmo-co-content p {
+    font-size: 18px;
+  }
+}
 .lmo-co-content h2 {
-  margin: 15px 0;
-  font-size: 78px;
+  margin: 15px 0 7.5px;
+  font-size: 49px;
   font-weight: 200;
   margin-left: -0.05em;
 }
+@media (min-width: 1200px) {
+  .lmo-co-content h2 {
+    font-size: 78px;
+  }
+}
+.lmo-co-content .lmo-co-social {
+  text-align: left;
+  font-size: 19px;
+  line-height: 1;
+  margin: 0 0 0.5em -0.25em;
+}
+.lmo-co-content .lmo-co-social a {
+  display: inline-block;
+  padding: 0.25em;
+  margin-left: -2px;
+  text-align: center;
+}
+.lmo-co-content .lmo-co-social a:link,
+.lmo-co-content .lmo-co-social a:visited,
+.lmo-co-content .lmo-co-social a:hover,
+.lmo-co-content .lmo-co-social a:active {
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+@media (min-width: 992px) {
+  .lmo-co-content .lmo-co-social {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 2em;
+    padding: 0 0.75em 0.5em 0;
+  }
+}
+@media (max-width: 767px) {
+  .lmo-co-content {
+    padding: 1px 1em;
+  }
+}
 .lmo-co-stats {
-  border-left: 1px solid #eeeeee;
-  border-bottom-right-radius: 12px;
-  border-top-right-radius: 12px;
   vertical-align: bottom;
   padding: 0;
   background-color: #fff;
+}
+@media (min-width: 768px) {
+  .lmo-co-stats {
+    border-left: 1px solid #eeeeee;
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+}
+@media (max-width: 767px) {
+  .lmo-co-stats {
+    border-top: 1px solid #eeeeee;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
 }
 .lmo-co-stats-section {
   padding: 15px;
   padding-left: 19px;
 }
+@media (min-width: 768px) and (max-width: 1199px) {
+  .lmo-co-stats-section {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 12px;
+    padding-left: 15px;
+  }
+}
 .lmo-co-photos {
   border-bottom: 1px solid #eeeeee;
+  padding-right: 0;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .lmo-co-photos {
+    padding-bottom: 13px;
+  }
 }
 .lmo-co-photos dd {
   display: inline-block;
-  margin: 0 3px 0 0;
+  margin: 0 5px 3px -2px;
+  border-radius: 2px;
+  overflow: hidden;
+  width: 48px;
+  height: 48px;
 }
 .lmo-co-photos dd:first-of-type {
   margin-left: -2px;
 }
+.lmo-co-photos dd:last-of-type {
+  margin-bottom: 0;
+}
 .lmo-co-photos dd:not(:last-child) {
   float: left;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .lmo-co-photos dd {
+    width: 38px;
+    height: 38px;
+  }
 }
 .lmo-co-photos img {
   width: 48px;
   height: auto;
-  border-radius: 2px;
+  position: relative;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .lmo-co-photos img {
+    width: 38px;
+  }
 }
 .lmo-co-categories {
   border-bottom: 1px solid #eeeeee;
+  width: auto;
+  display: block;
 }
 .lmo-co-categories dd {
   display: inline-block;
@@ -6130,7 +6360,7 @@ h4.lmo-co-content p,
   margin-right: 0.5em;
   border-radius: 1em;
   font-size: 13px;
-  padding: 3px 8px;
+  padding: 2px 7px;
 }
 dd.lmo-co-number {
   -moz-font-feature-settings: "lnum" 1;
@@ -6145,6 +6375,12 @@ dd.lmo-co-number {
   text-rendering: optimizeLegibility;
   line-height: 1;
 }
+@media (min-width: 768px) and (max-width: 1199px) {
+  dd.lmo-co-number {
+    font-size: 34px;
+    letter-spacing: -1px;
+  }
+}
 .lmo-co-founded {
   float: left;
   width: 50%;
@@ -6153,6 +6389,17 @@ dd.lmo-co-number {
   float: right;
   width: 50%;
   border-left: 1px solid #eeeeee;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .lmo-co-founded,
+  .lmo-co-employees {
+    float: none;
+    border-left-style: none;
+    width: 100%;
+  }
+  .lmo-co-employees {
+    border-top: 1px solid #eeeeee;
+  }
 }
 a.lmo-co-find-jobs {
   display: inline-block;
@@ -6174,11 +6421,18 @@ a.lmo-co-find-jobs {
   user-select: none;
   border-style: none;
   background-color: #10988b;
-  -webkit-font-smoothing: antialiased;
+  font-family: "Fort", Fort, "Helvetica Neue", HelveticaNeue, Helvetica, Verdana, sans-serif;
   font-weight: bold;
-  font-family: Fort, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transition-property: box-shadow, text-shadow;
+  transition-property: box-shadow, text-shadow;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
   border-radius: 0;
   border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
   display: block;
   margin: 0;
   padding: 15px 7.5px;
@@ -6215,11 +6469,44 @@ fieldset[disabled] a.lmo-co-find-jobs {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+a.lmo-co-find-jobs:hover {
+  color: #fff;
+  background-color: #10988b;
+  text-shadow: 0 0 10px #fff;
+  -webkit-transition-property: box-shadow, text-shadow;
+  transition-property: box-shadow, text-shadow;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+a.lmo-co-find-jobs:active {
+  box-shadow: 0 5em 1px 0 rgba(0, 0, 0, 0.5) inset;
+  -webkit-transition-property: box-shadow, text-shadow;
+  transition-property: box-shadow, text-shadow;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+@media (min-width: 768px) {
+  a.lmo-co-find-jobs {
+    border-radius: 0;
+    border-bottom-right-radius: 12px;
+  }
+}
 #lmo-co-harp h2 {
   color: #610514;
 }
 #lmo-co-harp a {
   color: #a02c3f;
+}
+#lmo-co-harp .lmo-co-social a:link,
+#lmo-co-harp .lmo-co-social a:visited {
+  color: rgba(169, 126, 134, 0.5);
+}
+#lmo-co-harp .lmo-co-social a:hover {
+  color: #d1586c;
 }
 #lmo-co-harp dt {
   color: #a65966;
@@ -6242,6 +6529,13 @@ fieldset[disabled] a.lmo-co-find-jobs {
 }
 #lmo-co-bex a {
   color: #cc3a00;
+}
+#lmo-co-bex .lmo-co-social a:link,
+#lmo-co-bex .lmo-co-social a:visited {
+  color: rgba(169, 139, 126, 0.5);
+}
+#lmo-co-bex .lmo-co-social a:hover {
+  color: #ff6629;
 }
 #lmo-co-bex dt {
   color: #a66f59;
