@@ -1,0 +1,40 @@
+.wr-icon {
+	display: inline-block;
+	.square(16px);
+	background-size: 16px 16px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	line-height: 0;
+	vertical-align: text-top;
+
+	p & {
+		margin: 0 2px;
+		text-indent: -2px; // when an icon is the first thing in the paragraph
+	}
+
+	// Icons
+
+	&-newbie { background-image: url(../icons/wr-icon-newbie.svg); }
+	&-investor { background-image: url(../icons/wr-icon-investor.svg); }
+	&-municipal { background-image: url(../icons/wr-icon-municipal.svg); }
+}
+
+// Sizes
+
+.wr-icon-md {
+	.square(24px);
+	background-size: 24px 24px;
+}
+
+.wr-icon-lg {
+	.square(32px);
+	background-size: 32px 32px;
+}
+
+// Auto-sizing
+
+.lead .wr-icon {
+	@media (min-width: @screen-sm-min) {
+		.wr-icon-md;
+	}
+}

@@ -3,7 +3,7 @@
 
 	.jumbotron {
 
-		background-color: #fff;
+		background-color: @body-bg;
 
 		h1, .h1 {
 			font-weight: 200;
@@ -16,7 +16,15 @@
 	}
 
 	body&>footer {
-		background-color: #fff;
+		background-color: @body-bg;
+
+		a {
+			.fancy-underline-default(@body-bg);
+		}
+	}
+
+	section.row {
+		border-top-color: #fff;
 	}
 
 }
@@ -108,8 +116,7 @@
 	}
 
 	dt {
-		text-transform: uppercase;
-		letter-spacing: 1px;
+		.sans-serif-small-caps;
 		.hero-type();
 		font-size: ceil((@font-size-base * 0.75));		
 		margin-bottom: ceil((@font-size-base / 4));
