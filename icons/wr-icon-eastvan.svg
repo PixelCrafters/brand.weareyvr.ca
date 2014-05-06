@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.0.1 (7597) - http://www.bohemiancoding.com/sketch -->
+    <title>wr-icon-eastvan</title>
+    <description>Created with Sketch.</description>
+    <defs>
+        <radialGradient cx="50%" cy="37.705485%" fx="50%" fy="37.705485%" r="132.15332%" id="radialGradient-1">
+            <stop stop-color="#002942" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </radialGradient>
+        <rect id="path-2" x="0" y="0" width="16" height="16" rx="2"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-4">
+            <feMorphology radius="1" in="SourceAlpha" operator="dilate" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.525 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-5">
+            <feMorphology radius="1" in="SourceAlpha" operator="dilate" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Places" sketch:type="MSLayerGroup">
+            <g id="East-Van">
+                <mask id="mask-3" sketch:name="Background/Mask" fill="white">
+                    <use xlink:href="#path-2"></use>
+                </mask>
+                <use id="Background/Mask" fill="url(#radialGradient-1)" sketch:type="MSShapeGroup" xlink:href="#path-2"></use>
+                <g id="East-Van-Cross" mask="url(#mask-3)" sketch:type="MSShapeGroup">
+                    <g transform="translate(3.000000, 1.000000)">
+                        <path d="M7.5,0 C7.5,-0.276142375 7.27614237,-0.5 7,-0.5 L3,-0.5 C2.72385763,-0.5 2.5,-0.276142375 2.5,0 L2.5,2.5 L0,2.5 C-0.276142375,2.5 -0.5,2.72385763 -0.5,3 L-0.5,7 C-0.5,7.27614237 -0.276142375,7.5 0,7.5 L2.5,7.5 L2.5,13 C2.5,13.2761424 2.72385763,13.5 3,13.5 L7,13.5 C7.27614237,13.5 7.5,13.2761424 7.5,13 L7.5,7.5 L10,7.5 C10.2761424,7.5 10.5,7.27614237 10.5,7 L10.5,3 C10.5,2.72385763 10.2761424,2.5 10,2.5 L7.5,2.5 L7.5,0 Z M7,0 L3,0 L3,3 L0,3 L0,7 L3,7 L3,13 L7,13 L7,7 L10,7 L10,3 L7,3 L7,0 Z" id="Cross" fill="#FFFFFF" filter="url(#filter-4)"></path>
+                        <path d="M7,0 L3,0 L3,3 L0,3 L0,7 L3,7 L3,13 L7,13 L7,7 L10,7 L10,3 L7,3 L7,0 Z" id="Cross-Mask" fill-opacity="0.5" fill="#000000"></path>
+                        <path d="M4,1 L4,3 L6,3 L6,1 L4,1 Z M4,6 L6,6 L5.5,4 L4.5,4 L4,6 Z M1,4 L1.5,6 L2.5,6 L3,4 L1,4 Z M5.5,7 L5.53574201,7.5 L6,8.01989746 L6,9 L4.5,9 L4.49781275,8.51454824 L4,8.0333252 L4,7 L5.5,7 Z M7,5.5 L7.5,5.53574201 L8.01989746,6 L9,6 L9,4.5 L8.51454824,4.49781275 L8.0333252,4 L7,4 L7,5.5 Z M4,10 L4,10.5 L4.5,10.5 L4.5,12 L5.5,12 L5.5,10.5 L6,10.5 L6,10 L4,10 Z M4.5,13 L4.5,15 L5.5,15 L5.5,13 L4.5,13 Z" id="Letters" fill="#FFFFFF" filter="url(#filter-5)"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

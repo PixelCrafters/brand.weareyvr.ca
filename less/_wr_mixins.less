@@ -1,6 +1,67 @@
+// Buttons
+
+.btn-active-padding(@padding-vertical) {
+	padding-top: (@padding-vertical * 2);
+	padding-bottom: 0;
+}
+
+.btn-active-box-shadow() {
+	box-shadow: 0 5em 1px 0 rgba(0,0,0,0.5) inset;
+}
+
+// Forms
+
+.input-inverse() {
+	.placeholder(fadeout(@grey-lighter,5%));
+
+	&:focus {
+		.placeholder(fadeout(@grey-light,10%));
+		border-color: transparent;
+	}
+}
+
+
+// Padding
+
+.padding-vertical(@padding-vertical) {
+	padding-top: @padding-vertical;
+	padding-bottom: @padding-vertical;
+}
+
+.padding-horizontal(@padding-horizontal) {
+	padding-left: @padding-horizontal;
+	padding-right: @padding-horizontal;
+}
+
+// Transitions
+
+.wr-transition(@transition-property;) {
+	-webkit-transition-property: @transition-property;
+	        transition-property: @transition-property;
+	.wr-transition-settings();
+}
+
+.wr-transition-settings() {
+	@transition-duration: 0.15s;
+	@transition-timing-function: ease-in-out;
+	-webkit-transition-duration: @transition-duration;
+	        transition-duration: @transition-duration;
+	-webkit-transition-timing-function: @transition-timing-function;
+	        transition-timing-function: @transition-timing-function;
+}
+
 // Typography
 
-.font-feature-settings(@font-feature-list) {
+.font-smoothing() {
+	-webkit-font-smoothing: antialiased;
+}
+
+.hero-type() {
+	.font-smoothing;
+	text-rendering: optimizeLegibility; // kerning
+}
+
+.font-feature-settings(@font-feature-list;) {
 	-moz-font-feature-settings: @font-feature-list;
 	-ms-font-feature-settings: @font-feature-list;
 	-o-font-feature-settings: @font-feature-list;
@@ -10,12 +71,41 @@
 
 .tabular-lining {
 	@font-feature-list: "tnum" 1, "lnum" 1;
-	-moz-font-feature-settings: @font-feature-list;
-	-ms-font-feature-settings: @font-feature-list;
-	-o-font-feature-settings: @font-feature-list;
-	-webkit-font-feature-settings: @font-feature-list;
-	font-feature-settings: @font-feature-list;
-	text-rendering: optimizeSpeed; // disable kerning;
+	.font-feature-settings(@font-feature-list);
+	text-rendering: optimizeSpeed; // disable kerning
+}
+
+.fancy-underline(@underline-colour; @underline-position-v; @background-colour) {
+	padding-bottom: 0.125em;
+	#gradient > .vertical(@start-color: transparent; @end-color: @underline-colour);
+	background-size: 1px 1px;
+	background-repeat: repeat-x;
+	background-position: 0 @underline-position-v;
+	text-shadow: 1px 0 @background-colour, 2px 0 @background-colour, -1px 0 @background-colour, -2px 0 @background-colour;
+	.transition(~"background-position ease-out 0.15s, color ease-in-out 0.15s");
+
+	&:hover,
+	&:active {
+		background-position: 0 100%;
+	}
+}
+
+.fancy-underline-default(@background-colour: @body-bg) {
+	.fancy-underline(fadeout(desaturate(@link-color,85%), 20%), 90%, @background-colour);
+}
+
+.serif {
+	font-family: @font-family-serif;
+	.font-feature-settings("onum" 1);
+}
+
+.sans-serif {
+	font-family: @font-family-sans-serif;
+}
+
+.sans-serif-small-caps {
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 // Colours

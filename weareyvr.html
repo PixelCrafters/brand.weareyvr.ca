@@ -10,6 +10,9 @@
 
   <!-- Bootstrap core CSS -->
   <link href="css/weareyvr.css" rel="stylesheet">
+  <link href="css/fonts.css" rel="stylesheet">
+  <link href="css/wr_icons.css" rel="stylesheet">
+  <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet"> -->
 
   <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
@@ -24,7 +27,7 @@
   <a class="sr-only" href="#content">Skip to main content</a>
 
   <!-- master nav -->
-  <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+  <nav class="navbar navbar-default wr-navbar" data-spy="affix" data-offset-top="50">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -33,7 +36,19 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-        <a class="navbar-brand" href="#">WeAreYVR</a>
+        <div class="navbar-mark">
+          <a class="navbar-brand" href="#">We are YVR</a>
+          <svg id="weareyvr-mark">
+            <line x1="54.24199034025416" y1="3.299654954555521" x2="431.2419903402542" y2="3.299654954555521" stroke-width="3" stroke="white"></line>
+            <line x1="242.25800965974585" y1="496.70034504544446" x2="222.25800965974585" y2="496.70034504544446" stroke-width="3" stroke="white"></line>
+            <line x1="464.6561797817127" y1="73.93390793044502" x2="189.64199085978746" y2="424.8701101429879" stroke-width="3" stroke="white"></line>
+            <line x1="286.1561797817127" y1="426.066092069555" x2="11.141990859787455" y2="75.12988985701209" stroke-width="3" stroke="white"></line>
+            <path class="one" d="M-39.09250943826296,26.98195148278422A47.5,47.5 0 0,1 5.4129248078711445,-47.190573688230714L5.071055872637178,-44.21011640265825A44.5,44.5 0 0,0 -36.62350884216214,25.27782823123995Z" transform="translate(49,49)" style="fill: #ffffff;"></path>
+            <path d="M5.4129248078711445,-47.190573688230714A47.5,47.5 0 0,1 39.91670738329025,25.746970145568227L37.39565218013508,24.120845715321813A44.5,44.5 0 0,0 5.071055872637178,-44.21011640265825Z" transform="translate(426,49)" style="fill: #ffffff;"></path>
+            <path d="M39.91670738329025,-25.746970145568227A47.5,47.5 0 0,1 -5.412924807871139,47.190573688230714L-5.071055872637173,44.21011640265825A44.5,44.5 0 0,0 37.39565218013508,-24.120845715321813Z" transform="translate(247.5,451)" style="fill: #ffffff;"></path>
+            <path d="M-5.412924807871139,47.190573688230714A47.5,47.5 0 0,1 -39.09250943826297,-26.981951482784204L-36.62350884216215,-25.277828231239937A44.5,44.5 0 0,0 -5.071055872637173,44.21011640265825Z" transform="translate(227.5,451)" style="fill: #ffffff;"></path>
+          </svg>
+        </div>
       </div>
       <nav class="collapse navbar-collapse" role="navigation">
         <ul class="nav navbar-nav">
@@ -51,8 +66,8 @@
 
   <header class="jumbotron wr-jumbotron">
     <div class="container">
-      <h1>Vancouver&rsquo;s startup community hub</h1>
-      <!-- <p class="lead">How do you feel about Vancouver&rsquo;s startup community? Are things going well? Are things going bad? The thing that is missing is data. Let&rsquo;s work together to keep up-to-date data on the evolution of startups in our community. Together, We Are Vancouver!</p> -->
+      <!-- <h1>Vancouver&rsquo;s startup community hub</h1> -->
+      <h1>Opening channels for Vancouver&rsquo;s startup community</h1>
       <form role="form">
         <div class="form-group">
           <label for="notify-me-email">Notify me on launch</label>
@@ -90,18 +105,52 @@
     <section class="row">
       <div class="col-md-9">
         <!-- <h2>About</h2> -->
-        <p class="lead serif">WeAreYVR is an information hub for the Vancouver startup community. It is a collaborative project &mdash; startup accelerators, the city of Vancouver, and members of the community are all helping to put each other on the map.</p>
-        <p class="lead serif">This data is important to entrepreneurs having a place to find local companies, events, and job opportunites, investors looking to connect with startups, municipalities who want to best support their local economies, and individuals looking for a new city to welcome them.</p>
+        <p class="lead serif">WeAreYVR is an information hub for the <i class="wr-icon wr-icon-downtown"></i> Vancouver startup community <i class="wr-icon wr-icon-gastown"></i>. It is a <i class="wr-icon wr-icon-newbie"></i> collaborative project &mdash; startup accelerators <i class="wr-icon wr-icon-incubator"></i>, the <a href="#">city of <i class="wr-icon wr-icon-municipal"></i> Vancouver</a>, and members of the community are all helping to put each other on the map.</p>
+        <p class="lead serif">This data is important to entrepreneurs <i class="wr-icon wr-icon-founder"></i> having a place to find local companies <i class="wr-icon wr-icon-startup"></i>, events <i class="wr-icon wr-icon-event"></i>, and job opportunities <i class="wr-icon wr-icon-jobs"></i>, investors <i class="wr-icon wr-icon-investor"></i> looking to connect with startups, municipalities who want to best support their local economies, and individuals looking for a new city to welcome them.</p>
         <p class="lead serif">Follow us on <a href="http://twitter.com/WeAreYVR">Twitter</a> and <a href="http://facebook.com/WeAreYVR">Facebook</a> as we get ready for launch.</p>
+      </div>
+
+      <div class="col-md-3">
+        <nav>
+          <ul class="nav wr-nav-vertical">
+            <li><a href="#"><i class="wr-icon wr-icon-advisor"></i> Advisors</a></li>
+            <li><a href="#"><i class="wr-icon wr-icon-advisor-av"></i> Advisors <small>(avatar)</small></a></li>
+            <li><a href="#"><i class="wr-icon wr-icon-angel-investor"></i> Angel Investors</a></li>
+            <li><a href="#"><i class="wr-icon wr-icon-angel-investor-av"></i> Angel Investors <small>(avatar)</small></a></li>
+            <li><a href="#"><i class="wr-icon wr-icon-downtown"></i> Downtown</a></li>
+            <li><a href="#"><i class="wr-icon wr-icon-eastvan"></i> East Van</a></li>
+            <li><a href="#"><i class="wr-icon wr-icon-employee"></i> Employees</a></li>
+            <li><a href="#"><i class="wr-icon wr-icon-employee-av"></i> Employees <small>(avatar)</small></a></li>
+            <li><a href="#"><i class="wr-icon wr-icon-event"></i> Events</a></li>
+            <li><a href="#"><i class="wr-icon wr-icon-founder"></i> Founders</a></li>
+            <li><a href="#"><i class="wr-icon wr-icon-founder-av"></i> Founders <small>(avatar)</small></a></li>
+            <li><a href="#"><i class="wr-icon wr-icon-funding"></i> Funding</a></li>
+            <li><a href="#"><i class="wr-icon wr-icon-gastown"></i> Gastown</a></li>
+            <li><a href="#"><i class="wr-icon wr-icon-incubator"></i> Incubators</a></li>
+            <li><a href="#"><i class="wr-icon wr-icon-investor"></i> Investors</a></li>
+            <li><a href="#"><i class="wr-icon wr-icon-investor-av"></i> Investors <small>(avatar)</small></a></li>
+            <li><a href="#"><i class="wr-icon wr-icon-jobs"></i> Jobs</a></li>
+            <li class="active"><a href="#"><i class="wr-icon wr-icon-municipal"></i> Municipal</a></li>
+            <li><a href="#"><i class="wr-icon wr-icon-newbie"></i> Newbies</a></li>
+            <li><a href="#"><i class="wr-icon wr-icon-newbie-av"></i> Newbies <small>(avatar)</small></a></li>
+            <li><a href="#"><i class="wr-icon wr-icon-provincial"></i> Provincial</a></li>
+            <li><a href="#"><i class="wr-icon wr-icon-series-a"></i> Series A</a></li>
+            <!-- <li><a href="#"><i class="wr-icon wr-icon-series-b"></i> Series B</a></li>
+            <li><a href="#"><i class="wr-icon wr-icon-series-c"></i> Series C</a></li>
+            <li><a href="#"><i class="wr-icon wr-icon-series-d"></i> Series D</a></li> -->
+            <li><a href="#"><i class="wr-icon wr-icon-startup"></i> Startups</a></li>
+            <li><a href="#"><i class="wr-icon wr-icon-vc"></i> Venture Capital</a></li>
+          </ul>
+        </nav>
       </div>
     </section>
 
     <section class="row">
       <div class="col-md-4">
         <h3>Founders</h3>
-        <p>Find investors, accelerators, and resources for your startup, and list your business so others can see you.</p>
+        <p>Find investors, accelerators, and <i class="wr-icon wr-icon-municipal"></i> resources for your startup, and list your business so others can see you.</p>
         <h3>Investors</h3>
-        <p>Peruse new business ideas and get a feel for the industry&#39;s current status.</p>
+        <p>Peruse new <i class="wr-icon wr-icon-investor"></i> business ideas and get a feel for the industry&#39;s current status.</p>
         <h3>Accelerators</h3>
         <p>Connect with new founders to share resources and opportunities. Highlight your incubated companies.</p>
       </div>
@@ -111,7 +160,7 @@
         <h3>Events</h3>
         <p>Meetups, conferences, panels, and seminars in Vancouver.</p>
         <h3>Directory</h3>
-        <p>Startups, founders, investments &ndash; faces and numbers, powered by <a href="http://startupgenome.com">Startup Genome</a> and available as open data for anyone to re-use and re-mix.</p>
+        <p><i class="wr-icon wr-icon-newbie"></i> Startups, founders, investments &ndash; faces and numbers, powered by <a href="http://startupgenome.com">Startup Genome</a> and available as open data for anyone to re-use and re-mix.</p>
       </div>
     </section>
 
@@ -124,17 +173,17 @@
             <label class="col-sm-2 control-label">Full name</label>
             <label for="first-name" class="sr-only">First name</label>
             <label for="last-name" class="sr-only">Last name</label>
-            <div class="col-sm-7">
+            <div class="col-sm-4">
               <div class="input-group">
                 <input type="text" class="form-control" id="first-name" placeholder="First name">
-                <input type="text" class="form-control" id="laaaaaast-name" placeholder="Last name">
+                <input type="text" class="form-control" id="last-name" placeholder="Last name">
               </div>
             </div>
           </div>
           <div class="form-group">
             <label for="contact-email" class="col-sm-2 control-label">Email address</label>
-            <div class="col-sm-7">
-              <input type="email" class="form-control" id="contact-email" placeholder="">
+            <div class="col-sm-4">
+              <input type="email" class="form-control" id="contact-email" placeholder="me@example.com">
             </div>
           </div>
           <div class="form-group">
@@ -166,5 +215,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="docs/docs.min.js"></script>
+
 </body>
 </html>
