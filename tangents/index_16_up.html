@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <title>Tangents</title>
+  <style>
+  * { box-sizing: border-box; }
+  body {
+    padding-top: 80px;
+    padding-left: 130px;
+    background: white;
+    font-family: Helvetica;
+  }
+  svg, canvas {
+    /*background: #3f3f3f;*/
+    float: left;
+    margin: 50px 100px 50px 50px;
+  }
+  h3, .outlines { margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <script src="d3.v3.min.js"></script>
+  <script>
+  var colours = ["#af1639",
+    "#ff769f",
+    "#ffaf00",
+    "#00d679",
+    "#4095c5",
+    "#601ebd",
+    "#8b572a"];
+  var body = d3.select('body');
+  for (var i = 0; i < 40; i++) {
+    body.append('div')
+      .attr('class', "weareyvr-mark")
+      .attr('data-height', 150)
+      .attr('data-colour', colours[Math.floor(Math.random()*colours.length)])
+      .attr('data-radius', Math.floor(Math.random()*101))
+      .attr('data-one', Math.floor(Math.random()*101))
+      .attr('data-two', Math.floor(Math.random()*101))
+      .attr('data-three', Math.floor(Math.random()*101))
+      .attr('data-four', Math.floor(Math.random()*101))
+  }
+  </script>
+  <script src="weareyvr-mark.js"></script>
+</body>
+</html>
