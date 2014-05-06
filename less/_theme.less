@@ -229,14 +229,16 @@ section.row {
 			border-left: @btn-border;
 		}
 
+		// for buttons immediately following text boxes
 		&:first-of-type:not(:first-child) .btn:first-of-type,
-		&:first-of-type:not(:first-child) .btn-group:first-of-type { // for buttons immediately following text boxes
+		&:first-of-type:not(:first-child) .btn-group:first-of-type {
 			margin-left: 1px;
 			border-left-style: none;
 		}
 
+		// for buttons immediately preceding text boxes
 		&:last-of-type:not(:last-child) .btn:last-of-type,
-		&:last-of-type:not(:last-child) .btn-group:last-of-type { // for buttons immediately preceding text boxes
+		&:last-of-type:not(:last-child) .btn-group:last-of-type {
 			margin-right: 1px;
 			border-right-style: none;
 		}
@@ -280,7 +282,7 @@ section.row {
 
 // ==================== jumbotron.less
 
-.wr-jumbotron {
+.jumbotron.wr-jumbotron {
 
 	.hero-type();
 
@@ -292,6 +294,10 @@ section.row {
 	background-image: url(../img/big-data.jpg);
 	background-position: center center;
 	background-attachment: fixed;
+
+	@media (max-width: @screen-sm-max) {
+		padding: @jumbotron-padding 0;
+	}
 
 	h1 {
 		font-style: italic;
@@ -312,10 +318,12 @@ section.row {
 
 		font-weight: 200;
 		text-transform: uppercase;
-		letter-spacing: 10px;
+		font-size: @font-size-h2;
+		letter-spacing: 7px;
 
 		@media (min-width: @screen-md-min) {
 			font-size: ceil((@font-size-h1 * 2));
+			letter-spacing: 10px;
 		}
 	}
 
@@ -360,6 +368,12 @@ body>.navbar.affix+* {
 
 .wr-navbar {
 	.font-smoothing;
+	border-radius: 0;
+
+	// &.affix-top,
+	// &.affix {
+	// 	.wr-transition(all);
+	// }
 
 	&.affix {
 		.navbar-fixed-top;
@@ -581,5 +595,16 @@ body>footer {
 
 	a {
 		.fancy-underline-default(@grey-lighter);
+	}
+}
+
+// ==================== SOCIAL
+
+.social-share-box {
+	display: inline-block;
+	padding-right: 1em;
+
+	&:not(:last-child) {
+		float: left;
 	}
 }

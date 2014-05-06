@@ -1,6 +1,6 @@
-@weareyvr-mark-colour: #ffaf00;
+@weareyvr-mark-colour: @wr-orange;
 
-.wr-navbar.affix-top {
+.wr-navbar:not(.affix) {
 	margin: 50px 0 0;
 }
 
@@ -33,6 +33,8 @@
 	}
 }
 
+@mark-stroke-width: 9;
+
 #weareyvr-mark {
 	// .square(72px);
 	width: 475px;
@@ -46,12 +48,12 @@
 
 	line {
 		stroke: @weareyvr-mark-colour !important;
-		stroke-width: 9 !important;
+		stroke-width: @mark-stroke-width !important;
 	}
 
 	path {
 		stroke: @weareyvr-mark-colour !important;
 		fill: @weareyvr-mark-colour !important;
-		stroke-width: 6 !important;
+		stroke-width: (@mark-stroke-width - 3) !important;
 	}
 }
