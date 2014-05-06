@@ -19,15 +19,21 @@
 		background-color: @body-bg;
 
 		a {
-			.fancy-underline-default(@body-bg);
+			.fancy-underline(@body-bg);
 		}
 	}
 
 	section.row {
 		border-top-color: #fff;
+
+		// p {
+		// 	.serif();
+		// }
 	}
 
 }
+
+// International Jobs (LMO) Guide
 
 @lmo-co-border-radius: ceil((@font-size-base * 0.75));
 @lmo-co-accent: @brand-primary;
@@ -42,6 +48,10 @@
 
 	a {
 		color: hsl(hue(@lmo-co-accent),saturation(@lmo-co-accent),40%);
+	}
+
+	.lmo-co-content p a {
+		.fancy-underline(#fff, @lmo-co-accent);
 	}
 
 	.lmo-co-social a {
