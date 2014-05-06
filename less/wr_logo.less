@@ -1,0 +1,57 @@
+@weareyvr-mark-colour: #ffaf00;
+
+.wr-navbar.affix-top {
+	margin: 50px 0 0;
+}
+
+.navbar-mark {
+	display: block;
+	position: relative;
+	width: 200px;
+	height: (@navbar-height + 2);
+	margin: 0;
+	text-align: center;
+
+	a.navbar-brand {
+		z-index: 13;
+		margin: 0 auto;
+		display: block;
+		font-size: @font-size-h3;
+		text-align: center;
+		// line-height: 0.7;
+		width: 200px;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		// margin: 5px;
+		// border: 1px solid fadeout(#fff,20%);
+
+		&:hover {
+			// background-color: #fff;
+		}
+	}
+}
+
+#weareyvr-mark {
+	// .square(72px);
+	width: 475px;
+	height: 500px;
+	.scale(0.2,0.2);
+	position: absolute;
+	left: -155px;
+	top: -225px;
+
+	z-index: 12;
+
+	line {
+		stroke: @weareyvr-mark-colour !important;
+		stroke-width: 9 !important;
+	}
+
+	path {
+		stroke: @weareyvr-mark-colour !important;
+		fill: @weareyvr-mark-colour !important;
+		stroke-width: 6 !important;
+	}
+}

@@ -51,6 +51,7 @@ a.alert-link {
 	}
 	
 	&:active {
+		color: @btn-primary-color;
 		.btn-active-box-shadow;
 		.wr-transition(box-shadow, text-shadow;);
 		background-color: @brand-primary;
@@ -79,6 +80,7 @@ a.alert-link {
 	&-vertical > .btn:not(:first-child),
 	&-vertical > .btn-group:not(:first-child) {
 		border-top: @btn-border;
+		margin-top: 0;
 
 		> .btn {
 			border-top-style: none;
@@ -292,6 +294,7 @@ section.row {
 	background-attachment: fixed;
 
 	h1 {
+		font-style: italic;
 		text-align: center;
 		margin: 0.5em 0;
 		text-rendering: optimizeLegibility;
@@ -307,11 +310,13 @@ section.row {
 		// font-weight: 300;
 		// letter-spacing: 4px;
 
-		// styles for sans-serif
-		font-size: ceil((@font-size-h1 * 2));
 		font-weight: 200;
 		text-transform: uppercase;
 		letter-spacing: 10px;
+
+		@media (min-width: @screen-md-min) {
+			font-size: ceil((@font-size-h1 * 2));
+		}
 	}
 
 	.lead {
@@ -337,11 +342,75 @@ section.row {
 // }
 
 body>.navbar+* {
-	margin-top: @navbar-height;
+	margin-top: 0;
 }
+
+body>.navbar.affix+* {
+	margin-top: (@navbar-height * 2);
+}
+
+// body>.navbar+.jumbotron {
+// 	padding-top: (@navbar-height * 4);
+// 	height: 500px + (@navbar-height * 4);
+// }
 
 .navbar-inverse input {
 	.input-inverse;
+}
+
+.wr-navbar {
+	.font-smoothing;
+
+	&.affix {
+		.navbar-fixed-top;
+	}
+
+	border-style: none;
+	background-color: fadeout(hsl(0,0%,93%),5%);
+
+	.navbar-brand {
+		.hero-type;
+		color: @grey-darker;
+	}
+
+	// .active>a {
+	// 	margin-top: 5px;
+	// 	margin-bottom: 0;
+	// 	padding-top: 5px;
+	// 	padding-bottom: 5px;
+	// 	border: 1px solid white;
+	// 	background-color: fadeout(@grey, 50%);
+	// }
+
+	.navbar-nav {
+		> li > a {
+			border-bottom: 3px solid transparent;
+			.wr-transition(border-bottom, color, background-color;);
+			.sans-serif-small-caps;
+			font-weight: bold;
+			font-size: 0.9em;
+
+			&:hover {
+				border-bottom-color: @brand-primary;
+			}
+		}
+
+		> li.active > a {
+			color: @grey-darker;
+			background-color: fadeout(@brand-primary,80%);
+			border-bottom-color: @brand-primary;
+			.wr-transition(border-bottom, color, background-color;);
+		}
+	}
+
+	input {
+		border-color: #fff;
+		background-color: transparent;
+
+		&:focus {
+			border-color: #fff;
+		}
+	}
 }
 
 // ==================== navs.less
@@ -357,9 +426,16 @@ body>.navbar+* {
 	line-height: 1;
 
 	> li {
+
+		// white-space: nowrap;
+
 		> a {
 			color: @grey-light;
 			.wr-transition(background-color);
+
+			&:active {
+				background-color: fadeout(@brand-primary, 70%);
+			}
 
 			> .wr-icon {
 				vertical-align: text-bottom;
@@ -369,6 +445,12 @@ body>.navbar+* {
 
 		&.active > a {
 			border-color: @nav-pills-active-link-hover-bg;
+		}
+
+		small,
+		.small {
+			font-weight: normal;
+			font-size: 1em;
 		}
 	}
 

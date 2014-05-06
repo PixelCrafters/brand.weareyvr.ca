@@ -1,0 +1,117 @@
+.wr-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-size: 16px 16px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  line-height: 0;
+  vertical-align: text-top;
+}
+p .wr-icon {
+  margin: 0 2px;
+  text-indent: -2px;
+}
+.wr-icon-advisor {
+  background-image: url(../icons/wr-icon-advisor.svg);
+}
+.wr-icon-advisor-av {
+  background-image: url(../icons/wr-icon-advisor-av.svg);
+}
+.wr-icon-angel-investor {
+  background-image: url(../icons/wr-icon-angel-investor.svg);
+}
+.wr-icon-angel-investor-av {
+  background-image: url(../icons/wr-icon-angel-investor-av.svg);
+}
+.wr-icon-downtown {
+  background-image: url(../icons/wr-icon-downtown.svg);
+}
+.wr-icon-eastvan {
+  background-image: url(../icons/wr-icon-eastvan.svg);
+}
+.wr-icon-employee {
+  background-image: url(../icons/wr-icon-employee.svg);
+}
+.wr-icon-employee-av {
+  background-image: url(../icons/wr-icon-employee-av.svg);
+}
+.wr-icon-event {
+  background-image: url(../icons/wr-icon-event.svg);
+}
+.wr-icon-founder {
+  background-image: url(../icons/wr-icon-founder.svg);
+}
+.wr-icon-founder-av {
+  background-image: url(../icons/wr-icon-founder-av.svg);
+}
+.wr-icon-funding {
+  background-image: url(../icons/wr-icon-funding.svg);
+}
+.wr-icon-gastown {
+  background-image: url(../icons/wr-icon-gastown.svg);
+}
+.wr-icon-incubator {
+  background-image: url(../icons/wr-icon-incubator.svg);
+}
+.wr-icon-investor {
+  background-image: url(../icons/wr-icon-investor.svg);
+}
+.wr-icon-investor-av {
+  background-image: url(../icons/wr-icon-investor-av.svg);
+}
+.wr-icon-jobs {
+  background-image: url(../icons/wr-icon-jobs.svg);
+}
+.wr-icon-funding {
+  background-image: url(../icons/wr-icon-funding.svg);
+}
+.wr-icon-municipal {
+  background-image: url(../icons/wr-icon-municipal.svg);
+}
+.wr-icon-newbie {
+  background-image: url(../icons/wr-icon-newbie.svg);
+}
+.wr-icon-newbie-av {
+  background-image: url(../icons/wr-icon-newbie-av.svg);
+}
+.wr-icon-provincial {
+  background-image: url(../icons/wr-icon-provincial.svg);
+}
+.wr-icon-series-a {
+  background-image: url(../icons/wr-icon-series-a.svg);
+}
+.wr-icon-series-b {
+  background-image: url(../icons/wr-icon-series-b.svg);
+}
+.wr-icon-series-c {
+  background-image: url(../icons/wr-icon-series-c.svg);
+}
+.wr-icon-series-d {
+  background-image: url(../icons/wr-icon-series-d.svg);
+}
+.wr-icon-startup {
+  background-image: url(../icons/wr-icon-startup.svg);
+}
+.wr-icon-vc {
+  background-image: url(../icons/wr-icon-vc.svg);
+}
+.wr-icon-md {
+  width: 24px;
+  height: 24px;
+  background-size: 24px 24px;
+}
+.wr-icon-lg {
+  width: 32px;
+  height: 32px;
+  background-size: 32px 32px;
+}
+@media (min-width: 768px) {
+  .lead .wr-icon {
+    width: 24px;
+    height: 24px;
+    background-size: 24px 24px;
+    vertical-align: baseline;
+  }
+}
+/*# sourceMappingURL=wr_icons.css.map */
