@@ -46,7 +46,7 @@
     <h3>Bottom Left</h3>
     <input type="range" min="0" max="100" step="1" value="0" name="bottomLeft">
     <h3>Generate From Text</h3>
-    <input type="text">
+    <input class="generate" type="text">
   </div>
   <div class="controls last">
     <h3>Colour</h3>
@@ -62,9 +62,11 @@
     <label><input type="radio" value="" name="text"> None</label>
     <label><input type="radio" value="black" name="text" checked> Black</label>
     <label><input type="radio" value="white" name="text"> White</label>
-    <h3>Export</h3>
-    <input type="submit" value="SVG">
-    <input type="submit" value="PNG"> <!-- http://bl.ocks.org/mbostock/6466603 -->
+    <h3>Size</h3>
+    <input name="height" type="text" value="500">
+    <!-- <h3>Export</h3> -->
+    <!-- <input type="submit" value="SVG"> -->
+    <!-- <input type="submit" value="PNG"> http://bl.ocks.org/mbostock/6466603 -->
   </div>
   <script src="d3.v3.min.js"></script>
   <script src="weareyvr-mark.js"></script>

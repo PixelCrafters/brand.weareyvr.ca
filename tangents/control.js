@@ -1,6 +1,7 @@
 var element = d3.select(".weareyvr-mark");
 var vis = d3.select(".weareyvr-mark svg");
 
+var height = 500;
 var text = "black";
 var radius = 50;
 var topLeft = 50;
@@ -10,7 +11,7 @@ var bottomLeft = 0;
 var colour  = "#4095c5";
 
 // Controls
-d3.selectAll('input[type="range"], input[type="radio"]').on("change", function change() {
+var change = function() {
   eval(this.name + ' = "' + this.value + '"'); // DIRTY!
   // console.log(this.name + ' = "' + this.value + '"');
   // var transition = vis.transition().duration(250);
@@ -24,10 +25,12 @@ d3.selectAll('input[type="range"], input[type="radio"]').on("change", function c
 
   document.body.style.backgroundColor = text === "white" ? "#ccc" : "white";
   vis.selectAll('*').remove();
-  drawMark(vis, element.attr('data-height'), text, colour,  radius, topLeft, topRight, bottomRight, bottomLeft);
-});
+  drawMark(vis, height, text, colour,  radius, topLeft, topRight, bottomRight, bottomLeft);
+};
+d3.selectAll('input[name="height"]').on("keyup", change);
+d3.selectAll('input[type="range"], input[type="radio"]').on("change", change);
 
-d3.selectAll('input[type="text"]').on("keyup", function change() {
+d3.selectAll('input[type="text"].generate').on("keyup", function change() {
   var hashed = hex_md5(this.value);
   var crc = (parseInt(hashed, 16) % 9999999999).toString(); // Get a 10 digit number
   radius = parseInt(crc.slice(0, 2), 10) || 0;

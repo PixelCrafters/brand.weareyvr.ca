@@ -4,12 +4,13 @@ d3.selectAll(".weareyvr-mark").each(function() {
 });
 
 function drawMark(vis, height, text, colour, radius, one, two, three, four) {
+  var scale = height/500;
   var width = height * 0.95;
-  var radius = ((parseInt(radius, 10)*70/100)+5)*height/500;
-  var stroke = (3/500)*height;
+  var radius = ((parseInt(radius, 10)*70/100)+5)*scale;
+  var stroke = 3*scale;
   if (stroke < 1) stroke = 1;
 
-  vis.attr('width', width+160).attr('height', height);
+  vis.attr('width', width + (635-475)*scale).attr('height', height);
 
   // Top left.
   var one = parseInt(one, 10);
@@ -83,7 +84,7 @@ function drawMark(vis, height, text, colour, radius, one, two, three, four) {
     return res[tangentIndex];
   }
 
-  var mark = vis.append("g").attr("transform", "translate(80,0)");
+  var mark = vis.append("g").attr("transform", "translate(" + 80*scale + ",0)");
 
   // Lines
 
@@ -189,7 +190,10 @@ function drawMark(vis, height, text, colour, radius, one, two, three, four) {
       { d: "M564.77 0h36.659c20.834 0 30.988 10.022 30.988 27.692 0 14.505-6.594 23.736-18.197 27.692L634 92.307h-12.922l-18.726-34.945h-25.846v34.945H564.77V0zM576.506 10.022v37.187h24.791c12.132 0 19.384-6.198 19.384-19.121 0-11.473-6.197-18.066-19.252-18.066H576.506z" },
     ];
 
-    var letterGroup = vis.append("g").attr("transform", "translate(0,179)");
+    var letterGroup = vis
+      .append("g")
+      .attr("class", "letters")
+      .attr("transform", "translate(0," + 179*scale + ") scale(" + scale + ")");
     var letters = letterGroup.selectAll("path")
       .data(letterforms)
       .enter()
