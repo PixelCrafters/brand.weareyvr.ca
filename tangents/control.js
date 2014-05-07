@@ -44,5 +44,5 @@ d3.selectAll('input[type="text"].generate').on("keyup", function change() {
   d3.select('input[name="bottomLeft"]').property('value', bottomLeft)
 
   vis.selectAll('*').remove();
-  drawMark(vis, element.attr('data-height'), text, colour,  radius, topLeft, topRight, bottomRight, bottomLeft);
+  drawMark(vis, height, text, colour,  radius, topLeft, topRight, bottomRight, bottomLeft);
 });
