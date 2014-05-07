@@ -1,11 +1,11 @@
 <!doctype html>
 <html>
 <head>
-  <title>Tangents</title>
+  <title>WeAreYVR Logo Maker</title>
   <style>
   * { box-sizing: border-box; }
   body {
-    /*background: #444;*/
+    background: #eee;
     font-family: Helvetica;
   }
   svg, canvas {
@@ -24,6 +24,12 @@
     display: block;
     margin: 10px 0;
   }
+  input[type="text"] {
+    font-size: 16px;
+    padding: 5px 7px;
+    width: 170px;
+  }
+  input[name="height"] { width: 60px; }
   input[type="radio"] {
     position: relative;
     top: -2px;
@@ -50,14 +56,16 @@
   </div>
   <div class="controls last">
     <h3>Colour</h3>
-    <label><input type="radio" value="black" name="colour"> Black</label>
+    <label><input type="radio" value="#10988b" name="colour" checked> Primary</label>
     <label><input type="radio" value="#af1639" name="colour"> Red</label>
     <label><input type="radio" value="#ff769f" name="colour"> Pink</label>
     <label><input type="radio" value="#ffaf00" name="colour"> Orange</label>
     <label><input type="radio" value="#00d679" name="colour"> Green</label>
-    <label><input type="radio" value="#4095c5" name="colour" checked> Blue</label>
+    <label><input type="radio" value="#4095c5" name="colour"> Blue</label>
     <label><input type="radio" value="#601ebd" name="colour"> Purple</label>
     <label><input type="radio" value="#8b572a" name="colour"> Brown</label>
+    <label><input type="radio" value="black" name="colour"> Black</label>
+    <label><input type="radio" value="white" name="colour"> White</label>
     <h3>Name</h3>
     <label><input type="radio" value="" name="text"> None</label>
     <label><input type="radio" value="black" name="text" checked> Black</label>

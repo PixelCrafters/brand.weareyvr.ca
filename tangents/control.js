@@ -8,7 +8,7 @@ var topLeft = 50;
 var topRight = 50;
 var bottomRight = 0;
 var bottomLeft = 0;
-var colour  = "#4095c5";
+var colour  = "#10988b";
 
 // Controls
 var change = function() {
@@ -23,7 +23,7 @@ var change = function() {
   // each arc and line is kind of unique, so just remove all and redraw.
   vis.selectAll('*').remove();
   drawMark(vis, height, text, colour,  radius, topLeft, topRight, bottomRight, bottomLeft);
-  document.body.style.backgroundColor = text === "white" ? "#ccc" : "white";
+  document.body.style.backgroundColor = text === "white" || colour === "white" ? "#ccc" : "#eee";
 };
 d3.selectAll('input[name="height"]').on("keyup", change);
 d3.selectAll('input[type="range"], input[type="radio"]').on("change", change);
