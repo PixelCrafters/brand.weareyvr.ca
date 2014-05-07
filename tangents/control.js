@@ -25,6 +25,7 @@ var change = function() {
   drawMark(vis, height, text, colour,  radius, topLeft, topRight, bottomRight, bottomLeft);
   document.body.style.backgroundColor = text === "white" || colour === "white" ? "#ccc" : "#eee";
 };
+d3.selectAll('input[name="height"]').on("change", change);
 d3.selectAll('input[name="height"]').on("keyup", change);
 d3.selectAll('input[type="range"], input[type="radio"]').on("change", change);
 
