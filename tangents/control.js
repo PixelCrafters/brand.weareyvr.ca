@@ -13,7 +13,6 @@ var colour  = "#4095c5";
 // Controls
 var change = function() {
   eval(this.name + ' = "' + this.value + '"'); // DIRTY!
-  // console.log(this.name + ' = "' + this.value + '"');
   // var transition = vis.transition().duration(250);
   // // var delay = function(d, i) { return i * 50; };
   // transition.selectAll(".one")
@@ -22,10 +21,9 @@ var change = function() {
 
   // Having troubling finding a nice data driven way to do this, since
   // each arc and line is kind of unique, so just remove all and redraw.
-
-  document.body.style.backgroundColor = text === "white" ? "#ccc" : "white";
   vis.selectAll('*').remove();
   drawMark(vis, height, text, colour,  radius, topLeft, topRight, bottomRight, bottomLeft);
+  document.body.style.backgroundColor = text === "white" ? "#ccc" : "white";
 };
 d3.selectAll('input[name="height"]').on("keyup", change);
 d3.selectAll('input[type="range"], input[type="radio"]').on("change", change);
