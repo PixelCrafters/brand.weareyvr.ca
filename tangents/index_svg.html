@@ -33,32 +33,42 @@
   </style>
 </head>
 <body>
-  <div class="weareyvr-mark" data-height="500" data-colour="black" data-radius="50" data-one="50" data-two="50" data-three="0" data-four="0"></div>
+  <div class="weareyvr-mark" data-height="500" data-colour="#4095c5" data-text="black" data-radius="50" data-one="50" data-two="50" data-three="0" data-four="0"></div>
   <div class="controls">
-    <h3>radius</h3>
+    <h3>Radius</h3>
     <input type="range" min="5" max="100" step="1" value="50" name="radius">
-    <h3>topLeft</h3>
+    <h3>Top Left</h3>
     <input type="range" min="0" max="100" step="1" value="50" name="topLeft">
-    <h3>topRight</h3>
+    <h3>Top Right</h3>
     <input type="range" min="0" max="100" step="1" value="50" name="topRight">
-    <h3>bottomRight</h3>
+    <h3>Bottom Right</h3>
     <input type="range" min="0" max="100" step="1" value="0" name="bottomRight">
-    <h3>bottomLeft</h3>
+    <h3>Bottom Left</h3>
     <input type="range" min="0" max="100" step="1" value="0" name="bottomLeft">
+    <h3>Generate From Text</h3>
+    <input type="text">
   </div>
   <div class="controls last">
-    <h3>colour</h3>
-    <label><input type="radio" value="black" name="colour" checked> Black</label>
+    <h3>Colour</h3>
+    <label><input type="radio" value="black" name="colour"> Black</label>
     <label><input type="radio" value="#af1639" name="colour"> Red</label>
     <label><input type="radio" value="#ff769f" name="colour"> Pink</label>
     <label><input type="radio" value="#ffaf00" name="colour"> Orange</label>
     <label><input type="radio" value="#00d679" name="colour"> Green</label>
-    <label><input type="radio" value="#4095c5" name="colour"> Blue</label>
+    <label><input type="radio" value="#4095c5" name="colour" checked> Blue</label>
     <label><input type="radio" value="#601ebd" name="colour"> Purple</label>
     <label><input type="radio" value="#8b572a" name="colour"> Brown</label>
+    <h3>Name</h3>
+    <label><input type="radio" value="" name="text"> None</label>
+    <label><input type="radio" value="black" name="text" checked> Black</label>
+    <label><input type="radio" value="white" name="text"> White</label>
+    <h3>Export</h3>
+    <input type="submit" value="SVG">
+    <input type="submit" value="PNG"> <!-- http://bl.ocks.org/mbostock/6466603 -->
   </div>
   <script src="d3.v3.min.js"></script>
   <script src="weareyvr-mark.js"></script>
+  <script src="md5.js"></script>
   <script src="control.js"></script>
 </body>
 </html>
