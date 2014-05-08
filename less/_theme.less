@@ -78,39 +78,39 @@ a.alert-link {
 		}
 	}
 
-	&-vertical > .btn:not(:first-child),
-	&-vertical > .btn-group:not(:first-child) {
-		border-top: @btn-border;
-		margin-top: -1px;
-		margin-bottom: 1px;
+	&-vertical {
 
-		> .btn {
-			margin-top: -1px;
+		> .btn:not(:first-child) {
 			border-top: @btn-border;
 		}
-	}
 
-	&-vertical > .btn-group:not(:first-child) {
-		margin-top: -1px;
+		> .btn-group:not(:first-child) {
+			margin-top: 1px;
+
+			> .btn {
+				margin-top: -1px;
+				border-top: @btn-border;
+			}
+		}
 	}
 
 	&-justified {
 		border-radius: @border-radius-base;
 		background-color: @btn-border-colour;
-	}
 
-	&-justified > .btn + .btn-group > .btn.dropdown-toggle,
-	&-justified > .btn-group + .btn-group > .btn.dropdown-toggle {
-	    margin-left: -1px;
-	    border-left: @btn-border;
-	}
+		> .btn + .btn-group > .btn.dropdown-toggle,
+		> .btn-group + .btn-group > .btn.dropdown-toggle {
+		    margin-left: -1px;
+		    border-left: @btn-border;
+		}
 
-	&-justified > .btn:not(:first-child),
-	&-justified > .btn-group:not(:first-child) {
-		border-left: @btn-border;
+		> .btn:not(:first-child),
+		> .btn-group:not(:first-child) {
+			border-left: @btn-border;
 
-		> .btn {
-			border-left-style: none;
+			> .btn {
+				border-left-style: none;
+			}
 		}
 	}
 }
@@ -175,6 +175,7 @@ a.alert-link {
 	.font-smoothing;
 	box-shadow: none;
 	border-style: none;
+	.wr-transition(display);
 
 	.divider {
 		margin: ((@line-height-computed / 3) - 1px) 0;
