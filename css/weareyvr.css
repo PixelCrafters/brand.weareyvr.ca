@@ -5772,47 +5772,17 @@ button.close {
   }
 }
 .wr-navbar:not(.affix) {
-  margin: 50px 0 0;
+  margin-top: 50px;
+  margin-bottom: 0;
 }
-.navbar-mark {
-  display: block;
-  position: relative;
-  width: 200px;
-  height: 52px;
-  margin: 0;
-  text-align: center;
-}
-.navbar-mark a.navbar-brand {
+.weareyvr-mark {
   z-index: 13;
-  margin: 0 auto;
-  display: block;
+  margin: 0 1em 0 0;
+  position: relative;
+  top: -35px;
+}
+.weareyvr-mark > span {
   font-size: 26px;
-  text-align: center;
-  width: 200px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-#weareyvr-mark {
-  width: 475px;
-  height: 500px;
-  -webkit-transform: scale(0.2, 0.2);
-  -ms-transform: scale(0.2, 0.2);
-  transform: scale(0.2, 0.2);
-  position: absolute;
-  left: -155px;
-  top: -220px;
-  z-index: 12;
-}
-#weareyvr-mark line {
-  stroke: #10988b !important;
-  stroke-width: 9 !important;
-}
-#weareyvr-mark path {
-  stroke: #10988b !important;
-  fill: #10988b !important;
-  stroke-width: 6 !important;
 }
 .tabular-lining {
   -moz-font-feature-settings: "tnum" 1, "lnum" 1;
@@ -5836,6 +5806,21 @@ button.close {
 .sans-serif-small-caps {
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+.wr-icon-sm {
+  width: 16px;
+  height: 16px;
+  background-size: 16px 16px;
+}
+.wr-icon-md {
+  width: 24px;
+  height: 24px;
+  background-size: 24px 24px;
+}
+.wr-icon-lg {
+  width: 32px;
+  height: 32px;
+  background-size: 32px 32px;
 }
 .alert-success a.alert-link {
   padding-bottom: 0.125em;
@@ -5931,8 +5916,8 @@ button.close {
   font-family: "Fort", Fort, "Helvetica Neue", HelveticaNeue, Helvetica, Verdana, sans-serif;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
-  -webkit-transition-property: box-shadow, text-shadow;
-  transition-property: box-shadow, text-shadow;
+  -webkit-transition-property: box-shadow, text-shadow, color, background-color;
+  transition-property: box-shadow, text-shadow, color, background-color;
   -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
   -webkit-transition-timing-function: ease-in-out;
@@ -5947,8 +5932,8 @@ button.close {
   color: #ffffff;
   background-color: #10988b;
   text-shadow: 0 0 10px #ffffff;
-  -webkit-transition-property: box-shadow, text-shadow;
-  transition-property: box-shadow, text-shadow;
+  -webkit-transition-property: box-shadow, text-shadow, color, background-color;
+  transition-property: box-shadow, text-shadow, color, background-color;
   -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
   -webkit-transition-timing-function: ease-in-out;
@@ -6111,8 +6096,17 @@ button.close {
 input[type="search"] {
   border-radius: 17.5px;
 }
-section.row {
+input[type="search"].input-lg {
+  border-radius: 24px;
+}
+input[type="search"].input-sm {
+  border-radius: 15.5px;
+}
+section.row,
+main.row {
   padding: 11.25px 0 45px;
+}
+section.row {
   border-top: 1px solid #f2f5f5;
 }
 section.row:first-of-type {
@@ -6120,6 +6114,9 @@ section.row:first-of-type {
 }
 section.row:last-of-type {
   padding-bottom: 45px;
+}
+section.row + main.row {
+  border-top: 1px solid #f2f5f5;
 }
 .input-group > .input-group-btn > .btn,
 .input-group > .input-group-btn > .btn-group {
@@ -6175,20 +6172,16 @@ section.row:last-of-type {
 .jumbotron.wr-jumbotron {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  color: #fff;
-  background-color: #313f3d;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-  box-shadow: 0px 0px 500px 100px rgba(0, 0, 0, 0.6) inset;
-  background-image: url(../img/big-data.jpg);
+  background-color: #f2f5f5;
   background-position: center center;
-  background-attachment: fixed;
 }
 @media (max-width: 991px) {
   .jumbotron.wr-jumbotron {
     padding: 30px 0;
   }
 }
-.jumbotron.wr-jumbotron h1 {
+.jumbotron.wr-jumbotron h1,
+.jumbotron.wr-jumbotron .h1 {
   font-style: italic;
   text-align: center;
   margin: 0.5em 0;
@@ -6199,9 +6192,9 @@ section.row:last-of-type {
   letter-spacing: 7px;
 }
 @media (min-width: 992px) {
-  .jumbotron.wr-jumbotron h1 {
-    font-size: 78px;
-    letter-spacing: 10px;
+  .jumbotron.wr-jumbotron h1,
+  .jumbotron.wr-jumbotron .h1 {
+    font-size: 51px;
   }
 }
 .jumbotron.wr-jumbotron .lead {
@@ -6212,34 +6205,59 @@ section.row:last-of-type {
   margin: 1.5em auto 0;
   max-width: 30em;
 }
-.jumbotron.wr-jumbotron .form-control::-moz-placeholder,
-.jumbotron.wr-jumbotron .input-group-addon::-moz-placeholder {
-  color: rgba(242, 245, 245, 0.95);
-  opacity: 1;
-}
-.jumbotron.wr-jumbotron .form-control:-ms-input-placeholder,
-.jumbotron.wr-jumbotron .input-group-addon:-ms-input-placeholder {
-  color: rgba(242, 245, 245, 0.95);
-}
-.jumbotron.wr-jumbotron .form-control::-webkit-input-placeholder,
-.jumbotron.wr-jumbotron .input-group-addon::-webkit-input-placeholder {
-  color: rgba(242, 245, 245, 0.95);
-}
+.jumbotron.wr-jumbotron .form-control,
+.jumbotron.wr-jumbotron .input-group-addon,
 .jumbotron.wr-jumbotron .form-control:focus,
 .jumbotron.wr-jumbotron .input-group-addon:focus {
+  border-color: #fff;
+}
+.jumbotron.wr-jumbotron .input-group .form-control:not(:first-child),
+.jumbotron.wr-jumbotron .input-group .input-group-addon:not(:first-child) {
+  border-left-style: none;
+}
+.jumbotron.wr-jumbotron .input-group .form-control:not(:last-child),
+.jumbotron.wr-jumbotron .input-group .input-group-addon:not(:last-child) {
+  border-right-style: none;
+}
+.jumbotron.wr-jumbotron-dark {
+  color: #fff;
+  background-color: #313f3d;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 0px 500px 100px rgba(0, 0, 0, 0.6) inset;
+  background-image: url(../img/big-data.jpg);
+}
+.jumbotron.wr-jumbotron-dark .form-control,
+.jumbotron.wr-jumbotron-dark .input-group-addon {
+  border-style: none;
+}
+.jumbotron.wr-jumbotron-dark .form-control::-moz-placeholder,
+.jumbotron.wr-jumbotron-dark .input-group-addon::-moz-placeholder {
+  color: rgba(242, 245, 245, 0.95);
+  opacity: 1;
+}
+.jumbotron.wr-jumbotron-dark .form-control:-ms-input-placeholder,
+.jumbotron.wr-jumbotron-dark .input-group-addon:-ms-input-placeholder {
+  color: rgba(242, 245, 245, 0.95);
+}
+.jumbotron.wr-jumbotron-dark .form-control::-webkit-input-placeholder,
+.jumbotron.wr-jumbotron-dark .input-group-addon::-webkit-input-placeholder {
+  color: rgba(242, 245, 245, 0.95);
+}
+.jumbotron.wr-jumbotron-dark .form-control:focus,
+.jumbotron.wr-jumbotron-dark .input-group-addon:focus {
   border-color: transparent;
 }
-.jumbotron.wr-jumbotron .form-control:focus::-moz-placeholder,
-.jumbotron.wr-jumbotron .input-group-addon:focus::-moz-placeholder {
+.jumbotron.wr-jumbotron-dark .form-control:focus::-moz-placeholder,
+.jumbotron.wr-jumbotron-dark .input-group-addon:focus::-moz-placeholder {
   color: rgba(146, 170, 167, 0.9);
   opacity: 1;
 }
-.jumbotron.wr-jumbotron .form-control:focus:-ms-input-placeholder,
-.jumbotron.wr-jumbotron .input-group-addon:focus:-ms-input-placeholder {
+.jumbotron.wr-jumbotron-dark .form-control:focus:-ms-input-placeholder,
+.jumbotron.wr-jumbotron-dark .input-group-addon:focus:-ms-input-placeholder {
   color: rgba(146, 170, 167, 0.9);
 }
-.jumbotron.wr-jumbotron .form-control:focus::-webkit-input-placeholder,
-.jumbotron.wr-jumbotron .input-group-addon:focus::-webkit-input-placeholder {
+.jumbotron.wr-jumbotron-dark .form-control:focus::-webkit-input-placeholder,
+.jumbotron.wr-jumbotron-dark .input-group-addon:focus::-webkit-input-placeholder {
   color: rgba(146, 170, 167, 0.9);
 }
 body > .navbar + * {
@@ -6275,7 +6293,7 @@ body > .navbar.affix + * {
   -webkit-font-smoothing: antialiased;
   border-radius: 0;
   border-style: none;
-  background-color: rgba(237, 237, 237, 0.95);
+  background-color: rgba(255, 255, 255, 0.95);
 }
 .wr-navbar.affix {
   position: fixed;
@@ -6294,6 +6312,9 @@ body > .navbar.affix + * {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #232c2b;
+}
+.wr-navbar .navbar-header {
+  border-bottom: 2px solid transparent;
 }
 .wr-navbar .navbar-nav > li > a {
   border-bottom: 0px solid #10988b;
@@ -6323,11 +6344,20 @@ body > .navbar.affix + * {
   transition-timing-function: ease-in-out;
 }
 .wr-navbar input {
-  border-color: #fff;
+  border-color: #f2f5f5;
   background-color: transparent;
 }
 .wr-navbar input:focus {
-  border-color: #fff;
+  border-color: #f2f5f5;
+}
+.wr-navbar .navbar-btn {
+  color: #10988b;
+  background-color: transparent;
+  border: 1px solid rgba(16, 152, 139, 0.5);
+}
+.wr-navbar .navbar-btn:hover {
+  color: #fff;
+  background-color: #10988b;
 }
 .wr-nav-vertical {
   text-transform: uppercase;
@@ -6407,19 +6437,17 @@ body > .navbar.affix + * {
   -webkit-font-feature-settings: "lnum" 1;
   font-feature-settings: "lnum" 1;
 }
-a {
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
   -webkit-transition-property: color, background-color;
   transition-property: color, background-color;
   -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
   -webkit-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
-}
-a:link,
-a:visited,
-a:hover,
-a:active {
-  text-decoration: none;
 }
 p a:not(.btn) {
   padding-bottom: 0.125em;
@@ -6532,22 +6560,8 @@ body > footer a:active {
 .social-share-box:not(:last-child) {
   float: left;
 }
-.guide {
+body.guide {
   background-color: #f2f5f5;
-}
-.guide .jumbotron {
-  background-color: #ffffff;
-}
-.guide .jumbotron h1,
-.guide .jumbotron .h1 {
-  font-weight: 200;
-  line-height: 0.9;
-}
-@media (min-width: 992px) {
-  .guide .jumbotron h1,
-  .guide .jumbotron .h1 {
-    font-size: 125px;
-  }
 }
 body.guide > footer {
   background-color: #ffffff;
@@ -6568,8 +6582,156 @@ body.guide > footer a:hover,
 body.guide > footer a:active {
   background-position: 0 100%;
 }
-.guide section.row {
+body.guide section.row,
+body.guide main.row {
   border-top-color: #fff;
+}
+body.guide main.row p {
+  font-family: "Arnhem Pro", ArnhemPro, Arnhem, Georgia, serif;
+  -moz-font-feature-settings: "onum" 1;
+  -ms-font-feature-settings: "onum" 1;
+  -o-font-feature-settings: "onum" 1;
+  -webkit-font-feature-settings: "onum" 1;
+  font-feature-settings: "onum" 1;
+}
+body.guide main.row p a:not(:hover) {
+  background-position: 0 88%;
+}
+p body.guide main.row p {
+  font-size: 106.25%;
+  line-height: 94.11764705882352%;
+}
+body.guide main.row p .sans-serif {
+  font-size: 94.11764705882352%;
+  line-height: 106.25%;
+}
+h1 body.guide main.row p,
+.h1 body.guide main.row p,
+h1body.guide main.row p,
+.h1body.guide main.row p,
+h2 body.guide main.row p,
+.h2 body.guide main.row p,
+h2body.guide main.row p,
+.h2body.guide main.row p,
+h3 body.guide main.row p,
+.h3 body.guide main.row p,
+h3body.guide main.row p,
+.h3body.guide main.row p,
+h4 body.guide main.row p,
+.h4 body.guide main.row p,
+h4body.guide main.row p,
+.h4body.guide main.row p {
+  -moz-font-feature-settings: "lnum" 1;
+  -ms-font-feature-settings: "lnum" 1;
+  -o-font-feature-settings: "lnum" 1;
+  -webkit-font-feature-settings: "lnum" 1;
+  font-feature-settings: "lnum" 1;
+}
+.jumbotron.wr-jumbotron-guide {
+  background-color: #ffffff;
+  padding: 2em 0;
+}
+.jumbotron.wr-jumbotron-guide h1,
+.jumbotron.wr-jumbotron-guide .h1 {
+  font-family: "Arnhem Pro", ArnhemPro, Arnhem, Georgia, serif;
+  -moz-font-feature-settings: "onum" 1;
+  -ms-font-feature-settings: "onum" 1;
+  -o-font-feature-settings: "onum" 1;
+  -webkit-font-feature-settings: "onum" 1;
+  font-feature-settings: "onum" 1;
+  line-height: 0.9;
+  text-transform: none;
+  letter-spacing: 0;
+  text-align: left;
+  font-style: normal;
+  margin: 0.25em 0 0.125em;
+}
+.jumbotron.wr-jumbotron-guide h1 a:not(:hover),
+.jumbotron.wr-jumbotron-guide .h1 a:not(:hover) {
+  background-position: 0 88%;
+}
+p .jumbotron.wr-jumbotron-guide h1,
+p .jumbotron.wr-jumbotron-guide .h1 {
+  font-size: 106.25%;
+  line-height: 94.11764705882352%;
+}
+.jumbotron.wr-jumbotron-guide h1 .sans-serif,
+.jumbotron.wr-jumbotron-guide .h1 .sans-serif {
+  font-size: 94.11764705882352%;
+  line-height: 106.25%;
+}
+h1 .jumbotron.wr-jumbotron-guide h1,
+h1 .jumbotron.wr-jumbotron-guide .h1,
+.h1 .jumbotron.wr-jumbotron-guide h1,
+.h1 .jumbotron.wr-jumbotron-guide .h1,
+h1.jumbotron.wr-jumbotron-guide h1,
+h1.jumbotron.wr-jumbotron-guide .h1,
+.h1.jumbotron.wr-jumbotron-guide h1,
+.h1.jumbotron.wr-jumbotron-guide .h1,
+h2 .jumbotron.wr-jumbotron-guide h1,
+h2 .jumbotron.wr-jumbotron-guide .h1,
+.h2 .jumbotron.wr-jumbotron-guide h1,
+.h2 .jumbotron.wr-jumbotron-guide .h1,
+h2.jumbotron.wr-jumbotron-guide h1,
+h2.jumbotron.wr-jumbotron-guide .h1,
+.h2.jumbotron.wr-jumbotron-guide h1,
+.h2.jumbotron.wr-jumbotron-guide .h1,
+h3 .jumbotron.wr-jumbotron-guide h1,
+h3 .jumbotron.wr-jumbotron-guide .h1,
+.h3 .jumbotron.wr-jumbotron-guide h1,
+.h3 .jumbotron.wr-jumbotron-guide .h1,
+h3.jumbotron.wr-jumbotron-guide h1,
+h3.jumbotron.wr-jumbotron-guide .h1,
+.h3.jumbotron.wr-jumbotron-guide h1,
+.h3.jumbotron.wr-jumbotron-guide .h1,
+h4 .jumbotron.wr-jumbotron-guide h1,
+h4 .jumbotron.wr-jumbotron-guide .h1,
+.h4 .jumbotron.wr-jumbotron-guide h1,
+.h4 .jumbotron.wr-jumbotron-guide .h1,
+h4.jumbotron.wr-jumbotron-guide h1,
+h4.jumbotron.wr-jumbotron-guide .h1,
+.h4.jumbotron.wr-jumbotron-guide h1,
+.h4.jumbotron.wr-jumbotron-guide .h1 {
+  -moz-font-feature-settings: "lnum" 1;
+  -ms-font-feature-settings: "lnum" 1;
+  -o-font-feature-settings: "lnum" 1;
+  -webkit-font-feature-settings: "lnum" 1;
+  font-feature-settings: "lnum" 1;
+}
+@media (min-width: 992px) {
+  .jumbotron.wr-jumbotron-guide h1,
+  .jumbotron.wr-jumbotron-guide .h1 {
+    font-size: 78px;
+  }
+}
+.wr-guide-badge {
+  color: #313f3d;
+  -webkit-font-smoothing: antialiased;
+  font-size: 13px;
+  display: inline-block;
+  background-color: rgba(253, 240, 243, 0.5);
+  border: 4px double #fad9e1;
+  border-radius: 6px;
+  padding: 0.75em;
+  margin: 0;
+}
+.wr-guide-badge .wr-icon {
+  width: 24px;
+  height: 24px;
+  background-size: 24px 24px;
+  float: left;
+  margin: 0 0.75em 0 0;
+}
+.wr-guide-badge .wr-guide-badge-text {
+  display: inline-block;
+  height: 24px;
+  width: 6em;
+  margin: 0;
+  line-height: 1.5;
+  vertical-align: middle;
+}
+.wr-guide-badge .wr-guide-badge-text:first-line {
+  line-height: 0.9;
 }
 .lmo-co {
   border-radius: 12px;
@@ -6704,14 +6866,16 @@ h4.lmo-co-content p,
     font-size: 18px;
   }
 }
-.lmo-co-content h2 {
+.lmo-co-content h2,
+.lmo-co-content .h2 {
   margin: 15px 0 7.5px;
   font-size: 49px;
   font-weight: 200;
   margin-left: -0.05em;
 }
 @media (min-width: 1200px) {
-  .lmo-co-content h2 {
+  .lmo-co-content h2,
+  .lmo-co-content .h2 {
     font-size: 78px;
   }
 }
@@ -6908,8 +7072,8 @@ a.lmo-co-find-jobs {
   font-family: "Fort", Fort, "Helvetica Neue", HelveticaNeue, Helvetica, Verdana, sans-serif;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
-  -webkit-transition-property: box-shadow, text-shadow;
-  transition-property: box-shadow, text-shadow;
+  -webkit-transition-property: box-shadow, text-shadow, color, background-color;
+  transition-property: box-shadow, text-shadow, color, background-color;
   -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
   -webkit-transition-timing-function: ease-in-out;
@@ -6962,8 +7126,8 @@ a.lmo-co-find-jobs:hover {
   color: #ffffff;
   background-color: #10988b;
   text-shadow: 0 0 10px #ffffff;
-  -webkit-transition-property: box-shadow, text-shadow;
-  transition-property: box-shadow, text-shadow;
+  -webkit-transition-property: box-shadow, text-shadow, color, background-color;
+  transition-property: box-shadow, text-shadow, color, background-color;
   -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
   -webkit-transition-timing-function: ease-in-out;
@@ -6987,11 +7151,19 @@ a.lmo-co-find-jobs:active {
     border-bottom-right-radius: 12px;
   }
 }
-#lmo-co-harp h2 {
+#lmo-co-harp h2,
+#lmo-co-harp .h2 {
   color: #610514;
 }
-#lmo-co-harp a {
+#lmo-co-harp a:link {
   color: #a02c3f;
+}
+#lmo-co-harp a:hover,
+#lmo-co-harp a:active {
+  color: #821729;
+}
+#lmo-co-harp a:visited {
+  color: #846267;
 }
 #lmo-co-harp .lmo-co-content p a {
   padding-bottom: 0.125em;
@@ -7032,11 +7204,19 @@ a.lmo-co-find-jobs:active {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd1586c', endColorstr='#ffcc52b4', GradientType=0);
 }
-#lmo-co-bex h2 {
+#lmo-co-bex h2,
+#lmo-co-bex .h2 {
   color: #611f05;
 }
-#lmo-co-bex a {
+#lmo-co-bex a:link {
   color: #cc3a00;
+}
+#lmo-co-bex a:hover,
+#lmo-co-bex a:active {
+  color: #992b00;
+}
+#lmo-co-bex a:visited {
+  color: #846b62;
 }
 #lmo-co-bex .lmo-co-content p a {
   padding-bottom: 0.125em;

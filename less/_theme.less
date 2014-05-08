@@ -39,14 +39,14 @@ a.alert-link {
 	font-family: @font-family-sans-serif;
 	font-weight: bold;
 	-webkit-font-smoothing: antialiased;
-	.wr-transition(box-shadow, text-shadow;);
+	.wr-transition(box-shadow, text-shadow, color, background-color;);
 	.font-feature-settings("lnum" 1);
 
 	&:hover {
 		color: @btn-primary-color;
 		background-color: @brand-primary;
 		text-shadow: 0 0 10px @btn-primary-color;
-		.wr-transition(box-shadow, text-shadow;);
+		.wr-transition(box-shadow, text-shadow, color, background-color;);
 		border-width: 0px;
 	}
 	
@@ -213,7 +213,15 @@ a.alert-link {
 }
 
 input[type="search"] {
-	border-radius: @input-height-base/2; // round ends
+	border-radius: (@input-height-base / 2); // round ends
+
+	&.input-lg {
+		border-radius: (@input-height-large / 2);
+	}
+
+	&.input-sm {
+		border-radius: (@input-height-small / 2);
+	}
 }
 
 // textarea {
@@ -232,9 +240,12 @@ input[type="search"] {
 // 	}
 // }
 
-section.row {
+section.row,
+main.row {
 	padding: @row-gutter-height*0.25 0 @row-gutter-height;
+}
 
+section.row {
 	border-top: 1px solid @gray-lighter;
 
 	&:first-of-type {
@@ -243,6 +254,10 @@ section.row {
 
 	&:last-of-type {
 		padding-bottom: @row-gutter-height;
+	}
+
+	+ main.row {
+		border-top: 1px solid @gray-lighter;
 	}
 }
 
@@ -327,20 +342,15 @@ section.row {
 
 	.hero-type();
 
-	color: #fff;
-	background-color: @gray-dark;
-	text-shadow: @carousel-text-shadow;
-	box-shadow: 0px 0px 500px 100px rgba(0,0,0,.6) inset;
-
-	background-image: url(../img/big-data.jpg);
+	background-color: @grey-lighter;
 	background-position: center center;
-	background-attachment: fixed;
 
 	@media (max-width: @screen-sm-max) {
 		padding: @jumbotron-padding 0;
 	}
 
-	h1 {
+	h1,
+	.h1 {
 		font-style: italic;
 		text-align: center;
 		margin: 0.5em 0;
@@ -357,14 +367,16 @@ section.row {
 		// font-weight: 300;
 		// letter-spacing: 4px;
 
-		font-weight: 200;
+		font-weight: 200; // Fort Extralight
 		text-transform: uppercase;
+
 		font-size: @font-size-h2;
 		letter-spacing: 7px;
 
 		@media (min-width: @screen-md-min) {
-			font-size: ceil((@font-size-h1 * 2));
-			letter-spacing: 10px;
+			// font-size: ceil((@font-size-h1 * 2));
+			font-size: ceil((@font-size-h1 * 1.3));
+			// letter-spacing: 10px;
 		}
 	}
 
@@ -380,7 +392,40 @@ section.row {
 
 	.form-control,
 	.input-group-addon {
-		.input-inverse;
+		// background-color: #fff;
+
+		&,
+		&:focus {
+			border-color: #fff;
+		}
+	}
+
+	.input-group {
+		.form-control,
+		.input-group-addon {
+			&:not(:first-child) {
+				border-left-style: none;
+			}
+
+			&:not(:last-child) {
+				border-right-style: none;
+			}
+		}
+	}
+
+	&-dark {
+		color: #fff;
+		background-color: @gray-dark;
+		text-shadow: @carousel-text-shadow;
+		box-shadow: 0px 0px 500px 100px rgba(0,0,0,.6) inset;
+
+		background-image: url(../img/big-data.jpg); // example image
+
+		.form-control,
+		.input-group-addon {
+			.input-inverse;
+			border-style: none;
+		}
 	}
 }
 
@@ -421,7 +466,8 @@ body>.navbar.affix+* {
 	}
 
 	border-style: none;
-	background-color: fadeout(hsl(0,0%,93%),5%);
+	// background-color: fadeout(@grey-lighter,5%);
+	background-color: fadeout(#fff,5%);
 
 	.navbar-brand {
 		.hero-type;
@@ -436,6 +482,10 @@ body>.navbar.affix+* {
 	// 	border: 1px solid white;
 	// 	background-color: fadeout(@grey, 50%);
 	// }
+
+	.navbar-header {
+		border-bottom: (3px - 1) solid transparent;
+	}
 
 	.navbar-nav {
 		> li > a {
@@ -459,11 +509,24 @@ body>.navbar.affix+* {
 	}
 
 	input {
-		border-color: #fff;
+		// border-color: #fff;
+		border-color: @grey-lighter;
 		background-color: transparent;
 
 		&:focus {
-			border-color: #fff;
+			// border-color: #fff;
+			border-color: @grey-lighter;
+		}
+	}
+
+	.navbar-btn {
+		color: @brand-primary;
+		background-color: transparent;
+		border: 1px solid fadeout(@brand-primary, 50%);
+
+		&:hover {
+			color: #fff;
+			background-color: @brand-primary;
 		}
 	}
 }
@@ -547,13 +610,13 @@ body>.navbar.affix+* {
 // ==================== scaffolding.less
 
 a {
-	.wr-transition(color, background-color;);
 
 	&:link,
 	&:visited,
 	&:hover,
 	&:active {
 		text-decoration: none;
+		.wr-transition(color, background-color;);
 	}
 
 	// .row a:not(.btn) {

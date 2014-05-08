@@ -1,21 +1,8 @@
-.guide {
+body.guide {
 	background-color: @grey-lighter;
+	// border-top: @font-size-small solid @wr-red;
 
-	.jumbotron {
-
-		background-color: @body-bg;
-
-		h1, .h1 {
-			font-weight: 200;
-			line-height: 0.9;
-
-			@media (min-width: @screen-md-min) {
-				font-size: ceil((@font-size-h1 * 3.2));
-			}
-		}
-	}
-
-	body&>footer {
+	> footer {
 		background-color: @body-bg;
 
 		a {
@@ -23,7 +10,8 @@
 		}
 	}
 
-	section.row {
+	section.row,
+	main.row {
 		border-top-color: #fff;
 
 		// p {
@@ -31,6 +19,65 @@
 		// }
 	}
 
+	main.row {
+		p {
+			.serif;
+		}
+	}
+
+}
+
+.jumbotron.wr-jumbotron-guide {
+
+	background-color: @body-bg;
+	padding: 2em 0;
+
+	h1, .h1 {
+		.serif;
+		line-height: 0.9;
+		text-transform: none;
+		letter-spacing: 0;
+		text-align: left;
+		font-style: normal;
+		margin: 0.25em 0 0.125em;
+
+		@media (min-width: @screen-md-min) {
+			font-size: ceil((@font-size-h1 * 2));
+		}
+	}
+}
+
+.wr-guide-badge {
+
+	color: @grey-dark;
+	.font-smoothing;
+	font-size: @font-size-small;
+
+	display: inline-block;
+	background-color: fadeout(lighten(@wr-red, 58%), 50%);
+	border: 4px double lighten(@wr-red, 53%);
+	border-radius: @border-radius-large;
+	padding: 0.75em;
+	margin: 0;
+
+	.wr-icon {
+		.wr-icon-md;
+		float: left;
+		margin: 0 0.75em 0 0;
+	}
+
+	& &-text {
+		display: inline-block;
+		height: @wr-icon-md;
+		width: 6em;
+		margin: 0;
+		line-height: 1.5;
+		vertical-align: middle;
+
+		&:first-line {
+			line-height: 0.9;
+		}
+	}
 }
 
 // International Jobs (LMO) Guide
@@ -42,12 +89,23 @@
 
 .lmo-co-accentize(@lmo-co-accent) {
 
-	h2 {
+	h2, .h2 {
 		color: hsl(hue(@lmo-co-accent),90%,20%);
 	}
 
 	a {
-		color: hsl(hue(@lmo-co-accent),saturation(@lmo-co-accent),40%);
+		&:link {
+			color: hsl(hue(@lmo-co-accent),saturation(@lmo-co-accent),40%);
+		}
+
+		&:hover,
+		&:active {
+			color: hsl(hue(@lmo-co-accent),saturation(@lmo-co-accent + 20%),30%);
+		}
+
+		&:visited {
+			color: hsl(hue(@lmo-co-accent),15%,45%);
+		}
 	}
 
 	.lmo-co-content p a {
@@ -188,7 +246,7 @@
 		}
 	}
 
-	h2 {
+	h2, .h2 {
 		margin: @font-size-base 0 (@font-size-base / 2);
 		font-size: ceil((@font-size-h1 * 1.25));
 		font-weight: 200;

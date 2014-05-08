@@ -1,12 +1,12 @@
 .wr-icon {
   display: inline-block;
-  width: 16px;
-  height: 16px;
-  background-size: 16px 16px;
   background-position: center center;
   background-repeat: no-repeat;
   line-height: 0;
   vertical-align: text-top;
+  width: 16px;
+  height: 16px;
+  background-size: 16px 16px;
 }
 p .wr-icon {
   margin: 0 2px;
@@ -120,6 +120,11 @@ p .wr-icon {
 .wr-icon-vc {
   background-image: url(../icons/wr-icon-vc.svg);
 }
+.wr-icon-sm {
+  width: 16px;
+  height: 16px;
+  background-size: 16px 16px;
+}
 .wr-icon-md {
   width: 24px;
   height: 24px;
@@ -129,6 +134,41 @@ p .wr-icon {
   width: 32px;
   height: 32px;
   background-size: 32px 32px;
+}
+h1 .wr-icon,
+.h1 .wr-icon {
+  width: 32px;
+  height: 32px;
+  background-size: 32px 32px;
+}
+h2 .wr-icon,
+.h2 .wr-icon,
+h3 .wr-icon,
+.h3 .wr-icon {
+  width: 24px;
+  height: 24px;
+  background-size: 24px 24px;
+}
+h4 .wr-icon,
+.h4 .wr-icon,
+h5 .wr-icon,
+.h5 .wr-icon,
+h6 .wr-icon,
+.h6 .wr-icon {
+  width: 16px;
+  height: 16px;
+  background-size: 16px 16px;
+}
+h1 .wr-icon,
+.h1 .wr-icon,
+h2 .wr-icon,
+.h2 .wr-icon,
+h3 .wr-icon,
+.h3 .wr-icon,
+h4 .wr-icon,
+.h4 .wr-icon {
+  vertical-align: baseline;
+  margin: 0 0.25em;
 }
 @media (min-width: 768px) {
   .lead .wr-icon {
