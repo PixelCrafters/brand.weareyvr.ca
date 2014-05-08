@@ -12,6 +12,9 @@ p .wr-icon {
   margin: 0 2px;
   text-indent: -2px;
 }
+.wr-icon-activity {
+  background-image: url(../icons/wr-icon-activity.svg);
+}
 .wr-icon-advisor {
   background-image: url(../icons/wr-icon-advisor.svg);
 }
@@ -23,6 +26,15 @@ p .wr-icon {
 }
 .wr-icon-angel-investor-av {
   background-image: url(../icons/wr-icon-angel-investor-av.svg);
+}
+.wr-icon-community {
+  background-image: url(../icons/wr-icon-community.svg);
+}
+.wr-icon-connectivity {
+  background-image: url(../icons/wr-icon-connectivity.svg);
+}
+.wr-icon-data {
+  background-image: url(../icons/wr-icon-data.svg);
 }
 .wr-icon-downtown {
   background-image: url(../icons/wr-icon-downtown.svg);
@@ -39,6 +51,9 @@ p .wr-icon {
 .wr-icon-event {
   background-image: url(../icons/wr-icon-event.svg);
 }
+.wr-icon-federal {
+  background-image: url(../icons/wr-icon-federal.svg);
+}
 .wr-icon-founder {
   background-image: url(../icons/wr-icon-founder.svg);
 }
@@ -50,6 +65,9 @@ p .wr-icon {
 }
 .wr-icon-gastown {
   background-image: url(../icons/wr-icon-gastown.svg);
+}
+.wr-icon-guides {
+  background-image: url(../icons/wr-icon-guides.svg);
 }
 .wr-icon-incubator {
   background-image: url(../icons/wr-icon-incubator.svg);
@@ -90,8 +108,14 @@ p .wr-icon {
 .wr-icon-series-d {
   background-image: url(../icons/wr-icon-series-d.svg);
 }
+.wr-icon-services {
+  background-image: url(../icons/wr-icon-services.svg);
+}
 .wr-icon-startup {
   background-image: url(../icons/wr-icon-startup.svg);
+}
+.wr-icon-transparency {
+  background-image: url(../icons/wr-icon-transparency.svg);
 }
 .wr-icon-vc {
   background-image: url(../icons/wr-icon-vc.svg);

@@ -6,9 +6,9 @@
     <defs>
         <rect id="path-1" x="0" y="0" width="16" height="16"></rect>
         <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-3">
-            <feMorphology radius="1" in="SourceAlpha" operator="dilate" result="shadowSpreadOuter1"></feMorphology>
+            <feMorphology radius="1.5" in="SourceAlpha" operator="dilate" result="shadowSpreadOuter1"></feMorphology>
             <feOffset dx="0" dy="0.5" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
-            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feGaussianBlur stdDeviation="0.75" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
             <feColorMatrix values="0 0 0 0 1   0 0 0 0 0.843137255   0 0 0 0 0.0784313725  0 0 0 0.281125453 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
             <feMerge>
                 <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
@@ -21,8 +21,8 @@
             <stop stop-color="#000000" stop-opacity="0.5" offset="100%"></stop>
         </linearGradient>
         <path d="M8.54545455,12.0909091 L10,11 L6,11 L7.45454545,12.0909091 L6,15 L10,15 L8.54545455,12.0909091 Z" id="path-7"></path>
-        <path d="M0,0 L0,11 L16,11 L16,0 L0,0 Z M4,4 L5,11 L11,11 L12,4 L4,4 Z" id="path-8"></path>
-        <path id="path-10" d="M16,2.24853196 L16,5.00245535 C16,5.5536886 15.5518945,6 14.9991283,6 L1.00087166,6 C0.444630861,6 -6.43929354e-15,5.55338405 -6.43929354e-15,5.00245535 L-2.27373675e-13,2.24853196 C0.800687443,1.21594562 2.03798241,0.358221283 3.54905437,-0.216087369 C4.61616051,1.14785363 6.16923848,2 8,2 C9.83076152,2 11.3838395,1.14785363 12.4509456,-0.216087369 C13.9620176,0.358221283 15.1993126,1.21594562 16,2.24853196 Z"></path>
+        <path d="M11.1428571,6 L14.9991283,6 C15.5518945,6 16,5.5536886 16,5.00245535 L16,2.24853196 C15.1993126,1.21594562 13.9620176,0.358221283 12.4509456,-0.216087369 C12.2941933,-0.0157315755 12.1269547,0.173580676 11.9498899,0.350770572 L11.1428571,6 Z M4.85714286,6 L1.00087166,6 C0.444630861,6 -6.43929354e-15,5.55338405 -6.43929354e-15,5.00245535 L-2.27373675e-13,2.24853196 C0.800687443,1.21594562 2.03798241,0.358221283 3.54905437,-0.216087369 C3.70580668,-0.0157315755 3.87304532,0.173580676 4.05011008,0.350770572 L4.85714286,6 Z" id="path-8"></path>
+        <path d="M4.5,3.5 L4.5,6 L4.5,6 L4,6 L4,0.300033055 C4.01661459,0.317053949 4.03331812,0.333966738 4.05011001,0.350770504 L4.5,3.5 Z M11.5,3.5 L11.5,6 L11.5,6 L11.1428571,6 L11.5,3.5 Z M0.5,5.86718431 L0.5,1.68220488 C0.318453028,1.8642375 0.151419275,2.05325792 -2.27373675e-13,2.24853196 L-6.43929354e-15,5.00245535 C-6.43929354e-15,5.37214347 0.200207245,5.6948619 0.5,5.86718431 L0.5,5.86718431 Z M1.5,6 L1.5,0.850020844 C1.32559037,0.971398423 1.15875496,1.0976519 1,1.22844377 L1,5.99999963 C1.00029052,5.99999988 1.00058108,6 1.00087166,6 L1.5,6 L1.5,6 Z M2.5,6 L2.5,0.250365174 C2.32829552,0.338864386 2.16152169,0.43140977 2,0.527786985 L2,6 L2.5,6 L2.5,6 Z M3.5,6 L3.5,-0.197306828 C3.32972834,-0.131642269 3.16298308,-0.0623655952 3,0.0103660244 L3,6 L3.5,6 L3.5,6 Z M12.5,6 L12.5,-0.197306828 C12.4836809,-0.203600234 12.4673293,-0.20986046 12.4509456,-0.216087369 C12.3090589,-0.0347322992 12.1585805,0.137574533 12,0.300033055 L12,6 L12.5,6 L12.5,6 Z M13.5,6 L13.5,0.250365174 C13.3376507,0.166687787 13.1708935,0.0866276774 13,0.0103660244 L13,6 L13.5,6 L13.5,6 Z M14.5,6 L14.5,0.850020844 C14.3396077,0.738398422 14.1728098,0.630899639 14,0.527786985 L14,6 L14.5,6 L14.5,6 Z M15.5,5.86636157 L15.5,1.68220488 C15.343838,1.52562516 15.1769377,1.3742157 15,1.22844377 L15,5.99999963 C15.1821554,5.999845 15.3529212,5.95122433 15.5,5.86636157 L15.5,5.86636157 Z" id="path-10"></path>
         <path id="path-12" d="M13.2739258,12.3554687 L12.5,13 L12.5,14 L15,14 L15,13 L13.2739258,12.3554687 Z"></path>
         <radialGradient cx="50%" cy="0%" fx="50%" fy="0%" r="87.4900351%" id="radialGradient-13">
             <stop stop-color="#512DBD" offset="0%"></stop>
@@ -36,9 +36,10 @@
                     <use xlink:href="#path-1"></use>
                 </mask>
                 <g id="Mask"></g>
-                <g id="Halo" mask="url(#mask-2)" stroke="#FFD714" filter="url(#filter-3)" stroke-width="0.5" sketch:type="MSShapeGroup">
+                <g id="Halo" mask="url(#mask-2)" stroke="#FFD714" sketch:type="MSShapeGroup">
                     <g transform="translate(2.000000, 0.000000)">
-                        <ellipse cx="6" cy="2.5" rx="6" ry="2.5"></ellipse>
+                        <ellipse id="Halo" stroke-width="0.2" filter="url(#filter-3)" cx="6" cy="2.70000076" rx="6" ry="2.5"></ellipse>
+                        <ellipse id="Halo-2" stroke-width="0.5" cx="6" cy="2.70000076" rx="6" ry="2.5"></ellipse>
                     </g>
                 </g>
                 <g id="Investor" mask="url(#mask-2)">
@@ -55,39 +56,15 @@
                             <use fill-opacity="0.300000012" fill="url(#linearGradient-6)" xlink:href="#path-7"></use>
                         </g>
                         <path d="M8,10.5 L6,12 L4,9.5 L8,10.5 Z M8,10.5 L10,12 L12,9.5 L8,10.5 Z" id="Collar" fill="#DAD8CF" sketch:type="MSShapeGroup"></path>
-                        <g id="Suitjacket" stroke-width="1" fill="none" sketch:type="MSLayerGroup" transform="translate(0.000000, 5.000000)">
-                            <mask id="mask-9" sketch:name="Mask" fill="white">
+                        <g id="Suitjacket" stroke-width="1" fill="none" sketch:type="MSLayerGroup" transform="translate(0.000000, 9.000000)">
+                            <mask id="mask-9" sketch:name="Shoulders" fill="white">
                                 <use xlink:href="#path-8"></use>
                             </mask>
-                            <use id="Mask" sketch:type="MSShapeGroup" xlink:href="#path-8"></use>
-                            <g id="Shoulders" mask="url(#mask-9)">
-                                <g transform="translate(0.000000, 4.000000)">
-                                    <mask id="mask-11" sketch:name="Shoulders" fill="white">
-                                        <use xlink:href="#path-10"></use>
-                                    </mask>
-                                    <use id="Shoulders" stroke="none" fill="#666666" fill-rule="evenodd" sketch:type="MSShapeGroup" xlink:href="#path-10"></use>
-                                    <g id="Pinstripes-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSLayerGroup" mask="url(#mask-11)" stroke-linecap="square">
-                                        <g transform="translate(0.000000, -5.000000)" stroke="#601EBD" stroke-width="0.5" sketch:type="MSShapeGroup">
-                                            <path d="M0.25,0.5 L0.25,10.5" id="Line"></path>
-                                            <path d="M1.25,0.5 L1.25,10.5" id="Line-3"></path>
-                                            <path d="M2.25,0.5 L2.25,10.5" id="Line-4"></path>
-                                            <path d="M3.25,0.5 L3.25,10.5" id="Line-5"></path>
-                                            <path d="M4.25,0.5 L4.25,10.5" id="Line-6"></path>
-                                            <path d="M5.25,0.5 L5.25,10.5" id="Line-7"></path>
-                                            <path d="M6.25,0.5 L6.25,10.5" id="Line-8"></path>
-                                            <path d="M7.25,0.5 L7.25,10.5" id="Line-9"></path>
-                                            <path d="M8.25,0.5 L8.25,10.5" id="Line-10"></path>
-                                            <path d="M9.25,0.5 L9.25,10.5" id="Line-11"></path>
-                                            <path d="M10.25,0.5 L10.25,10.5" id="Line-12"></path>
-                                            <path d="M11.25,0.5 L11.25,10.5" id="Line-13"></path>
-                                            <path d="M12.25,0.5 L12.25,10.5" id="Line-14"></path>
-                                            <path d="M13.25,0.5 L13.25,10.5" id="Line-15"></path>
-                                            <path d="M14.25,0.5 L14.25,10.5" id="Line-16"></path>
-                                            <path d="M15.25,0.5 L15.25,10.5" id="Line-17"></path>
-                                        </g>
-                                    </g>
-                                </g>
-                            </g>
+                            <use id="Shoulders" fill="#666666" sketch:type="MSShapeGroup" xlink:href="#path-8"></use>
+                            <mask id="mask-11" sketch:name="Pinstripes" fill="white">
+                                <use xlink:href="#path-10"></use>
+                            </mask>
+                            <use id="Pinstripes" fill="#4C4C4C" sketch:type="MSShapeGroup" xlink:href="#path-10"></use>
                         </g>
                         <g id="Pocket-Square">
                             <use fill="#FFAF00" sketch:type="MSShapeGroup" xlink:href="#path-12"></use>
