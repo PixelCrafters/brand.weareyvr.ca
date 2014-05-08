@@ -64,7 +64,7 @@
 	font-feature-settings+: @font-feature-list;
 }
 
-.tabular-lining {
+.tabular-lining() {
 	@font-feature-list: "tnum" 1, "lnum" 1;
 	.font-feature-settings(@font-feature-list);
 	text-rendering: optimizeSpeed; // disable kerning
@@ -122,6 +122,30 @@
 .sans-serif-small-caps {
 	text-transform: uppercase;
 	letter-spacing: 1px;
+}
+
+// Icon Sizes
+
+.wr-icon-size(@size) {
+	width: @size;
+	height: @size;
+	background-size: @size @size;
+}
+
+@wr-icon-sm: 16px;
+@wr-icon-md: 24px;
+@wr-icon-lg: 32px;
+
+.wr-icon-sm {
+	.wr-icon-size(@wr-icon-sm);
+}
+
+.wr-icon-md {
+	.wr-icon-size(@wr-icon-md);
+}
+
+.wr-icon-lg {
+	.wr-icon-size(@wr-icon-lg);
 }
 
 // Colours
