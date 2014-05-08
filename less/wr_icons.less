@@ -1,12 +1,11 @@
 .wr-icon {
 	display: inline-block;
-	width: 16px;
-	height: 16px;
-	background-size: 16px 16px;
 	background-position: center center;
 	background-repeat: no-repeat;
 	line-height: 0;
 	vertical-align: text-top;
+
+	.wr-icon-sm;
 
 	p & {
 		margin: 0 2px;
@@ -61,19 +60,53 @@
 	background-size: @size @size;
 }
 
+@wr-icon-sm: 16px;
+@wr-icon-md: 24px;
+@wr-icon-lg: 32px;
+
+.wr-icon-sm {
+	.wr-icon-size(@wr-icon-sm);
+}
+
 .wr-icon-md {
-	.wr-icon-size(24px);
+	.wr-icon-size(@wr-icon-md);
 }
 
 .wr-icon-lg {
-	.wr-icon-size(32px);
+	.wr-icon-size(@wr-icon-lg);
 }
 
 // Auto-sizing
 
-.lead .wr-icon {
-	@media (min-width: 768px) { // Bootstrap's @screen-sm-min
+.wr-icon {
+
+	h1 &, .h1 & {
+		.wr-icon-lg;
+	}
+
+	h2 &, .h2 &,
+	h3 &, .h3 & {
 		.wr-icon-md;
+	}
+
+	h4 &, .h4 &,
+	h5 &, .h5 &,
+	h6 &, .h6 & {
+		.wr-icon-sm;
+	}
+
+	h1 &, .h1 &,
+	h2 &, .h2 &,
+	h3 &, .h3 &,
+	h4 &, .h4 & {
 		vertical-align: baseline;
+		margin: 0 0.25em;
+	}
+
+	.lead & {
+		@media (min-width: 768px) { // Bootstrap's @screen-sm-min
+			.wr-icon-md;
+			vertical-align: baseline;
+		}
 	}
 }
