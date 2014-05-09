@@ -5784,14 +5784,6 @@ button.close {
 .weareyvr-mark > span {
   font-size: 26px;
 }
-.tabular-lining {
-  -moz-font-feature-settings: "tnum" 1, "lnum" 1;
-  -ms-font-feature-settings: "tnum" 1, "lnum" 1;
-  -o-font-feature-settings: "tnum" 1, "lnum" 1;
-  -webkit-font-feature-settings: "tnum" 1, "lnum" 1;
-  font-feature-settings: "tnum" 1, "lnum" 1;
-  text-rendering: optimizeSpeed;
-}
 .serif {
   font-family: "Arnhem Pro", ArnhemPro, Arnhem, Georgia, serif;
   -moz-font-feature-settings: "onum" 1;
@@ -6184,8 +6176,9 @@ section.row + main.row {
 .jumbotron.wr-jumbotron .h1 {
   font-style: italic;
   text-align: center;
-  margin: 0.5em 0;
+  margin: 0.5em auto;
   text-rendering: optimizeLegibility;
+  max-width: 14em;
   font-weight: 200;
   text-transform: uppercase;
   font-size: 32px;
@@ -6194,7 +6187,7 @@ section.row + main.row {
 @media (min-width: 992px) {
   .jumbotron.wr-jumbotron h1,
   .jumbotron.wr-jumbotron .h1 {
-    font-size: 51px;
+    font-size: 59px;
   }
 }
 .jumbotron.wr-jumbotron .lead {
@@ -6709,7 +6702,7 @@ h4.jumbotron.wr-jumbotron-guide .h1,
   -webkit-font-smoothing: antialiased;
   font-size: 13px;
   display: inline-block;
-  background-color: rgba(253, 240, 243, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   border: 4px double #fad9e1;
   border-radius: 6px;
   padding: 0.75em;
@@ -6727,11 +6720,55 @@ h4.jumbotron.wr-jumbotron-guide .h1,
   height: 24px;
   width: 6em;
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.4;
   vertical-align: middle;
+  font-family: "Arnhem Pro", ArnhemPro, Arnhem, Georgia, serif;
+  -moz-font-feature-settings: "onum" 1;
+  -ms-font-feature-settings: "onum" 1;
+  -o-font-feature-settings: "onum" 1;
+  -webkit-font-feature-settings: "onum" 1;
+  font-feature-settings: "onum" 1;
+  font-size: 106.25%;
+}
+.wr-guide-badge .wr-guide-badge-text a:not(:hover) {
+  background-position: 0 88%;
+}
+p .wr-guide-badge .wr-guide-badge-text {
+  font-size: 106.25%;
+  line-height: 94.11764705882352%;
+}
+.wr-guide-badge .wr-guide-badge-text .sans-serif {
+  font-size: 94.11764705882352%;
+  line-height: 106.25%;
+}
+h1 .wr-guide-badge .wr-guide-badge-text,
+.h1 .wr-guide-badge .wr-guide-badge-text,
+h1.wr-guide-badge .wr-guide-badge-text,
+.h1.wr-guide-badge .wr-guide-badge-text,
+h2 .wr-guide-badge .wr-guide-badge-text,
+.h2 .wr-guide-badge .wr-guide-badge-text,
+h2.wr-guide-badge .wr-guide-badge-text,
+.h2.wr-guide-badge .wr-guide-badge-text,
+h3 .wr-guide-badge .wr-guide-badge-text,
+.h3 .wr-guide-badge .wr-guide-badge-text,
+h3.wr-guide-badge .wr-guide-badge-text,
+.h3.wr-guide-badge .wr-guide-badge-text,
+h4 .wr-guide-badge .wr-guide-badge-text,
+.h4 .wr-guide-badge .wr-guide-badge-text,
+h4.wr-guide-badge .wr-guide-badge-text,
+.h4.wr-guide-badge .wr-guide-badge-text {
+  -moz-font-feature-settings: "lnum" 1;
+  -ms-font-feature-settings: "lnum" 1;
+  -o-font-feature-settings: "lnum" 1;
+  -webkit-font-feature-settings: "lnum" 1;
+  font-feature-settings: "lnum" 1;
+}
+.wr-guide-badge .wr-guide-badge-text a {
+  font-family: "Fort", Fort, "Helvetica Neue", HelveticaNeue, Helvetica, Verdana, sans-serif;
+  font-size: 94.11764705882352%;
 }
 .wr-guide-badge .wr-guide-badge-text:first-line {
-  line-height: 0.9;
+  line-height: 0.8;
 }
 .lmo-co {
   border-radius: 12px;

@@ -353,8 +353,9 @@ section.row {
 	.h1 {
 		font-style: italic;
 		text-align: center;
-		margin: 0.5em 0;
+		margin: 0.5em auto;
 		text-rendering: optimizeLegibility;
+		max-width: 14em;
 
 		// serif variant
 		// .serif();
@@ -375,7 +376,7 @@ section.row {
 
 		@media (min-width: @screen-md-min) {
 			// font-size: ceil((@font-size-h1 * 2));
-			font-size: ceil((@font-size-h1 * 1.3));
+			font-size: ceil((@font-size-h1 * 1.5));
 			// letter-spacing: 10px;
 		}
 	}
@@ -628,7 +629,7 @@ a {
 // ==================== type.less
 
 @font-size-serif-adjust: 106.25%;
-@font-size-serif-adjust-reverse: percentage(100/@font-size-serif-adjust);
+@font-size-sans-adjust: percentage(100/@font-size-serif-adjust);
 
 .serif {
 
@@ -638,11 +639,11 @@ a {
 
 	p & {
 		font-size: @font-size-serif-adjust;
-		line-height: @font-size-serif-adjust-reverse;
+		line-height: @font-size-sans-adjust;
 	}
 
 	.sans-serif {
-		font-size: @font-size-serif-adjust-reverse;
+		font-size: @font-size-sans-adjust;
 		line-height: @font-size-serif-adjust;
 	}
 
