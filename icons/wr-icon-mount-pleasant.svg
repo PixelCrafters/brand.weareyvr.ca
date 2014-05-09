@@ -43,7 +43,7 @@
                                 <path d="M2.5,1.5 L0,4" id="Minute-Hand"></path>
                             </g>
                         </g>
-                        <rect id="Sign" stroke="#3D444D" stroke-width="0.5" fill="#FFFFFF" sketch:type="MSShapeGroup" x="3.5" y="14.5" width="7" height="1" rx="1"></rect>
+                        <rect id="Sign" stroke="#3D444D" stroke-width="0.5" fill="#FFFFFF" sketch:type="MSShapeGroup" x="3.5" y="14.5" width="7" height="1" rx="0.5"></rect>
                     </g>
                 </g>
             </g>
