@@ -220,13 +220,14 @@
   <!-- WeAreYVR logo generator -->
   <script src="tangents/d3.v3.min.js"></script>
   <script>
-    var colours = ["#af1639",
-      "#ff769f",
-      "#ffaf00",
-      "#00d679",
-      "#4095c5",
-      "#601ebd",
-      "#8b572a"];
+    var colours = ["#10988b", // spruce
+      "#af1639", // red
+      "#ff769f", // pink
+      "#ffaf00", // orange
+      "#00d679", // green
+      "#4095c5", // blue
+      "#601ebd", // purple
+      "#8b572a"]; // brown
     // randomize mark
     d3.select('.weareyvr-mark')
       .attr('data-colour', colours[Math.floor(Math.random()*colours.length)])
