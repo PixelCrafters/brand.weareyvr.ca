@@ -5775,13 +5775,13 @@ button.close {
   margin-top: 50px;
   margin-bottom: 0;
 }
-.weareyvr-mark {
+.navbar-brand .weareyvr-mark {
   z-index: 13;
   margin: 0 1em 0 0;
   position: relative;
   top: -35px;
 }
-.weareyvr-mark > span {
+.navbar-brand .weareyvr-mark > span {
   font-size: 26px;
 }
 .serif {
@@ -6285,7 +6285,8 @@ body > .navbar.affix + * {
 .wr-navbar {
   -webkit-font-smoothing: antialiased;
   border-radius: 0;
-  border-style: none;
+  border-top-style: none;
+  border-bottom: 1px solid #f2f5f5;
   background-color: rgba(255, 255, 255, 0.95);
 }
 .wr-navbar.affix {
@@ -6351,6 +6352,9 @@ body > .navbar.affix + * {
 .wr-navbar .navbar-btn:hover {
   color: #fff;
   background-color: #10988b;
+}
+.wr-navbar + .container {
+  margin-top: 3em;
 }
 .wr-nav-vertical {
   text-transform: uppercase;
@@ -6429,6 +6433,12 @@ body > .navbar.affix + * {
   -o-font-feature-settings: "lnum" 1;
   -webkit-font-feature-settings: "lnum" 1;
   font-feature-settings: "lnum" 1;
+}
+::selection {
+  background: rgba(16, 152, 139, 0.30000000000000004);
+}
+::-moz-selection {
+  background: rgba(16, 152, 139, 0.30000000000000004);
 }
 a:link,
 a:visited,
@@ -6705,21 +6715,38 @@ h4.jumbotron.wr-jumbotron-guide .h1,
   background-color: rgba(255, 255, 255, 0.5);
   border: 4px double #fad9e1;
   border-radius: 6px;
-  padding: 0.75em;
   margin: 0;
 }
-.wr-guide-badge .wr-icon {
+.wr-guide-badge .wr-guide-badge-marks {
+  float: left;
+  border-right: 1px solid #fad9e1;
+  padding: 0.75em;
+}
+.wr-guide-badge .wr-guide-badge-marks .weareyvr-mark {
+  float: left;
+  opacity: 0.6;
+  display: block;
+  margin: 0;
+  padding: 0;
+  height: 24px;
+  width: 23px;
+}
+.wr-guide-badge .wr-guide-badge-marks .weareyvr-mark svg {
+  margin-left: -3px;
+}
+.wr-guide-badge .wr-guide-badge-marks .wr-icon {
+  float: left;
   width: 24px;
   height: 24px;
   background-size: 24px 24px;
-  float: left;
-  margin: 0 0.75em 0 0;
+  margin: 0 0.25em 0 0.75em;
 }
 .wr-guide-badge .wr-guide-badge-text {
   display: inline-block;
   height: 24px;
-  width: 6em;
+  width: 7.5em;
   margin: 0;
+  padding: 0.7em 0.5em 0.8em 1em;
   line-height: 1.4;
   vertical-align: middle;
   font-family: "Arnhem Pro", ArnhemPro, Arnhem, Georgia, serif;

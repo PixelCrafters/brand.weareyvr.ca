@@ -456,6 +456,10 @@ body>.navbar.affix+* {
 .wr-navbar {
 	.font-smoothing;
 	border-radius: 0;
+	border-top-style: none;
+	border-bottom: 1px solid @grey-lighter;
+	// background-color: fadeout(@grey-lighter,5%);
+	background-color: fadeout(#fff,5%);
 
 	// &.affix-top,
 	// &.affix {
@@ -465,10 +469,6 @@ body>.navbar.affix+* {
 	&.affix {
 		.navbar-fixed-top;
 	}
-
-	border-style: none;
-	// background-color: fadeout(@grey-lighter,5%);
-	background-color: fadeout(#fff,5%);
 
 	.navbar-brand {
 		.hero-type;
@@ -529,6 +529,10 @@ body>.navbar.affix+* {
 			color: #fff;
 			background-color: @brand-primary;
 		}
+	}
+
+	+ .container {
+		margin-top: 3em;
 	}
 }
 
@@ -609,6 +613,14 @@ body>.navbar.affix+* {
 }
 
 // ==================== scaffolding.less
+
+::selection {
+	background: fadeout(@brand-primary, 70%);
+}
+
+::-moz-selection {
+	background: fadeout(@brand-primary, 70%);
+}
 
 a {
 
