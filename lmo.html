@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>International Jobs &mdash; Guide</title>
+  <title>WeAreYVR Guide &mdash; International Jobs</title>
 
   <!-- Bootstrap core CSS -->
   <link href="css/weareyvr.css" rel="stylesheet">
@@ -31,7 +31,11 @@
   <header class="jumbotron wr-jumbotron wr-jumbotron-guide">
     <div class="container">
       <div class="wr-guide-badge">
-        <i class="wr-icon wr-icon-guides"></i>
+        <div class="wr-guide-badge-marks">
+          <div class="weareyvr-mark" data-height="24" data-colour="#af1639" data-text="none"></div>
+          <!-- <div class="weareyvr-mark" data-height="24" data-colour="#af1639" data-text="none" data-radius="50" data-one="50" data-two="50" data-three="0" data-four="0"></div> -->
+          <i class="wr-icon wr-icon-guides"></i>
+        </div>
         <span class="wr-guide-badge-text">A <a href="http://weareyvr.ca/">WeAreYVR</a> Guide</span>
       </div>
       <h1>International Jobs</h1>
@@ -203,11 +207,34 @@
     </div>
   </footer>
 
-<!-- Bootstrap core JavaScript
+  <!-- Bootstrap core JavaScript
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="docs/docs.min.js"></script>
+
+  <!-- WeAreYVR logo generator -->
+  <script src="tangents/d3.v3.min.js"></script>
+  <script>
+    var colours = ["#10988b", // spruce
+      "#af1639", // red
+      "#ff769f", // pink
+      "#ffaf00", // orange
+      "#00d679", // green
+      "#4095c5", // blue
+      "#601ebd", // purple
+      "#8b572a"]; // brown
+    // randomize mark
+    d3.select('.weareyvr-mark')
+      // .attr('data-colour', colours[Math.floor(Math.random()*colours.length)])
+      .attr('data-radius', Math.floor(Math.random()*101))
+      .attr('data-one', Math.floor(Math.random()*101))
+      .attr('data-two', Math.floor(Math.random()*101))
+      .attr('data-three', Math.floor(Math.random()*101))
+      .attr('data-four', Math.floor(Math.random()*101))
+  </script>
+  <script src="tangents/weareyvr-mark.js"></script>
+
 </body>
 </html>
