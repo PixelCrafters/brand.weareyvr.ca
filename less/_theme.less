@@ -39,21 +39,28 @@ a.alert-link {
 	font-family: @font-family-sans-serif;
 	font-weight: bold;
 	-webkit-font-smoothing: antialiased;
-	.wr-transition(box-shadow, text-shadow, color, background-color;);
+	.wr-transition(box-shadow);
+	.wr-transition(text-shadow);
+	.wr-transition(color);
+	.wr-transition(background-color);
 	.font-feature-settings("lnum" 1);
 
 	&:hover {
 		color: @btn-primary-color;
 		background-color: @brand-primary;
 		text-shadow: 0 0 10px @btn-primary-color;
-		.wr-transition(box-shadow, text-shadow, color, background-color;);
+		.wr-transition(box-shadow);
+		.wr-transition(text-shadow);
+		.wr-transition(color);
+		.wr-transition(background-color);
 		border-width: 0px;
 	}
 	
 	&:active {
 		color: @btn-primary-color;
 		.btn-active-box-shadow;
-		.wr-transition(box-shadow, text-shadow;);
+		.wr-transition(box-shadow);
+		.wr-transition(text-shadow);
 		background-color: @brand-primary;
 	}
 }
@@ -491,7 +498,9 @@ body>.navbar.affix+* {
 	.navbar-nav {
 		> li > a {
 			border-bottom: 0px solid @brand-primary;
-			.wr-transition(border-bottom, color, background-color;);
+			.wr-transition(border-bottom);
+			.wr-transition(color);
+			.wr-transition(background-color);
 			.sans-serif-small-caps;
 			font-weight: bold;
 			font-size: 0.9em;
@@ -505,7 +514,9 @@ body>.navbar.affix+* {
 			color: @grey-darker;
 			background-color: fadeout(@brand-primary,80%);
 			border-bottom-width: 3px;
-			.wr-transition(border-bottom, color, background-color;);
+			.wr-transition(border-bottom);
+			.wr-transition(color);
+			.wr-transition(background-color);
 		}
 	}
 
@@ -629,7 +640,8 @@ a {
 	&:hover,
 	&:active {
 		text-decoration: none;
-		.wr-transition(color, background-color;);
+		.wr-transition(color);
+		.wr-transition(background-color);
 	}
 
 	// .row a:not(.btn) {
@@ -701,7 +713,7 @@ p {
 
 // ==================== FOOTER
 
-body>footer {
+body > footer {
 	display: block;
 	color: @gray;
 	background-color: @gray-lighter;

@@ -30,19 +30,12 @@
 
 // Transitions
 
-.wr-transition(@transition-property;) {
-	-webkit-transition-property: @transition-property;
-	        transition-property: @transition-property;
-	.wr-transition-settings();
-}
+@wr-transition-duration: 0.15s;
+@wr-transition-timing-function: ease-in-out;
 
-.wr-transition-settings() {
-	@transition-duration: 0.15s;
-	@transition-timing-function: ease-in-out;
-	-webkit-transition-duration: @transition-duration;
-	        transition-duration: @transition-duration;
-	-webkit-transition-timing-function: @transition-timing-function;
-	        transition-timing-function: @transition-timing-function;
+.wr-transition(@transition-property) {
+	-webkit-transition+: @transition-property @wr-transition-duration @wr-transition-timing-function;
+	        transition+: @transition-property @wr-transition-duration @wr-transition-timing-function;
 }
 
 // Typography
@@ -74,7 +67,15 @@
 	padding-bottom: 0.125em;
 	background-size: 1px 1px;
 	background-repeat: repeat-x;
-	.transition(background-position ease-out 0.15s, color ease-in-out 0.15s;);
+
+	&,
+	&:link,
+	&:visited,
+	&:hover,
+	&:active {
+		.wr-transition(background-position);
+		.wr-transition(color);
+	}
 
 	&:hover,
 	&:active {
