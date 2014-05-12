@@ -397,8 +397,8 @@ section.row {
 		letter-spacing: 7px;
 
 		@media (min-width: @screen-md-min) {
-			// font-size: ceil((@font-size-h1 * 2));
-			font-size: ceil((@font-size-h1 * 1.5));
+			font-size: ceil((@font-size-h1 * 2));
+			// font-size: ceil((@font-size-h1 * 1.5));
 			// letter-spacing: 10px;
 		}
 	}
@@ -436,13 +436,17 @@ section.row {
 		}
 	}
 
+	&-blank {
+	&-light {
+		box-shadow: 0px 0px 300px 50px rgba(255,255,255,.6) inset;
+	}
+
 	&-dark {
+
 		color: #fff;
 		background-color: @gray-dark;
-		text-shadow: @carousel-text-shadow;
+		// text-shadow: @carousel-text-shadow;
 		box-shadow: 0px 0px 500px 100px rgba(0,0,0,.6) inset;
-
-		background-image: url(../img/big-data.jpg); // example image
 
 		.form-control,
 		.input-group-addon {
@@ -479,7 +483,7 @@ body>.navbar.affix+* {
 	.font-smoothing;
 	border-radius: 0;
 	border-top-style: none;
-	border-bottom: 1px solid @grey-lighter;
+	border-bottom: 1px solid fadeout(@grey-light,60%);
 	// background-color: fadeout(@grey-lighter,5%);
 	background-color: fadeout(#fff,5%);
 
