@@ -6062,11 +6062,12 @@ button.close {
 }
 .form-control,
 .input-group-addon {
-  background-color: rgba(242, 245, 245, 0.6);
+  background-color: rgba(242, 245, 245, 0.7);
   border-color: transparent;
   box-shadow: none;
   -webkit-transition: background-color 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out;
+  color: #232c2b;
 }
 .form-control::-moz-placeholder,
 .input-group-addon::-moz-placeholder {

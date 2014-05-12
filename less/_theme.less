@@ -203,11 +203,12 @@ a.alert-link {
 
 .form-control,
 .input-group-addon {
-	background-color: fadeout(@gray-lighter,40%);
+	background-color: fadeout(@gray-lighter,30%);
 	border-color: transparent;
 	box-shadow: none;
 	.wr-transition(background-color);
 	.placeholder(fadeout(@grey-light,10%));
+	color: @grey-darker;
 
 	&:focus {
 		background-color: fadeout(@input-bg,10%);
