@@ -5778,11 +5778,16 @@ button.close {
 .navbar-brand .weareyvr-mark {
   z-index: 13;
   margin: 0 1em 0 0;
+  display: inline-block;
   position: relative;
   top: -35px;
+  height: 100px;
 }
 .navbar-brand .weareyvr-mark > span {
   font-size: 26px;
+  line-height: 0;
+  position: absolute;
+  top: 46px;
 }
 .serif {
   font-family: "Arnhem Pro", ArnhemPro, Arnhem, Georgia, serif;
@@ -5956,12 +5961,14 @@ button.close {
   transition: box-shadow 0.15s ease-in-out, text-shadow 0.15s ease-in-out, color 0.15s ease-in-out, background-color 0.15s ease-in-out;
   border-width: 0px;
 }
-.btn:active {
+.btn:active,
+.btn.active {
   color: #ffffff;
   box-shadow: 0 5em 1px 0 rgba(0, 0, 0, 0.5) inset;
   -webkit-transition: box-shadow 0.15s ease-in-out, text-shadow 0.15s ease-in-out;
   transition: box-shadow 0.15s ease-in-out, text-shadow 0.15s ease-in-out;
   background-color: #10988b;
+  border-color: rgba(0, 0, 0, 0.5);
 }
 .btn-group > .btn + .btn,
 .btn-group > .btn-group + .btn,
@@ -5971,13 +5978,15 @@ button.close {
 .btn-group-justified > .btn-group + .btn {
   margin: 0;
 }
-.btn-group > .btn:not(:first-child),
-.btn-group > .btn-group:not(:first-child) {
+.btn-group > .btn:not(:first-child) {
   border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
-.btn-group > .btn:not(:first-child) > .btn,
+.btn-group > .btn-group:not(:first-child) {
+  margin-left: 1px;
+}
 .btn-group > .btn-group:not(:first-child) > .btn {
-  border-left-style: none;
+  margin-left: -1px;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
 .btn-group-vertical > .btn:not(:first-child) {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -5998,13 +6007,15 @@ button.close {
   margin-left: -1px;
   border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
-.btn-group-justified > .btn:not(:first-child),
-.btn-group-justified > .btn-group:not(:first-child) {
+.btn-group-justified > .btn:not(:first-child) {
   border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
-.btn-group-justified > .btn:not(:first-child) > .btn,
+.btn-group-justified > .btn-group:not(:first-child) {
+  margin-left: 1px;
+}
 .btn-group-justified > .btn-group:not(:first-child) > .btn {
-  border-left-style: none;
+  margin-left: -1px;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
 .open.btn-group > .btn.dropdown-toggle,
 .open.btn-group-vertical > .btn.dropdown-toggle,
@@ -6065,8 +6076,8 @@ button.close {
   background-color: rgba(242, 245, 245, 0.7);
   border-color: transparent;
   box-shadow: none;
-  -webkit-transition: background-color 0.15s ease-in-out;
-  transition: background-color 0.15s ease-in-out;
+  -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   color: #232c2b;
 }
 .form-control::-moz-placeholder,
@@ -6085,11 +6096,12 @@ button.close {
 .form-control:focus,
 .input-group-addon:focus {
   background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: none;
+  -webkit-box-shadow: 0 0 5px rgba(16, 152, 139, 0.4);
+  box-shadow: 0 0 5px rgba(16, 152, 139, 0.4);
   border-style: solid;
   border-color: rgba(242, 245, 245, 0.9);
-  -webkit-transition: background-color 0.15s ease-in-out;
-  transition: background-color 0.15s ease-in-out;
+  -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .form-control {
   -webkit-font-smoothing: antialiased;
@@ -6122,7 +6134,6 @@ section.row + main.row {
 .input-group > .input-group-btn > .btn,
 .input-group > .input-group-btn > .btn-group {
   margin: 0;
-  border: 1px solid #10988b;
 }
 .input-group > .input-group-btn > .btn:hover,
 .input-group > .input-group-btn > .btn-group:hover {
@@ -6196,7 +6207,7 @@ section.row + main.row {
 @media (min-width: 992px) {
   .jumbotron.wr-jumbotron h1,
   .jumbotron.wr-jumbotron .h1 {
-    font-size: 59px;
+    font-size: 78px;
   }
 }
 .jumbotron.wr-jumbotron .lead {
@@ -6207,12 +6218,6 @@ section.row + main.row {
   margin: 1.5em auto 0;
   max-width: 30em;
 }
-.jumbotron.wr-jumbotron .form-control,
-.jumbotron.wr-jumbotron .input-group-addon,
-.jumbotron.wr-jumbotron .form-control:focus,
-.jumbotron.wr-jumbotron .input-group-addon:focus {
-  border-color: #fff;
-}
 .jumbotron.wr-jumbotron .input-group .form-control:not(:first-child),
 .jumbotron.wr-jumbotron .input-group .input-group-addon:not(:first-child) {
   border-left-style: none;
@@ -6221,12 +6226,19 @@ section.row + main.row {
 .jumbotron.wr-jumbotron .input-group .input-group-addon:not(:last-child) {
   border-right-style: none;
 }
+.jumbotron.wr-jumbotron-blank .form-control,
+.jumbotron.wr-jumbotron-blank .input-group-addon,
+.jumbotron.wr-jumbotron-blank .form-control:focus,
+.jumbotron.wr-jumbotron-blank .input-group-addon:focus {
+  border-color: #fff;
+}
+.jumbotron.wr-jumbotron-light {
+  box-shadow: 0px 0px 300px 50px rgba(255, 255, 255, 0.6) inset;
+}
 .jumbotron.wr-jumbotron-dark {
   color: #fff;
   background-color: #313f3d;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
   box-shadow: 0px 0px 500px 100px rgba(0, 0, 0, 0.6) inset;
-  background-image: url(../img/big-data.jpg);
 }
 .jumbotron.wr-jumbotron-dark .form-control,
 .jumbotron.wr-jumbotron-dark .input-group-addon {
@@ -6295,7 +6307,7 @@ body > .navbar.affix + * {
   -webkit-font-smoothing: antialiased;
   border-radius: 0;
   border-top-style: none;
-  border-bottom: 1px solid #f2f5f5;
+  border-bottom: 1px solid rgba(146, 170, 167, 0.4);
   background-color: rgba(255, 255, 255, 0.95);
 }
 .wr-navbar.affix {
@@ -6337,13 +6349,6 @@ body > .navbar.affix + * {
   border-bottom-width: 3px;
   -webkit-transition: border-bottom 0.15s ease-in-out, color 0.15s ease-in-out, background-color 0.15s ease-in-out;
   transition: border-bottom 0.15s ease-in-out, color 0.15s ease-in-out, background-color 0.15s ease-in-out;
-}
-.wr-navbar input {
-  border-color: #f2f5f5;
-  background-color: transparent;
-}
-.wr-navbar input:focus {
-  border-color: #f2f5f5;
 }
 .wr-navbar .navbar-btn {
   color: #10988b;
@@ -7286,12 +7291,14 @@ a.lmo-co-find-jobs:hover {
   transition: box-shadow 0.15s ease-in-out, text-shadow 0.15s ease-in-out, color 0.15s ease-in-out, background-color 0.15s ease-in-out;
   border-width: 0px;
 }
-a.lmo-co-find-jobs:active {
+a.lmo-co-find-jobs:active,
+a.lmo-co-find-jobs.active {
   color: #ffffff;
   box-shadow: 0 5em 1px 0 rgba(0, 0, 0, 0.5) inset;
   -webkit-transition: box-shadow 0.15s ease-in-out, text-shadow 0.15s ease-in-out;
   transition: box-shadow 0.15s ease-in-out, text-shadow 0.15s ease-in-out;
   background-color: #10988b;
+  border-color: rgba(0, 0, 0, 0.5);
 }
 @media (min-width: 768px) {
   a.lmo-co-find-jobs {
