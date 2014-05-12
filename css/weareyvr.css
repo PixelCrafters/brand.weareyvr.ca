@@ -5909,26 +5909,26 @@ button.close {
   -webkit-font-feature-settings: "lnum" 1;
   font-feature-settings: "lnum" 1;
 }
-.breadcrumb a:not(.btn) {
+.breadcrumb a {
   padding-bottom: 0.125em;
   background-size: 1px 1px;
-  text-shadow: 1px 0 #ffffff, 2px 0 #ffffff, -1px 0 #ffffff, -2px 0 #ffffff;
+  text-shadow: 1px 0 #f5f5f5, 2px 0 #f5f5f5, -1px 0 #f5f5f5, -2px 0 #f5f5f5;
   background-image: -webkit-linear-gradient(top, transparent 0%, rgba(58, 110, 105, 0.5) 100%);
   background-image: linear-gradient(to bottom, transparent 0%, rgba(58, 110, 105, 0.5) 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#803a6e69', GradientType=0);
   background-position: 0 90%;
 }
-.breadcrumb a:not(.btn),
-.breadcrumb a:not(.btn):link,
-.breadcrumb a:not(.btn):visited,
-.breadcrumb a:not(.btn):hover,
-.breadcrumb a:not(.btn):active {
+.breadcrumb a,
+.breadcrumb a:link,
+.breadcrumb a:visited,
+.breadcrumb a:hover,
+.breadcrumb a:active {
   -webkit-transition: background-position 0.15s ease-in-out, color 0.15s ease-in-out;
   transition: background-position 0.15s ease-in-out, color 0.15s ease-in-out;
 }
-.breadcrumb a:not(.btn):hover,
-.breadcrumb a:not(.btn):active {
+.breadcrumb a:hover,
+.breadcrumb a:active {
   background-position: 0 100%;
 }
 .btn {
@@ -6589,6 +6589,32 @@ blockquote.blockquote-reverse {
 blockquote.blockquote-reverse:after {
   content: "\201D";
   right: -0.05em;
+}
+ol:not(.list-unstyled):not(.breadcrumb) {
+  counter-reset: li;
+  list-style: none;
+}
+ol:not(.list-unstyled):not(.breadcrumb) > li {
+  position: relative;
+}
+ol:not(.list-unstyled):not(.breadcrumb) > li:before {
+  content: counter(li) ".";
+  counter-increment: li;
+  position: absolute;
+  left: -2.5em;
+  margin: 0;
+  display: inline-block;
+  width: 2em;
+  text-align: right;
+  color: #92aaa7;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-feature-settings: "tnum" 1, "lnum" 1;
+  -ms-font-feature-settings: "tnum" 1, "lnum" 1;
+  -o-font-feature-settings: "tnum" 1, "lnum" 1;
+  -webkit-font-feature-settings: "tnum" 1, "lnum" 1;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+  text-rendering: optimizeSpeed;
 }
 body > footer {
   display: block;

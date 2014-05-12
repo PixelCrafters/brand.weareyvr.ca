@@ -743,6 +743,32 @@ blockquote {
 	}
 }
 
+ol:not(.list-unstyled):not(.breadcrumb) {
+	counter-reset: li;
+	list-style: none;
+
+	> li {
+		position: relative;
+
+		&:before {
+			@ol-counter-width: 2em;
+
+		    content: counter(li) ".";
+		    counter-increment: li;
+		    position: absolute;
+		    left: (-(@ol-counter-width) - 0.5em);
+			margin: 0;
+		    display: inline-block;
+		    width: @ol-counter-width;
+		    text-align: right;
+		    color: @grey-light;
+		    font-weight: bold;
+		    .font-smoothing;
+		    .tabular-lining;
+		}
+	}
+}
+
 // ==================== FOOTER
 
 body > footer {
