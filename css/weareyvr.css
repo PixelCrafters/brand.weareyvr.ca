@@ -5908,6 +5908,8 @@ button.close {
   -o-font-feature-settings: "lnum" 1;
   -webkit-font-feature-settings: "lnum" 1;
   font-feature-settings: "lnum" 1;
+  -webkit-font-smoothing: antialiased;
+  padding-top: 4px;
 }
 .breadcrumb a {
   padding-bottom: 0.125em;
@@ -6427,6 +6429,7 @@ body > .navbar.affix + * {
   -o-font-feature-settings: "lnum" 1;
   -webkit-font-feature-settings: "lnum" 1;
   font-feature-settings: "lnum" 1;
+  -webkit-font-smoothing: antialiased;
 }
 ::selection {
   background: rgba(16, 152, 139, 0.30000000000000004);
