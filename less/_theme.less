@@ -60,12 +60,14 @@ a.alert-link {
 		border-width: 0px;
 	}
 	
-	&:active {
+	&:active,
+	&.active {
 		color: @btn-primary-color;
 		.btn-active-box-shadow;
 		.wr-transition(box-shadow);
 		.wr-transition(text-shadow);
 		background-color: @brand-primary;
+		border-color: @btn-active-box-shadow-colour;
 	}
 }
 
@@ -80,12 +82,16 @@ a.alert-link {
 	    margin: 0;
 	}
 
-	> .btn:not(:first-child),
-	> .btn-group:not(:first-child) {
+	> .btn:not(:first-child) {
 		border-left: @btn-border;
+	}
+
+	> .btn-group:not(:first-child) {
+		margin-left: 1px;
 
 		> .btn {
-			border-left-style: none;
+			margin-left: -1px;
+			border-left: @btn-border;
 		}
 	}
 
@@ -115,12 +121,16 @@ a.alert-link {
 		    border-left: @btn-border;
 		}
 
-		> .btn:not(:first-child),
-		> .btn-group:not(:first-child) {
+		> .btn:not(:first-child) {
 			border-left: @btn-border;
+		}
+
+		> .btn-group:not(:first-child) {
+			margin-left: 1px;
 
 			> .btn {
-				border-left-style: none;
+				margin-left: -1px;
+				border-left: @btn-border;
 			}
 		}
 	}
@@ -282,7 +292,7 @@ section.row {
 		> .btn,
 		> .btn-group {
 			margin: 0;
-			border: 1px solid @brand-primary;
+
 			&:hover {
 				margin: 0;
 			}
