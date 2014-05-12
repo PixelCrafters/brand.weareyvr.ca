@@ -431,6 +431,28 @@ section.row {
 		}
 	}
 
+	> .image-credit {
+		font-size: @font-size-small;
+		position: absolute;
+		right: 1em;
+		bottom: 1em;
+		opacity: 0.5;
+		.wr-transition(opacity);
+		.wr-transition(text-shadow);
+
+		a {
+			color: @grey-darker;
+			font-weight: bold;
+		}
+	}
+
+	&:hover > .image-credit {
+		opacity: 1;
+		text-shadow: 0 0 2px fadeout(@grey-lighter,20%);
+		.wr-transition(opacity);
+		.wr-transition(text-shadow);
+	}
+
 	&-blank {
 
 		.form-control,
