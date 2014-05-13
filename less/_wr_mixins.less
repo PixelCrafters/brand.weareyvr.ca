@@ -17,6 +17,22 @@
 	}
 }
 
+.input-default() { // for resetting .input-inverse
+	.placeholder(fadeout(@grey-light,10%));
+
+	&:focus {
+		.placeholder(fadeout(@grey-light,10%));
+	}
+}
+
+.input-ghost {
+	&:not(:focus) {
+		.placeholder(fadeout(#fff,10%));
+		color: #fff;
+		background-color: transparent;
+		border-color: fadeout(#fff,20%);
+	}
+}
 
 // Padding
 
