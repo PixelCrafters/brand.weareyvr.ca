@@ -13,10 +13,6 @@ body.guide {
 	section.row,
 	main.row {
 		border-top-color: #fff;
-
-		// p {
-		// 	.serif();
-		// }
 	}
 
 	main.row {
@@ -42,7 +38,7 @@ body.guide {
 		margin: 0.25em 0 0.125em;
 
 		@media (min-width: @screen-md-min) {
-			font-size: ceil((@font-size-h1 * 2));
+			font-size: ceil((@font-size-h1 * 1.9));
 		}
 	}
 }
@@ -55,7 +51,7 @@ body.guide {
 
 	display: inline-block;
 	// background-color: fadeout(lighten(@wr-red, 58%), 50%);
-	background-color: fadeout(@body-bg, 50%);
+	background-color: mix(@body-bg, @grey-lighter);
 	border: 4px double lighten(@wr-red, 53%);
 	border-radius: @border-radius-large;
 	margin: 0;
