@@ -535,7 +535,7 @@ section.row {
 
 	.wr-search-bar {
 		.jumbotron-overlay;
-		background-color: @brand-primary;
+		background-color: fadeout(@brand-primary,15%);
 		padding: (@jumbotron-padding / 3.2);
 		font-weight: normal;
 
@@ -572,6 +572,7 @@ section.row {
 
 			.search-bar-submit {
 				border-radius: @font-size-h2;
+				background-color: transparent;
 			}
 
 			@media screen and (max-width: @screen-xs-max) {
@@ -586,6 +587,10 @@ section.row {
 					height: (@font-size-h3 * 2);
 					display: inline;
 					padding-right: 5em;
+
+					&:valid + .search-bar-submit {
+						visibility: visible;
+					}
 				}
 
 				.search-bar-submit {
@@ -594,11 +599,13 @@ section.row {
 					position: absolute;
 					top: 1px;
 					right: 1px;
-					font-weight: normal;
-					color: @grey-lighter;
+					// font-weight: normal;
+					color: fadeout(@grey-lighter,15%);
 					border-color: transparent;
 					padding-left: 0.9em;
-					padding-right: 0.9em;				
+					padding-right: 0.9em;
+
+					visibility: hidden;
 				}
 			}
 
@@ -647,7 +654,7 @@ body>.navbar.affix+* {
 	background-color: fadeout(#fff,5%);
 	box-shadow: 0 1px 2px fadeout(@grey-light,50%);
 
-	@media screen and (min-width: @screen-sm-min) {
+	@media screen and (min-width: @screen-sm-min) and (max-width: @screen-md-max) {
 		.container {
 			padding: 0;
 			margin: 0 auto;

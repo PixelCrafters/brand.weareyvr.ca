@@ -6453,7 +6453,7 @@ section.row + main.row {
   background-color: rgba(242, 245, 245, 0.4);
   padding: 9.375px 9.375px 4.6875px;
   margin-bottom: 0;
-  background-color: #10988b;
+  background-color: rgba(16, 152, 139, 0.85);
   padding: 9.375px;
   font-weight: normal;
 }
@@ -6528,6 +6528,7 @@ section.row + main.row {
 }
 .jumbotron.wr-jumbotron .wr-search-bar form .search-bar-submit {
   border-radius: 32px;
+  background-color: transparent;
 }
 @media screen and (max-width: 767px) {
   .jumbotron.wr-jumbotron .wr-search-bar form .search-bar-submit {
@@ -6548,17 +6549,20 @@ section.row + main.row {
     display: inline;
     padding-right: 5em;
   }
+  .jumbotron.wr-jumbotron .wr-search-bar form .search-bar-field:valid + .search-bar-submit {
+    visibility: visible;
+  }
   .jumbotron.wr-jumbotron .wr-search-bar form .search-bar-submit {
     font-size: 26px;
     height: 50px;
     position: absolute;
     top: 1px;
     right: 1px;
-    font-weight: normal;
-    color: #f2f5f5;
+    color: rgba(242, 245, 245, 0.85);
     border-color: transparent;
     padding-left: 0.9em;
     padding-right: 0.9em;
+    visibility: hidden;
   }
 }
 @media screen and (min-width: 992px) {
@@ -6607,7 +6611,7 @@ body > .navbar.affix + * {
   background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 1px 2px rgba(146, 170, 167, 0.5);
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .wr-navbar .container {
     padding: 0;
     margin: 0 auto;
