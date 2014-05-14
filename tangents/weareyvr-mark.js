@@ -181,6 +181,7 @@ function drawMark(vis, height, text, colour, radius, one, two, three, four) {
     .style("fill", colour)
     .attr("transform", "translate(" + bottomLeft.x + ',' + bottomLeft.y + ")");
 
+
   if (text !== '') {
     var letterforms = [
       { d: "M65.01 0.264l20.835 75.032L106.944 0h11.34L91.252 92.307H80.043L59.076 16.879 38.242 92.307H26.901L0 0h12l20.703 75.823 20.835-75.56H65.01z" },
@@ -197,7 +198,7 @@ function drawMark(vis, height, text, colour, radius, one, two, three, four) {
 
     var letterGroup = vis.append("g")
       .attr("class", "letters")
-      .attr("transform", "translate(" + 90 * scale + "," + (trans_y - 20*scale) + ") scale(" + scale*.7 + ")");
+      .attr("transform", "translate(" + 40 * scale + "," + (trans_y + 20*scale) + ") scale(" + scale*.9 + ")");
 
     var letters = letterGroup.selectAll("path")
       .data(letterforms)
