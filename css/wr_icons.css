@@ -1,16 +1,19 @@
 .wr-icon {
   display: inline-block;
-  width: 16px;
-  height: 16px;
-  background-size: 16px 16px;
   background-position: center center;
   background-repeat: no-repeat;
   line-height: 0;
   vertical-align: text-top;
+  width: 16px;
+  height: 16px;
+  background-size: 16px 16px;
 }
 p .wr-icon {
   margin: 0 2px;
   text-indent: -2px;
+}
+.wr-icon-activity {
+  background-image: url(../icons/wr-icon-activity.svg);
 }
 .wr-icon-advisor {
   background-image: url(../icons/wr-icon-advisor.svg);
@@ -23,6 +26,15 @@ p .wr-icon {
 }
 .wr-icon-angel-investor-av {
   background-image: url(../icons/wr-icon-angel-investor-av.svg);
+}
+.wr-icon-community {
+  background-image: url(../icons/wr-icon-community.svg);
+}
+.wr-icon-connectivity {
+  background-image: url(../icons/wr-icon-connectivity.svg);
+}
+.wr-icon-data {
+  background-image: url(../icons/wr-icon-data.svg);
 }
 .wr-icon-downtown {
   background-image: url(../icons/wr-icon-downtown.svg);
@@ -39,6 +51,9 @@ p .wr-icon {
 .wr-icon-event {
   background-image: url(../icons/wr-icon-event.svg);
 }
+.wr-icon-federal {
+  background-image: url(../icons/wr-icon-federal.svg);
+}
 .wr-icon-founder {
   background-image: url(../icons/wr-icon-founder.svg);
 }
@@ -50,6 +65,9 @@ p .wr-icon {
 }
 .wr-icon-gastown {
   background-image: url(../icons/wr-icon-gastown.svg);
+}
+.wr-icon-guides {
+  background-image: url(../icons/wr-icon-guides.svg);
 }
 .wr-icon-incubator {
   background-image: url(../icons/wr-icon-incubator.svg);
@@ -65,6 +83,9 @@ p .wr-icon {
 }
 .wr-icon-funding {
   background-image: url(../icons/wr-icon-funding.svg);
+}
+.wr-icon-mount-pleasant {
+  background-image: url(../icons/wr-icon-mount-pleasant.svg);
 }
 .wr-icon-municipal {
   background-image: url(../icons/wr-icon-municipal.svg);
@@ -90,11 +111,22 @@ p .wr-icon {
 .wr-icon-series-d {
   background-image: url(../icons/wr-icon-series-d.svg);
 }
+.wr-icon-services {
+  background-image: url(../icons/wr-icon-services.svg);
+}
 .wr-icon-startup {
   background-image: url(../icons/wr-icon-startup.svg);
 }
+.wr-icon-transparency {
+  background-image: url(../icons/wr-icon-transparency.svg);
+}
 .wr-icon-vc {
   background-image: url(../icons/wr-icon-vc.svg);
+}
+.wr-icon-sm {
+  width: 16px;
+  height: 16px;
+  background-size: 16px 16px;
 }
 .wr-icon-md {
   width: 24px;
@@ -105,6 +137,41 @@ p .wr-icon {
   width: 32px;
   height: 32px;
   background-size: 32px 32px;
+}
+h1 .wr-icon,
+.h1 .wr-icon {
+  width: 32px;
+  height: 32px;
+  background-size: 32px 32px;
+}
+h2 .wr-icon,
+.h2 .wr-icon,
+h3 .wr-icon,
+.h3 .wr-icon {
+  width: 24px;
+  height: 24px;
+  background-size: 24px 24px;
+}
+h4 .wr-icon,
+.h4 .wr-icon,
+h5 .wr-icon,
+.h5 .wr-icon,
+h6 .wr-icon,
+.h6 .wr-icon {
+  width: 16px;
+  height: 16px;
+  background-size: 16px 16px;
+}
+h1 .wr-icon,
+.h1 .wr-icon,
+h2 .wr-icon,
+.h2 .wr-icon,
+h3 .wr-icon,
+.h3 .wr-icon,
+h4 .wr-icon,
+.h4 .wr-icon {
+  vertical-align: baseline;
+  margin: 0 0.25em;
 }
 @media (min-width: 768px) {
   .lead .wr-icon {

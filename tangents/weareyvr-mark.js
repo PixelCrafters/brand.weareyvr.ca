@@ -1,5 +1,6 @@
 d3.selectAll(".weareyvr-mark").each(function() {
   var element = d3.select(this);
+  element.select("span").attr("class", "sr-only");
   drawMark(element.append("svg"), element.attr('data-height'), element.attr('data-text'), element.attr('data-colour'),  element.attr('data-radius'), element.attr('data-one'), element.attr('data-two'), element.attr('data-three'), element.attr('data-four'));
 });
 

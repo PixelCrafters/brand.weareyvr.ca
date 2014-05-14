@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>WeAreYVR &mdash; Search for Organizations</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/weareyvr.css" rel="stylesheet">
+  <!-- <link href="css/fonts.css" rel="stylesheet"> -->
+  <link href="css/wr_icons.css" rel="stylesheet">
+  <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+
+  <!-- master nav -->
+  <nav class="navbar navbar-default wr-navbar" data-spy="affix" data-offset-top="50">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="#">
+           <div class="weareyvr-mark" data-height="100" data-colour="#10988b" data-text="black">
+             <span>WeAreYVR</span>
+           </div>
+        </a>
+      </div>
+      <nav class="collapse navbar-collapse" role="navigation">
+        <ul class="nav navbar-nav">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <button type="button" class="btn btn-default navbar-btn navbar-right">Login</button>
+      </nav>
+    </div>
+  </nav>
+
+  <header class="jumbotron wr-jumbotron wr-jumbotron-light" style="background-image: url(img/7627655228_8b4c5d8044_h.jpg);">
+    <h1>Opening channels for Vancouver&rsquo;s startup community</h1>
+    <div class="wr-search-bar">
+      <form role="form">
+          <label for="search-orgs" class="sr-only">Search for organizations</label>
+          <input class="form-control search-bar-field" id="search-orgs" placeholder="Search for Organizations" type="search" required />
+          <input class="btn btn-lg btn-primary search-bar-submit" name="commit" type="submit" value="Search" />
+      </form>
+    </div>
+    <!-- <div class="wr-search-bar">
+      <form role="form">
+        <div class="form-group">
+          <label for="home-page-search" class="sr-only">Search for organizations</label>
+          <div class="input-group">
+            <input class="form-control input-lg" id="home-page-search" name="query" placeholder="Search for Organizations" type="search" />
+            <span class="input-group-btn">
+              <input class="btn btn-lg btn-primary" name="commit" type="submit" value="Search" />
+            </span>
+          </div>
+        </div>
+      </form>
+    </div> -->
+  </header>
+
+  <!-- <footer>
+    <div class="container">
+      WeAreYVR &mdash; A community project by <a href="http://launchacademy.ca">Launch Academy</a> &copy; 2013 &bull; Thanks to <a href="http://startupgenome.com">StartupGenome</a>
+    </div>
+  </footer> -->
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="docs/docs.min.js"></script>
+
+  <!-- WeAreYVR logo generator -->
+  <script src="tangents/d3.v3.min.js"></script>
+  <script>
+    var colours = ["#10988b", // spruce
+      "#af1639", // red
+      "#ff769f", // pink
+      "#ffaf00", // orange
+      "#00d679", // green
+      "#4095c5", // blue
+      "#601ebd", // purple
+      "#8b572a"]; // brown
+    // randomize mark
+    d3.select('.weareyvr-mark')
+      .attr('data-colour', colours[Math.floor(Math.random()*colours.length)])
+      .attr('data-radius', Math.floor(Math.random()*101))
+      .attr('data-one', Math.floor(Math.random()*101))
+      .attr('data-two', Math.floor(Math.random()*101))
+      .attr('data-three', Math.floor(Math.random()*101))
+      .attr('data-four', Math.floor(Math.random()*101))
+  </script>
+  <script src="tangents/weareyvr-mark.js"></script>
+
+</body>
+</html>

@@ -1,21 +1,8 @@
-.guide {
+body.guide {
 	background-color: @grey-lighter;
+	// border-top: @font-size-small solid @wr-red;
 
-	.jumbotron {
-
-		background-color: @body-bg;
-
-		h1, .h1 {
-			font-weight: 200;
-			line-height: 0.9;
-
-			@media (min-width: @screen-md-min) {
-				font-size: ceil((@font-size-h1 * 3.2));
-			}
-		}
-	}
-
-	body&>footer {
+	> footer {
 		background-color: @body-bg;
 
 		a {
@@ -23,14 +10,98 @@
 		}
 	}
 
-	section.row {
+	section.row,
+	main.row {
 		border-top-color: #fff;
-
-		// p {
-		// 	.serif();
-		// }
 	}
 
+	main.row {
+		p {
+			.serif;
+		}
+	}
+
+}
+
+.jumbotron.wr-jumbotron-guide {
+
+	background-color: @body-bg;
+	padding: 2em 0;
+
+	h1, .h1 {
+		.serif;
+		line-height: 0.9;
+		text-transform: none;
+		letter-spacing: 0;
+		text-align: left;
+		font-style: normal;
+		margin: 0.25em 0 0.125em;
+
+		@media (min-width: @screen-md-min) {
+			font-size: ceil((@font-size-h1 * 1.9));
+		}
+	}
+}
+
+.wr-guide-badge {
+
+	color: @grey-dark;
+	.font-smoothing;
+	font-size: @font-size-small;
+
+	display: inline-block;
+	// background-color: fadeout(lighten(@wr-red, 58%), 50%);
+	background-color: mix(@body-bg, @grey-lighter);
+	border: 4px double lighten(@wr-red, 53%);
+	border-radius: @border-radius-large;
+	margin: 0;
+
+	& &-marks {
+		float: left;
+		border-right: 1px solid lighten(@wr-red, 53%);
+		padding: 0.75em;
+
+		.weareyvr-mark {
+			float: left;
+			opacity: 0.6;
+			display: block;
+			margin: 0;
+			padding: 0;
+			height: @wr-icon-md;
+			width: 23px;
+
+			svg {
+				margin-left: -3px; // correct for missing text
+			}
+		}
+
+		.wr-icon {
+			float: left;
+			.wr-icon-md;
+			margin: 0 0.25em 0 0.75em;
+		}
+	}
+
+	& &-text {
+		display: inline-block;
+		height: @wr-icon-md;
+		width: 7.5em;
+		margin: 0;
+		padding: 0.7em 0.5em 0.8em 1em;
+		line-height: 1.4;
+		vertical-align: middle;
+		.serif;
+		font-size: (1em * @font-size-serif-adjust);
+
+		a {
+			font-family: @font-family-sans-serif;
+			font-size: (1em * @font-size-sans-adjust);
+		}
+
+		&:first-line {
+			line-height: 0.8;
+		}
+	}
 }
 
 // International Jobs (LMO) Guide
@@ -42,12 +113,23 @@
 
 .lmo-co-accentize(@lmo-co-accent) {
 
-	h2 {
+	h2, .h2 {
 		color: hsl(hue(@lmo-co-accent),90%,20%);
 	}
 
 	a {
-		color: hsl(hue(@lmo-co-accent),saturation(@lmo-co-accent),40%);
+		&:link {
+			color: hsl(hue(@lmo-co-accent),saturation(@lmo-co-accent),40%);
+		}
+
+		&:hover,
+		&:active {
+			color: hsl(hue(@lmo-co-accent),saturation(@lmo-co-accent + 20%),30%);
+		}
+
+		&:visited {
+			color: hsl(hue(@lmo-co-accent),15%,45%);
+		}
 	}
 
 	.lmo-co-content p a {
@@ -188,7 +270,7 @@
 		}
 	}
 
-	h2 {
+	h2, .h2 {
 		margin: @font-size-base 0 (@font-size-base / 2);
 		font-size: ceil((@font-size-h1 * 1.25));
 		font-weight: 200;
@@ -311,7 +393,6 @@
 		width: 48px;
 		height: auto;
 		position: relative;
-		// .wr-transition(transform);
 
 		@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
 			width: 38px;
@@ -319,11 +400,6 @@
 
 		@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
 			// width: 35px;
-
-			// &:hover {
-			// 	.translate(((48px - 35px) * -1), 0);
-			// 	.wr-transition(transform);
-			// }
 		}
 	}
 }

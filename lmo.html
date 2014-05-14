@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>International Jobs &mdash; Guide</title>
+  <title>WeAreYVR Guide &mdash; International Jobs</title>
 
   <!-- Bootstrap core CSS -->
   <link href="css/weareyvr.css" rel="stylesheet">
@@ -28,8 +28,15 @@
 <body class="guide">
   <a class="sr-only" href="#content">Skip to main content</a>
 
-  <header class="jumbotron">
+  <header class="jumbotron wr-jumbotron wr-jumbotron-guide">
     <div class="container">
+      <div class="wr-guide-badge">
+        <div class="wr-guide-badge-marks">
+          <div class="weareyvr-mark" data-height="24" data-colour="#af1639" data-text=""></div>
+          <i class="wr-icon wr-icon-guides"></i>
+        </div>
+        <span class="wr-guide-badge-text">A <a href="http://weareyvr.ca/">WeAreYVR</a> Guide</span>
+      </div>
       <h1>International Jobs</h1>
     </div>
   </header>
@@ -39,7 +46,7 @@
 
     <section class="row">
       <div class="col-md-9">
-        <p class="lead">This data is important to entrepreneurs having a place to find local companies, events, and job opportunites, investors looking to connect with startups, municipalities who want to best support their local economies, and individuals looking for a new city to welcome them.</p>
+        <p class="lead">This data is important to entrepreneurs having a place to find local companies, events, and job opportunities, investors looking to connect with startups, municipalities who want to best support their local economies, and individuals looking for a new city to welcome them.</p>
         <a class="btn btn-lg">Learn more</a>
       </div>
     </section>
@@ -156,11 +163,11 @@
     <section class="row">
       <div class="col-md-6">
         <h1>Why Vancouver?</h1>
-        <p>This data is important to entrepreneurs having a place to find local companies, events, and job opportunites, investors looking to connect with startups, municipalities who want to best support their local economies, and individuals looking for a new city to welcome them.</p>
+        <p>This data is important to entrepreneurs having a place to find local companies, events, and job opportunities, investors looking to connect with startups, municipalities who want to best support their local economies, and individuals looking for a new city to welcome them.</p>
       </div>
       <div class="col-md-6">
         <h1>Next steps</h1>
-        <p>This data is important to entrepreneurs having a place to find local companies, events, and job opportunites, investors looking to connect with startups, municipalities who want to best support their local economies, and individuals looking for a new city to welcome them.</p>
+        <p>This data is important to entrepreneurs having a place to find local companies, events, and job opportunities, investors looking to connect with startups, municipalities who want to best support their local economies, and individuals looking for a new city to welcome them.</p>
       </div>
     </section>
 
@@ -199,11 +206,34 @@
     </div>
   </footer>
 
-<!-- Bootstrap core JavaScript
+  <!-- Bootstrap core JavaScript
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="docs/docs.min.js"></script>
+
+  <!-- WeAreYVR logo generator -->
+  <script src="tangents/d3.v3.min.js"></script>
+  <script>
+    var colours = ["#10988b", // spruce
+      "#af1639", // red
+      "#ff769f", // pink
+      "#ffaf00", // orange
+      "#00d679", // green
+      "#4095c5", // blue
+      "#601ebd", // purple
+      "#8b572a"]; // brown
+    // randomize mark
+    d3.select('.weareyvr-mark')
+      // .attr('data-colour', colours[Math.floor(Math.random()*colours.length)])
+      .attr('data-radius', Math.floor(Math.random()*101))
+      .attr('data-one', Math.floor(Math.random()*101))
+      .attr('data-two', Math.floor(Math.random()*101))
+      .attr('data-three', Math.floor(Math.random()*101))
+      .attr('data-four', Math.floor(Math.random()*101))
+  </script>
+  <script src="tangents/weareyvr-mark.js"></script>
+
 </body>
 </html>

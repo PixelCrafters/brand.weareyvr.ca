@@ -18,8 +18,10 @@
                     <g transform="translate(1.000000, 2.000000)">
                         <path d="M5.5,7.4981649 C6.0319478,7.47574189 6.53050784,7 6.97869676,7 C7.43882055,7 7.95205114,7.47643222 8.5,7.5" id="Bridge" stroke="#AF1639" stroke-width="0.5" fill="none" sketch:type="MSShapeGroup"></path>
                         <g id="Arm-1-+-Arm-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSLayerGroup" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M0,6 C0,6 1.00000001,1.68058015 1,1.68058009 C1.59055092,-0.090834759 3,0.000805681074 3,0.000805681074" id="Arm-1" stroke="#AF1639" stroke-width="0.5" sketch:type="MSShapeGroup"></path>
+                            <path d="M10.8000031,6.40000153 C10.8000031,6.40000153 11.8000031,2.08058168 11.8000031,2.08058162 C12.390554,0.309166767 13.8000031,0.400807207 13.8000031,0.400807207" id="Arm-3" stroke="#FFFFFF" stroke-width="0.5" opacity="0.8" sketch:type="MSShapeGroup" transform="translate(12.300003, 3.400002) scale(-1, 1) translate(-12.300003, -3.400002) "></path>
                             <path d="M11,6 C11,6 12,1.68058015 12,1.68058009 C12.5905509,-0.090834759 14,0.000805681074 14,0.000805681074" id="Arm-2" stroke="#AF1639" stroke-width="0.5" sketch:type="MSShapeGroup" transform="translate(12.500000, 3.000000) scale(-1, 1) translate(-12.500000, -3.000000) "></path>
+                            <path d="M0.199996948,6.40000153 C0.199996948,6.40000153 1.19999696,2.08058168 1.19999695,2.08058162 C1.79054786,0.309166767 3.19999695,0.400807207 3.19999695,0.400807207" id="Arm-4" stroke="#FFFFFF" stroke-width="0.5" sketch:type="MSShapeGroup"></path>
+                            <path d="M0,6 C0,6 1.00000001,1.68058015 1,1.68058009 C1.59055092,-0.090834759 3,0.000805681074 3,0.000805681074" id="Arm-1" stroke="#AF1639" stroke-width="0.5" sketch:type="MSShapeGroup"></path>
                         </g>
                         <g id="Lenses">
                             <use stroke-opacity="0.7" stroke="#D79FAB" stroke-width="0.5" fill-opacity="0.9" fill="#FFFFFF" fill-rule="evenodd" sketch:type="MSShapeGroup" xlink:href="#path-3"></use>

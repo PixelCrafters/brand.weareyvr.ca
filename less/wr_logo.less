@@ -1,60 +1,21 @@
-// @weareyvr-mark-colour: @wr-orange;
-@weareyvr-mark-colour: @brand-primary;
-
 .wr-navbar:not(.affix) {
-	margin: 50px 0 0;
+	margin-top: 50px;
+	margin-bottom: 0;
 }
 
-.navbar-mark {
-	display: block;
+.navbar-brand .weareyvr-mark {
+	z-index: 13;
+	margin: 0 1em 0 0;
+	display: inline-block;
 	position: relative;
-	width: 200px;
-	height: (@navbar-height + 2);
-	margin: 0;
-	text-align: center;
+	top: ceil(-(179px / 5));
+	width: 127px;
+	height: 100px;
 
-	a.navbar-brand {
-		z-index: 13;
-		margin: 0 auto;
-		display: block;
+	> span {
 		font-size: @font-size-h3;
-		text-align: center;
-		// line-height: 0.7;
-		width: 200px;
-		height: 100%;
+		line-height: 0;
 		position: absolute;
-		top: 0;
-		left: 0;
-		// margin: 5px;
-		// border: 1px solid fadeout(#fff,20%);
-
-		&:hover {
-			// background-color: #fff;
-		}
-	}
-}
-
-@mark-stroke-width: 9;
-
-#weareyvr-mark {
-	// .square(72px);
-	width: 475px;
-	height: 500px;
-	.scale(0.2,0.2);
-	position: absolute;
-	left: -155px;
-	top: -220px;
-
-	z-index: 12;
-
-	line {
-		stroke: @weareyvr-mark-colour !important;
-		stroke-width: @mark-stroke-width !important;
-	}
-
-	path {
-		stroke: @weareyvr-mark-colour !important;
-		fill: @weareyvr-mark-colour !important;
-		stroke-width: (@mark-stroke-width - 3) !important;
+		top: 46px;
 	}
 }
