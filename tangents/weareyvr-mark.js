@@ -8,9 +8,9 @@ function drawMark(vis, height, text, colour, radius, one, two, three, four) {
   var scale = height/500;
   var width = height * 0.95;
   var radius = ((parseInt(radius, 10)*70/100)+5)*scale;
-  var stroke = 25*scale;
+  var stroke = 20*scale;
   if (stroke < 1) stroke = 1;
-
+  
   var depth_factor = 0.85;
 
   vis.attr('width', width + (635-475)*scale).attr('height', height *1.3);
@@ -36,7 +36,7 @@ function drawMark(vis, height, text, colour, radius, one, two, three, four) {
   var bottomRight = {
     radius: radius * Math.pow(depth_factor , 2),
     x: (width - radius - stroke) + (three < 50 ? ((three-50)/50)*1.15*(width/2-2*radius) : 0),
-    y: (height - radius - stroke) - (three > 50 ? ((three-50)/50)*2*(height/2-2*radius) : 60*scale),
+    y: (height - radius - stroke) - (three > 50 ? ((three-50)/50)*2*(height/2-2*radius) : 65 * scale),
   };
 
   // Bottom left.
@@ -44,7 +44,7 @@ function drawMark(vis, height, text, colour, radius, one, two, three, four) {
   var bottomLeft = {
     radius: radius,
     x: (radius + stroke) - (four < 50 ? ((four-50)/50)*1.15*(width/2-2*radius) : 0),
-    y: (height - radius - stroke) - (four > 50 ? ((four-50)/50)*2*(height/2-2*radius) : 60 * scale),
+    y: (height - radius - stroke) - (four > 50 ? ((four-50)/50)*2*(height/2-2*radius) : 65 * scale),
   };
 
   // Port of: http://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Tangents_between_two_circles
@@ -87,7 +87,9 @@ function drawMark(vis, height, text, colour, radius, one, two, three, four) {
     return res[tangentIndex];
   }
 
-  var mark = vis.append("g").attr("transform", "translate(" + 80*scale + ",0)");
+  var trans_y = Math.max(Math.max(bottomLeft.y + bottomLeft.radius, bottomRight.y + bottomRight.radius), Math.max(topRight.y + topRight.radius, topLeft.y + topLeft.radius));
+
+  var mark = vis.append("g").attr("transform", "translate(" + 80*scale + "," + (180-trans_y)*scale + ")");
 
   // Lines
 
@@ -194,11 +196,9 @@ function drawMark(vis, height, text, colour, radius, one, two, three, four) {
       { d: "M564.77 0h36.659c20.834 0 30.988 10.022 30.988 27.692 0 14.505-6.594 23.736-18.197 27.692L634 92.307h-12.922l-18.726-34.945h-25.846v34.945H564.77V0zM576.506 10.022v37.187h24.791c12.132 0 19.384-6.198 19.384-19.121 0-11.473-6.197-18.066-19.252-18.066H576.506z" },
     ];
 
-    var trans_y = Math.max(Math.max(bottomLeft.y + bottomLeft.radius, bottomRight.y + bottomRight.radius), Math.max(topRight.y + topRight.radius, topLeft.y + topLeft.radius));
-
     var letterGroup = vis.append("g")
       .attr("class", "letters")
-      .attr("transform", "translate(" + 40 * scale + "," + (trans_y + 20*scale) + ") scale(" + scale*.9 + ")");
+      .attr("transform", "translate(" + 40 * scale + "," +  500*scale + ") scale(" + scale*.9 + ")");
 
     var letters = letterGroup.selectAll("path")
       .data(letterforms)
