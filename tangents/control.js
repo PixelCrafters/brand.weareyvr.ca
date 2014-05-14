@@ -3,12 +3,29 @@ var vis = d3.select(".weareyvr-mark svg");
 
 var height = 500;
 var text = "black";
-var radius = 50;
-var topLeft = 50;
-var topRight = 50;
-var bottomRight = 0;
-var bottomLeft = 0;
+
+// Canonical.
+// var radius = 50;
+// var topLeft = 50;
+// var topRight = 50;
+// var bottomRight = 0;
+// var bottomLeft = 0;
 var colour  = "#10988b";
+
+// Randomize.
+var radius = Math.floor(Math.random()*101);
+var topLeft = Math.floor(Math.random()*101);
+var topRight = Math.floor(Math.random()*101);
+var bottomRight = Math.floor(Math.random()*101);
+var bottomLeft = Math.floor(Math.random()*101);
+d3.select('input[name="radius"]').property('value', radius)
+d3.select('input[name="topLeft"]').property('value', topLeft)
+d3.select('input[name="topRight"]').property('value', topRight)
+d3.select('input[name="bottomRight"]').property('value', bottomRight)
+d3.select('input[name="bottomLeft"]').property('value', bottomLeft)
+
+vis.selectAll('*').remove();
+drawMark(vis, height, text, colour,  radius, topLeft, topRight, bottomRight, bottomLeft);
 
 // Controls
 var change = function() {
