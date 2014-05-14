@@ -8,15 +8,17 @@ function drawMark(vis, height, text, colour, radius, one, two, three, four) {
   var scale = height/500;
   var width = height * 0.95;
   var radius = ((parseInt(radius, 10)*70/100)+5)*scale;
-  var stroke = 3*scale;
+  var stroke = 30*scale;
   if (stroke < 1) stroke = 1;
+
+  var depth_factor = 4*scale;
 
   vis.attr('width', width + (635-475)*scale).attr('height', height);
 
   // Top left.
   var one = parseInt(one, 10);
   var topLeft = {
-    radius: radius,
+    radius: radius - depth_factor * 4,
     x: (radius + stroke) + (one > 50 ? ((one-50)/50)*1.15*(width/2-2*radius) : 0),
     y: (radius + stroke) - (one < 50 ? ((one-50)/50)*2*(height/2-2*radius) : 0),
   };
@@ -24,7 +26,7 @@ function drawMark(vis, height, text, colour, radius, one, two, three, four) {
   // Top right.
   var two = parseInt(two, 10);
   var topRight = {
-    radius: radius,
+    radius: radius - depth_factor * 2,
     x: (width - radius - stroke) - (two > 50 ? ((two-50)/50)*1.15*(width/2-2*radius) : 0),
     y: (radius + stroke) - (two < 50 ? ((two-50)/50)*2*(height/2-2*radius) : 0),
   };
@@ -32,9 +34,9 @@ function drawMark(vis, height, text, colour, radius, one, two, three, four) {
   // Bottom right.
   var three = parseInt(three, 10);
   var bottomRight = {
-    radius: radius,
+    radius: radius - depth_factor * 2,
     x: (width - radius - stroke) + (three < 50 ? ((three-50)/50)*1.15*(width/2-2*radius) : 0),
-    y: (height - radius - stroke) - (three > 50 ? ((three-50)/50)*2*(height/2-2*radius) : 0),
+    y: (height - radius - stroke) - (three > 50 ? ((three-50)/50)*2*(height/2-2*radius) : 60*scale),
   };
 
   // Bottom left.
@@ -42,7 +44,7 @@ function drawMark(vis, height, text, colour, radius, one, two, three, four) {
   var bottomLeft = {
     radius: radius,
     x: (radius + stroke) - (four < 50 ? ((four-50)/50)*1.15*(width/2-2*radius) : 0),
-    y: (height - radius - stroke) - (four > 50 ? ((four-50)/50)*2*(height/2-2*radius) : 0),
+    y: (height - radius - stroke) - (four > 50 ? ((four-50)/50)*2*(height/2-2*radius) : 60 * scale),
   };
 
   // Port of: http://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Tangents_between_two_circles
@@ -96,7 +98,7 @@ function drawMark(vis, height, text, colour, radius, one, two, three, four) {
     .attr("y1", tangentTopLeftToTopRight.y1)
     .attr("x2", tangentTopLeftToTopRight.x2)
     .attr("y2", tangentTopLeftToTopRight.y2)
-    .attr("stroke-width", stroke)
+    .attr("stroke-width", stroke - 3 * depth_factor)
     .attr("stroke", colour);
 
   // Top right to bottom left.
@@ -106,7 +108,7 @@ function drawMark(vis, height, text, colour, radius, one, two, three, four) {
     .attr("y1", tangentTopRightToBottomLeft.y1)
     .attr("x2", tangentTopRightToBottomLeft.x2)
     .attr("y2", tangentTopRightToBottomLeft.y2)
-    .attr("stroke-width", stroke)
+    .attr("stroke-width", stroke - 1 * depth_factor)
     .attr("stroke", colour);
 
   // Bottom left to bottom right.
@@ -116,7 +118,7 @@ function drawMark(vis, height, text, colour, radius, one, two, three, four) {
     .attr("y1", tangentBottomLeftToBottomRight.y1)
     .attr("x2", tangentBottomLeftToBottomRight.x2)
     .attr("y2", tangentBottomLeftToBottomRight.y2)
-    .attr("stroke-width", stroke)
+    .attr("stroke-width", stroke - 1 * depth_factor)
     .attr("stroke", colour);
 
   // Bottom right to top left.
@@ -126,15 +128,15 @@ function drawMark(vis, height, text, colour, radius, one, two, three, four) {
     .attr("y1", tangentBottomRightToTopLeft.y1)
     .attr("x2", tangentBottomRightToTopLeft.x2)
     .attr("y2", tangentBottomRightToTopLeft.y2)
-    .attr("stroke-width", stroke)
+    .attr("stroke-width", stroke - 3 * depth_factor)
     .attr("stroke", colour);
 
   // Arcs
 
   // Top left.
   var arc = d3.svg.arc()
-    .innerRadius(topLeft.radius - stroke/2)
-    .outerRadius(topLeft.radius - stroke/2 + stroke)
+    .innerRadius(topLeft.radius - (stroke - depth_factor * 4)/2)
+    .outerRadius(topLeft.radius - (stroke - depth_factor * 4)/2 + (stroke - depth_factor * 4))
     .startAngle(Math.PI + Math.atan((topLeft.x - tangentBottomRightToTopLeft.x2) / (tangentBottomRightToTopLeft.y2 - topLeft.y)))
     .endAngle(2 * Math.PI + Math.atan((topLeft.x - tangentTopLeftToTopRight.x1) / (tangentTopLeftToTopRight.y1 - topLeft.y)));
 
@@ -145,8 +147,8 @@ function drawMark(vis, height, text, colour, radius, one, two, three, four) {
 
   // Top right.
   var arc = d3.svg.arc()
-    .innerRadius(topRight.radius - stroke/2)
-    .outerRadius(topRight.radius - stroke/2 + stroke)
+    .innerRadius(topRight.radius - (stroke - depth_factor * 2)/2)
+    .outerRadius(topRight.radius - (stroke - depth_factor * 2)/2 + (stroke - depth_factor * 2))
     .startAngle(Math.atan((topRight.x - tangentTopLeftToTopRight.x2) / (tangentTopLeftToTopRight.y2 - topRight.y)))
     .endAngle(Math.PI + Math.atan((topRight.x - tangentTopRightToBottomLeft.x1) / (tangentTopRightToBottomLeft.y1 - topRight.y)));
 
@@ -157,8 +159,8 @@ function drawMark(vis, height, text, colour, radius, one, two, three, four) {
 
   // Bottom right.
   var arc = d3.svg.arc()
-    .innerRadius(bottomRight.radius - stroke/2)
-    .outerRadius(bottomRight.radius - stroke/2 + stroke)
+    .innerRadius(bottomRight.radius - (stroke - depth_factor * 2)/2)
+    .outerRadius(bottomRight.radius - (stroke - depth_factor * 2)/2 + (stroke - depth_factor * 2))
     .startAngle(Math.atan((bottomRight.x - tangentBottomRightToTopLeft.x1) / (tangentBottomRightToTopLeft.y1 - bottomRight.y)))
     .endAngle(Math.PI + Math.atan((bottomRight.x - tangentBottomLeftToBottomRight.x2) / (tangentBottomLeftToBottomRight.y2 - bottomRight.y)));
 
@@ -191,9 +193,11 @@ function drawMark(vis, height, text, colour, radius, one, two, three, four) {
       { d: "M564.77 0h36.659c20.834 0 30.988 10.022 30.988 27.692 0 14.505-6.594 23.736-18.197 27.692L634 92.307h-12.922l-18.726-34.945h-25.846v34.945H564.77V0zM576.506 10.022v37.187h24.791c12.132 0 19.384-6.198 19.384-19.121 0-11.473-6.197-18.066-19.252-18.066H576.506z" },
     ];
 
+    var trans_y = Math.max(bottomLeft.y + bottomLeft.radius, bottomRight.y + bottomRight.radius)
+
     var letterGroup = vis.append("g")
       .attr("class", "letters")
-      .attr("transform", "translate(0," + 179*scale + ") scale(" + scale + ")");
+      .attr("transform", "translate(" + 90 * scale + "," + (trans_y - 20*scale) + ") scale(" + scale*.7 + ")");
 
     var letters = letterGroup.selectAll("path")
       .data(letterforms)

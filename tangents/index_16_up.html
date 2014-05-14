@@ -32,13 +32,11 @@
     // });
   });
   // var text = true
-  var colours = ["#af1639",
+  var colours = [
     "#ff769f",
     "#ffaf00",
-    "#00d679",
-    "#4095c5",
-    "#601ebd",
-    "#8b572a"];
+    "#10988b",
+    ];
   var body = d3.select('body');
   var draw16Up = function() {
     for (var i = 0; i < 35; i++) {
@@ -47,7 +45,7 @@
         .attr('data-height', 150)
         .attr('data-colour', colours[Math.floor(Math.random()*colours.length)])
         .attr('data-text', "black")
-        .attr('data-radius', Math.floor(Math.random()*101))
+        .attr('data-radius', Math.floor(Math.random()*80 + 40))
         .attr('data-one', Math.floor(Math.random()*101))
         .attr('data-two', Math.floor(Math.random()*101))
         .attr('data-three', Math.floor(Math.random()*101))
