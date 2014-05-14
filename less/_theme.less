@@ -582,14 +582,23 @@ section.row {
 			}
 
 			@media screen and (min-width: @screen-sm-min) {
+
 				.search-bar-field {
 					font-size: @font-size-h3;
 					height: (@font-size-h3 * 2);
 					display: inline;
 					padding-right: 5em;
 
-					&:valid + .search-bar-submit {
+					&:focus + .search-bar-submit {
 						visibility: visible;
+						opacity: 0;
+					}
+
+					&:valid + .search-bar-submit,
+					&:focus:valid + .search-bar-submit {
+						visibility: visible;
+						opacity: 1.0;
+						.wr-transition(opacity);
 					}
 				}
 

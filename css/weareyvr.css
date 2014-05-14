@@ -6549,8 +6549,16 @@ section.row + main.row {
     display: inline;
     padding-right: 5em;
   }
-  .jumbotron.wr-jumbotron .wr-search-bar form .search-bar-field:valid + .search-bar-submit {
+  .jumbotron.wr-jumbotron .wr-search-bar form .search-bar-field:focus + .search-bar-submit {
     visibility: visible;
+    opacity: 0;
+  }
+  .jumbotron.wr-jumbotron .wr-search-bar form .search-bar-field:valid + .search-bar-submit,
+  .jumbotron.wr-jumbotron .wr-search-bar form .search-bar-field:focus:valid + .search-bar-submit {
+    visibility: visible;
+    opacity: 1.0;
+    -webkit-transition: opacity 0.15s ease-in-out;
+    transition: opacity 0.15s ease-in-out;
   }
   .jumbotron.wr-jumbotron .wr-search-bar form .search-bar-submit {
     font-size: 26px;
