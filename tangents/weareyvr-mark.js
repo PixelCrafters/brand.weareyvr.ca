@@ -8,17 +8,17 @@ function drawMark(vis, height, text, colour, radius, one, two, three, four) {
   var scale = height/500;
   var width = height * 0.95;
   var radius = ((parseInt(radius, 10)*70/100)+5)*scale;
-  var stroke = 30*scale;
+  var stroke = 25*scale;
   if (stroke < 1) stroke = 1;
 
-  var depth_factor = 4*scale;
+  var depth_factor = 0.85;
 
-  vis.attr('width', width + (635-475)*scale).attr('height', height);
+  vis.attr('width', width + (635-475)*scale).attr('height', height *1.3);
 
   // Top left.
   var one = parseInt(one, 10);
   var topLeft = {
-    radius: radius - depth_factor * 4,
+    radius: radius * Math.pow(depth_factor , 4),
     x: (radius + stroke) + (one > 50 ? ((one-50)/50)*1.15*(width/2-2*radius) : 0),
     y: (radius + stroke) - (one < 50 ? ((one-50)/50)*2*(height/2-2*radius) : 0),
   };
@@ -26,7 +26,7 @@ function drawMark(vis, height, text, colour, radius, one, two, three, four) {
   // Top right.
   var two = parseInt(two, 10);
   var topRight = {
-    radius: radius - depth_factor * 2,
+    radius: radius * Math.pow(depth_factor , 2),
     x: (width - radius - stroke) - (two > 50 ? ((two-50)/50)*1.15*(width/2-2*radius) : 0),
     y: (radius + stroke) - (two < 50 ? ((two-50)/50)*2*(height/2-2*radius) : 0),
   };
@@ -34,7 +34,7 @@ function drawMark(vis, height, text, colour, radius, one, two, three, four) {
   // Bottom right.
   var three = parseInt(three, 10);
   var bottomRight = {
-    radius: radius - depth_factor * 2,
+    radius: radius * Math.pow(depth_factor , 2),
     x: (width - radius - stroke) + (three < 50 ? ((three-50)/50)*1.15*(width/2-2*radius) : 0),
     y: (height - radius - stroke) - (three > 50 ? ((three-50)/50)*2*(height/2-2*radius) : 60*scale),
   };
@@ -98,7 +98,7 @@ function drawMark(vis, height, text, colour, radius, one, two, three, four) {
     .attr("y1", tangentTopLeftToTopRight.y1)
     .attr("x2", tangentTopLeftToTopRight.x2)
     .attr("y2", tangentTopLeftToTopRight.y2)
-    .attr("stroke-width", stroke - 3 * depth_factor)
+    .attr("stroke-width", stroke * Math.pow(depth_factor, 3))
     .attr("stroke", colour);
 
   // Top right to bottom left.
@@ -108,7 +108,7 @@ function drawMark(vis, height, text, colour, radius, one, two, three, four) {
     .attr("y1", tangentTopRightToBottomLeft.y1)
     .attr("x2", tangentTopRightToBottomLeft.x2)
     .attr("y2", tangentTopRightToBottomLeft.y2)
-    .attr("stroke-width", stroke - 1 * depth_factor)
+    .attr("stroke-width", stroke * Math.pow(depth_factor, 1))
     .attr("stroke", colour);
 
   // Bottom left to bottom right.
@@ -118,7 +118,7 @@ function drawMark(vis, height, text, colour, radius, one, two, three, four) {
     .attr("y1", tangentBottomLeftToBottomRight.y1)
     .attr("x2", tangentBottomLeftToBottomRight.x2)
     .attr("y2", tangentBottomLeftToBottomRight.y2)
-    .attr("stroke-width", stroke - 1 * depth_factor)
+    .attr("stroke-width", stroke * Math.pow(depth_factor, 1))
     .attr("stroke", colour);
 
   // Bottom right to top left.
@@ -128,7 +128,7 @@ function drawMark(vis, height, text, colour, radius, one, two, three, four) {
     .attr("y1", tangentBottomRightToTopLeft.y1)
     .attr("x2", tangentBottomRightToTopLeft.x2)
     .attr("y2", tangentBottomRightToTopLeft.y2)
-    .attr("stroke-width", stroke - 3 * depth_factor)
+    .attr("stroke-width", stroke * Math.pow(depth_factor, 3))
     .attr("stroke", colour);
 
   // Arcs
@@ -194,7 +194,7 @@ function drawMark(vis, height, text, colour, radius, one, two, three, four) {
       { d: "M564.77 0h36.659c20.834 0 30.988 10.022 30.988 27.692 0 14.505-6.594 23.736-18.197 27.692L634 92.307h-12.922l-18.726-34.945h-25.846v34.945H564.77V0zM576.506 10.022v37.187h24.791c12.132 0 19.384-6.198 19.384-19.121 0-11.473-6.197-18.066-19.252-18.066H576.506z" },
     ];
 
-    var trans_y = Math.max(bottomLeft.y + bottomLeft.radius, bottomRight.y + bottomRight.radius)
+    var trans_y = Math.max(Math.max(bottomLeft.y + bottomLeft.radius, bottomRight.y + bottomRight.radius), Math.max(topRight.y + topRight.radius, topLeft.y + topLeft.radius));
 
     var letterGroup = vis.append("g")
       .attr("class", "letters")
