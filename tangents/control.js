@@ -24,8 +24,18 @@ d3.select('input[name="topRight"]').property('value', topRight)
 d3.select('input[name="bottomRight"]').property('value', bottomRight)
 d3.select('input[name="bottomLeft"]').property('value', bottomLeft)
 
-vis.selectAll('*').remove();
-drawMark(vis, height, text, colour,  radius, topLeft, topRight, bottomRight, bottomLeft);
+var draw = function() {
+  // Having troubling finding a nice data driven way to do this, since
+  // each arc and line is kind of unique, so just remove all and redraw.
+  d3.select('.radius-value').text(radius);
+  d3.select('.topLeft-value').text(topLeft);
+  d3.select('.topRight-value').text(topRight);
+  d3.select('.bottomRight-value').text(bottomRight);
+  d3.select('.bottomLeft-value').text(bottomLeft);
+  vis.selectAll('*').remove();
+  drawMark(vis, height, text, colour,  radius, topLeft, topRight, bottomRight, bottomLeft);
+  document.body.style.backgroundColor = text === "white" || colour === "white" ? "#ccc" : "#eee";
+};
 
 // Controls
 var change = function() {
@@ -35,13 +45,9 @@ var change = function() {
   // transition.selectAll(".one")
   //   // .delay(delay)
   //   .attr("transform", "translate(" + one.x + ',' + one.y + ")");
-
-  // Having troubling finding a nice data driven way to do this, since
-  // each arc and line is kind of unique, so just remove all and redraw.
-  vis.selectAll('*').remove();
-  drawMark(vis, height, text, colour,  radius, topLeft, topRight, bottomRight, bottomLeft);
-  document.body.style.backgroundColor = text === "white" || colour === "white" ? "#ccc" : "#eee";
+  draw();  
 };
+
 d3.selectAll('input[name="height"]').on("change", change);
 d3.selectAll('input[name="height"]').on("keyup", change);
 d3.selectAll('input[type="range"], input[type="radio"]').on("change", change);
@@ -61,6 +67,7 @@ d3.selectAll('input[type="text"].generate').on("keyup", function change() {
   d3.select('input[name="bottomRight"]').property('value', bottomRight)
   d3.select('input[name="bottomLeft"]').property('value', bottomLeft)
 
-  vis.selectAll('*').remove();
-  drawMark(vis, height, text, colour,  radius, topLeft, topRight, bottomRight, bottomLeft);
+  draw();
 });
+
+draw();

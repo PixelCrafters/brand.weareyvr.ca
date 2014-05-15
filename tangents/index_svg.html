@@ -35,6 +35,13 @@
     top: -2px;
     margin-right: 5px;
   }
+  input + span {
+    color: #555;
+    font-size: 14px;
+    position: relative;
+    top: -4px;
+    margin-left: 4px;
+  }
   h3, .outlines { margin-top: 40px; }
   </style>
 </head>
@@ -42,15 +49,15 @@
   <div class="weareyvr-mark" data-height="500" data-colour="#10988b" data-text="black" data-radius="50" data-one="50" data-two="50" data-three="0" data-four="0"></div>
   <div class="controls">
     <h3>Radius</h3>
-    <input type="range" min="5" max="100" step="1" value="50" name="radius">
+    <input type="range" min="5" max="100" step="1" value="50" name="radius"><span class="radius-value">50</span>
     <h3>Top Left</h3>
-    <input type="range" min="0" max="100" step="1" value="50" name="topLeft">
+    <input type="range" min="0" max="100" step="1" value="50" name="topLeft"><span class="topLeft-value">50</span>
     <h3>Top Right</h3>
-    <input type="range" min="0" max="100" step="1" value="50" name="topRight">
+    <input type="range" min="0" max="100" step="1" value="50" name="topRight"><span class="topRight-value">50</span>
     <h3>Bottom Right</h3>
-    <input type="range" min="0" max="100" step="1" value="0" name="bottomRight">
+    <input type="range" min="0" max="100" step="1" value="0" name="bottomRight"><span class="bottomRight-value">0</span>
     <h3>Bottom Left</h3>
-    <input type="range" min="0" max="100" step="1" value="0" name="bottomLeft">
+    <input type="range" min="0" max="100" step="1" value="0" name="bottomLeft"><span class="bottomLeft-value">0</span>
     <h3>Generate From Text</h3>
     <input class="generate" type="text">
   </div>
