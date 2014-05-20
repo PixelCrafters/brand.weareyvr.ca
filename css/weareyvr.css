@@ -5970,8 +5970,9 @@ button.close {
   font-feature-settings: "lnum" 1;
 }
 .btn:hover {
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.9);
   color: #10988b;
+  text-shadow: 0 0 10px #ffffff;
   -webkit-transition: box-shadow 0.15s ease-in-out, text-shadow 0.15s ease-in-out, color 0.15s ease-in-out, background-color 0.15s ease-in-out;
   transition: box-shadow 0.15s ease-in-out, text-shadow 0.15s ease-in-out, color 0.15s ease-in-out, background-color 0.15s ease-in-out;
   border: 1px solid rgba(16, 152, 139, 0.7);
@@ -6635,13 +6636,22 @@ body > .navbar.affix + * {
     margin: 0 auto;
   }
 }
+.wr-navbar,
+.wr-navbar.affix-top {
+  height: 104px;
+  -webkit-transition: height 0.15s ease-in-out;
+  transition: height 0.15s ease-in-out;
+}
 .wr-navbar.affix {
+  height: 52px;
   position: fixed;
   right: 0;
   left: 0;
   z-index: 1030;
   top: 0;
   border-width: 0 0 1px;
+  -webkit-transition: height 0.15s ease-in-out;
+  transition: height 0.15s ease-in-out;
 }
 @media (min-width: 768px) {
   .wr-navbar.affix {
@@ -7609,8 +7619,9 @@ fieldset[disabled] a.lmo-co-find-jobs {
   box-shadow: none;
 }
 a.lmo-co-find-jobs:hover {
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.9);
   color: #10988b;
+  text-shadow: 0 0 10px #ffffff;
   -webkit-transition: box-shadow 0.15s ease-in-out, text-shadow 0.15s ease-in-out, color 0.15s ease-in-out, background-color 0.15s ease-in-out;
   transition: box-shadow 0.15s ease-in-out, text-shadow 0.15s ease-in-out, color 0.15s ease-in-out, background-color 0.15s ease-in-out;
   border: 1px solid rgba(16, 152, 139, 0.7);
@@ -7679,6 +7690,7 @@ a.lmo-co-find-jobs.active {
 #lmo-co-harp a.lmo-co-find-jobs {
   color: #ffffff;
   background-color: #d1586c;
+  border-style: none;
 }
 #lmo-co-harp .lmo-co-categories dd {
   border: 1px solid #f5e0e4;
@@ -7738,6 +7750,7 @@ a.lmo-co-find-jobs.active {
 #lmo-co-bex a.lmo-co-find-jobs {
   color: #ffffff;
   background-color: #ff6629;
+  border-style: none;
 }
 #lmo-co-bex .lmo-co-categories dd {
   border: 1px solid #f5e6e0;

@@ -678,13 +678,16 @@ body>.navbar.affix+* {
 		}
 	}
 
-	// &.affix-top,
-	// &.affix {
-	// 	.wr-transition(all);
-	// }
+	&,
+	&.affix-top {
+		height: ((@navbar-height + 2) * 2);
+		.wr-transition(height);
+	}
 
 	&.affix {
+		height: (@navbar-height + 2);
 		.navbar-fixed-top;
+		.wr-transition(height);
 	}
 
 	.navbar-brand {
