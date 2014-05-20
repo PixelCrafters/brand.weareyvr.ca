@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Spinner test</title>
+
+  <style>
+
+  .spinner {
+  	position: absolute;
+  	left: 50%;
+  	top: 50%;
+  	margin-left: -16px;
+  	margin-top: -16px;
+  }
+
+  @-webkit-keyframes spin {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+
+    to {
+      -webkit-transform: rotate(359deg);
+    }
+  }
+
+  .spinner svg {
+  	-webkit-animation: spin 0.8s infinite ease-in-out;
+  }
+
+  .spinner svg:first-child {
+  	position: absolute;
+  	left: -128px;
+  }
+
+  </style>
+
+</head>
+<body>
+
+	<div class="spinner">
+		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+		  <g id="wr-spinner">
+		    <circle id="wr-spinner-bounds" fill="none" cx="16" cy="16" r="16" />
+		    <path id="wr-spinner-path" fill="none" stroke="#10988b" d="M24.385 13.26C26.188 12.673 27.5 10.999 27.5 9c0-2.485-2.015-4.5-4.5-4.5H9C6.515 4.5 4.5 6.515 4.5 9c0 1.999 1.312 3.673 3.115 4.26l16.771 5.48C26.188 19.327 27.5 21.001 27.5 23c0 2.485-2.015 4.5-4.5 4.5H9c-2.485 0-4.5-2.015-4.5-4.5 0-1.999 1.312-3.673 3.115-4.26L24.385 13.26z" />
+		  </g>
+		</svg>
+
+		<!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+		  <g id="wr-spinner">
+		    <circle id="wr-spinner-bounds" fill="none" cx="16" cy="16" r="16"/>
+		    <path id="wr-spinner-path" fill="none" stroke="#10988b" d="M12.578,20.109C11.915,20.893,11.5,21.893,11.5,23c0,2.485,2.015,4.5,4.5,4.5
+		    	s4.5-2.015,4.5-4.5c0-1.107-0.415-2.107-1.078-2.891l-6.844-8.218C11.915,11.107,11.5,10.107,11.5,9c0-2.485,2.015-4.5,4.5-4.5
+		    	s4.5,2.015,4.5,4.5c0,1.107-0.415,2.107-1.078,2.891L12.578,20.109z"/>
+		  </g>
+		</svg> -->
+		</div>
+
+</body>
+</html>
