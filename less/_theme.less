@@ -52,9 +52,9 @@ a.alert-link {
 	&:hover {
 		// color: @btn-primary-color;
 		// background-color: @brand-primary;
-		background-color: @btn-primary-color;
+		background-color: fadeout(@btn-primary-color,10%);
 		color: @brand-primary;
-		// text-shadow: 0 0 10px @btn-primary-color;
+		text-shadow: 0 0 10px @btn-primary-color;
 		.wr-transition(box-shadow);
 		.wr-transition(text-shadow);
 		.wr-transition(color);
