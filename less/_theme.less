@@ -670,6 +670,7 @@ body>.navbar.affix+* {
 	border-style: none;
 	background-color: fadeout(#fff,5%);
 	box-shadow: 0 1px 2px fadeout(@grey-light,50%);
+	height: (@navbar-height * 2);
 
 	@media screen and (min-width: @screen-sm-min) and (max-width: @screen-md-max) {
 		.container {
@@ -678,17 +679,17 @@ body>.navbar.affix+* {
 		}
 	}
 
-	&,
-	&.affix-top {
-		height: ((@navbar-height + 2) * 2);
-		.wr-transition(height);
-	}
+	// &,
+	// &.affix-top {
+	// 	height: ((@navbar-height + 2) * 2);
+	// 	.wr-transition(height);
+	// }
 
-	&.affix {
-		height: (@navbar-height + 2);
-		.navbar-fixed-top;
-		.wr-transition(height);
-	}
+	// &.affix {
+	// 	height: (@navbar-height + 2);
+	// 	.navbar-fixed-top;
+	// 	.wr-transition(height);
+	// }
 
 	.navbar-brand {
 		.hero-type;
