@@ -6251,24 +6251,22 @@ section.row + main.row {
 .jumbotron.wr-jumbotron .input-group .input-group-addon:not(:last-child) {
   border-right-style: none;
 }
-.jumbotron.wr-jumbotron > .image-credit {
-  font-size: 13px;
+.jumbotron.wr-jumbotron .image-credit {
+  font-size: 11px;
   position: absolute;
   right: 1em;
   bottom: 1em;
-  opacity: 0.5;
+  opacity: 0.4;
+  color: #92aaa7;
   -webkit-transition: opacity 0.15s ease-in-out, text-shadow 0.15s ease-in-out;
   transition: opacity 0.15s ease-in-out, text-shadow 0.15s ease-in-out;
 }
-.jumbotron.wr-jumbotron > .image-credit a {
-  color: #232c2b;
-  font-weight: bold;
+.jumbotron.wr-jumbotron .image-credit a:link,
+.jumbotron.wr-jumbotron .image-credit a:visited {
+  color: #f2f5f5;
 }
-.jumbotron.wr-jumbotron:hover > .image-credit {
-  opacity: 1;
-  text-shadow: 0 0 2px rgba(242, 245, 245, 0.8);
-  -webkit-transition: opacity 0.15s ease-in-out, text-shadow 0.15s ease-in-out;
-  transition: opacity 0.15s ease-in-out, text-shadow 0.15s ease-in-out;
+.jumbotron.wr-jumbotron:hover .image-credit {
+  opacity: 0.9;
 }
 .jumbotron.wr-jumbotron-blank .form-control,
 .jumbotron.wr-jumbotron-blank .input-group-addon,
@@ -6328,19 +6326,8 @@ section.row + main.row {
 .jumbotron.wr-jumbotron-darken .input-group-addon:focus::-webkit-input-placeholder {
   color: rgba(146, 170, 167, 0.9);
 }
-.jumbotron.wr-jumbotron-dark > .image-credit a,
-.jumbotron.wr-jumbotron-darken > .image-credit a {
-  color: #f2f5f5;
-}
-.jumbotron.wr-jumbotron-dark:hover > .image-credit,
-.jumbotron.wr-jumbotron-darken:hover > .image-credit {
-  text-shadow: 0 0 2px rgba(35, 44, 43, 0.8);
-}
 .jumbotron.wr-jumbotron-darken {
   box-shadow: 0px 0px 500px 100px rgba(0, 0, 0, 0.6) inset;
-}
-.jumbotron.wr-jumbotron-darken:hover > .image-credit {
-  text-shadow: none;
 }
 .jumbotron.wr-jumbotron .jumbotron-overlay {
   background-color: rgba(242, 245, 245, 0.4);
