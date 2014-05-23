@@ -1,3 +1,5 @@
+@import "_variables";
+
 .wr-navbar:not(.affix) {
 	margin-top: 50px;
 	margin-bottom: 0;
@@ -12,7 +14,7 @@
 	width: 127px;
 	height: 100px;
 
-	> span {
+	> span { /* fallback text if SVG doesn't load */
 		font-size: @font-size-h3;
 		line-height: 0;
 		position: absolute;
