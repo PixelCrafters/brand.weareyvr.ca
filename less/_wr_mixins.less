@@ -25,7 +25,7 @@
 	}
 }
 
-.input-ghost {
+.input-ghost() {
 	&:not(:focus) {
 		.placeholder(fadeout(#fff,10%));
 		color: #fff;
@@ -108,21 +108,7 @@
 	background-position: 0 90%;
 }
 
-.fancy-underline(@background-colour) {
-	.fancy-underline-base;
-	text-shadow: 1px 0 @background-colour, 2px 0 @background-colour, -1px 0 @background-colour, -2px 0 @background-colour;
-	#gradient > .vertical(@start-color: transparent; @end-color: fadeout(desaturate(@link-color,50%), 50%));
-	background-position: 0 90%;
-}
-
-.fancy-underline(@background-colour; @underline-colour) {
-	.fancy-underline-base;
-	text-shadow: 1px 0 @background-colour, 2px 0 @background-colour, -1px 0 @background-colour, -2px 0 @background-colour;
-	#gradient > .vertical(@start-color: transparent; @end-color: @underline-colour);
-	background-position: 0 90%;
-}
-
-.fancy-underline(@background-colour; @underline-colour; @underline-position-v) {
+.fancy-underline(@background-colour: transparent; @underline-colour: @link-color; @underline-position-v: 90%) {
 	.fancy-underline-base;
 	text-shadow: 1px 0 @background-colour, 2px 0 @background-colour, -1px 0 @background-colour, -2px 0 @background-colour;
 	#gradient > .vertical(@start-color: transparent; @end-color: @underline-colour);
