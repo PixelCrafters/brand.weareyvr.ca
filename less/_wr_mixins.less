@@ -6,6 +6,21 @@
 	box-shadow: 0 5em 1px 0 @btn-active-box-shadow-colour inset;
 }
 
+.wr-btn-variant(@color: @brand-primary, @hover-background-color: fadeout(@btn-primary-color,10%)) {
+	background-color: @color;
+
+	&:hover {
+		border-color: fadeout(@color,30%);
+		color: @color;
+		background-color: @hover-background-color;
+	}
+
+	&:active,
+	&.active {
+		background-color: @color;
+	}
+}
+
 // Forms
 
 .input-inverse() {
