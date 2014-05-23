@@ -6001,7 +6001,7 @@ button.close {
 .btn-primary:hover {
   border-color: rgba(16, 152, 139, 0.7);
   color: #10988b;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(243, 250, 249, 0.9);
 }
 .btn-primary:active,
 .btn-primary.active {
@@ -6028,7 +6028,7 @@ button.close {
 .btn-success:hover {
   border-color: rgba(92, 184, 92, 0.7);
   color: #5cb85c;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(247, 251, 247, 0.9);
 }
 .btn-success:active,
 .btn-success.active {
@@ -6055,7 +6055,7 @@ button.close {
 .btn-info:hover {
   border-color: rgba(91, 192, 222, 0.7);
   color: #5bc0de;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(247, 252, 253, 0.9);
 }
 .btn-info:active,
 .btn-info.active {
@@ -6082,7 +6082,7 @@ button.close {
 .btn-warning:hover {
   border-color: rgba(240, 173, 78, 0.7);
   color: #f0ad4e;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(254, 251, 246, 0.9);
 }
 .btn-warning:active,
 .btn-warning.active {
@@ -6109,7 +6109,7 @@ button.close {
 .btn-danger:hover {
   border-color: rgba(217, 83, 79, 0.7);
   color: #d9534f;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(253, 246, 246, 0.9);
 }
 .btn-danger:active,
 .btn-danger.active {
@@ -7746,7 +7746,7 @@ a.lmo-co-find-jobs-primary {
 a.lmo-co-find-jobs-primary:hover {
   border-color: rgba(16, 152, 139, 0.7);
   color: #10988b;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(243, 250, 249, 0.9);
 }
 a.lmo-co-find-jobs-primary:active,
 a.lmo-co-find-jobs-primary.active {
@@ -7773,7 +7773,7 @@ a.lmo-co-find-jobs-success {
 a.lmo-co-find-jobs-success:hover {
   border-color: rgba(92, 184, 92, 0.7);
   color: #5cb85c;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(247, 251, 247, 0.9);
 }
 a.lmo-co-find-jobs-success:active,
 a.lmo-co-find-jobs-success.active {
@@ -7800,7 +7800,7 @@ a.lmo-co-find-jobs-info {
 a.lmo-co-find-jobs-info:hover {
   border-color: rgba(91, 192, 222, 0.7);
   color: #5bc0de;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(247, 252, 253, 0.9);
 }
 a.lmo-co-find-jobs-info:active,
 a.lmo-co-find-jobs-info.active {
@@ -7827,7 +7827,7 @@ a.lmo-co-find-jobs-warning {
 a.lmo-co-find-jobs-warning:hover {
   border-color: rgba(240, 173, 78, 0.7);
   color: #f0ad4e;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(254, 251, 246, 0.9);
 }
 a.lmo-co-find-jobs-warning:active,
 a.lmo-co-find-jobs-warning.active {
@@ -7854,7 +7854,7 @@ a.lmo-co-find-jobs-danger {
 a.lmo-co-find-jobs-danger:hover {
   border-color: rgba(217, 83, 79, 0.7);
   color: #d9534f;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(253, 246, 246, 0.9);
 }
 a.lmo-co-find-jobs-danger:active,
 a.lmo-co-find-jobs-danger.active {
