@@ -88,6 +88,8 @@ a.alert-link {
 		&.active {
 			background-color: mix(@brand-primary,@btn-primary-color);
 		}
+
+		.wr-navbar-btn-variant(@navbar-border-color: fadeout(@brand-primary,70%));
 	}
 
 	&-primary {
@@ -717,17 +719,6 @@ body>.navbar.affix+* {
 	// 		border-color: @grey-lighter;
 	// 	}
 	// }
-
-	.navbar-btn {
-		color: @brand-primary;
-		background-color: transparent;
-		border: 1px solid fadeout(@brand-primary, 50%);
-
-		&:hover {
-			color: #fff;
-			background-color: @brand-primary;
-		}
-	}
 
 	+ .container {
 		margin-top: 3em;

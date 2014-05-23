@@ -19,6 +19,28 @@
 	&.active {
 		background-color: @color;
 	}
+
+	.wr-navbar-btn-variant(@color);
+}
+
+.wr-navbar-btn-variant(@navbar-color: @brand-primary, @navbar-border-color: fadeout(@navbar-color,50%)) {
+	.wr-navbar &.navbar-btn {
+		border-color: @navbar-border-color;
+		color: @navbar-color;
+		background-color: transparent;
+
+		&:hover {
+			background-color: fadeout(@navbar-color,90%);
+			border-color: fadein(@navbar-border-color,20%);
+		}
+
+		&:active,
+		&.active {
+			border-color: @btn-active-box-shadow-colour;
+			color: @btn-primary-color;
+			background-color: @navbar-color;
+		}
+	}
 }
 
 // Forms

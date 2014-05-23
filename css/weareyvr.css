@@ -5980,6 +5980,21 @@ button.close {
 .btn-default.active {
   background-color: #87ccc5;
 }
+.wr-navbar .btn-default.navbar-btn {
+  border-color: rgba(16, 152, 139, 0.30000000000000004);
+  color: #10988b;
+  background-color: transparent;
+}
+.wr-navbar .btn-default.navbar-btn:hover {
+  background-color: rgba(16, 152, 139, 0.09999999999999998);
+  border-color: rgba(16, 152, 139, 0.5);
+}
+.wr-navbar .btn-default.navbar-btn:active,
+.wr-navbar .btn-default.navbar-btn.active {
+  border-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  background-color: #10988b;
+}
 .btn-primary {
   background-color: #10988b;
 }
@@ -5990,6 +6005,21 @@ button.close {
 }
 .btn-primary:active,
 .btn-primary.active {
+  background-color: #10988b;
+}
+.wr-navbar .btn-primary.navbar-btn {
+  border-color: rgba(16, 152, 139, 0.5);
+  color: #10988b;
+  background-color: transparent;
+}
+.wr-navbar .btn-primary.navbar-btn:hover {
+  background-color: rgba(16, 152, 139, 0.09999999999999998);
+  border-color: rgba(16, 152, 139, 0.7);
+}
+.wr-navbar .btn-primary.navbar-btn:active,
+.wr-navbar .btn-primary.navbar-btn.active {
+  border-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
   background-color: #10988b;
 }
 .btn-success {
@@ -6004,6 +6034,21 @@ button.close {
 .btn-success.active {
   background-color: #5cb85c;
 }
+.wr-navbar .btn-success.navbar-btn {
+  border-color: rgba(92, 184, 92, 0.5);
+  color: #5cb85c;
+  background-color: transparent;
+}
+.wr-navbar .btn-success.navbar-btn:hover {
+  background-color: rgba(92, 184, 92, 0.09999999999999998);
+  border-color: rgba(92, 184, 92, 0.7);
+}
+.wr-navbar .btn-success.navbar-btn:active,
+.wr-navbar .btn-success.navbar-btn.active {
+  border-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  background-color: #5cb85c;
+}
 .btn-info {
   background-color: #5bc0de;
 }
@@ -6014,6 +6059,21 @@ button.close {
 }
 .btn-info:active,
 .btn-info.active {
+  background-color: #5bc0de;
+}
+.wr-navbar .btn-info.navbar-btn {
+  border-color: rgba(91, 192, 222, 0.5);
+  color: #5bc0de;
+  background-color: transparent;
+}
+.wr-navbar .btn-info.navbar-btn:hover {
+  background-color: rgba(91, 192, 222, 0.09999999999999998);
+  border-color: rgba(91, 192, 222, 0.7);
+}
+.wr-navbar .btn-info.navbar-btn:active,
+.wr-navbar .btn-info.navbar-btn.active {
+  border-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
   background-color: #5bc0de;
 }
 .btn-warning {
@@ -6028,6 +6088,21 @@ button.close {
 .btn-warning.active {
   background-color: #f0ad4e;
 }
+.wr-navbar .btn-warning.navbar-btn {
+  border-color: rgba(240, 173, 78, 0.5);
+  color: #f0ad4e;
+  background-color: transparent;
+}
+.wr-navbar .btn-warning.navbar-btn:hover {
+  background-color: rgba(240, 173, 78, 0.09999999999999998);
+  border-color: rgba(240, 173, 78, 0.7);
+}
+.wr-navbar .btn-warning.navbar-btn:active,
+.wr-navbar .btn-warning.navbar-btn.active {
+  border-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  background-color: #f0ad4e;
+}
 .btn-danger {
   background-color: #d9534f;
 }
@@ -6038,6 +6113,21 @@ button.close {
 }
 .btn-danger:active,
 .btn-danger.active {
+  background-color: #d9534f;
+}
+.wr-navbar .btn-danger.navbar-btn {
+  border-color: rgba(217, 83, 79, 0.5);
+  color: #d9534f;
+  background-color: transparent;
+}
+.wr-navbar .btn-danger.navbar-btn:hover {
+  background-color: rgba(217, 83, 79, 0.09999999999999998);
+  border-color: rgba(217, 83, 79, 0.7);
+}
+.wr-navbar .btn-danger.navbar-btn:active,
+.wr-navbar .btn-danger.navbar-btn.active {
+  border-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
   background-color: #d9534f;
 }
 .btn-group,
@@ -6669,15 +6759,6 @@ body > .navbar.affix + * {
   border-bottom-width: 3px;
   -webkit-transition: border-bottom 0.15s ease-in-out, color 0.15s ease-in-out, background-color 0.15s ease-in-out;
   transition: border-bottom 0.15s ease-in-out, color 0.15s ease-in-out, background-color 0.15s ease-in-out;
-}
-.wr-navbar .navbar-btn {
-  color: #10988b;
-  background-color: transparent;
-  border: 1px solid rgba(16, 152, 139, 0.5);
-}
-.wr-navbar .navbar-btn:hover {
-  color: #fff;
-  background-color: #10988b;
 }
 .wr-navbar + .container {
   margin-top: 3em;
@@ -7644,6 +7725,21 @@ a.lmo-co-find-jobs-default:active,
 a.lmo-co-find-jobs-default.active {
   background-color: #87ccc5;
 }
+.wr-navbar a.lmo-co-find-jobs-default.navbar-btn {
+  border-color: rgba(16, 152, 139, 0.30000000000000004);
+  color: #10988b;
+  background-color: transparent;
+}
+.wr-navbar a.lmo-co-find-jobs-default.navbar-btn:hover {
+  background-color: rgba(16, 152, 139, 0.09999999999999998);
+  border-color: rgba(16, 152, 139, 0.5);
+}
+.wr-navbar a.lmo-co-find-jobs-default.navbar-btn:active,
+.wr-navbar a.lmo-co-find-jobs-default.navbar-btn.active {
+  border-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  background-color: #10988b;
+}
 a.lmo-co-find-jobs-primary {
   background-color: #10988b;
 }
@@ -7654,6 +7750,21 @@ a.lmo-co-find-jobs-primary:hover {
 }
 a.lmo-co-find-jobs-primary:active,
 a.lmo-co-find-jobs-primary.active {
+  background-color: #10988b;
+}
+.wr-navbar a.lmo-co-find-jobs-primary.navbar-btn {
+  border-color: rgba(16, 152, 139, 0.5);
+  color: #10988b;
+  background-color: transparent;
+}
+.wr-navbar a.lmo-co-find-jobs-primary.navbar-btn:hover {
+  background-color: rgba(16, 152, 139, 0.09999999999999998);
+  border-color: rgba(16, 152, 139, 0.7);
+}
+.wr-navbar a.lmo-co-find-jobs-primary.navbar-btn:active,
+.wr-navbar a.lmo-co-find-jobs-primary.navbar-btn.active {
+  border-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
   background-color: #10988b;
 }
 a.lmo-co-find-jobs-success {
@@ -7668,6 +7779,21 @@ a.lmo-co-find-jobs-success:active,
 a.lmo-co-find-jobs-success.active {
   background-color: #5cb85c;
 }
+.wr-navbar a.lmo-co-find-jobs-success.navbar-btn {
+  border-color: rgba(92, 184, 92, 0.5);
+  color: #5cb85c;
+  background-color: transparent;
+}
+.wr-navbar a.lmo-co-find-jobs-success.navbar-btn:hover {
+  background-color: rgba(92, 184, 92, 0.09999999999999998);
+  border-color: rgba(92, 184, 92, 0.7);
+}
+.wr-navbar a.lmo-co-find-jobs-success.navbar-btn:active,
+.wr-navbar a.lmo-co-find-jobs-success.navbar-btn.active {
+  border-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  background-color: #5cb85c;
+}
 a.lmo-co-find-jobs-info {
   background-color: #5bc0de;
 }
@@ -7678,6 +7804,21 @@ a.lmo-co-find-jobs-info:hover {
 }
 a.lmo-co-find-jobs-info:active,
 a.lmo-co-find-jobs-info.active {
+  background-color: #5bc0de;
+}
+.wr-navbar a.lmo-co-find-jobs-info.navbar-btn {
+  border-color: rgba(91, 192, 222, 0.5);
+  color: #5bc0de;
+  background-color: transparent;
+}
+.wr-navbar a.lmo-co-find-jobs-info.navbar-btn:hover {
+  background-color: rgba(91, 192, 222, 0.09999999999999998);
+  border-color: rgba(91, 192, 222, 0.7);
+}
+.wr-navbar a.lmo-co-find-jobs-info.navbar-btn:active,
+.wr-navbar a.lmo-co-find-jobs-info.navbar-btn.active {
+  border-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
   background-color: #5bc0de;
 }
 a.lmo-co-find-jobs-warning {
@@ -7692,6 +7833,21 @@ a.lmo-co-find-jobs-warning:active,
 a.lmo-co-find-jobs-warning.active {
   background-color: #f0ad4e;
 }
+.wr-navbar a.lmo-co-find-jobs-warning.navbar-btn {
+  border-color: rgba(240, 173, 78, 0.5);
+  color: #f0ad4e;
+  background-color: transparent;
+}
+.wr-navbar a.lmo-co-find-jobs-warning.navbar-btn:hover {
+  background-color: rgba(240, 173, 78, 0.09999999999999998);
+  border-color: rgba(240, 173, 78, 0.7);
+}
+.wr-navbar a.lmo-co-find-jobs-warning.navbar-btn:active,
+.wr-navbar a.lmo-co-find-jobs-warning.navbar-btn.active {
+  border-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  background-color: #f0ad4e;
+}
 a.lmo-co-find-jobs-danger {
   background-color: #d9534f;
 }
@@ -7702,6 +7858,21 @@ a.lmo-co-find-jobs-danger:hover {
 }
 a.lmo-co-find-jobs-danger:active,
 a.lmo-co-find-jobs-danger.active {
+  background-color: #d9534f;
+}
+.wr-navbar a.lmo-co-find-jobs-danger.navbar-btn {
+  border-color: rgba(217, 83, 79, 0.5);
+  color: #d9534f;
+  background-color: transparent;
+}
+.wr-navbar a.lmo-co-find-jobs-danger.navbar-btn:hover {
+  background-color: rgba(217, 83, 79, 0.09999999999999998);
+  border-color: rgba(217, 83, 79, 0.7);
+}
+.wr-navbar a.lmo-co-find-jobs-danger.navbar-btn:active,
+.wr-navbar a.lmo-co-find-jobs-danger.navbar-btn.active {
+  border-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
   background-color: #d9534f;
 }
 @media (min-width: 768px) {
