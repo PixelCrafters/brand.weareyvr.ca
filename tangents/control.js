@@ -34,7 +34,7 @@ var draw = function() {
   d3.select('.bottomLeft-value').text(bottomLeft);
   vis.selectAll('*').remove();
   drawMark(vis, height, text, colour,  radius, topLeft, topRight, bottomRight, bottomLeft);
-  document.body.style.backgroundColor = text === "white" || colour === "white" ? "#ccc" : "#eee";
+  document.body.style.backgroundColor = text === "white" || colour === "white" ? "#bdcbca" : "#f2f5f5";
 };
 
 // Controls

@@ -1,0 +1,145 @@
+@import "_variables";
+@import "_wr_mixins";
+
+body.logo-generator {
+
+  h3 {
+    @media screen and (max-width: @screen-sm-max) {
+      font-size: 1.5em;
+    }
+  }
+
+  input[type="range"] {
+    @media screen and (min-width: @screen-md-min) {
+      width: 200px;
+    }
+  }
+
+  .form-control {
+    background-color: #fff;
+  }
+
+  .row {
+    border-top-color: fadeout(#fff,25%);
+
+    &:first-of-type {
+      @media screen and (min-width: @screen-md-min) {
+        margin-top: 2em;
+      }
+    }
+  }
+
+  .row#mark-controls {
+    display: block;
+    overflow: hidden;
+
+    &,
+    & > div {
+      min-height: 300px;
+      position: relative;
+    }
+
+    .weareyvr-mark {
+      > svg {
+        margin: 0 auto;
+        display: block;
+      }
+    }
+
+    label {
+
+      @media screen and (max-width: @screen-sm-max) {
+        width: 48%;
+        margin: 0;
+
+        &[for=topLeft],
+        &[for=topRight] {
+          margin-bottom: 15px;
+        }
+
+        &[for=topLeft],
+        &[for=bottomRight] {
+          float: left;
+        }
+
+        &[for=topRight],
+        &[for=bottomLeft] {
+          float: right;
+        }
+      }
+
+      @media screen and (min-width: @screen-md-min) {
+        position: absolute;
+
+        &[for=topLeft] {
+          top: 15px;
+          left: 15px;
+        }
+        &[for=topRight] {
+          top: 15px;
+          right: 15px;
+        }
+        &[for=bottomLeft] {
+          bottom: 15px;
+          left: 15px;
+        }
+        &[for=bottomRight] {
+          bottom: 15px;
+          right: 15px;
+        }
+      }
+      
+      span {
+        float: right;
+      }
+    }
+  }
+
+  .slider-value {
+    .tabular-lining();
+    .font-smoothing();
+    float: right;
+
+    @media screen and (min-width: @screen-md-min) {
+      font-size: 2em;
+      font-weight: normal;
+    }
+  }
+
+  #radius-text {
+    > label {
+      @media screen and (max-width: @screen-sm-max) {
+        display: block;
+      }
+    }
+  }
+
+  .colours-list {
+
+    > label {
+      display: block;
+      padding: 0.375em 0;
+      margin: 0;
+    }
+
+    > label small {
+      font-weight: normal;
+      color: @gray-light;
+    }
+
+    input[type="radio"] {
+      display: inline;
+      width: auto;
+      margin: 0 0.5em 0 0;
+      padding: 0;
+      line-height: 0;
+    }
+  }
+
+  #size-px {
+    .form-control {
+      .tabular-lining();
+      letter-spacing: 1px;
+    }
+  }
+}

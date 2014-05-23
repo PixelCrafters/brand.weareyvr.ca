@@ -2,90 +2,106 @@
 <html>
 <head>
   <title>WeAreYVR Generator</title>
-  <style>
-  * { box-sizing: border-box; }
-  body {
-    background: #eee;
-    font-family: Helvetica;
-  }
-  svg, canvas {
-    /*background: #3f3f3f;*/
-    float: left;
-    margin: 50px 100px 50px 50px;
-  }
-  .controls {
-    /*display: none;*/
-    float: left;
-  }
-  .last {
-    margin-left: 70px;
-  }
-  label {
-    display: block;
-    margin: 10px 0;
-  }
-  input[type="text"], input[type="number"] {
-    font-size: 16px;
-    padding: 5px 7px;
-    width: 170px;
-  }
-  input[name="height"] { width: 80px; }
-  input[type="radio"] {
-    position: relative;
-    top: -2px;
-    margin-right: 5px;
-  }
-  input + span {
-    color: #555;
-    font-size: 14px;
-    position: relative;
-    top: -4px;
-    margin-left: 4px;
-  }
-  h3, .outlines { margin-top: 40px; }
-  </style>
+
+  <link href="../css/weareyvr.css" rel="stylesheet">
+  <link href="../css/fonts.css" rel="stylesheet">
+  <link href="../css/wr_logo-generator.css" rel="stylesheet">
+
 </head>
-<body>
-  <div class="weareyvr-mark" data-height="500" data-colour="#10988b" data-text="black" data-radius="50" data-one="50" data-two="50" data-three="0" data-four="0"></div>
-  <div class="controls">
-    <h3>Radius</h3>
-    <input type="range" min="5" max="100" step="1" value="50" name="radius"><span class="radius-value">50</span>
-    <h3>Top Left</h3>
-    <input type="range" min="0" max="100" step="1" value="50" name="topLeft"><span class="topLeft-value">50</span>
-    <h3>Top Right</h3>
-    <input type="range" min="0" max="100" step="1" value="50" name="topRight"><span class="topRight-value">50</span>
-    <h3>Bottom Right</h3>
-    <input type="range" min="0" max="100" step="1" value="0" name="bottomRight"><span class="bottomRight-value">0</span>
-    <h3>Bottom Left</h3>
-    <input type="range" min="0" max="100" step="1" value="0" name="bottomLeft"><span class="bottomLeft-value">0</span>
-    <h3>Generate From Text</h3>
-    <input class="generate" type="text">
-  </div>
-  <div class="controls last">
-    <h3>Colour</h3>
-    <label><input type="radio" value="#10988b" name="colour" checked> Primary</label>
-    <label><input type="radio" value="#af1639" name="colour"> Red</label>
-    <label><input type="radio" value="#ff769f" name="colour"> Pink</label>
-    <label><input type="radio" value="#ffaf00" name="colour"> Orange</label>
-    <label><input type="radio" value="#00d679" name="colour"> Green</label>
-    <label><input type="radio" value="#4095c5" name="colour"> Blue</label>
-    <label><input type="radio" value="#601ebd" name="colour"> Purple</label>
-    <label><input type="radio" value="#8b572a" name="colour"> Brown</label>
-    <label><input type="radio" value="black" name="colour"> Black</label>
-    <label><input type="radio" value="white" name="colour"> White</label>
-    <h3>Name</h3>
-    <label><input type="radio" value="" name="text"> None</label>
-    <label><input type="radio" value="black" name="text" checked> Black</label>
-    <label><input type="radio" value="white" name="text"> White</label>
-    <h3>Size</h3>
-    <input name="height" type="number" value="500">
-    <!-- <h3>Export</h3> -->
-    <!-- <input type="submit" value="SVG"> -->
-    <!-- <input type="submit" value="PNG"> http://bl.ocks.org/mbostock/6466603 -->
+<body class="logo-generator">
+
+  <div class="container">
+    <section id="mark-controls" class="row">
+      <div class="col-sm-12">
+        <label for="topLeft"><h3>Top Left</h3>
+        <input type="range" min="0" max="100" step="1" value="50" name="topLeft" id="topLeft"><span class="slider-value topLeft-value">50</span></label>
+        <label for="topRight"><h3>Top Right</h3>
+        <input type="range" min="0" max="100" step="1" value="50" name="topRight" id="topRight"><span class="slider-value topRight-value">50</span></label>
+        <div class="weareyvr-mark" data-height="500" data-colour="#10988b" data-text="black" data-radius="50" data-one="50" data-two="50" data-three="0" data-four="0"></div>
+        <label for="bottomRight"><h3>Bottom Right</h3>
+        <input type="range" min="0" max="100" step="1" value="0" name="bottomRight" id="bottomRight"><span class="slider-value bottomRight-value">0</span></label>
+        <label for="bottomLeft"><h3>Bottom Left</h3>
+        <input type="range" min="0" max="100" step="1" value="0" name="bottomLeft" id="bottomLeft"><span class="slider-value bottomLeft-value">0</span></label>
+      </div>
+    </section>
+    <section class="controls row">
+      <div class="col-sm-3" id="radius-text">
+        <label for="radius"><h3>Radius</h3>
+        <input type="range" min="5" max="100" step="1" value="50" name="radius" id="radius"><span class="slider-value radius-value">50</span></label>
+        <label for="generateFromText"><h3>Generate from Text</h3>
+        <input class="generate form-control" id="generateFromText" type="text"></label>
+      </div>
+      <div class="col-sm-3 col-xs-7 colours-list" id="glyph-colours">
+        <h3>Colour</h3>
+
+          <label>
+            <input type="radio" value="#10988b" name="colour" checked> Spruce (Primary)
+          </label>
+          <label>
+            <input type="radio" value="#af1639" name="colour"> Red <small>(Advisors)</small>
+          </label>
+          <label>
+            <input type="radio" value="#ff769f" name="colour"> Pink <small>(Events)</small>
+          </label>
+          <label>
+            <input type="radio" value="#ffaf00" name="colour"> Orange <small>(Founders)</small>
+          </label>
+          <label>
+            <input type="radio" value="#00d679" name="colour"> Green <small>(Startups)</small>
+          </label>
+          <label>
+            <input type="radio" value="#4095c5" name="colour"> Blue <small>(Employees)</small>
+          </label>
+          <label>
+            <input type="radio" value="#601ebd" name="colour"> Purple <small>(Investors)</small>
+          </label>
+          <label>
+            <input type="radio" value="#8b572a" name="colour"> Brown <small>(Jobs)</small>
+          </label>
+          <label>
+            <input type="radio" value="black" name="colour"> Black
+          </label>
+          <label>
+            <input type="radio" value="white" name="colour"> White
+          </label>
+      </div>
+      <div class="col-sm-3 col-xs-5 colours-list" id="text-colours">
+        <h3>Name</h3>
+
+        <label>
+          <input type="radio" value="black" name="text" checked> Black
+        </label>
+        <label>
+          <input type="radio" value="white" name="text"> White
+        </label>
+        <label>
+          <input type="radio" value="" name="text"> None
+        </label>
+      </div>
+      <div class="clearfix visible-xs"></div>
+      <div class="col-sm-3" id="size-px">
+        <h3>Size <small>(px)</small></h3>
+        <input class="form-control input-lg" name="height" type="number" value="500">
+        <!-- <h3>Export</h3> -->
+        <!-- <input type="submit" value="SVG"> -->
+        <!-- <input type="submit" value="PNG"> http://bl.ocks.org/mbostock/6466603 -->
+      </div>
+    </section>
+    <section class="controls row">
+    <div class="col-sm-12 col-md-6 col-md-offset-3">
+      <button type="button" class="btn btn-default btn-lg btn-block">Download <small>(SVG)</small></button>
+    </div>
+    </section>
   </div>
   <script src="d3.v3.min.js"></script>
   <script src="weareyvr-mark.js"></script>
   <script src="md5.js"></script>
   <script src="control.js"></script>
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../docs/docs.min.js"></script>
 </body>
 </html>

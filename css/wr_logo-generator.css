@@ -1,0 +1,153 @@
+.serif {
+  font-family: "Arnhem Pro", ArnhemPro, Arnhem, Georgia, serif;
+  -moz-font-feature-settings: "onum" 1;
+  -ms-font-feature-settings: "onum" 1;
+  -o-font-feature-settings: "onum" 1;
+  -webkit-font-feature-settings: "onum" 1;
+  font-feature-settings: "onum" 1;
+}
+.sans-serif {
+  font-family: "Fort", Fort, "Helvetica Neue", HelveticaNeue, Helvetica, Verdana, sans-serif;
+}
+.sans-serif-small-caps {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.wr-icon-sm {
+  width: 16px;
+  height: 16px;
+  background-size: 16px 16px;
+}
+.wr-icon-md {
+  width: 24px;
+  height: 24px;
+  background-size: 24px 24px;
+}
+.wr-icon-lg {
+  width: 32px;
+  height: 32px;
+  background-size: 32px 32px;
+}
+@media screen and (max-width: 991px) {
+  body.logo-generator h3 {
+    font-size: 1.5em;
+  }
+}
+@media screen and (min-width: 992px) {
+  body.logo-generator input[type="range"] {
+    width: 200px;
+  }
+}
+body.logo-generator .form-control {
+  background-color: #fff;
+}
+body.logo-generator .row {
+  border-top-color: rgba(255, 255, 255, 0.75);
+}
+@media screen and (min-width: 992px) {
+  body.logo-generator .row:first-of-type {
+    margin-top: 2em;
+  }
+}
+body.logo-generator .row#mark-controls {
+  display: block;
+  overflow: hidden;
+}
+body.logo-generator .row#mark-controls,
+body.logo-generator .row#mark-controls > div {
+  min-height: 300px;
+  position: relative;
+}
+body.logo-generator .row#mark-controls .weareyvr-mark > svg {
+  margin: 0 auto;
+  display: block;
+}
+@media screen and (max-width: 991px) {
+  body.logo-generator .row#mark-controls label {
+    width: 48%;
+    margin: 0;
+  }
+  body.logo-generator .row#mark-controls label[for=topLeft],
+  body.logo-generator .row#mark-controls label[for=topRight] {
+    margin-bottom: 15px;
+  }
+  body.logo-generator .row#mark-controls label[for=topLeft],
+  body.logo-generator .row#mark-controls label[for=bottomRight] {
+    float: left;
+  }
+  body.logo-generator .row#mark-controls label[for=topRight],
+  body.logo-generator .row#mark-controls label[for=bottomLeft] {
+    float: right;
+  }
+}
+@media screen and (min-width: 992px) {
+  body.logo-generator .row#mark-controls label {
+    position: absolute;
+  }
+  body.logo-generator .row#mark-controls label[for=topLeft] {
+    top: 15px;
+    left: 15px;
+  }
+  body.logo-generator .row#mark-controls label[for=topRight] {
+    top: 15px;
+    right: 15px;
+  }
+  body.logo-generator .row#mark-controls label[for=bottomLeft] {
+    bottom: 15px;
+    left: 15px;
+  }
+  body.logo-generator .row#mark-controls label[for=bottomRight] {
+    bottom: 15px;
+    right: 15px;
+  }
+}
+body.logo-generator .row#mark-controls label span {
+  float: right;
+}
+body.logo-generator .slider-value {
+  -moz-font-feature-settings: "tnum" 1, "lnum" 1;
+  -ms-font-feature-settings: "tnum" 1, "lnum" 1;
+  -o-font-feature-settings: "tnum" 1, "lnum" 1;
+  -webkit-font-feature-settings: "tnum" 1, "lnum" 1;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  float: right;
+}
+@media screen and (min-width: 992px) {
+  body.logo-generator .slider-value {
+    font-size: 2em;
+    font-weight: normal;
+  }
+}
+@media screen and (max-width: 991px) {
+  body.logo-generator #radius-text > label {
+    display: block;
+  }
+}
+body.logo-generator .colours-list > label {
+  display: block;
+  padding: 0.375em 0;
+  margin: 0;
+}
+body.logo-generator .colours-list > label small {
+  font-weight: normal;
+  color: #92aaa7;
+}
+body.logo-generator .colours-list input[type="radio"] {
+  display: inline;
+  width: auto;
+  margin: 0 0.5em 0 0;
+  padding: 0;
+  line-height: 0;
+}
+body.logo-generator #size-px .form-control {
+  -moz-font-feature-settings: "tnum" 1, "lnum" 1;
+  -ms-font-feature-settings: "tnum" 1, "lnum" 1;
+  -o-font-feature-settings: "tnum" 1, "lnum" 1;
+  -webkit-font-feature-settings: "tnum" 1, "lnum" 1;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+  text-rendering: optimizeSpeed;
+  letter-spacing: 1px;
+}
+/*# sourceMappingURL=wr_logo-generator.css.map */
