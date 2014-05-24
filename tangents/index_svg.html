@@ -11,20 +11,29 @@
 <body class="logo-generator">
 
   <div class="container">
-    <section id="mark-controls" class="row">
+    <section class="row header">
       <div class="col-sm-12">
-        <label for="topLeft"><h3>Top Left</h3>
-        <input type="range" min="0" max="100" step="1" value="50" name="topLeft" id="topLeft"><span class="slider-value topLeft-value">50</span></label>
-        <label for="topRight"><h3>Top Right</h3>
-        <input type="range" min="0" max="100" step="1" value="50" name="topRight" id="topRight"><span class="slider-value topRight-value">50</span></label>
-        <div class="weareyvr-mark" data-height="500" data-colour="#10988b" data-text="black" data-radius="50" data-one="50" data-two="50" data-three="0" data-four="0"></div>
-        <label for="bottomRight"><h3>Bottom Right</h3>
-        <input type="range" min="0" max="100" step="1" value="0" name="bottomRight" id="bottomRight"><span class="slider-value bottomRight-value">0</span></label>
-        <label for="bottomLeft"><h3>Bottom Left</h3>
-        <input type="range" min="0" max="100" step="1" value="0" name="bottomLeft" id="bottomLeft"><span class="slider-value bottomLeft-value">0</span></label>
+        <h1>Generate a custom WeAreYVR logo</h1>
       </div>
     </section>
-    <section class="controls row">
+    <section id="mark-controls" class="row">
+      <div class="col-sm-12">
+        <div class="top-controls">
+          <label for="topLeft"><h3>Top Left</h3>
+          <input type="range" min="0" max="100" step="1" value="50" name="topLeft" id="topLeft"><span class="slider-value topLeft-value">50</span></label>
+          <label for="topRight"><h3>Top Right</h3>
+          <input type="range" min="0" max="100" step="1" value="50" name="topRight" id="topRight"><span class="slider-value topRight-value">50</span></label>
+        </div>
+        <div class="weareyvr-mark" data-height="500" data-colour="#10988b" data-text="black" data-radius="50" data-one="50" data-two="50" data-three="0" data-four="0"></div>
+        <div class="bottom-controls">
+          <label for="bottomLeft"><h3>Bottom Left</h3>
+          <input type="range" min="0" max="100" step="1" value="0" name="bottomLeft" id="bottomLeft"><span class="slider-value bottomLeft-value">0</span></label>
+          <label for="bottomRight"><h3>Bottom Right</h3>
+          <input type="range" min="0" max="100" step="1" value="0" name="bottomRight" id="bottomRight"><span class="slider-value bottomRight-value">0</span></label>
+        </div>
+      </div>
+    </section>
+    <section class="row">
       <div class="col-sm-3" id="radius-text">
         <label for="radius"><h3>Radius</h3>
         <input type="range" min="5" max="100" step="1" value="50" name="radius" id="radius"><span class="slider-value radius-value">50</span></label>
@@ -87,9 +96,9 @@
         <!-- <input type="submit" value="PNG"> http://bl.ocks.org/mbostock/6466603 -->
       </div>
     </section>
-    <section class="controls row">
+    <section id="downloads" class="row">
     <div class="col-sm-12 col-md-6 col-md-offset-3">
-      <button type="button" class="btn btn-primary btn-lg btn-block">Download <small>(SVG)</small></button>
+      <button type="button" class="btn btn-primary btn-lg btn-block"><span class="glyphicon glyphicon-save"></span> Download <small>(SVG)</small></button>
     </div>
     </section>
   </div>

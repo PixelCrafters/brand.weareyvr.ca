@@ -3,7 +3,33 @@
 
 body.logo-generator {
 
-  h3 {
+  // Heading
+
+  .header.row {
+    padding-top: 1.25em;
+    padding-bottom: 1em;
+  }
+
+  h1, .h1 {
+    font-weight: normal;
+    margin: 0;
+    color: @grey;
+    .serif;
+
+    @media screen and (max-width: @screen-xs-max) {
+      font-size: 2.2em;
+    }
+  }
+
+  // Rows
+
+  .row {
+    border-top-color: fadeout(#fff,25%);
+  }
+
+  // Input Appearance
+
+  h3, .h3 {
     @media screen and (max-width: @screen-sm-max) {
       font-size: 1.5em;
     }
@@ -19,19 +45,15 @@ body.logo-generator {
     background-color: #fff;
   }
 
-  .row {
-    border-top-color: fadeout(#fff,25%);
-
-    &:first-of-type {
-      @media screen and (min-width: @screen-md-min) {
-        margin-top: 2em;
-      }
-    }
-  }
+  // Glyph & Slider Values
 
   .row#mark-controls {
     display: block;
     overflow: hidden;
+
+    @media screen and (min-width: @screen-md-min) {
+      padding-top: 3em;
+    }
 
     &,
     & > div {
@@ -58,12 +80,12 @@ body.logo-generator {
         }
 
         &[for=topLeft],
-        &[for=bottomRight] {
+        &[for=bottomLeft] {
           float: left;
         }
 
         &[for=topRight],
-        &[for=bottomLeft] {
+        &[for=bottomRight] {
           float: right;
         }
       }
@@ -106,6 +128,8 @@ body.logo-generator {
     }
   }
 
+  // Radius & Generative Text
+
   #radius-text {
     > label {
       @media screen and (max-width: @screen-sm-max) {
@@ -113,6 +137,8 @@ body.logo-generator {
       }
     }
   }
+
+  // Colours
 
   .colours-list {
 
@@ -136,10 +162,18 @@ body.logo-generator {
     }
   }
 
+  // Size
+
   #size-px {
     .form-control {
       .tabular-lining();
       letter-spacing: 1px;
     }
+  }
+
+  // Download Button
+
+  section.row#downloads {
+    border-top-style: none;
   }
 }

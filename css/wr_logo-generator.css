@@ -28,8 +28,34 @@
   height: 32px;
   background-size: 32px 32px;
 }
+body.logo-generator .header.row {
+  padding-top: 1.25em;
+  padding-bottom: 1em;
+}
+body.logo-generator h1,
+body.logo-generator .h1 {
+  font-weight: normal;
+  margin: 0;
+  color: #506563;
+  font-family: "Arnhem Pro", ArnhemPro, Arnhem, Georgia, serif;
+  -moz-font-feature-settings: "onum" 1;
+  -ms-font-feature-settings: "onum" 1;
+  -o-font-feature-settings: "onum" 1;
+  -webkit-font-feature-settings: "onum" 1;
+  font-feature-settings: "onum" 1;
+}
+@media screen and (max-width: 767px) {
+  body.logo-generator h1,
+  body.logo-generator .h1 {
+    font-size: 2.2em;
+  }
+}
+body.logo-generator .row {
+  border-top-color: rgba(255, 255, 255, 0.75);
+}
 @media screen and (max-width: 991px) {
-  body.logo-generator h3 {
+  body.logo-generator h3,
+  body.logo-generator .h3 {
     font-size: 1.5em;
   }
 }
@@ -41,17 +67,14 @@
 body.logo-generator .form-control {
   background-color: #fff;
 }
-body.logo-generator .row {
-  border-top-color: rgba(255, 255, 255, 0.75);
-}
-@media screen and (min-width: 992px) {
-  body.logo-generator .row:first-of-type {
-    margin-top: 2em;
-  }
-}
 body.logo-generator .row#mark-controls {
   display: block;
   overflow: hidden;
+}
+@media screen and (min-width: 992px) {
+  body.logo-generator .row#mark-controls {
+    padding-top: 3em;
+  }
 }
 body.logo-generator .row#mark-controls,
 body.logo-generator .row#mark-controls > div {
@@ -72,11 +95,11 @@ body.logo-generator .row#mark-controls .weareyvr-mark > svg {
     margin-bottom: 15px;
   }
   body.logo-generator .row#mark-controls label[for=topLeft],
-  body.logo-generator .row#mark-controls label[for=bottomRight] {
+  body.logo-generator .row#mark-controls label[for=bottomLeft] {
     float: left;
   }
   body.logo-generator .row#mark-controls label[for=topRight],
-  body.logo-generator .row#mark-controls label[for=bottomLeft] {
+  body.logo-generator .row#mark-controls label[for=bottomRight] {
     float: right;
   }
 }
@@ -149,5 +172,8 @@ body.logo-generator #size-px .form-control {
   font-feature-settings: "tnum" 1, "lnum" 1;
   text-rendering: optimizeSpeed;
   letter-spacing: 1px;
+}
+body.logo-generator section.row#downloads {
+  border-top-style: none;
 }
 /*# sourceMappingURL=wr_logo-generator.css.map */
