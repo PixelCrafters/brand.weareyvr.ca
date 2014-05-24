@@ -5785,6 +5785,7 @@ button.close {
   height: 100px;
 }
 .navbar-brand .weareyvr-mark > span {
+  /* fallback text if SVG doesn't load */
   font-size: 26px;
   line-height: 0;
   position: absolute;
@@ -6238,6 +6239,12 @@ input[type="search"].input-lg {
 }
 input[type="search"].input-sm {
   border-radius: 15.5px;
+}
+.glyphicon {
+  top: 3px;
+}
+.btn .glyphicon {
+  opacity: 0.85;
 }
 section.row,
 main.row {
