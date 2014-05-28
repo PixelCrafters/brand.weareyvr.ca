@@ -1,8 +1,8 @@
-var element = d3.select(".weareyvr-mark");
-var vis = d3.select(".weareyvr-mark svg");
+var element = d3.select('.weareyvr-mark');
+var vis = d3.select('.weareyvr-mark svg');
 
 var height = 500;
-var text = "black";
+var text = 'black';
 
 // Canonical.
 // var radius = 50;
@@ -10,7 +10,7 @@ var text = "black";
 // var topRight = 50;
 // var bottomRight = 0;
 // var bottomLeft = 0;
-var colour  = "#10988b";
+var colour  = '#10988b';
 
 // Randomize.
 var radius = Math.floor(Math.random()*101);
@@ -34,7 +34,7 @@ var draw = function() {
   d3.select('.bottomLeft-value').text(bottomLeft);
   vis.selectAll('*').remove();
   drawMark(vis, height, text, colour,  radius, topLeft, topRight, bottomRight, bottomLeft);
-  document.body.style.backgroundColor = text === "white" || colour === "white" ? "#bdcbca" : "#f2f5f5";
+  document.body.style.backgroundColor = text === 'white' || colour === 'white' ? '#bdcbca' : '#f2f5f5';
 };
 
 // Controls
@@ -48,11 +48,11 @@ var change = function() {
   draw();  
 };
 
-d3.selectAll('input[name="height"]').on("change", change);
-d3.selectAll('input[name="height"]').on("keyup", change);
-d3.selectAll('input[type="range"], input[type="radio"]').on("change", change);
+d3.selectAll('input[name="height"]').on('change', change);
+d3.selectAll('input[name="height"]').on('keyup', change);
+d3.selectAll('input[type="range"], input[type="radio"]').on('change', change);
 
-d3.selectAll('input[type="text"].generate').on("keyup", function change() {
+d3.selectAll('input[type="text"].generate').on('keyup', function() {
   var hashed = hex_md5(this.value);
   var crc = (parseInt(hashed, 16) % 9999999999).toString(); // Get a 10 digit number
   radius = parseInt(crc.slice(0, 2), 10) || 0;
@@ -69,5 +69,41 @@ d3.selectAll('input[type="text"].generate').on("keyup", function change() {
 
   draw();
 });
+
+d3.selectAll('#download-svg').on('click', function() {
+  var sources = getSources(window.document);
+  download(sources[0]);
+});
+
+var downloadCanvas = document.createElement('canvas');
+
+// Canvas needs a tick to draw the SVG to canvas, do
+// this on hover and then download on click.
+d3.selectAll('#download-png').on('mouseover', function() {
+  var sources = getSources(window.document);
+  downloadCanvas.width = sources[0].width;
+  downloadCanvas.height = sources[0].height;
+  var ctx = downloadCanvas.getContext('2d');
+  var img = new Image();
+  img.onload = function() {
+    ctx.drawImage(img, 0, 0);
+  }
+  var url = window.URL.createObjectURL(new Blob(sources[0].source, { "type" : "image/svg+xml" }));
+  img.src = url;
+  window.URL.revokeObjectURL(url);
+});
+
+d3.selectAll('#download-png').on('click', function() {
+  var url = downloadCanvas.toDataURL();
+  this.href = url;
+  this.download = 'WeAreYVR.png';
+});
+
+// Difficult to differentiate which browsers work, so we only support Chrome:
+// - Safari has a security warning because we're taking the SVG from a blob, which marks the canvas as dirty.
+// - Firefox doesn't seem to get the size correct.
+if (!navigator.userAgent.match(/chrome/i)) {
+  d3.selectAll('#download-png').remove();
+}
 
 draw();
