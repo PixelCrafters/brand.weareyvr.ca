@@ -104,6 +104,7 @@ d3.selectAll('#download-png').on('click', function() {
 // - Firefox doesn't seem to get the size correct.
 if (!navigator.userAgent.match(/chrome/i)) {
   d3.selectAll('#download-png').remove();
+  d3.selectAll('#download-use-chrome').classed('show', true);
 }
 
 draw();
