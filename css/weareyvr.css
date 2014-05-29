@@ -5968,14 +5968,14 @@ button.close {
   border-color: rgba(0, 0, 0, 0.5);
 }
 .btn-default {
-  background-color: #ffffff;
+  background-color: rgba(231, 245, 243, 0.9);
   color: #10988b;
-  border-color: rgba(16, 152, 139, 0.7);
+  border-color: rgba(219, 240, 238, 0.5);
 }
 .btn-default:hover {
   border-color: rgba(16, 152, 139, 0.9);
   color: #10988b;
-  background-color: rgba(231, 245, 243, 0.9);
+  background-color: rgba(243, 250, 249, 0.9);
 }
 .btn-default:active,
 .btn-default.active {
@@ -6134,7 +6134,6 @@ button.close {
 .btn-group,
 .btn-group-vertical,
 .btn-group-justified {
-  background-color: rgba(135, 204, 197, 0.9);
   border-radius: 6px;
 }
 .btn-group.btn-group-lg,
@@ -6156,10 +6155,6 @@ button.close {
 }
 .btn-group-justified {
   border-spacing: 1px 0;
-  background-image: -webkit-linear-gradient(left, #10988b, rgba(135, 204, 197, 0.9) 3%, rgba(135, 204, 197, 0.9) 97%, #10988b);
-  background-image: linear-gradient(to right, #10988b, rgba(135, 204, 197, 0.9) 3%, rgba(135, 204, 197, 0.9) 97%, #10988b);
-  background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff10988b', endColorstr='#ff10988b', GradientType=1);
 }
 .open.btn-group > .btn.dropdown-toggle,
 .open.btn-group-vertical > .btn.dropdown-toggle,
@@ -7719,14 +7714,14 @@ a.lmo-co-find-jobs:not(.btn-link).active {
   border-color: rgba(0, 0, 0, 0.5);
 }
 a.lmo-co-find-jobs-default {
-  background-color: #ffffff;
+  background-color: rgba(231, 245, 243, 0.9);
   color: #10988b;
-  border-color: rgba(16, 152, 139, 0.7);
+  border-color: rgba(219, 240, 238, 0.5);
 }
 a.lmo-co-find-jobs-default:hover {
   border-color: rgba(16, 152, 139, 0.9);
   color: #10988b;
-  background-color: rgba(231, 245, 243, 0.9);
+  background-color: rgba(243, 250, 249, 0.9);
 }
 a.lmo-co-find-jobs-default:active,
 a.lmo-co-find-jobs-default.active {
