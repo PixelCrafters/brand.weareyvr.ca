@@ -1,0 +1,125 @@
+@import '_variables';
+@import '_wr_mixins';
+
+// Typography
+
+.serif {
+	.serif();
+}
+
+.sans-serif {
+	.sans-serif();
+}
+
+.sans-serif-small-caps {
+	.sans-serif-small-caps();
+}
+
+// Node links
+
+a.node {
+	border-radius: 2px;
+	padding: 0.2em 0.3em 0.1em;
+	margin: 0 0.25em;
+	font-weight: bold;
+	.font-smoothing();
+
+	.node-link(@link-color);
+
+	.wr-icon {
+		margin-right: 0.1em;
+	}
+}
+
+// Tags
+
+a.tag {
+	@tag-colour: fadeout(@link-color,80%);
+
+	// color: mix(@link-color,#000,80%);
+	// font-size: @font-size-small;
+	font-weight: bold;
+	.font-smoothing();
+	border-radius: 1em;
+	border: 1px solid @tag-colour;
+	padding: 0.2em 0.6em 0.1em;
+	margin: 0 0.25em;
+
+	&:hover {
+		background-color: @tag-colour;
+	}
+}
+
+// Coloured links
+
+.wr-link {
+
+	&-advisor,
+	&-advisor-av,
+	&-guides {
+		.wr-link-colour(@wr-colour-advisor, @wr-colour-advisor-txt);
+	}
+
+	&-events {
+		.wr-link-colour(@wr-colour-events, @wr-colour-events-txt);
+	}
+
+	&-founder,
+	&-founder-av {
+		.wr-link-colour(@wr-colour-founder, @wr-colour-founder-txt);
+	}
+
+	&-startup,
+	&-incubator {
+		.wr-link-colour(@wr-colour-startup, @wr-colour-startup-txt);
+	}
+
+	&-employee,
+	&-employee-av,
+	&-newbie,
+	&-newbie-av {
+		.wr-link-colour(@wr-colour-employee, @wr-colour-employee-txt);
+	}
+
+	&-investor,
+	&-investor-av,
+	&-angel-investor,
+	&-angel-investor-av,
+	&-funding,
+	&-series-a,
+	&-series-b,
+	&-series-c,
+	&-series-d {
+		.wr-link-colour(@wr-colour-investor, @wr-colour-investor-txt);
+	}
+
+	&-jobs {
+		.wr-link-colour(@wr-colour-jobs, @wr-colour-jobs-txt);
+	}
+
+}
+
+// Icon sizes
+
+.wr-icon-sm {
+	.wr-icon-sm();
+}
+
+.wr-icon-md {
+	.wr-icon-md();
+}
+
+.wr-icon-lg {
+	.wr-icon-lg();
+}
+
+// Social network buttons
+
+.social-share-box {
+	display: inline-block;
+	padding-right: 1em;
+
+	&:not(:last-child) {
+		float: left;
+	}
+}
