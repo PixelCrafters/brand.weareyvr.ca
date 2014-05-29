@@ -1,0 +1,16 @@
+@import "_variables";
+@import "_wr_mixins";
+
+.activity {
+
+	position: relative;
+
+	> i.wr-icon:first-child {
+		.wr-icon-lg;
+		float: right;
+		position: absolute;
+		right: @wr-icon-sm;
+		top: 50%;
+		margin-top: (-(@wr-icon-lg) / 2);
+	}
+}
