@@ -164,6 +164,10 @@
 	text-shadow: none;
 	#gradient > .vertical(@start-color: transparent; @end-color: fadeout(desaturate(@link-color,85%), 20%));
 	background-position: 0 90%;
+
+	&:visited {
+		#gradient > .vertical(@start-color: transparent; @end-color: fadeout(desaturate(@link-color,85%), 50%));		
+	}
 }
 
 .fancy-underline(@background-colour: transparent; @underline-colour: @link-color; @underline-position-v: 90%) {
@@ -171,6 +175,10 @@
 	text-shadow: 1px 0 @background-colour, 2px 0 @background-colour, -1px 0 @background-colour, -2px 0 @background-colour;
 	#gradient > .vertical(@start-color: transparent; @end-color: @underline-colour);
 	background-position: 0 @underline-position-v;
+
+	&:visited {
+		#gradient > .vertical(@start-color: transparent; @end-color: fadeout(@underline-colour,40%));
+	}	
 }
 
 .serif() {
@@ -219,42 +227,6 @@
 @grey:			@gray;
 @grey-light:	@gray-light;
 @grey-lighter:	@gray-lighter;
-
-// Node Link Colour
-
-.node-link(@txt-color) {
-	display: inline-block;
-	@node-bg-color: mix(fadeout(desaturate(@txt-color,10%),90%),rgba(255,255,255,0.5));
-	background-color: @node-bg-color;
-	border: 1px solid fadeout(@txt-color,80%);
-
-	&:hover {
-		background-color: fadein(@node-bg-color,30%);
-	}
-}
-
-// Link Colours
-
-.wr-link-colour(@color, @txt-color) {
-
-	a&,
-	& a {
-		color: @txt-color;
-		@underline-colour: @color;
-
-		&:visited {
-			color: lighten(desaturate(@txt-color,40%),25%);
-		}
-
-		&:hover {
-			color: darken(@txt-color,25%);
-		}
-
-		&.node {
-			.node-link(@txt-color);
-		}
-	}
-}
 
 // Gradients
 

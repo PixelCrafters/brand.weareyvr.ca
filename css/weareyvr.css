@@ -5813,6 +5813,12 @@ button.close {
 .alert-success a.alert-link:active {
   background-position: 0 100%;
 }
+.alert-success a.alert-link:visited {
+  background-image: -webkit-linear-gradient(top, transparent 0%, rgba(60, 118, 61, 0.3) 100%);
+  background-image: linear-gradient(to bottom, transparent 0%, rgba(60, 118, 61, 0.3) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#4c3c763d', GradientType=0);
+}
 .alert-info a.alert-link {
   padding-bottom: 0.125em;
   background-size: 1px 1px;
@@ -5834,6 +5840,12 @@ button.close {
 .alert-info a.alert-link:hover,
 .alert-info a.alert-link:active {
   background-position: 0 100%;
+}
+.alert-info a.alert-link:visited {
+  background-image: -webkit-linear-gradient(top, transparent 0%, rgba(49, 112, 143, 0.3) 100%);
+  background-image: linear-gradient(to bottom, transparent 0%, rgba(49, 112, 143, 0.3) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#4c31708f', GradientType=0);
 }
 .alert-warning a.alert-link {
   padding-bottom: 0.125em;
@@ -5857,6 +5869,12 @@ button.close {
 .alert-warning a.alert-link:active {
   background-position: 0 100%;
 }
+.alert-warning a.alert-link:visited {
+  background-image: -webkit-linear-gradient(top, transparent 0%, rgba(138, 109, 59, 0.3) 100%);
+  background-image: linear-gradient(to bottom, transparent 0%, rgba(138, 109, 59, 0.3) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#4c8a6d3b', GradientType=0);
+}
 .alert-danger a.alert-link {
   padding-bottom: 0.125em;
   background-size: 1px 1px;
@@ -5878,6 +5896,12 @@ button.close {
 .alert-danger a.alert-link:hover,
 .alert-danger a.alert-link:active {
   background-position: 0 100%;
+}
+.alert-danger a.alert-link:visited {
+  background-image: -webkit-linear-gradient(top, transparent 0%, rgba(169, 68, 66, 0.3) 100%);
+  background-image: linear-gradient(to bottom, transparent 0%, rgba(169, 68, 66, 0.3) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#4ca94442', GradientType=0);
 }
 .badge {
   -moz-font-feature-settings: "lnum" 1;
@@ -5909,6 +5933,12 @@ button.close {
 .breadcrumb a:hover,
 .breadcrumb a:active {
   background-position: 0 100%;
+}
+.breadcrumb a:visited {
+  background-image: -webkit-linear-gradient(top, transparent 0%, rgba(16, 152, 139, 0.6) 100%);
+  background-image: linear-gradient(to bottom, transparent 0%, rgba(16, 152, 139, 0.6) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#9910988b', GradientType=0);
 }
 .btn:not(.btn-link) {
   border-width: 1px;
@@ -6826,6 +6856,13 @@ body > .navbar.affix + * {
 .navbar-link .navbar-default *:active {
   background-position: 0 100%;
 }
+.navbar-link:visited,
+.navbar-link .navbar-default *:visited {
+  background-image: -webkit-linear-gradient(top, transparent 0%, rgba(119, 119, 119, 0.6) 100%);
+  background-image: linear-gradient(to bottom, transparent 0%, rgba(119, 119, 119, 0.6) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#99777777', GradientType=0);
+}
 .navbar-inverse .navbar-link {
   padding-bottom: 0.125em;
   background-size: 1px 1px;
@@ -6847,6 +6884,12 @@ body > .navbar.affix + * {
 .navbar-inverse .navbar-link:hover,
 .navbar-inverse .navbar-link:active {
   background-position: 0 100%;
+}
+.navbar-inverse .navbar-link:visited {
+  background-image: -webkit-linear-gradient(top, transparent 0%, rgba(146, 170, 167, 0.6) 100%);
+  background-image: linear-gradient(to bottom, transparent 0%, rgba(146, 170, 167, 0.6) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#9992aaa7', GradientType=0);
 }
 .wr-nav-vertical {
   text-transform: uppercase;
@@ -6907,6 +6950,11 @@ body > .navbar.affix + * {
   font-feature-settings: "tnum" 1, "lnum" 1;
   text-rendering: optimizeSpeed;
 }
+.panel {
+  margin: 10.5px 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
 .progress {
   box-shadow: none;
 }
@@ -6944,14 +6992,16 @@ a:active,
 }
 a:visited,
 .btn.btn-link:visited {
-  color: #68c0b7;
+  color: #53b2a8;
 }
 a:visited:hover,
 .btn.btn-link:visited:hover {
   color: #09534c;
 }
 p a,
-p .btn.btn-link {
+p .btn.btn-link,
+a.link,
+.btn.btn-link.link {
   padding-bottom: 0.125em;
   background-size: 1px 1px;
   text-shadow: 1px 0 #ffffff, 2px 0 #ffffff, -1px 0 #ffffff, -2px 0 #ffffff;
@@ -6963,22 +7013,45 @@ p .btn.btn-link {
 }
 p a,
 p .btn.btn-link,
+a.link,
+.btn.btn-link.link,
 p a:link,
 p .btn.btn-link:link,
+a.link:link,
+.btn.btn-link.link:link,
 p a:visited,
 p .btn.btn-link:visited,
+a.link:visited,
+.btn.btn-link.link:visited,
 p a:hover,
 p .btn.btn-link:hover,
+a.link:hover,
+.btn.btn-link.link:hover,
 p a:active,
-p .btn.btn-link:active {
+p .btn.btn-link:active,
+a.link:active,
+.btn.btn-link.link:active {
   -webkit-transition: background-position 0.15s ease-in-out, color 0.15s ease-in-out;
   transition: background-position 0.15s ease-in-out, color 0.15s ease-in-out;
 }
 p a:hover,
 p .btn.btn-link:hover,
+a.link:hover,
+.btn.btn-link.link:hover,
 p a:active,
-p .btn.btn-link:active {
+p .btn.btn-link:active,
+a.link:active,
+.btn.btn-link.link:active {
   background-position: 0 100%;
+}
+p a:visited,
+p .btn.btn-link:visited,
+a.link:visited,
+.btn.btn-link.link:visited {
+  background-image: -webkit-linear-gradient(top, transparent 0%, rgba(16, 152, 139, 0.6) 100%);
+  background-image: linear-gradient(to bottom, transparent 0%, rgba(16, 152, 139, 0.6) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#9910988b', GradientType=0);
 }
 a.btn {
   text-shadow: none;
@@ -7198,6 +7271,12 @@ body > footer a:hover,
 body > footer a:active {
   background-position: 0 100%;
 }
+body > footer a:visited {
+  background-image: -webkit-linear-gradient(top, transparent 0%, rgba(16, 152, 139, 0.6) 100%);
+  background-image: linear-gradient(to bottom, transparent 0%, rgba(16, 152, 139, 0.6) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#9910988b', GradientType=0);
+}
 .serif {
   font-family: "Arnhem Pro", ArnhemPro, Arnhem, Georgia, serif;
   -moz-font-feature-settings: "onum" 1;
@@ -7247,28 +7326,55 @@ h4.serif,
   letter-spacing: 1px;
 }
 a.node {
-  border-radius: 2px;
-  padding: 0.2em 0.3em 0.1em;
-  margin: 0 0.25em;
-  font-weight: bold;
   -webkit-font-smoothing: antialiased;
+  font-weight: bold;
+  margin: 0 0.25em;
+  padding-top: 0.2em;
+  padding-bottom: 0.1em;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3px;
+  padding-right: 0.3em;
+  padding-left: 0.3em;
+  color: #10988b;
   display: inline-block;
   background-color: rgba(186, 222, 218, 0.3);
   border: 1px solid rgba(16, 152, 139, 0.2);
 }
+a.node .wr-icon {
+  margin-right: 0.2em;
+}
 a.node:hover {
   background-color: rgba(186, 222, 218, 0.6);
 }
-a.node .wr-icon {
-  margin-right: 0.1em;
+a.node.disabled {
+  color: #92aaa7 !important;
+  display: inline-block !important;
+  background-color: rgba(225, 227, 226, 0.3) !important;
+  border: 1px solid rgba(146, 170, 167, 0.2) !important;
+}
+a.node.disabled:hover {
+  background-color: rgba(225, 227, 226, 0.6) !important;
+}
+a.node.disabled:not(:hover) {
+  -webkit-filter: grayscale();
+  filter: grayscale();
 }
 a.tag {
-  font-weight: bold;
   -webkit-font-smoothing: antialiased;
-  border-radius: 1em;
-  border: 1px solid rgba(16, 152, 139, 0.2);
-  padding: 0.2em 0.6em 0.1em;
+  font-weight: bold;
   margin: 0 0.25em;
+  padding-top: 0.2em;
+  padding-bottom: 0.1em;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 1em;
+  border-color: rgba(16, 152, 139, 0.2);
+  padding-right: 0.6em;
+  padding-left: 0.6em;
+}
+a.tag .wr-icon {
+  margin-right: 0.2em;
 }
 a.tag:hover {
   background-color: rgba(16, 152, 139, 0.2);
@@ -7303,6 +7409,7 @@ a.wr-link-guides.node,
 .wr-link-advisor a.node,
 .wr-link-advisor-av a.node,
 .wr-link-guides a.node {
+  color: #c61940;
   display: inline-block;
   background-color: rgba(234, 189, 200, 0.3);
   border: 1px solid rgba(198, 25, 64, 0.2);
@@ -7315,27 +7422,28 @@ a.wr-link-guides.node:hover,
 .wr-link-guides a.node:hover {
   background-color: rgba(234, 189, 200, 0.6);
 }
-a.wr-link-events,
-.wr-link-events a {
-  color: #f64c7f;
+a.wr-link-event,
+.wr-link-event a {
+  color: #ff4d82;
 }
-a.wr-link-events:visited,
-.wr-link-events a:visited {
-  color: #f0d2db;
+a.wr-link-event:visited,
+.wr-link-event a:visited {
+  color: #f5d7e0;
 }
-a.wr-link-events:hover,
-.wr-link-events a:hover {
-  color: #b90a3e;
+a.wr-link-event:hover,
+.wr-link-event a:hover {
+  color: #cd003d;
 }
-a.wr-link-events.node,
-.wr-link-events a.node {
+a.wr-link-event.node,
+.wr-link-event a.node {
+  color: #ff4d82;
   display: inline-block;
-  background-color: rgba(249, 204, 218, 0.3);
-  border: 1px solid rgba(246, 76, 127, 0.2);
+  background-color: rgba(252, 204, 219, 0.3);
+  border: 1px solid rgba(255, 77, 130, 0.2);
 }
-a.wr-link-events.node:hover,
-.wr-link-events a.node:hover {
-  background-color: rgba(249, 204, 218, 0.6);
+a.wr-link-event.node:hover,
+.wr-link-event a.node:hover {
+  background-color: rgba(252, 204, 219, 0.6);
 }
 a.wr-link-founder,
 a.wr-link-founder-av,
@@ -7359,6 +7467,7 @@ a.wr-link-founder.node,
 a.wr-link-founder-av.node,
 .wr-link-founder a.node,
 .wr-link-founder-av a.node {
+  color: #e69d00;
   display: inline-block;
   background-color: rgba(244, 224, 182, 0.3);
   border: 1px solid rgba(230, 157, 0, 0.2);
@@ -7391,6 +7500,7 @@ a.wr-link-startup.node,
 a.wr-link-incubator.node,
 .wr-link-startup a.node,
 .wr-link-incubator a.node {
+  color: #00a35c;
   display: inline-block;
   background-color: rgba(181, 225, 206, 0.3);
   border: 1px solid rgba(0, 163, 92, 0.2);
@@ -7439,6 +7549,7 @@ a.wr-link-newbie-av.node,
 .wr-link-employee-av a.node,
 .wr-link-newbie a.node,
 .wr-link-newbie-av a.node {
+  color: #4095c5;
   display: inline-block;
   background-color: rgba(201, 222, 234, 0.3);
   border: 1px solid rgba(64, 149, 197, 0.2);
@@ -7531,6 +7642,7 @@ a.wr-link-series-d.node,
 .wr-link-series-b a.node,
 .wr-link-series-c a.node,
 .wr-link-series-d a.node {
+  color: #9968dc;
   display: inline-block;
   background-color: rgba(225, 213, 242, 0.3);
   border: 1px solid rgba(153, 104, 220, 0.2);
@@ -7569,6 +7681,7 @@ a.wr-link-jobs:hover,
 }
 a.wr-link-jobs.node,
 .wr-link-jobs a.node {
+  color: #8b572a;
   display: inline-block;
   background-color: rgba(217, 205, 194, 0.3);
   border: 1px solid rgba(139, 87, 42, 0.2);
@@ -7626,6 +7739,12 @@ body.guide > footer a:active {
 body.guide > footer a:hover,
 body.guide > footer a:active {
   background-position: 0 100%;
+}
+body.guide > footer a:visited {
+  background-image: -webkit-linear-gradient(top, transparent 0%, rgba(16, 152, 139, 0.6) 100%);
+  background-image: linear-gradient(to bottom, transparent 0%, rgba(16, 152, 139, 0.6) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#9910988b', GradientType=0);
 }
 body.guide section.row,
 body.guide main.row {
@@ -8644,6 +8763,12 @@ a.lmo-co-find-jobs-danger.active {
 #lmo-co-harp .lmo-co-content p a:active {
   background-position: 0 100%;
 }
+#lmo-co-harp .lmo-co-content p a:visited {
+  background-image: -webkit-linear-gradient(top, transparent 0%, rgba(209, 88, 108, 0.6) 100%);
+  background-image: linear-gradient(to bottom, transparent 0%, rgba(209, 88, 108, 0.6) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#99d1586c', GradientType=0);
+}
 #lmo-co-harp .lmo-co-social a:link,
 #lmo-co-harp .lmo-co-social a:visited {
   color: rgba(169, 126, 134, 0.5);
@@ -8703,6 +8828,12 @@ a.lmo-co-find-jobs-danger.active {
 #lmo-co-bex .lmo-co-content p a:hover,
 #lmo-co-bex .lmo-co-content p a:active {
   background-position: 0 100%;
+}
+#lmo-co-bex .lmo-co-content p a:visited {
+  background-image: -webkit-linear-gradient(top, transparent 0%, rgba(255, 102, 41, 0.6) 100%);
+  background-image: linear-gradient(to bottom, transparent 0%, rgba(255, 102, 41, 0.6) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#99ff6629', GradientType=0);
 }
 #lmo-co-bex .lmo-co-social a:link,
 #lmo-co-bex .lmo-co-social a:visited {

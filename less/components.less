@@ -15,35 +15,57 @@
 	.sans-serif-small-caps();
 }
 
-// Node links
+// Tags
 
-a.node {
-	border-radius: 2px;
-	padding: 0.2em 0.3em 0.1em;
-	margin: 0 0.25em;
-	font-weight: bold;
+.inline-tagged-text() {
 	.font-smoothing();
-
-	.node-link(@link-color);
+	font-weight: bold;
+	margin: 0 0.25em;
+	padding-top: 0.2em;
+	padding-bottom: 0.1em;
+	border-width: 1px;
+	border-style: solid;
 
 	.wr-icon {
-		margin-right: 0.1em;
+		margin-right: 0.2em;
 	}
 }
 
-// Tags
+.node-link(@txt-color) {
+	color: @txt-color;
+	display: inline-block;
+	@node-bg-color: mix(fadeout(desaturate(@txt-color,10%),90%),rgba(255,255,255,0.5));
+	background-color: @node-bg-color;
+	border: 1px solid fadeout(@txt-color,80%);
+
+	&:hover {
+		background-color: fadein(@node-bg-color,30%);
+	}
+}
+
+a.node {
+	.inline-tagged-text();
+	border-radius: 3px;
+	padding-right: 0.3em;
+	padding-left: 0.3em;
+
+	.node-link(@link-color);
+
+	&.disabled {
+		.node-link(@btn-link-disabled-color) !important;
+		-webkit-filter: grayscale();
+		filter: grayscale();
+	}
+}
 
 a.tag {
+	.inline-tagged-text();
 	@tag-colour: fadeout(@link-color,80%);
 
-	// color: mix(@link-color,#000,80%);
-	// font-size: @font-size-small;
-	font-weight: bold;
-	.font-smoothing();
 	border-radius: 1em;
-	border: 1px solid @tag-colour;
-	padding: 0.2em 0.6em 0.1em;
-	margin: 0 0.25em;
+	border-color: @tag-colour;
+	padding-right: 0.6em;
+	padding-left: 0.6em;
 
 	&:hover {
 		background-color: @tag-colour;
@@ -51,6 +73,27 @@ a.tag {
 }
 
 // Coloured links
+
+.wr-link-colour(@color, @txt-color) {
+
+	a&,
+	& a {
+		color: @txt-color;
+		@underline-colour: @color;
+
+		&:visited {
+			color: lighten(desaturate(@txt-color,40%),25%);
+		}
+
+		&:hover {
+			color: darken(@txt-color,25%);
+		}
+
+		&.node {
+			.node-link(@txt-color);
+		}
+	}
+}
 
 .wr-link {
 
@@ -60,8 +103,8 @@ a.tag {
 		.wr-link-colour(@wr-colour-advisor, @wr-colour-advisor-txt);
 	}
 
-	&-events {
-		.wr-link-colour(@wr-colour-events, @wr-colour-events-txt);
+	&-event {
+		.wr-link-colour(@wr-colour-event, @wr-colour-event-txt);
 	}
 
 	&-founder,

@@ -852,8 +852,9 @@ body>.navbar.affix+* {
 
 // ==================== panels.less
 
-.panel a {
-	// .fancy-underline();
+.panel {
+	margin: (@line-height-computed / 2) 0;
+	.box-shadow(none);
 }
 
 // ==================== progress-bars.less
@@ -903,14 +904,15 @@ a,
 	}
 
 	&:visited {
-		color: lighten(desaturate(@link-color,40%),25%);
+		color: lighten(desaturate(@link-color,43%),18%);
 	}
 
 	&:visited:hover {
 		color: @link-hover-color;
 	}
 
-	p & {
+	p &,
+	&.link {
 	// .row & {
 		.fancy-underline(@body-bg);
 	}

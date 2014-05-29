@@ -1,3 +1,15 @@
+#activity-feed .panel {
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0;
+  border-style: none;
+  border-top-style: solid;
+  margin-top: 21px;
+}
+#activity-feed .panel > .panel-body {
+  padding-left: 0;
+  padding-right: 0;
+}
 .activity {
   position: relative;
 }
