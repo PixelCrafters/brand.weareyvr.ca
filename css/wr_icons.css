@@ -123,6 +123,12 @@ p .wr-icon {
 .wr-icon-vc {
   background-image: url(../icons/wr-icon-vc.svg);
 }
+.disabled .wr-icon,
+.wr-icon.disabled {
+  -webkit-filter: grayscale();
+  filter: grayscale();
+  opacity: 0.5;
+}
 .wr-icon-sm {
   width: 16px;
   height: 16px;

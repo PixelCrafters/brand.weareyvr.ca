@@ -1,3 +1,6 @@
+@import "_variables";
+@import "_wr_mixins";
+
 .wr-icon {
 	display: inline-block;
 	background-position: center center;
@@ -51,6 +54,15 @@
 	&-startup { background-image: url(../icons/wr-icon-startup.svg); }
 	&-transparency { background-image: url(../icons/wr-icon-transparency.svg); }
 	&-vc { background-image: url(../icons/wr-icon-vc.svg); }
+
+	// Desaturate when disabled
+
+	.disabled &,
+	&.disabled {
+		-webkit-filter: grayscale();
+		filter: grayscale();
+		opacity: 0.5;
+	}
 }
 
 // Sizes

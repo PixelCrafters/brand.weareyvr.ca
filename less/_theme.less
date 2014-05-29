@@ -775,6 +775,13 @@ body>.navbar.affix+* {
 	+ .container {
 		margin-top: 3em;
 	}
+
+	.navbar-form {
+		.form-control,
+		.input-group-addon {
+			margin: 0 1em;
+		}
+	}
 }
 
 .navbar-link {
@@ -843,6 +850,12 @@ body>.navbar.affix+* {
 	.tabular-lining;
 }
 
+// ==================== panels.less
+
+.panel a {
+	// .fancy-underline();
+}
+
 // ==================== progress-bars.less
 
 .progress {
@@ -889,7 +902,16 @@ a,
 		.wr-transition(background-color);
 	}
 
+	&:visited {
+		color: lighten(desaturate(@link-color,40%),25%);
+	}
+
+	&:visited:hover {
+		color: @link-hover-color;
+	}
+
 	p & {
+	// .row & {
 		.fancy-underline(@body-bg);
 	}
 }
@@ -1028,16 +1050,5 @@ body > footer {
 
 	a {
 		.fancy-underline(@grey-lighter);
-	}
-}
-
-// ==================== SOCIAL
-
-.social-share-box {
-	display: inline-block;
-	padding-right: 1em;
-
-	&:not(:last-child) {
-		float: left;
 	}
 }

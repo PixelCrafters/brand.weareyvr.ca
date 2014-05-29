@@ -1,3 +1,6 @@
+@import "../bower_components/bootstrap/less/mixins";
+@import "_variables";
+
 // Buttons
 
 @btn-active-box-shadow-colour: rgba(0,0,0,0.5);
@@ -170,16 +173,16 @@
 	background-position: 0 @underline-position-v;
 }
 
-.serif {
+.serif() {
 	font-family: @font-family-serif;
 	.font-feature-settings("onum" 1);
 }
 
-.sans-serif {
+.sans-serif() {
 	font-family: @font-family-sans-serif;
 }
 
-.sans-serif-small-caps {
+.sans-serif-small-caps() {
 	text-transform: uppercase;
 	letter-spacing: 1px;
 }
@@ -196,15 +199,15 @@
 @wr-icon-md: 24px;
 @wr-icon-lg: 32px;
 
-.wr-icon-sm {
+.wr-icon-sm() {
 	.wr-icon-size(@wr-icon-sm);
 }
 
-.wr-icon-md {
+.wr-icon-md() {
 	.wr-icon-size(@wr-icon-md);
 }
 
-.wr-icon-lg {
+.wr-icon-lg() {
 	.wr-icon-size(@wr-icon-lg);
 }
 
@@ -216,6 +219,42 @@
 @grey:			@gray;
 @grey-light:	@gray-light;
 @grey-lighter:	@gray-lighter;
+
+// Node Link Colour
+
+.node-link(@txt-color) {
+	display: inline-block;
+	@node-bg-color: mix(fadeout(desaturate(@txt-color,10%),90%),rgba(255,255,255,0.5));
+	background-color: @node-bg-color;
+	border: 1px solid fadeout(@txt-color,80%);
+
+	&:hover {
+		background-color: fadein(@node-bg-color,30%);
+	}
+}
+
+// Link Colours
+
+.wr-link-colour(@color, @txt-color) {
+
+	a&,
+	& a {
+		color: @txt-color;
+		@underline-colour: @color;
+
+		&:visited {
+			color: lighten(desaturate(@txt-color,40%),25%);
+		}
+
+		&:hover {
+			color: darken(@txt-color,25%);
+		}
+
+		&.node {
+			.node-link(@txt-color);
+		}
+	}
+}
 
 // Gradients
 
