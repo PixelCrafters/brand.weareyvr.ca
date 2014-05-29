@@ -74,12 +74,12 @@ a.alert-link {
 	}
 
 	&-default {
-		background-color: fadeout(mix(@brand-primary,@btn-primary-color,10%),10%);
+		background-color: fadeout(mix(@brand-primary,@btn-primary-color,15%),10%);
 		color: @brand-primary;
-		border-color: fadeout(mix(@brand-primary,@btn-primary-color,15%),50%);
+		border-color: fadeout(mix(@brand-primary,@btn-primary-color,50%),50%);
 
 		&:hover {
-			border-color: fadeout(@brand-primary,10%);
+			border-color: fadeout(@brand-primary,15%);
 			color: @brand-primary;
 			background-color: fadeout(mix(@brand-primary,@btn-primary-color,5%),10%);
 		}
@@ -87,6 +87,10 @@ a.alert-link {
 		&:active,
 		&.active {
 			background-color: mix(@brand-primary,@btn-primary-color);
+		}
+
+		.btn-group > & + &.dropdown-toggle {
+			margin-left: -1px;
 		}
 
 		.wr-navbar-btn-variant(@navbar-border-color: fadeout(@brand-primary,70%));
@@ -97,20 +101,20 @@ a.alert-link {
 	}
 
 	&-success {
-		.wr-btn-variant(@brand-success);
+		.wr-btn-variant(@btn-success-bg,@btn-success-border);
 	}
 
 	&-info {
-		.wr-btn-variant(@brand-info);
+		.wr-btn-variant(@btn-info-bg,@btn-info-border);
 	}
 
 
 	&-warning {
-		.wr-btn-variant(@brand-warning);
+		.wr-btn-variant(@btn-warning-bg,@btn-warning-border);
 	}
 
 	&-danger {
-		.wr-btn-variant(@brand-danger);
+		.wr-btn-variant(@btn-danger-bg,@btn-danger-border);
 	}
 }
 
@@ -661,11 +665,14 @@ section.row {
 	}
 }
 
-// ==================== navbar.less
+// ==================== labels.less
 
-// body {
-// 	padding-top: @navbar-height;
-// }
+.label {
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;
+}
+
+// ==================== navbar.less
 
 body>.navbar+* {
 	margin-top: 0;
@@ -770,6 +777,18 @@ body>.navbar.affix+* {
 	}
 }
 
+.navbar-link {
+
+	&,
+	.navbar-default * {
+		.fancy-underline(@background-colour: transparent; @underline-colour: @navbar-default-link-color);
+	}
+
+	.navbar-inverse & {
+		.fancy-underline(@background-colour: transparent; @underline-colour: @navbar-inverse-link-color);
+	}
+}
+
 // ==================== navs.less
 
 .wr-nav-vertical {
@@ -870,10 +889,13 @@ a,
 		.wr-transition(background-color);
 	}
 
-	// .row a:not(.btn) {
-	p &:not(.btn) {
+	p & {
 		.fancy-underline(@body-bg);
 	}
+}
+
+a.btn {
+	text-shadow: none;
 }
 
 // ==================== type.less

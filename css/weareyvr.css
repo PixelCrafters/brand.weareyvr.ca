@@ -5968,18 +5968,21 @@ button.close {
   border-color: rgba(0, 0, 0, 0.5);
 }
 .btn-default {
-  background-color: rgba(231, 245, 243, 0.9);
+  background-color: rgba(219, 240, 238, 0.9);
   color: #10988b;
-  border-color: rgba(219, 240, 238, 0.5);
+  border-color: rgba(135, 204, 197, 0.5);
 }
 .btn-default:hover {
-  border-color: rgba(16, 152, 139, 0.9);
+  border-color: rgba(16, 152, 139, 0.85);
   color: #10988b;
   background-color: rgba(243, 250, 249, 0.9);
 }
 .btn-default:active,
 .btn-default.active {
   background-color: #87ccc5;
+}
+.btn-group > .btn-default + .btn-default.dropdown-toggle {
+  margin-left: -1px;
 }
 .wr-navbar .btn-default.navbar-btn {
   border-color: rgba(16, 152, 139, 0.30000000000000004);
@@ -5998,15 +6001,25 @@ button.close {
 }
 .btn-primary {
   background-color: #10988b;
+  border-color: #0e8176;
 }
 .btn-primary:hover {
-  border-color: rgba(16, 152, 139, 0.7);
+  border-color: rgba(14, 129, 118, 0.8);
   color: #10988b;
   background-color: rgba(243, 250, 249, 0.9);
 }
 .btn-primary:active,
 .btn-primary.active {
   background-color: #10988b;
+}
+.btn-group > .btn-primary + .btn-primary.dropdown-toggle {
+  margin-left: -1px;
+}
+.btn-group > .btn-primary + .btn-primary.dropdown-toggle:not(:hover) {
+  background-color: #0e8176;
+}
+.btn-group > .btn-primary + .btn-primary.dropdown-toggle:hover {
+  border-color: rgba(14, 129, 118, 0.8);
 }
 .wr-navbar .btn-primary.navbar-btn {
   border-color: rgba(16, 152, 139, 0.5);
@@ -6025,15 +6038,25 @@ button.close {
 }
 .btn-success {
   background-color: #5cb85c;
+  border-color: #4cae4c;
 }
 .btn-success:hover {
-  border-color: rgba(92, 184, 92, 0.7);
+  border-color: rgba(76, 174, 76, 0.8);
   color: #5cb85c;
   background-color: rgba(247, 251, 247, 0.9);
 }
 .btn-success:active,
 .btn-success.active {
   background-color: #5cb85c;
+}
+.btn-group > .btn-success + .btn-success.dropdown-toggle {
+  margin-left: -1px;
+}
+.btn-group > .btn-success + .btn-success.dropdown-toggle:not(:hover) {
+  background-color: #4cae4c;
+}
+.btn-group > .btn-success + .btn-success.dropdown-toggle:hover {
+  border-color: rgba(76, 174, 76, 0.8);
 }
 .wr-navbar .btn-success.navbar-btn {
   border-color: rgba(92, 184, 92, 0.5);
@@ -6052,15 +6075,25 @@ button.close {
 }
 .btn-info {
   background-color: #5bc0de;
+  border-color: #46b8da;
 }
 .btn-info:hover {
-  border-color: rgba(91, 192, 222, 0.7);
+  border-color: rgba(70, 184, 218, 0.8);
   color: #5bc0de;
   background-color: rgba(247, 252, 253, 0.9);
 }
 .btn-info:active,
 .btn-info.active {
   background-color: #5bc0de;
+}
+.btn-group > .btn-info + .btn-info.dropdown-toggle {
+  margin-left: -1px;
+}
+.btn-group > .btn-info + .btn-info.dropdown-toggle:not(:hover) {
+  background-color: #46b8da;
+}
+.btn-group > .btn-info + .btn-info.dropdown-toggle:hover {
+  border-color: rgba(70, 184, 218, 0.8);
 }
 .wr-navbar .btn-info.navbar-btn {
   border-color: rgba(91, 192, 222, 0.5);
@@ -6079,15 +6112,25 @@ button.close {
 }
 .btn-warning {
   background-color: #f0ad4e;
+  border-color: #eea236;
 }
 .btn-warning:hover {
-  border-color: rgba(240, 173, 78, 0.7);
+  border-color: rgba(238, 162, 54, 0.8);
   color: #f0ad4e;
   background-color: rgba(254, 251, 246, 0.9);
 }
 .btn-warning:active,
 .btn-warning.active {
   background-color: #f0ad4e;
+}
+.btn-group > .btn-warning + .btn-warning.dropdown-toggle {
+  margin-left: -1px;
+}
+.btn-group > .btn-warning + .btn-warning.dropdown-toggle:not(:hover) {
+  background-color: #eea236;
+}
+.btn-group > .btn-warning + .btn-warning.dropdown-toggle:hover {
+  border-color: rgba(238, 162, 54, 0.8);
 }
 .wr-navbar .btn-warning.navbar-btn {
   border-color: rgba(240, 173, 78, 0.5);
@@ -6106,15 +6149,25 @@ button.close {
 }
 .btn-danger {
   background-color: #d9534f;
+  border-color: #d43f3a;
 }
 .btn-danger:hover {
-  border-color: rgba(217, 83, 79, 0.7);
+  border-color: rgba(212, 63, 58, 0.8);
   color: #d9534f;
   background-color: rgba(253, 246, 246, 0.9);
 }
 .btn-danger:active,
 .btn-danger.active {
   background-color: #d9534f;
+}
+.btn-group > .btn-danger + .btn-danger.dropdown-toggle {
+  margin-left: -1px;
+}
+.btn-group > .btn-danger + .btn-danger.dropdown-toggle:not(:hover) {
+  background-color: #d43f3a;
+}
+.btn-group > .btn-danger + .btn-danger.dropdown-toggle:hover {
+  border-color: rgba(212, 63, 58, 0.8);
 }
 .wr-navbar .btn-danger.navbar-btn {
   border-color: rgba(217, 83, 79, 0.5);
@@ -6692,6 +6745,10 @@ section.row + main.row {
     height: 62px;
   }
 }
+.label {
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
 body > .navbar + * {
   margin-top: 0;
 }
@@ -6764,6 +6821,58 @@ body > .navbar.affix + * {
 }
 .wr-navbar + .container {
   margin-top: 3em;
+}
+.navbar-link,
+.navbar-link .navbar-default * {
+  padding-bottom: 0.125em;
+  background-size: 1px 1px;
+  text-shadow: 1px 0 transparent, 2px 0 transparent, -1px 0 transparent, -2px 0 transparent;
+  background-image: -webkit-linear-gradient(top, transparent 0%, #777777 100%);
+  background-image: linear-gradient(to bottom, transparent 0%, #777777 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#ff777777', GradientType=0);
+  background-position: 0 90%;
+}
+.navbar-link,
+.navbar-link .navbar-default *,
+.navbar-link:link,
+.navbar-link .navbar-default *:link,
+.navbar-link:visited,
+.navbar-link .navbar-default *:visited,
+.navbar-link:hover,
+.navbar-link .navbar-default *:hover,
+.navbar-link:active,
+.navbar-link .navbar-default *:active {
+  -webkit-transition: background-position 0.15s ease-in-out, color 0.15s ease-in-out;
+  transition: background-position 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+.navbar-link:hover,
+.navbar-link .navbar-default *:hover,
+.navbar-link:active,
+.navbar-link .navbar-default *:active {
+  background-position: 0 100%;
+}
+.navbar-inverse .navbar-link {
+  padding-bottom: 0.125em;
+  background-size: 1px 1px;
+  text-shadow: 1px 0 transparent, 2px 0 transparent, -1px 0 transparent, -2px 0 transparent;
+  background-image: -webkit-linear-gradient(top, transparent 0%, #92aaa7 100%);
+  background-image: linear-gradient(to bottom, transparent 0%, #92aaa7 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#ff92aaa7', GradientType=0);
+  background-position: 0 90%;
+}
+.navbar-inverse .navbar-link,
+.navbar-inverse .navbar-link:link,
+.navbar-inverse .navbar-link:visited,
+.navbar-inverse .navbar-link:hover,
+.navbar-inverse .navbar-link:active {
+  -webkit-transition: background-position 0.15s ease-in-out, color 0.15s ease-in-out;
+  transition: background-position 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+.navbar-inverse .navbar-link:hover,
+.navbar-inverse .navbar-link:active {
+  background-position: 0 100%;
 }
 .wr-nav-vertical {
   text-transform: uppercase;
@@ -6859,8 +6968,8 @@ a:active,
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
 }
-p a:not(.btn),
-p .btn.btn-link:not(.btn) {
+p a,
+p .btn.btn-link {
   padding-bottom: 0.125em;
   background-size: 1px 1px;
   text-shadow: 1px 0 #ffffff, 2px 0 #ffffff, -1px 0 #ffffff, -2px 0 #ffffff;
@@ -6870,24 +6979,27 @@ p .btn.btn-link:not(.btn) {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#ff10988b', GradientType=0);
   background-position: 0 90%;
 }
-p a:not(.btn),
-p .btn.btn-link:not(.btn),
-p a:not(.btn):link,
-p .btn.btn-link:not(.btn):link,
-p a:not(.btn):visited,
-p .btn.btn-link:not(.btn):visited,
-p a:not(.btn):hover,
-p .btn.btn-link:not(.btn):hover,
-p a:not(.btn):active,
-p .btn.btn-link:not(.btn):active {
+p a,
+p .btn.btn-link,
+p a:link,
+p .btn.btn-link:link,
+p a:visited,
+p .btn.btn-link:visited,
+p a:hover,
+p .btn.btn-link:hover,
+p a:active,
+p .btn.btn-link:active {
   -webkit-transition: background-position 0.15s ease-in-out, color 0.15s ease-in-out;
   transition: background-position 0.15s ease-in-out, color 0.15s ease-in-out;
 }
-p a:not(.btn):hover,
-p .btn.btn-link:not(.btn):hover,
-p a:not(.btn):active,
-p .btn.btn-link:not(.btn):active {
+p a:hover,
+p .btn.btn-link:hover,
+p a:active,
+p .btn.btn-link:active {
   background-position: 0 100%;
+}
+a.btn {
+  text-shadow: none;
 }
 .serif a:not(:hover) {
   background-position: 0 88%;
@@ -7714,18 +7826,21 @@ a.lmo-co-find-jobs:not(.btn-link).active {
   border-color: rgba(0, 0, 0, 0.5);
 }
 a.lmo-co-find-jobs-default {
-  background-color: rgba(231, 245, 243, 0.9);
+  background-color: rgba(219, 240, 238, 0.9);
   color: #10988b;
-  border-color: rgba(219, 240, 238, 0.5);
+  border-color: rgba(135, 204, 197, 0.5);
 }
 a.lmo-co-find-jobs-default:hover {
-  border-color: rgba(16, 152, 139, 0.9);
+  border-color: rgba(16, 152, 139, 0.85);
   color: #10988b;
   background-color: rgba(243, 250, 249, 0.9);
 }
 a.lmo-co-find-jobs-default:active,
 a.lmo-co-find-jobs-default.active {
   background-color: #87ccc5;
+}
+.btn-group > a.lmo-co-find-jobs-default + a.lmo-co-find-jobs-default.dropdown-toggle {
+  margin-left: -1px;
 }
 .wr-navbar a.lmo-co-find-jobs-default.navbar-btn {
   border-color: rgba(16, 152, 139, 0.30000000000000004);
@@ -7744,15 +7859,25 @@ a.lmo-co-find-jobs-default.active {
 }
 a.lmo-co-find-jobs-primary {
   background-color: #10988b;
+  border-color: #0e8176;
 }
 a.lmo-co-find-jobs-primary:hover {
-  border-color: rgba(16, 152, 139, 0.7);
+  border-color: rgba(14, 129, 118, 0.8);
   color: #10988b;
   background-color: rgba(243, 250, 249, 0.9);
 }
 a.lmo-co-find-jobs-primary:active,
 a.lmo-co-find-jobs-primary.active {
   background-color: #10988b;
+}
+.btn-group > a.lmo-co-find-jobs-primary + a.lmo-co-find-jobs-primary.dropdown-toggle {
+  margin-left: -1px;
+}
+.btn-group > a.lmo-co-find-jobs-primary + a.lmo-co-find-jobs-primary.dropdown-toggle:not(:hover) {
+  background-color: #0e8176;
+}
+.btn-group > a.lmo-co-find-jobs-primary + a.lmo-co-find-jobs-primary.dropdown-toggle:hover {
+  border-color: rgba(14, 129, 118, 0.8);
 }
 .wr-navbar a.lmo-co-find-jobs-primary.navbar-btn {
   border-color: rgba(16, 152, 139, 0.5);
@@ -7771,15 +7896,25 @@ a.lmo-co-find-jobs-primary.active {
 }
 a.lmo-co-find-jobs-success {
   background-color: #5cb85c;
+  border-color: #4cae4c;
 }
 a.lmo-co-find-jobs-success:hover {
-  border-color: rgba(92, 184, 92, 0.7);
+  border-color: rgba(76, 174, 76, 0.8);
   color: #5cb85c;
   background-color: rgba(247, 251, 247, 0.9);
 }
 a.lmo-co-find-jobs-success:active,
 a.lmo-co-find-jobs-success.active {
   background-color: #5cb85c;
+}
+.btn-group > a.lmo-co-find-jobs-success + a.lmo-co-find-jobs-success.dropdown-toggle {
+  margin-left: -1px;
+}
+.btn-group > a.lmo-co-find-jobs-success + a.lmo-co-find-jobs-success.dropdown-toggle:not(:hover) {
+  background-color: #4cae4c;
+}
+.btn-group > a.lmo-co-find-jobs-success + a.lmo-co-find-jobs-success.dropdown-toggle:hover {
+  border-color: rgba(76, 174, 76, 0.8);
 }
 .wr-navbar a.lmo-co-find-jobs-success.navbar-btn {
   border-color: rgba(92, 184, 92, 0.5);
@@ -7798,15 +7933,25 @@ a.lmo-co-find-jobs-success.active {
 }
 a.lmo-co-find-jobs-info {
   background-color: #5bc0de;
+  border-color: #46b8da;
 }
 a.lmo-co-find-jobs-info:hover {
-  border-color: rgba(91, 192, 222, 0.7);
+  border-color: rgba(70, 184, 218, 0.8);
   color: #5bc0de;
   background-color: rgba(247, 252, 253, 0.9);
 }
 a.lmo-co-find-jobs-info:active,
 a.lmo-co-find-jobs-info.active {
   background-color: #5bc0de;
+}
+.btn-group > a.lmo-co-find-jobs-info + a.lmo-co-find-jobs-info.dropdown-toggle {
+  margin-left: -1px;
+}
+.btn-group > a.lmo-co-find-jobs-info + a.lmo-co-find-jobs-info.dropdown-toggle:not(:hover) {
+  background-color: #46b8da;
+}
+.btn-group > a.lmo-co-find-jobs-info + a.lmo-co-find-jobs-info.dropdown-toggle:hover {
+  border-color: rgba(70, 184, 218, 0.8);
 }
 .wr-navbar a.lmo-co-find-jobs-info.navbar-btn {
   border-color: rgba(91, 192, 222, 0.5);
@@ -7825,15 +7970,25 @@ a.lmo-co-find-jobs-info.active {
 }
 a.lmo-co-find-jobs-warning {
   background-color: #f0ad4e;
+  border-color: #eea236;
 }
 a.lmo-co-find-jobs-warning:hover {
-  border-color: rgba(240, 173, 78, 0.7);
+  border-color: rgba(238, 162, 54, 0.8);
   color: #f0ad4e;
   background-color: rgba(254, 251, 246, 0.9);
 }
 a.lmo-co-find-jobs-warning:active,
 a.lmo-co-find-jobs-warning.active {
   background-color: #f0ad4e;
+}
+.btn-group > a.lmo-co-find-jobs-warning + a.lmo-co-find-jobs-warning.dropdown-toggle {
+  margin-left: -1px;
+}
+.btn-group > a.lmo-co-find-jobs-warning + a.lmo-co-find-jobs-warning.dropdown-toggle:not(:hover) {
+  background-color: #eea236;
+}
+.btn-group > a.lmo-co-find-jobs-warning + a.lmo-co-find-jobs-warning.dropdown-toggle:hover {
+  border-color: rgba(238, 162, 54, 0.8);
 }
 .wr-navbar a.lmo-co-find-jobs-warning.navbar-btn {
   border-color: rgba(240, 173, 78, 0.5);
@@ -7852,15 +8007,25 @@ a.lmo-co-find-jobs-warning.active {
 }
 a.lmo-co-find-jobs-danger {
   background-color: #d9534f;
+  border-color: #d43f3a;
 }
 a.lmo-co-find-jobs-danger:hover {
-  border-color: rgba(217, 83, 79, 0.7);
+  border-color: rgba(212, 63, 58, 0.8);
   color: #d9534f;
   background-color: rgba(253, 246, 246, 0.9);
 }
 a.lmo-co-find-jobs-danger:active,
 a.lmo-co-find-jobs-danger.active {
   background-color: #d9534f;
+}
+.btn-group > a.lmo-co-find-jobs-danger + a.lmo-co-find-jobs-danger.dropdown-toggle {
+  margin-left: -1px;
+}
+.btn-group > a.lmo-co-find-jobs-danger + a.lmo-co-find-jobs-danger.dropdown-toggle:not(:hover) {
+  background-color: #d43f3a;
+}
+.btn-group > a.lmo-co-find-jobs-danger + a.lmo-co-find-jobs-danger.dropdown-toggle:hover {
+  border-color: rgba(212, 63, 58, 0.8);
 }
 .wr-navbar a.lmo-co-find-jobs-danger.navbar-btn {
   border-color: rgba(217, 83, 79, 0.5);

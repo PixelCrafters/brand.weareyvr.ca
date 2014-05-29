@@ -6,11 +6,13 @@
 	box-shadow: 0 5em 1px 0 @btn-active-box-shadow-colour inset;
 }
 
-.wr-btn-variant(@color: @brand-primary, @hover-background-color: @color) {
+.wr-btn-variant(@color: @btn-primary-bg; @border-color: @btn-primary-border; @hover-background-color: @color) {
 	background-color: @color;
+	border-color: @border-color;
 
 	&:hover {
-		border-color: fadeout(@color,30%);
+		// border-color: fadeout(@color,30%);
+		border-color: fadeout(@border-color,20%);
 		color: @color;
 		background-color: fadeout(mix(@hover-background-color,@btn-primary-color,5%),10%);
 	}
@@ -20,7 +22,23 @@
 		background-color: @color;
 	}
 
+	.wr-dropdown-toggle-btn-variant(@border-color);
+
 	.wr-navbar-btn-variant(@color);
+}
+
+.wr-dropdown-toggle-btn-variant(@dropdown-border-color: @btn-primary-border) {
+	.btn-group > & + &.dropdown-toggle {
+		margin-left: -1px;
+
+		&:not(:hover) {
+			background-color: @border-color;
+		}
+
+		&:hover {
+			border-color: fadeout(@border-color,20%);
+		}
+	}
 }
 
 .wr-navbar-btn-variant(@navbar-btn-color: @brand-primary, @navbar-border-color: fadeout(@navbar-btn-color,50%)) {
