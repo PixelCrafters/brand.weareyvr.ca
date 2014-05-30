@@ -118,12 +118,12 @@ body.logo-generator .slider-value {
     display: block;
   }
 }
-body.logo-generator .colours-list > label {
+body.logo-generator .colours-list label {
   display: block;
   padding: 0.375em 0;
   margin: 0;
 }
-body.logo-generator .colours-list > label small {
+body.logo-generator .colours-list label small {
   font-weight: normal;
   color: #92aaa7;
 }
