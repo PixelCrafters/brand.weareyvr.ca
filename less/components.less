@@ -57,15 +57,17 @@
 	.font-smoothing();
 	font-weight: bold;
 	margin: 0 0.25em;
-	padding-top: 0.2em;
-	padding-bottom: 0.1em;
+	padding-top: 0.175em;
+	padding-bottom: 0.075em;
 	border-width: 1px;
 	border-style: solid;
 	font-family: @font-family-sans-serif;
-	display: inline-block;
+	display: inline;
+	white-space: nowrap;
 
 	.wr-icon {
 		margin-right: 0.2em;
+		margin-top: 1px;
 	}
 }
 
@@ -92,6 +94,22 @@ a.node {
 		.node-link(@btn-link-disabled-color) !important;
 		-webkit-filter: grayscale();
 		filter: grayscale();
+	}
+
+	&.link {
+		background-color: rgba(255,255,255,0.7);
+		border-bottom-style: none;
+		.fancy-underline(@underline-position-v: 100%);
+
+		&:link,
+		&:visited,
+		&:hover {
+			.wr-transition(background-color);
+		}
+
+		&:hover {
+			background-color: @node-bg-color;
+		}
 	}
 }
 
