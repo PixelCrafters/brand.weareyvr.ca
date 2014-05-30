@@ -21,11 +21,12 @@ a.node {
   padding-bottom: 0.1em;
   border-width: 1px;
   border-style: solid;
-  border-radius: 3px;
+  font-family: "Fort", Fort, "Helvetica Neue", HelveticaNeue, Helvetica, Verdana, sans-serif;
+  display: inline-block;
+  border-radius: 4px;
   padding-right: 0.3em;
   padding-left: 0.3em;
   color: #10988b;
-  display: inline-block;
   background-color: rgba(186, 222, 218, 0.3);
   border: 1px solid rgba(16, 152, 139, 0.2);
 }
@@ -37,7 +38,6 @@ a.node:hover {
 }
 a.node.disabled {
   color: #92aaa7 !important;
-  display: inline-block !important;
   background-color: rgba(225, 227, 226, 0.3) !important;
   border: 1px solid rgba(146, 170, 167, 0.2) !important;
   -webkit-filter: grayscale();
@@ -54,6 +54,8 @@ a.tag {
   padding-bottom: 0.1em;
   border-width: 1px;
   border-style: solid;
+  font-family: "Fort", Fort, "Helvetica Neue", HelveticaNeue, Helvetica, Verdana, sans-serif;
+  display: inline-block;
   border-radius: 1em;
   border-color: rgba(16, 152, 139, 0.2);
   padding-right: 0.6em;
@@ -96,7 +98,6 @@ a.wr-link-guides.node,
 .wr-link-advisor-av a.node,
 .wr-link-guides a.node {
   color: #c61940;
-  display: inline-block;
   background-color: rgba(234, 189, 200, 0.3);
   border: 1px solid rgba(198, 25, 64, 0.2);
 }
@@ -123,7 +124,6 @@ a.wr-link-event:hover,
 a.wr-link-event.node,
 .wr-link-event a.node {
   color: #ff4d82;
-  display: inline-block;
   background-color: rgba(252, 204, 219, 0.3);
   border: 1px solid rgba(255, 77, 130, 0.2);
 }
@@ -154,7 +154,6 @@ a.wr-link-founder-av.node,
 .wr-link-founder a.node,
 .wr-link-founder-av a.node {
   color: #e69d00;
-  display: inline-block;
   background-color: rgba(244, 224, 182, 0.3);
   border: 1px solid rgba(230, 157, 0, 0.2);
 }
@@ -187,7 +186,6 @@ a.wr-link-incubator.node,
 .wr-link-startup a.node,
 .wr-link-incubator a.node {
   color: #00a35c;
-  display: inline-block;
   background-color: rgba(181, 225, 206, 0.3);
   border: 1px solid rgba(0, 163, 92, 0.2);
 }
@@ -236,7 +234,6 @@ a.wr-link-newbie-av.node,
 .wr-link-newbie a.node,
 .wr-link-newbie-av a.node {
   color: #4095c5;
-  display: inline-block;
   background-color: rgba(201, 222, 234, 0.3);
   border: 1px solid rgba(64, 149, 197, 0.2);
 }
@@ -329,7 +326,6 @@ a.wr-link-series-d.node,
 .wr-link-series-c a.node,
 .wr-link-series-d a.node {
   color: #9968dc;
-  display: inline-block;
   background-color: rgba(225, 213, 242, 0.3);
   border: 1px solid rgba(153, 104, 220, 0.2);
 }
@@ -368,7 +364,6 @@ a.wr-link-jobs:hover,
 a.wr-link-jobs.node,
 .wr-link-jobs a.node {
   color: #8b572a;
-  display: inline-block;
   background-color: rgba(217, 205, 194, 0.3);
   border: 1px solid rgba(139, 87, 42, 0.2);
 }

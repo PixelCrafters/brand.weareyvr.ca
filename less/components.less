@@ -25,6 +25,8 @@
 	padding-bottom: 0.1em;
 	border-width: 1px;
 	border-style: solid;
+	font-family: @font-family-sans-serif;
+	display: inline-block;
 
 	.wr-icon {
 		margin-right: 0.2em;
@@ -33,7 +35,6 @@
 
 .node-link(@txt-color) {
 	color: @txt-color;
-	display: inline-block;
 	@node-bg-color: mix(fadeout(desaturate(@txt-color,10%),90%),rgba(255,255,255,0.5));
 	background-color: @node-bg-color;
 	border: 1px solid fadeout(@txt-color,80%);
@@ -45,7 +46,7 @@
 
 a.node {
 	.inline-tagged-text();
-	border-radius: 3px;
+	border-radius: @border-radius-small;
 	padding-right: 0.3em;
 	padding-left: 0.3em;
 
