@@ -9,25 +9,25 @@
 	box-shadow: 0 5em 1px 0 @btn-active-box-shadow-colour inset;
 }
 
-.wr-btn-variant(@color: @btn-primary-bg; @border-color: @btn-primary-border; @hover-background-color: @color) {
-	background-color: @color;
+.wr-btn-variant(@bg-color: @btn-primary-bg; @border-color: darken(@bg-color, 5%); @text-color: #fff; @hover-bg-color: @bg-color) {
+	background-color: @bg-color;
 	border-color: @border-color;
+	color: @text-color;
 
 	&:hover {
-		// border-color: fadeout(@color,30%);
 		border-color: fadeout(@border-color,20%);
-		color: @color;
-		background-color: fadeout(mix(@hover-background-color,@btn-primary-color,5%),10%);
+		color: @bg-color;
+		background-color: fadeout(mix(@hover-bg-color,@btn-primary-color,5%),10%);
 	}
 
 	&:active,
 	&.active {
-		background-color: @color;
+		background-color: @bg-color;
 	}
 
 	.wr-dropdown-toggle-btn-variant(@border-color);
 
-	.wr-navbar-btn-variant(@color);
+	.wr-navbar-btn-variant(@bg-color);
 }
 
 .wr-dropdown-toggle-btn-variant(@dropdown-border-color: @btn-primary-border) {
@@ -42,10 +42,17 @@
 			border-color: fadeout(@border-color,20%);
 		}
 	}
+
+	.btn-group.open > & + &.dropdown-toggle {
+		&:hover {
+			background-color: @border-color;
+			border-color: @btn-active-box-shadow-colour;
+		}
+	}
 }
 
 .wr-navbar-btn-variant(@navbar-btn-color: @brand-primary, @navbar-border-color: fadeout(@navbar-btn-color,50%)) {
-	.wr-navbar &.navbar-btn {
+	.wr-navbar &.btn {
 		border-color: @navbar-border-color;
 		color: @navbar-btn-color;
 		background-color: transparent;

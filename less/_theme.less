@@ -108,7 +108,6 @@ a.alert-link {
 		.wr-btn-variant(@btn-info-bg,@btn-info-border);
 	}
 
-
 	&-warning {
 		.wr-btn-variant(@btn-warning-bg,@btn-warning-border);
 	}
@@ -146,6 +145,14 @@ a.alert-link {
 		> .btn-group + .btn-group {
 		    margin: 1px 0 0 0;
 		}
+
+		&.text-left .btn {
+			text-align: left;
+		}
+
+		&.text-right .btn {
+			text-align: right;
+		}
 	}
 
 	&-justified {
@@ -181,40 +188,6 @@ a.alert-link {
 	> .btn.dropdown-toggle {
 		border: 1px solid rgba(0,0,0,0.5)
 	}
-}
-
-.btn.btn-default {
-
-// 	.btn-group > & + & {
-// 		margin-left: -1px;
-// 	}
-
-// 	.btn-group-vertical > & + & {
-// 		margin-top: -1px;
-// 	}
-
-// 	.btn-group > .btn + &,
-// 	.btn-group > & + .btn {
-// 		margin-left: -1px;
-// 	}
-
-// 	.btn-group-vertical > .btn + &,
-// 	.btn-group-vertical > & + .btn {
-// 		margin-top: -1px;
-// 	}
-
-// 	.btn-group > & + .btn-group > & {
-// 		margin-left: -2px;
-// 	}
-
-// 	.btn-group-vertical > & + .btn-group > & {
-// 		margin-top: -2px;
-// 	}
-
-	// .btn-group & + &.btn.dropdown-toggle,
-	// .input-group-btn & + &.btn.dropdown-toggle {
-	// 	margin-left: -1px;
-	// }
 }
 
 // ==================== dropdowns.less
@@ -761,6 +734,14 @@ body>.navbar.affix+* {
 		}
 	}
 
+	.navbar-form > * {
+		margin-left: 1em;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+
 	// .form-control {
 	// 	// border-color: #fff;
 	// 	border-color: @grey-lighter;
@@ -774,13 +755,6 @@ body>.navbar.affix+* {
 
 	+ .container {
 		margin-top: 3em;
-	}
-
-	.navbar-form {
-		.form-control,
-		.input-group-addon {
-			margin: 0 1em;
-		}
 	}
 }
 
