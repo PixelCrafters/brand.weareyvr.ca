@@ -1,7 +1,7 @@
 var element = d3.select('.weareyvr-mark');
 var vis = d3.select('.weareyvr-mark svg');
 
-var height = 500;
+var height = 100;
 var text = 'black';
 
 // Canonical.

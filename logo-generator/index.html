@@ -24,7 +24,7 @@
           <label for="topRight"><h3>Top Right</h3>
           <input type="range" min="0" max="100" step="1" value="50" name="topRight" id="topRight"><span class="slider-value topRight-value">50</span></label>
         </div>
-        <div class="weareyvr-mark" data-height="500" data-colour="#10988b" data-text="black" data-radius="50" data-one="50" data-two="50" data-three="0" data-four="0"></div>
+        <div class="weareyvr-mark" data-height="100" data-colour="#10988b" data-text="black" data-radius="50" data-one="50" data-two="50" data-three="0" data-four="0"></div>
         <div class="bottom-controls">
           <label for="bottomLeft"><h3>Bottom Left</h3>
           <input type="range" min="0" max="100" step="1" value="0" name="bottomLeft" id="bottomLeft"><span class="slider-value bottomLeft-value">0</span></label>
@@ -88,7 +88,8 @@
       <div class="clearfix visible-xs"></div>
       <div class="col-sm-3" id="size-px">
         <h3>Size <small>(px)</small></h3>
-        <input class="form-control input-lg" name="height" type="number" value="500">
+        <!-- <input type="range" min="50" max="750" step="1" value="100" name="height" id="height"><span class="slider-value height-value">100</span></label> -->
+        <input class="form-control input-lg" name="height" type="number" value="100" min="50" max="750" step="5">
       </div>
     </section>
     <section id="downloads" class="row">
