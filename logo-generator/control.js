@@ -32,6 +32,7 @@ var draw = function() {
   d3.select('.topRight-value').text(topRight);
   d3.select('.bottomRight-value').text(bottomRight);
   d3.select('.bottomLeft-value').text(bottomLeft);
+  d3.select('.height-value').text(height);
   vis.selectAll('*').remove();
   drawMark(vis, height, text, colour,  radius, topLeft, topRight, bottomRight, bottomLeft);
   document.body.style.backgroundColor = text === 'white' || colour === 'white' ? '#bdcbca' : '#f2f5f5';

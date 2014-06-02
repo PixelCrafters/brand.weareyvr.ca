@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <title>WeAreYVR Generator</title>
+  <title>WeAreYVR &mdash; Logo Generator</title>
 
   <link href="../css/weareyvr.css" rel="stylesheet">
   <link href="../css/fonts.css" rel="stylesheet">
@@ -40,56 +40,77 @@
         <label for="generateFromText"><h3>Generate from Text</h3>
         <input class="generate form-control" id="generateFromText" type="text"></label>
       </div>
-      <div class="col-sm-3 col-xs-7 colours-list" id="glyph-colours">
+      <div class="col-sm-3 col-xs-7" id="glyph-colours">
         <h3>Colour</h3>
-        <label>
-          <input type="radio" value="#10988b" name="colour" checked> Spruce (Primary)
-        </label>
-        <label>
-          <input type="radio" value="#af1639" name="colour"> Red <small>(Advisors)</small>
-        </label>
-        <label>
-          <input type="radio" value="#ff769f" name="colour"> Pink <small>(Events)</small>
-        </label>
-        <label>
-          <input type="radio" value="#ffaf00" name="colour"> Orange <small>(Founders)</small>
-        </label>
-        <label>
-          <input type="radio" value="#00d679" name="colour"> Green <small>(Startups)</small>
-        </label>
-        <label>
-          <input type="radio" value="#4095c5" name="colour"> Blue <small>(Employees)</small>
-        </label>
-        <label>
-          <input type="radio" value="#601ebd" name="colour"> Purple <small>(Investors)</small>
-        </label>
-        <label>
-          <input type="radio" value="#8b572a" name="colour"> Brown <small>(Jobs)</small>
-        </label>
-        <label>
-          <input type="radio" value="black" name="colour"> Black
-        </label>
-        <label>
-          <input type="radio" value="white" name="colour"> White
-        </label>
+        <div class="radio-list">
+          <label>
+            <input type="radio" value="#10988b" name="colour" checked> Spruce (Primary)
+          </label>
+          <label>
+            <input type="radio" value="#af1639" name="colour"> Red <small>(Advisors)</small>
+          </label>
+          <label>
+            <input type="radio" value="#ff769f" name="colour"> Pink <small>(Events)</small>
+          </label>
+          <label>
+            <input type="radio" value="#ffaf00" name="colour"> Orange <small>(Founders)</small>
+          </label>
+          <label>
+            <input type="radio" value="#00d679" name="colour"> Green <small>(Startups)</small>
+          </label>
+          <label>
+            <input type="radio" value="#4095c5" name="colour"> Blue <small>(Employees)</small>
+          </label>
+          <label>
+            <input type="radio" value="#601ebd" name="colour"> Purple <small>(Investors)</small>
+          </label>
+          <label>
+            <input type="radio" value="#8b572a" name="colour"> Brown <small>(Jobs)</small>
+          </label>
+          <label>
+            <input type="radio" value="black" name="colour"> Black
+          </label>
+          <label>
+            <input type="radio" value="white" name="colour"> White
+          </label>
+        </div>
       </div>
-      <div class="col-sm-3 col-xs-5 colours-list" id="text-colours">
+      <div class="col-sm-3 col-xs-5" id="text-colours">
         <h3>Name</h3>
-        <label>
-          <input type="radio" value="black" name="text" checked> Black
-        </label>
-        <label>
-          <input type="radio" value="white" name="text"> White
-        </label>
-        <label>
-          <input type="radio" value="" name="text"> None
-        </label>
+        <div class="radio-list">
+          <label>
+            <input type="radio" value="black" name="text" checked> Black
+          </label>
+          <label>
+            <input type="radio" value="white" name="text"> White
+          </label>
+          <label>
+            <input type="radio" value="" name="text"> None
+          </label>
+        </div>
       </div>
       <div class="clearfix visible-xs"></div>
       <div class="col-sm-3" id="size-px">
         <h3>Size <small>(px)</small></h3>
         <!-- <input type="range" min="50" max="750" step="1" value="100" name="height" id="height"><span class="slider-value height-value">100</span></label> -->
         <input class="form-control input-lg" name="height" type="number" value="100" min="50" max="750" step="5">
+        <div class="radio-list">
+          <label>
+            <input type="radio" value=""> X-Small <small>(50px)</small>
+          </label>
+          <label>
+            <input type="radio" value="" checked> Small <small>(100px)</small>
+          </label>
+          <label>
+            <input type="radio" value=""> Medium <small>(250px)</small>
+          </label>
+          <label>
+            <input type="radio" value=""> Large <small>(500px)</small>
+          </label>
+          <label>
+            <input type="radio" value=""> X-Large <small>(750px)</small>
+          </label>
+        </div>
       </div>
     </section>
     <section id="downloads" class="row">

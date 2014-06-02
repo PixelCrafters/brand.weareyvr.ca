@@ -118,16 +118,16 @@ body.logo-generator .slider-value {
     display: block;
   }
 }
-body.logo-generator .colours-list label {
+body.logo-generator .radio-list label {
   display: block;
   padding: 0.375em 0;
   margin: 0;
 }
-body.logo-generator .colours-list label small {
+body.logo-generator .radio-list label small {
   font-weight: normal;
   color: #92aaa7;
 }
-body.logo-generator .colours-list input[type="radio"] {
+body.logo-generator .radio-list input[type="radio"] {
   display: inline;
   width: auto;
   margin: 0 0.5em 0 0;

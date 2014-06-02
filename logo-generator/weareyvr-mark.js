@@ -8,8 +8,10 @@ function drawMark(vis, height, text, colour, radius, one, two, three, four) {
   var scale = height/500;
   var width = height * 0.95;
   var radius = ((parseInt(radius, 10)*70/100)+5)*scale;
-  var stroke = 3*scale;
-  if (stroke < 1) stroke = 1;
+  var stroke = (5*scale); // so stroke = 1 when height = 100px
+  if (scale <= 0.3) stroke = 1; // <= 150px
+  if (scale >= 0.5) stroke = (4*scale); // >= 250px
+  if (scale >= 1) stroke = (3*scale); // >= 500px
 
   vis.attr('width', Math.ceil(width + (635-475)*scale)).attr('height', height);
 
