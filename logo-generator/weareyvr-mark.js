@@ -11,7 +11,7 @@ function drawMark(vis, height, text, colour, radius, one, two, three, four) {
   var stroke = 3*scale;
   if (stroke < 1) stroke = 1;
 
-  vis.attr('width', width + (635-475)*scale).attr('height', height);
+  vis.attr('width', Math.ceil(width + (635-475)*scale)).attr('height', height);
 
   // Top left.
   var one = parseInt(one, 10);
