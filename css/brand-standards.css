@@ -68,23 +68,23 @@
 .modal-footer:after {
   clear: both;
 }
-body.brand-standards .wr-nav-brand > li {
+.wr-nav-brand > li {
   float: left;
 }
-body.brand-standards .wr-nav-brand > li > a {
+.wr-nav-brand > li > a {
   border-radius: 6px;
 }
-body.brand-standards .wr-nav-brand > li + li {
+.wr-nav-brand > li + li {
   margin-left: 2px;
 }
-body.brand-standards .wr-nav-brand > li.active > a,
-body.brand-standards .wr-nav-brand > li.active > a:hover,
-body.brand-standards .wr-nav-brand > li.active > a:focus {
+.wr-nav-brand > li.active > a,
+.wr-nav-brand > li.active > a:hover,
+.wr-nav-brand > li.active > a:focus {
   color: #ffffff;
   background-color: #10988b;
 }
-body.brand-standards .wr-nav-brand,
-body.brand-standards .wr-nav-brand .nav {
+.wr-nav-brand,
+.wr-nav-brand .nav {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: bold;
@@ -92,58 +92,48 @@ body.brand-standards .wr-nav-brand .nav {
   -webkit-font-smoothing: antialiased;
   line-height: 1;
 }
-body.brand-standards .wr-nav-brand > li > a,
-body.brand-standards .wr-nav-brand .nav > li > a {
+.wr-nav-brand > li > a,
+.wr-nav-brand .nav > li > a {
   color: #92aaa7;
   -webkit-transition: background-color 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out;
   border-radius: 6px;
 }
-body.brand-standards .wr-nav-brand > li > a:active,
-body.brand-standards .wr-nav-brand .nav > li > a:active,
-body.brand-standards .wr-nav-brand > li > a.active,
-body.brand-standards .wr-nav-brand .nav > li > a.active {
-  background-color: rgba(16, 152, 139, 0.3);
-}
-body.brand-standards .wr-nav-brand > li > a > .wr-icon,
-body.brand-standards .wr-nav-brand .nav > li > a > .wr-icon {
+.wr-nav-brand > li > a > .wr-icon,
+.wr-nav-brand .nav > li > a > .wr-icon {
   vertical-align: text-bottom;
   margin: 0 0.5em 0 0;
 }
-body.brand-standards .wr-nav-brand > li.active > a,
-body.brand-standards .wr-nav-brand .nav > li.active > a {
-  border-color: #10988b;
-}
-body.brand-standards .wr-nav-brand > li small,
-body.brand-standards .wr-nav-brand .nav > li small,
-body.brand-standards .wr-nav-brand > li .small,
-body.brand-standards .wr-nav-brand .nav > li .small {
+.wr-nav-brand > li small,
+.wr-nav-brand .nav > li small,
+.wr-nav-brand > li .small,
+.wr-nav-brand .nav > li .small {
   font-weight: normal;
   font-size: 1em;
 }
-body.brand-standards .wr-nav-brand .nav,
-body.brand-standards .wr-nav-brand .nav .nav {
+.wr-nav-brand .nav,
+.wr-nav-brand .nav .nav {
   margin: 10px 15px;
   margin-top: 0;
   margin-bottom: 0;
 }
-body.brand-standards .wr-nav-brand > li {
+.wr-nav-brand > li {
   float: left;
 }
-body.brand-standards .wr-nav-brand > li > a {
+.wr-nav-brand > li > a {
   border-radius: 6px;
 }
-body.brand-standards .wr-nav-brand > li + li {
+.wr-nav-brand > li + li {
   margin-left: 2px;
 }
-body.brand-standards .wr-nav-brand > li.active > a,
-body.brand-standards .wr-nav-brand > li.active > a:hover,
-body.brand-standards .wr-nav-brand > li.active > a:focus {
+.wr-nav-brand > li.active > a,
+.wr-nav-brand > li.active > a:hover,
+.wr-nav-brand > li.active > a:focus {
   color: #ffffff;
   background-color: #10988b;
 }
-body.brand-standards .wr-nav-brand,
-body.brand-standards .wr-nav-brand .nav {
+.wr-nav-brand,
+.wr-nav-brand .nav {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: bold;
@@ -151,62 +141,69 @@ body.brand-standards .wr-nav-brand .nav {
   -webkit-font-smoothing: antialiased;
   line-height: 1;
 }
-body.brand-standards .wr-nav-brand > li > a,
-body.brand-standards .wr-nav-brand .nav > li > a {
+.wr-nav-brand > li > a,
+.wr-nav-brand .nav > li > a {
   color: #92aaa7;
   -webkit-transition: background-color 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out;
   border-radius: 6px;
 }
-body.brand-standards .wr-nav-brand > li > a:active,
-body.brand-standards .wr-nav-brand .nav > li > a:active,
-body.brand-standards .wr-nav-brand > li > a.active,
-body.brand-standards .wr-nav-brand .nav > li > a.active {
-  background-color: rgba(16, 152, 139, 0.3);
-}
-body.brand-standards .wr-nav-brand > li > a > .wr-icon,
-body.brand-standards .wr-nav-brand .nav > li > a > .wr-icon {
+.wr-nav-brand > li > a > .wr-icon,
+.wr-nav-brand .nav > li > a > .wr-icon {
   vertical-align: text-bottom;
   margin: 0 0.5em 0 0;
 }
-body.brand-standards .wr-nav-brand > li.active > a,
-body.brand-standards .wr-nav-brand .nav > li.active > a {
-  border-color: #10988b;
-}
-body.brand-standards .wr-nav-brand > li small,
-body.brand-standards .wr-nav-brand .nav > li small,
-body.brand-standards .wr-nav-brand > li .small,
-body.brand-standards .wr-nav-brand .nav > li .small {
+.wr-nav-brand > li small,
+.wr-nav-brand .nav > li small,
+.wr-nav-brand > li .small,
+.wr-nav-brand .nav > li .small {
   font-weight: normal;
   font-size: 1em;
 }
-body.brand-standards .wr-nav-brand .nav,
-body.brand-standards .wr-nav-brand .nav .nav {
+.wr-nav-brand .nav,
+.wr-nav-brand .nav .nav {
   margin: 10px 15px;
   margin-top: 0;
   margin-bottom: 0;
 }
-body.brand-standards .wr-nav-brand > li {
+.wr-nav-brand > li {
   float: none;
 }
-body.brand-standards .wr-nav-brand > li + li {
+.wr-nav-brand > li + li {
   margin-top: 2px;
   margin-left: 0;
 }
-body.brand-standards .wr-nav-brand li a {
+.wr-nav-brand li a {
   font-weight: normal;
   padding: 8px 10px;
 }
-body.brand-standards .wr-nav-brand li.active > a {
+.wr-nav-brand li.active > a {
   font-weight: bold !important;
 }
-body.brand-standards .wr-nav-brand .nav {
+.wr-nav-brand .nav {
   margin-left: 15px;
 }
-body.brand-standards .wr-nav-brand .nav li a {
+.wr-nav-brand .nav li a {
   padding: 5px 8px;
   font-weight: normal;
   text-transform: none;
   letter-spacing: 0;
+}
+.colour-swatch {
+  width: 48px;
+  height: 48px;
+  display: block;
+  border-radius: 4px;
+}
+.icon-swatch {
+  width: 32px;
+  height: 32px;
+  background-size: 32px 32px;
+  width: 48px;
+  height: 48px;
+  background-color: rgba(249, 250, 250, 0.9);
+  border: 1px solid #f2f5f5;
+  display: block;
+  border-radius: 4px;
 }
 /*# sourceMappingURL=brand-standards.css.map */
