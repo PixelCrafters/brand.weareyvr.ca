@@ -94,6 +94,13 @@ a.alert-link {
 		}
 
 		.wr-navbar-btn-variant(@navbar-border-color: fadeout(@brand-primary,70%));
+
+		.wr-navbar &.btn {
+			&:hover {
+				color: @brand-primary;
+				background-color: fadeout(@brand-primary,70%);
+			}
+		}
 	}
 
 	&-primary {
