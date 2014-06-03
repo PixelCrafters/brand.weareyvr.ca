@@ -21,10 +21,12 @@ p .wr-icon {
 .wr-icon-advisor-av {
   background-image: url(../icons/wr-icon-advisor-av.svg);
 }
-.wr-icon-angel-investor {
+.wr-icon-angel-investor,
+.wr-icon-angel {
   background-image: url(../icons/wr-icon-angel-investor.svg);
 }
-.wr-icon-angel-investor-av {
+.wr-icon-angel-investor-av,
+.wr-icon-angel-av {
   background-image: url(../icons/wr-icon-angel-investor-av.svg);
 }
 .wr-icon-community {
@@ -48,7 +50,8 @@ p .wr-icon {
 .wr-icon-employee-av {
   background-image: url(../icons/wr-icon-employee-av.svg);
 }
-.wr-icon-event {
+.wr-icon-event,
+.wr-icon-events {
   background-image: url(../icons/wr-icon-event.svg);
 }
 .wr-icon-federal {
@@ -66,6 +69,7 @@ p .wr-icon {
 .wr-icon-gastown {
   background-image: url(../icons/wr-icon-gastown.svg);
 }
+.wr-icon-guide,
 .wr-icon-guides {
   background-image: url(../icons/wr-icon-guides.svg);
 }
@@ -78,11 +82,9 @@ p .wr-icon {
 .wr-icon-investor-av {
   background-image: url(../icons/wr-icon-investor-av.svg);
 }
+.wr-icon-job,
 .wr-icon-jobs {
   background-image: url(../icons/wr-icon-jobs.svg);
-}
-.wr-icon-funding {
-  background-image: url(../icons/wr-icon-funding.svg);
 }
 .wr-icon-mount-pleasant {
   background-image: url(../icons/wr-icon-mount-pleasant.svg);
@@ -120,7 +122,8 @@ p .wr-icon {
 .wr-icon-transparency {
   background-image: url(../icons/wr-icon-transparency.svg);
 }
-.wr-icon-vc {
+.wr-icon-vc,
+.wr-icon-venture-capital {
   background-image: url(../icons/wr-icon-vc.svg);
 }
 .disabled .wr-icon,
