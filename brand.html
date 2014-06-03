@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>WeAreYVR &mdash; Brand standards guide</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/weareyvr.css" rel="stylesheet">
+  <link href="css/fonts.css" rel="stylesheet">
+  <link href="css/wr_icons.css" rel="stylesheet">
+  <link href="css/components.css" rel="stylesheet">
+  <link href="css/brand-standards.css" rel="stylesheet">
+  <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+<body class="brand-standards">
+  <a class="sr-only" href="#content">Skip to main content</a>
+
+  <!-- master nav -->
+  <!-- <nav class="navbar navbar-default wr-navbar">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <div class="weareyvr-mark" data-height="100" data-colour="#10988b" data-text="black">
+            <span>WeAreYVR</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </nav> -->
+
+  <!-- <header class="jumbotron wr-jumbotron-light" style="background-image: url(img/7627655228_8b4c5d8044_h.jpg); background-position: center top;"> -->
+  <header class="jumbotron">
+    <div class="container">
+      <div class="weareyvr-mark" data-height="100" data-colour="#10988b" data-text="black">
+        <span>WeAreYVR</span>
+      </div>
+      <h1>Brand standards guide <small>v1.0</small></h1>
+    </div>
+  </header>
+
+
+  <div class="container">
+
+    <section class="row">
+      <div class="col-md-9">
+
+        <section>
+          <p class="lead">WeAreYVR is an information hub for the Vancouver startup community. It is a collaborative project &mdash; startup accelerators, the city of Vancouver, and members of the community are all helping to put each other on the map.</p>
+          <p class="lead">This data is important to entrepreneurs having a place to find local companies, events, and job opportunities, investors looking to connect with startups, municipalities who want to best support their local economies, and individuals looking for a new city to welcome them.</p>
+          <p class="lead">Follow us on <a href="http://twitter.com/WeAreYVR">Twitter</a> and <a href="http://facebook.com/WeAreYVR">Facebook</a> as we get ready for launch.</p>
+        </section>
+
+        <section id="logo">
+          <h1 class="page-header">Logo</h1>
+          <!-- <section>
+            <h2>Logo</h2>
+          </section> -->
+        </section>
+
+        <section id="typography">
+          <h1 class="page-header">Typography</h1>
+        </section>
+
+        <section id="colours">
+          <h1 class="page-header">Colours</h1>
+        </section>
+
+        <section id="components">
+          <h1 class="page-header">Components</h1>
+          <section>
+            <h2>Entity links</h2>
+          </section>
+        </section>
+
+      </div>
+
+      <div class="col-md-3">
+
+        <nav>
+          <ul class="nav wr-nav-vertical wr-nav-brand">
+
+            <li><a href="#logo">Logo</a></li>
+            <li class="active"><a href="#typography">Typography</a></li>
+            <li><a href="#colours">Colours</a></li>
+            <li>
+              <a href="#components">Components</a>
+              <ul class="nav">
+                <li><a href="#">Entity links</a></li>
+              </ul>
+            </li>
+
+            </ul>
+        </nav>
+
+      </div>
+
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="container">
+      WeAreYVR Brand Standards Guide v1.0 &mdash; <time datetime="2014-06-03">2014-06-03</time>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="docs/docs.min.js"></script>
+
+  <!-- WeAreYVR logo generator -->
+  <script src="logo-generator/d3.v3.min.js"></script>
+  <script>
+    var colours = ["#10988b", // spruce
+      "#af1639", // red
+      "#ff769f", // pink
+      "#ffaf00", // orange
+      "#00d679", // green
+      "#4095c5", // blue
+      "#601ebd", // purple
+      "#8b572a"]; // brown
+    // randomize mark
+    d3.select('.weareyvr-mark')
+      .attr('data-colour', "#10988b")
+      .attr('data-radius', Math.floor(Math.random()*101))
+      .attr('data-one', Math.floor(Math.random()*101))
+      .attr('data-two', Math.floor(Math.random()*101))
+      .attr('data-three', Math.floor(Math.random()*101))
+      .attr('data-four', Math.floor(Math.random()*101))
+  </script>
+  <script src="logo-generator/weareyvr-mark.js"></script>
+
+</body>
+</html>
