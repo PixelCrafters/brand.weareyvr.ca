@@ -2,7 +2,7 @@
   margin-top: 50px;
   margin-bottom: 0;
 }
-.navbar-brand .weareyvr-mark {
+.wr-navbar .navbar-brand .weareyvr-mark {
   z-index: 13;
   margin: 0 1em 0 0;
   display: inline-block;
@@ -11,7 +11,7 @@
   width: 127px;
   height: 100px;
 }
-.navbar-brand .weareyvr-mark > span {
+.wr-navbar .navbar-brand .weareyvr-mark > span {
   /* fallback text if SVG doesn't load */
   font-size: 26px;
   line-height: 0;
