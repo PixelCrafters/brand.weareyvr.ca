@@ -147,6 +147,11 @@ p .wr-icon {
   height: 32px;
   background-size: 32px 32px;
 }
+.wr-icon-xl {
+  width: 48px;
+  height: 48px;
+  background-size: 48px 48px;
+}
 h1 .wr-icon,
 .h1 .wr-icon {
   width: 32px;
