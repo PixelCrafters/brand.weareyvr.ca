@@ -9,6 +9,11 @@
 		a {
 			font-weight: normal;
 			padding: 8px 10px;
+
+			&:link,
+			&:visited {
+				color: @grey;
+			}
 		}
 
 		&.active > a {
@@ -28,17 +33,26 @@
 	}
 }
 
-.colour-swatch {
+.swatch {
 	.square(48px);
 	display: block;
 	border-radius: @border-radius-small;
-}
-
-.icon-swatch {
-	.wr-icon-size(32px);
-	.square(48px);
 	background-color: fadeout(mix(@grey-lighter,#fff),10%);
-	border: 1px solid @grey-lighter;
-	display: block;
-	border-radius: @border-radius-small;
+	border: 1px solid fadeout(@grey,90%);
+
+	&-colour {
+		overflow: hidden;
+		padding: 8px;
+
+		font-size: @font-size-h2;
+		font-weight: bold;
+		line-height: 1;
+		.font-smoothing();
+		.serif;
+	}
+
+	&-icon {
+		.wr-icon-size(32px);
+		.square(48px);
+	}
 }
