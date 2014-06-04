@@ -428,13 +428,24 @@ body>.navbar.affix+* {
 			// white-space: nowrap;
 
 			> a {
-				color: @grey-light;
 				.wr-transition(background-color);
 				border-radius: @nav-pills-border-radius;
+
+				&:link,
+				&:hover,
+				&:visited {
+					color: @grey-light;
+				}
 
 				&:active,
 				&.active {
 					background-color: fadeout(@brand-primary, 70%);
+
+					&:link,
+					&:hover,
+					&:visited {
+						color: #fff;
+					}
 				}
 
 				> .wr-icon {
