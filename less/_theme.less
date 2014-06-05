@@ -204,6 +204,7 @@ kbd,
 pre,
 samp {
 	.font-smoothing(subpixel-antialiased);
+	text-rendering: optimizeSpeed; // disable kerning
 }
 
 // ==================== dropdowns.less
@@ -568,6 +569,12 @@ a,
 
 a.btn {
 	text-shadow: none;
+}
+
+// ==================== tables.less
+
+.table {
+	.tabular-lining();
 }
 
 // ==================== tooltip.less
