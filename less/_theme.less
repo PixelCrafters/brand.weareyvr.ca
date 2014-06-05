@@ -276,6 +276,35 @@ input[type="search"] {
 // 	-webkit-font-smoothing: subpixel-antialiased;
 // }
 
+input[type=number],
+input[type=color],
+input[type=datetime],
+input[type=datetime-local],
+input[type=month],
+input[type=tel],
+input[type=time],
+input[type=week] {
+	.font-feature-settings("lnum" 1);
+}
+
+input[type=number]{
+	&::-webkit-inner-spin-button, 
+	&::-webkit-outer-spin-button {
+		position: relative;
+		right: 4px;
+		background-color: transparent;
+		opacity: 0.2;
+		.wr-transition(opacity);
+	}
+	&:hover::-webkit-inner-spin-button, 
+	&:hover::-webkit-outer-spin-button,
+	&:focus::-webkit-inner-spin-button, 
+	&:focus::-webkit-outer-spin-button {
+		opacity: 0.9;
+		.wr-transition(opacity);
+	}
+}
+
 // ==================== glyphicons.less
 
 .glyphicon {
@@ -345,27 +374,29 @@ section {
 			}
 		}
 
-		// &:not(:first-child) .btn,
-		// &:not(:first-child) .btn-group,
-		// &:first-child .btn:not(:first-child),
-		// &:first-child .btn-group:not(:first-child)
 		> .btn:not(:first-child),
 		> .btn-group:not(:first-child) {
 			border-left: @btn-border;
 		}
 
 		// for buttons immediately following text boxes
-		&:first-of-type:not(:first-child) .btn:first-of-type,
-		&:first-of-type:not(:first-child) .btn-group:first-of-type {
+		&:first-of-type:not(:first-child) .btn,
+		&:first-of-type:not(:first-child) .btn-group {
 			margin-left: 1px;
-			border-left-style: none;
+
+			&:first-of-type {
+				border-left-style: none;
+			}
 		}
 
 		// for buttons immediately preceding text boxes
-		&:last-of-type:not(:last-child) .btn:last-of-type,
-		&:last-of-type:not(:last-child) .btn-group:last-of-type {
+		&:last-of-type:not(:last-child) .btn,
+		&:last-of-type:not(:last-child) .btn-group {
 			margin-right: 1px;
-			border-right-style: none;
+
+			&:last-of-type {
+				border-right-style: none;
+			}
 		}
 	}
 
@@ -462,6 +493,7 @@ body>.navbar.affix+* {
 				&.active {
 					background-color: fadeout(@brand-primary, 70%);
 
+					&,
 					&:link,
 					&:hover,
 					&:visited {
@@ -477,6 +509,13 @@ body>.navbar.affix+* {
 
 			&.active > a {
 				border-color: @nav-pills-active-link-hover-bg;
+
+				&,
+				&:link,
+				&:hover,
+				&:visited {
+					color: #fff;
+				}
 			}
 
 			small,
