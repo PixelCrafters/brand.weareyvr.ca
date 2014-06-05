@@ -608,6 +608,9 @@ h4.text-content,
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+.font-light {
+  font-weight: 200;
+}
 a.entity {
   -webkit-font-smoothing: antialiased;
   font-weight: bold;

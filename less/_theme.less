@@ -322,11 +322,11 @@ section {
 	padding: ((@row-gutter-height*0.25) / 1.5) 0 (@row-gutter-height / 1.5);
 
 	& & {
-		padding: ((@row-gutter-height*0.25) / 2) 0 (@row-gutter-height / 2);
+		padding: ceil((@row-gutter-height*0.25) / 2) 0 ceil(@row-gutter-height / 2);
 	}
 
 	& & & {
-		padding: ((@row-gutter-height*0.25) / 4) 0 (@row-gutter-height / 4);
+		padding: ceil((@row-gutter-height*0.25) / 3) 0 ceil(@row-gutter-height / 3);
 	}
 }
 
@@ -622,6 +622,11 @@ h4, .h4 {
 h5, .h5,
 h6, .h6 {
 	.font-smoothing();
+
+	small,
+	.small {
+		font-size: 85%;
+	}
 }
 
 @font-size-lead: ceil((@font-size-base * 1.9));

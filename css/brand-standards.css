@@ -68,6 +68,14 @@
 .modal-footer:after {
   clear: both;
 }
+@media (max-width: 767px) {
+  .wr-jumbotron-brand {
+    text-align: center;
+  }
+  .wr-jumbotron-brand .container {
+    padding: 0;
+  }
+}
 .wr-nav-brand > li {
   float: left;
 }
@@ -290,6 +298,91 @@ h4.swatch-colour,
   div[class|=col] + div[class|=col] .media:first-child {
     margin-top: 15px;
   }
+}
+.type-specimen {
+  background-color: rgba(248, 248, 248, 0.9);
+  border-radius: 6px;
+  padding: 16px 0 16px 16px;
+  margin-bottom: 8px;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.45;
+  color: #282828;
+  overflow: scroll;
+  position: relative;
+}
+.type-specimen-sans {
+  font-family: "Fort", Fort, "Helvetica Neue", HelveticaNeue, Helvetica, Verdana, sans-serif;
+  font-size: 17px;
+}
+.type-specimen-serif {
+  font-family: "Arnhem Pro", ArnhemPro, Arnhem, Georgia, serif;
+  font-size: 19px;
+}
+.type-specimen-md,
+.type-specimen-lg {
+  line-height: 1.1;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.type-specimen-md.type-specimen-section + .type-specimen-md.type-specimen-section,
+.type-specimen-md.type-specimen-section + .type-specimen-lg.type-specimen-section,
+.type-specimen-lg.type-specimen-section + .type-specimen-md.type-specimen-section,
+.type-specimen-lg.type-specimen-section + .type-specimen-lg.type-specimen-section {
+  margin-top: 7px;
+}
+.type-specimen-md {
+  font-size: 225%;
+}
+.type-specimen-lg {
+  font-size: 300%;
+}
+.type-specimen-section {
+  display: block;
+  position: relative;
+  margin-top: 12px;
+  padding-bottom: 19px;
+}
+.type-specimen-section p {
+  margin: 6px 0;
+  padding-right: 16px;
+}
+.type-specimen-lg .type-specimen-section {
+  padding-bottom: 15px;
+}
+.type-specimen-section:first-child {
+  margin-top: 0;
+}
+.type-specimen-id {
+  display: block;
+  font-family: "Fort", Fort, "Helvetica Neue", HelveticaNeue, Helvetica, Verdana, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  font-size: 12px;
+  color: rgba(146, 170, 167, 0.9);
+}
+.type-specimen-lg .type-specimen-id {
+  left: 3px;
+}
+.type-specimen > .type-specimen-id {
+  font-weight: bold;
+  position: static;
+}
+.type-specimen:before {
+  font-family: "Fort", Fort, "Helvetica Neue", HelveticaNeue, Helvetica, Verdana, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  color: rgba(146, 170, 167, 0.9);
+  content: "Specimen";
+  margin: 0;
+  position: absolute;
+  top: -13px;
 }
 .hll {
   background-color: #ffffcc;

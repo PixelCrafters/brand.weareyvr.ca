@@ -6362,10 +6362,10 @@ section {
   padding: 7.5px 0 30px;
 }
 section section {
-  padding: 5.625px 0 22.5px;
+  padding: 6px 0 23px;
 }
 section section section {
-  padding: 2.8125px 0 11.25px;
+  padding: 4px 0 15px;
 }
 .input-group > .input-group-btn > .btn,
 .input-group > .input-group-btn > .btn-group {
@@ -6777,6 +6777,16 @@ h6,
 .h6 {
   -webkit-font-smoothing: antialiased;
 }
+h5 small,
+.h5 small,
+h6 small,
+.h6 small,
+h5 .small,
+.h5 .small,
+h6 .small,
+.h6 .small {
+  font-size: 85%;
+}
 .lead {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -7054,6 +7064,9 @@ h4.text-content,
 .sans-serif-small-caps {
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+.font-light {
+  font-weight: 200;
 }
 a.entity {
   -webkit-font-smoothing: antialiased;
