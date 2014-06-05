@@ -575,6 +575,59 @@ a.tag {
 	}
 }
 
+// Segmented inputs
+
+.segmented-input-vertical {
+
+	> .form-control,
+	> .input-segment > .form-control {
+
+		margin-top: 2px;
+
+		&:first-child {
+			.border-bottom-radius(0);
+			margin-top: 0;
+		}
+
+		&:last-child {
+			.border-top-radius(0);
+		}
+
+		&:not(:first-child):not(:last-child) {
+			border-radius: 0;
+		}
+	}
+}
+
+.segmented-input-horizontal {
+
+	display: table;
+	width: 100%;
+	// table-layout: fixed;
+	border-collapse: separate;
+	border-spacing: 2px 0;
+
+	> .input-segment {
+
+		display: table-cell;
+		float: none;
+		width: auto;
+		
+		&:first-child > .form-control {
+			.border-right-radius(0);
+			margin-left: 0;
+		}
+
+		&:last-child > .form-control {
+			.border-left-radius(0);
+		}
+
+		&:not(:first-child):not(:last-child) > .form-control {
+			border-radius: 0;
+		}
+	}
+}
+
 // Navbar
 
 .wr-navbar {

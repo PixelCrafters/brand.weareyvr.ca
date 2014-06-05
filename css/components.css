@@ -1819,6 +1819,48 @@ a.wr-link-brown.entity:hover,
     height: 62px;
   }
 }
+.segmented-input-vertical > .form-control,
+.segmented-input-vertical > .input-segment > .form-control {
+  margin-top: 2px;
+}
+.segmented-input-vertical > .form-control:first-child,
+.segmented-input-vertical > .input-segment > .form-control:first-child {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-top: 0;
+}
+.segmented-input-vertical > .form-control:last-child,
+.segmented-input-vertical > .input-segment > .form-control:last-child {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+.segmented-input-vertical > .form-control:not(:first-child):not(:last-child),
+.segmented-input-vertical > .input-segment > .form-control:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+.segmented-input-horizontal {
+  display: table;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 2px 0;
+}
+.segmented-input-horizontal > .input-segment {
+  display: table-cell;
+  float: none;
+  width: auto;
+}
+.segmented-input-horizontal > .input-segment:first-child > .form-control {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  margin-left: 0;
+}
+.segmented-input-horizontal > .input-segment:last-child > .form-control {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.segmented-input-horizontal > .input-segment:not(:first-child):not(:last-child) > .form-control {
+  border-radius: 0;
+}
 .wr-navbar {
   -webkit-font-smoothing: antialiased;
   border-radius: 0;
