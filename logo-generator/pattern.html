@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+  <title>WeAreYVR &mdash; Pattern generator</title>
+
+  <link href="../css/weareyvr.css" rel="stylesheet">
+  <link href="../css/fonts.css" rel="stylesheet">
+  <link href="../css/wr_logo-generator.css" rel="stylesheet">
+
+</head>
+<body class="logo-generator">
+
+  <div class="container">
+    <section class="row header">
+      <div class="col-sm-12">
+        <h1>Generate a pattern of WeAreYVR glyphs</h1>
+      </div>
+    </section>
+    <section id="mark-controls" class="row">
+      <div class="col-sm-12">
+        <div class="weareyvr-mark" data-height="100" data-colour="#10988b" data-radius="50" data-one="50" data-two="50" data-three="0" data-four="0"></div>
+      </div>
+    </section>
+    <section class="row">
+      <div class="col-sm-4 col-xs-7" id="glyph-colours">
+        <h3>Colours</h3>
+        <div class="checklist">
+          <label>
+            <input type="checkbox" value="#10988b" name="colour" checked> Spruce (Primary)
+          </label>
+          <label>
+            <input type="checkbox" value="#af1639" name="colour"> Red <small>(Advisors)</small>
+          </label>
+          <label>
+            <input type="checkbox" value="#ff769f" name="colour"> Pink <small>(Events)</small>
+          </label>
+          <label>
+            <input type="checkbox" value="#ffaf00" name="colour"> Orange <small>(Founders)</small>
+          </label>
+          <label>
+            <input type="checkbox" value="#00d679" name="colour"> Green <small>(Startups)</small>
+          </label>
+          <label>
+            <input type="checkbox" value="#4095c5" name="colour"> Blue <small>(Employees)</small>
+          </label>
+          <label>
+            <input type="checkbox" value="#601ebd" name="colour"> Purple <small>(Investors)</small>
+          </label>
+          <label>
+            <input type="checkbox" value="#8b572a" name="colour"> Brown <small>(Jobs)</small>
+          </label>
+          <label>
+            <input type="checkbox" value="black" name="colour"> Black
+          </label>
+          <label>
+            <input type="checkbox" value="white" name="colour"> White
+          </label>
+        </div>
+      </div>
+      <div class="col-sm-4 col-xs-5" id="size-px">
+        <h3>Size</h3>
+        <div class="checklist">
+          <label>
+            <input type="radio" value=""> Tiny <small>(25px)</small>
+          </label>
+          <label>
+            <input type="radio" value=""> X-Small <small>(50px)</small>
+          </label>
+          <label>
+            <input type="radio" value="" checked> Small <small>(100px)</small>
+          </label>
+          <label>
+            <input type="radio" value=""> Medium <small>(250px)</small>
+          </label>
+          <label>
+            <input type="radio" value=""> Large <small>(500px)</small>
+          </label>
+          <label>
+            <input type="radio" value=""> X-Large <small>(750px)</small>
+          </label>
+        </div>
+      </div>
+      <div class="clearfix visible-xs"></div>
+      <div class="col-sm-4">
+        <h3>Rows &amp; Columns</h3>
+        <div class="segmented-input-horizontal">
+          <div class="input-segment"><input type="number" class="form-control input-lg" id="rows" value="8"></div>
+          <div class="input-segment"><input type="number" class="form-control input-lg" id="cols" value="8"></div>
+        </div>
+        <h3>Reshuffle</h3>
+        <a href="#" id="reshuffle" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-refresh"></span></a>
+      </div>
+    </section>
+    <section id="downloads" class="row">
+      <div class="col-sm-12 col-md-6 col-md-offset-3">
+        <a id="download-svg" class="btn btn-primary btn-lg btn-block"><span class="glyphicon glyphicon-save"></span> Download <small>(SVG)</small></a>
+        <a id="download-png" class="btn btn-primary btn-lg btn-block"><span class="glyphicon glyphicon-save"></span> Download <small>(PNG)</small></a>
+        <div id="download-use-chrome">PNG download is available in Google Chrome.</div>
+      </div>
+    </section>
+  </div>
+  <script src="d3.v3.min.js"></script>
+  <script src="weareyvr-mark.js"></script>
+  <script src="md5.js"></script>
+  <script src="svg-crowbar-tweaked.js"></script>
+  <script src="control.js"></script>
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../docs/docs.min.js"></script>
+</body>
+</html>

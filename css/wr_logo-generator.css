@@ -1,3 +1,11 @@
+@-webkit-keyframes refresh {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+  }
+}
 body.logo-generator .header.row {
   padding-top: 1.25em;
   padding-bottom: 1em;
@@ -118,16 +126,17 @@ body.logo-generator .slider-value {
     display: block;
   }
 }
-body.logo-generator .radio-list label {
+body.logo-generator .checklist label {
   display: block;
   padding: 0.375em 0;
   margin: 0;
 }
-body.logo-generator .radio-list label small {
+body.logo-generator .checklist label small {
   font-weight: normal;
   color: #92aaa7;
 }
-body.logo-generator .radio-list input[type="radio"] {
+body.logo-generator .checklist input[type="radio"],
+body.logo-generator .checklist input[type="checkbox"] {
   display: inline;
   width: auto;
   margin: 0 0.5em 0 0;
@@ -142,6 +151,9 @@ body.logo-generator #size-px .form-control {
   font-feature-settings: "tnum" 1, "lnum" 1;
   text-rendering: optimizeSpeed;
   letter-spacing: 1px;
+}
+body.logo-generator #reshuffle:hover .glyphicon-refresh {
+  -webkit-animation: refresh 0.4s ease-in-out;
 }
 body.logo-generator section.row#downloads {
   border-top-style: none;

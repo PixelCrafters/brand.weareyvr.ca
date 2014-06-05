@@ -1,5 +1,15 @@
 @import "_wr_mixins";
 
+@-webkit-keyframes refresh {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(180deg);
+  }
+}
+
 body.logo-generator {
 
   // Heading
@@ -169,6 +179,15 @@ body.logo-generator {
       .tabular-lining();
       letter-spacing: 1px;
     }
+  }
+
+  // Reshuffle
+
+  #reshuffle:hover .glyphicon-refresh {
+    -webkit-animation: refresh 0.4s ease-in-out;
+    // display: inline-block;
+    // width: 20px;
+    // height: 20px;
   }
 
   // Download Button
