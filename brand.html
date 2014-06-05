@@ -809,26 +809,212 @@
 
         </section>
 
-        <section id="components">
-          <h2 class="page-header h1">Components</h2>
+        <section id="bootstrap">
+          <h2 class="page-header h1">Bootstrap &amp; Less</h2>
 
-          <section id="components-tags">
+          <section id="colours">
+
+            <h3>Colours</h3>
+            <p>Each colour is available via two Less variables: a default variable of <code>@wr-</code> followed by the colour name, and a semantic variable of <code>@wr-colour-</code> followed by the colour&rsquo;s semantic role. Use the semantic variable when using the colour for a semantic purpose; otherwise, use the devault variable.</p>
+
+            <section id="colours-secondary">
+              <h4>Primary &amp; secondary colours</h4>
+              <div class="row">
+                <div class="col-sm-6 col-md-5">
+                  <div class="media">
+                    <div class="swatch swatch-colour media-object pull-left" style="background-color: #10988b;"></div>
+                    <div class="media-body">
+                      <h5 class="media-heading">Spruce</h5>
+                      In most cases, you should use Bootstrap&rsquo;s <code>@brand-primary</code> variable. If you must reference this specific colour, use <code>@wr-spruce</code>.
+                    </div>
+                  </div>
+                  <div class="media">
+                    <div class="swatch swatch-colour media-object pull-left" style="background-color: #af1639;"></div>
+                    <div class="media-body">
+                      <h5 class="media-heading">Red <small>(Advisors)</small></h5>
+                      <code>@wr-red</code>, <code>@wr-colour-advisor</code>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <div class="swatch swatch-colour media-object pull-left" style="background-color: #ff769f;"></div>
+                    <div class="media-body">
+                      <h5 class="media-heading">Pink <small>(Events)</small></h5>
+                      <code>@wr-pink</code>, <code>@wr-colour-event</code>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <div class="swatch swatch-colour media-object pull-left" style="background-color: #ffaf00;"></div>
+                    <div class="media-body">
+                      <h5 class="media-heading">Orange <small>(Founders)</small></h5>
+                      <code>@wr-orange</code>, <code>@wr-colour-founder</code>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-5">
+                  <div class="media">
+                    <div class="swatch swatch-colour media-object pull-left" style="background-color: #00d679;"></div>
+                    <div class="media-body">
+                      <h5 class="media-heading">Green <small>(Startups)</small></h5>
+                      <code>@wr-green</code>, <code>@wr-colour-startup</code>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <div class="swatch swatch-colour media-object pull-left" style="background-color: #4095c5;"></div>
+                    <div class="media-body">
+                      <h5 class="media-heading">Blue <small>(Employees)</small></h5>
+                      <code>@wr-blue</code>, <code>@wr-colour-employee</code>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <div class="swatch swatch-colour media-object pull-left" style="background-color: #601ebd;"></div>
+                    <div class="media-body">
+                      <h5 class="media-heading">Purple <small>(Investors)</small></h5>
+                      <code>@wr-purple</code>, <code>@wr-colour-investor</code>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <div class="swatch swatch-colour media-object pull-left" style="background-color: #8b572a;"></div>
+                    <div class="media-body">
+                      <h5 class="media-heading">Brown <small>(Jobs)</small></h5>
+                      <code>@wr-brown</code>, <code>@wr-colour-jobs</code>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section id="colours-text">
+              <h4>Text colours</h4>
+              <p>For added readability when applying brand colours to text, append <code>-txt</code> to any of the Less colour variables listed above.</p>
+
+              <div class="row">
+                <div class="col-sm-6 col-md-5">
+                  <div class="media">
+                    <div class="swatch swatch-colour media-object pull-left" style="color: #10988b;">Brand</div>
+                    <div class="media-body">
+                      <h5 class="media-heading">Spruce</h5>
+                      <code>@brand-primary</code>, <code>@wr-spruce-txt</code>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <div class="swatch swatch-colour media-object pull-left" style="color: #c61940;">Advisors</div>
+                    <div class="media-body">
+                      <h5 class="media-heading">Red <small>(Advisors)</small></h5>
+                      <code>@wr-red-txt</code>, <code>@wr-colour-advisor-txt</code>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <div class="swatch swatch-colour media-object pull-left" style="color: #ff4d82;">Events</div>
+                    <div class="media-body">
+                      <h5 class="media-heading">Pink <small>(Events)</small></h5>
+                      <code>@wr-pink-txt</code>, <code>@wr-colour-event-txt</code>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <div class="swatch swatch-colour media-object pull-left" style="color: #e69d00;">Founders</div>
+                    <div class="media-body">
+                      <h5 class="media-heading">Orange <small>(Founders)</small></h5>
+                      <code>@wr-orange-txt</code>, <code>@wr-colour-founder-txt</code>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-5">
+                  <div class="media">
+                    <div class="swatch swatch-colour media-object pull-left" style="color: #00a35c;">Startups</div>
+                    <div class="media-body">
+                      <h5 class="media-heading">Green <small>(Startups)</small></h5>
+                      <code>@wr-green-txt</code>, <code>@wr-colour-startup-txt</code>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <div class="swatch swatch-colour media-object pull-left" style="color: #4095c5;">Employees</div>
+                    <div class="media-body">
+                      <h5 class="media-heading">Blue <small>(Employees)</small></h5>
+                      <code>@wr-blue-txt</code>, <code>@wr-colour-employee-txt</code>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <div class="swatch swatch-colour media-object pull-left" style="color: #9968dc;">Investors</div>
+                    <div class="media-body">
+                      <h5 class="media-heading">Purple <small>(Investors)</small></h5>
+                      <code>@wr-purple-txt</code>, <code>@wr-colour-investor-txt</code>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <div class="swatch swatch-colour media-object pull-left" style="color: #8b572a;">Jobs</div>
+                    <div class="media-body">
+                      <h5 class="media-heading">Brown <small>(Jobs)</small></h5>
+                      <code>@wr-brown-txt</code>, <code>@wr-colour-jobs-txt</code>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            
+            <!-- <section id="colours-greys">
+              <h4>Greys</h4>
+              <div class="row">
+                <div class="col-sm-6 col-md-5">
+                  <div class="media">
+                    <div class="swatch swatch-colour media-object pull-left" style="background-color: #f2f5f5;"></div>
+                    <div class="media-body">
+                      <h5 class="media-heading">Lighter</h5>
+                      <code>@gray-lighter</code>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <div class="swatch swatch-colour media-object pull-left" style="background-color: #92aaa7;"></div>
+                    <div class="media-body">
+                      <h5 class="media-heading">Light</h5>
+                      <code>@gray-light</code>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <div class="swatch swatch-colour media-object pull-left" style="background-color: #506563;"></div>
+                    <div class="media-body">
+                      <h5 class="media-heading">Grey</h5>
+                      <code>@gray</code>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-5">
+                  <div class="media">
+                    <div class="swatch swatch-colour media-object pull-left" style="background-color: #313f3d;"></div>
+                    <div class="media-body">
+                      <h5 class="media-heading">Dark</h5>
+                      <code>@gray-dark</code>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <div class="swatch swatch-colour media-object pull-left" style="background-color: #232c2b;"></div>
+                    <div class="media-body">
+                      <h5 class="media-heading">Darker</h5>
+                      <code>@gray-darker</code>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section> -->
+
+          </section>
+
+          <section id="bootstrap-tags">
             <h3>Tags &amp; entity links</h3>
           </section>
 
-          <section id="components-buttons">
+          <section id="bootstrap-buttons">
             <h3>Buttons</h3>
           </section>
 
-          <section id="components-navbar">
+          <section id="bootstrap-navbar">
             <h3>Navbar style</h3>
           </section>
 
-          <section id="components-jumbotron">
+          <section id="bootstrap-jumbotron">
             <h3>Jumbotron styles</h3>
           </section>
 
-          <section id="components-search">
+          <section id="bootstrap-search">
             <h3>Search bar</h3>
           </section>
 
@@ -894,13 +1080,19 @@
               </ul>
             </li>
             <li>
-              <a href="#components">Components</a>
+              <a href="#bootstrap">Bootstrap &amp; Less</a>
               <ul class="nav">
-                <li><a href="#components-tags">Tags &amp; entity links</a></li>
-                <li><a href="#components-buttons">Buttons</a></li>
-                <li><a href="#components-navbar">Navbar style</a></li>
-                <li><a href="#components-jumbotron">Jumbotron styles</a></li>
-                <li><a href="#components-search">Search bar</a></li>
+                <li>
+                  <a href="#bootstrap-colours">Colours</a>
+                  <ul class="nav">
+                    <li><a href="#bootstrap-colours">Primary &amp; secondary colours</a></li>
+                  </ul>
+                </li>
+                <li><a href="#bootstrap-tags">Tags &amp; entity links</a></li>
+                <li><a href="#bootstrap-buttons">Buttons</a></li>
+                <li><a href="#bootstrap-navbar">Navbar style</a></li>
+                <li><a href="#bootstrap-jumbotron">Jumbotron styles</a></li>
+                <li><a href="#bootstrap-search">Search bar</a></li>
               </ul>
             </li>
 
