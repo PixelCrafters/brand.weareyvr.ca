@@ -46,12 +46,21 @@ var change = function() {
   // transition.selectAll(".one")
   //   // .delay(delay)
   //   .attr("transform", "translate(" + one.x + ',' + one.y + ")");
-  draw();  
+  draw();
 };
 
 d3.selectAll('input[name="height"]').on('change', change);
 d3.selectAll('input[name="height"]').on('keyup', change);
 d3.selectAll('input[type="range"], input[type="radio"]').on('change', change);
+
+d3.selectAll('#reset').on('click', function() {
+  radius = 50;
+  topLeft = 50;
+  topRight = 50;
+  bottomRight = 0;
+  bottomLeft = 0;
+  draw();
+});
 
 d3.selectAll('input[type="text"].generate').on('keyup', function() {
   var hashed = hex_md5(this.value);
@@ -101,7 +110,7 @@ d3.selectAll('#download-png').on('click', function() {
 });
 
 // Difficult to differentiate which browsers work, so we only support Chrome:
-// - Safari has a security warning because we're taking the SVG from a blob, which marks the canvas as dirty.
+// - Safari has a security warning because we're inserting the SVG to the canvas from a blob, which marks the canvas as dirty.
 // - Firefox doesn't seem to get the size correct.
 if (!navigator.userAgent.match(/chrome/i)) {
   d3.selectAll('#download-png').remove();
