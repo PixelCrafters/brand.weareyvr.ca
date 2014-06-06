@@ -107,103 +107,138 @@
 	}
 }
 
-.type-specimen {
+.specimen {
 
-	background-color: fadeout(desaturate(mix(#fff,@grey-lighter,35%),100%),10%);
 	border-radius: @border-radius-base;
-	padding: 16px 0 16px 16px;
+	border: 1px solid fadeout((@grey-lighter),10%);
+	padding: 16px;
 	margin-bottom: 8px;
 	width: 100%;
-	.font-smoothing();
-	line-height: 1.45;
-	color: desaturate(@grey-darker,100%);
-	overflow: scroll;
 	position: relative;
-
-	&-sans {
-		font-family: @font-family-sans-serif;
-		font-size: ceil((@font-size-large + @font-size-base) / 2);
-	}
-
-	&-serif {
-		font-family: @font-family-serif;
-		font-size: @font-size-large;
-	}
-
-	&-md,
-	&-lg {
-		line-height: 1.1;
-		overflow: hidden;
-		white-space: nowrap;
-		.hero-type;
-	}
-
-	&-md {
-		font-size: 225%;
-
-		&.type-specimen-section + &.type-specimen-section {
-			margin-top: ceil(@font-size-small / 2);
-		}
-	}
-
-	&-lg {
-		font-size: 300%;
-
-		&.type-specimen-section + &.type-specimen-section {
-			margin-top: 0;
-		}
-	}
 
 	&-section {
 		display: block;
-		position: relative;
-
-		margin-top: ceil(@line-height-computed * 0.5);
-		padding-bottom: @font-size-large;
-
-		p {
-			margin: ceil(@line-height-computed * 0.25) 0;
-			padding-right: 16px;
-		}
-
-		.type-specimen-lg & {
-			padding-bottom: @font-size-base;			
-		}
-
-		&:first-child {
-			margin-top: 0;
-		}
 	}
 
 	&-id {
 		display: block;
 		font-family: @font-family-sans-serif;
 		.sans-serif-small-caps;
-		position: absolute;
-		left: 0;
-		bottom: ceil((@font-size-small * 0.85) / 4);
 		font-size: ceil(@font-size-small * 0.85);
-		color: fadeout(@grey-light, 10%);
+		color: fadeout(@grey-light, 40%);
+		margin: ceil((@font-size-small * 0.85) / 2) 0 ceil(@font-size-small * 0.85);
 
-		.type-specimen-lg & {
-			left: ceil((@font-size-small * 0.85) / 4);
+		&:first-child {
+			margin-top: 0;
+		}
+
+		.specimen > &:last-child,
+		.specimen-section:last-child > &:last-child {
+			margin-bottom: 0;
+		}
+
+		@media (max-width: @screen-sm-max) {
+			[class*=col-md] > &:last-child {
+				margin-bottom: ceil(@font-size-small * 0.85);
+			}
+
+			[class*=col-md]:last-child > &:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		@media (min-width: @screen-md-min) {
+			[class*=col-md] > &:last-child {
+				margin-bottom: 0;
+			}
 		}
 	}
 
-	& > &-id {
-		font-weight: bold;
-		position: static;
-	}
+	&-type {
 
-	&:before {
-		font-family: @font-family-sans-serif;
-		.sans-serif-small-caps;
-		font-size: ceil(@font-size-small * 0.85);
-		color: fadeout(@grey-light, 10%);
-		content: "Specimen";
-		margin: 0;
-		position: absolute;
-		top: (-(@font-size-small));
+		border-right-style: none;
+		background-color: fadeout(desaturate(mix(#fff,@grey-lighter,35%),100%),10%);
+		.font-smoothing();
+		line-height: 1.45;
+		color: desaturate(@grey-darker,100%);
+		overflow: scroll;
+		position: relative;
+		padding-right: 0;
+
+		&-sans {
+			font-family: @font-family-sans-serif;
+			font-size: ceil((@font-size-large + @font-size-base) / 2);
+		}
+
+		&-serif {
+			font-family: @font-family-serif;
+			font-size: @font-size-large;
+		}
+
+		&-md,
+		&-lg {
+			line-height: 1.1;
+			overflow: hidden;
+			white-space: nowrap;
+			.hero-type;
+		}
+
+		&-md {
+			font-size: 225%;
+
+			&.type-specimen-section + &.type-specimen-section {
+				margin-top: ceil(@font-size-small / 2);
+			}
+		}
+
+		&-lg {
+			font-size: 300%;
+
+			&.type-specimen-section + &.type-specimen-section {
+				margin-top: 0;
+			}
+		}
+
+		&-section {
+			display: block;
+			position: relative;
+
+			margin-top: ceil(@line-height-computed * 0.5);
+			padding-bottom: @font-size-large;
+
+			p {
+				margin: ceil(@line-height-computed * 0.25) 0;
+				padding-right: 16px;
+			}
+
+			.type-specimen-lg & {
+				padding-bottom: @font-size-base;			
+			}
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+
+		&-id {
+			display: block;
+			font-family: @font-family-sans-serif;
+			.sans-serif-small-caps;
+			position: absolute;
+			left: 0;
+			bottom: ceil((@font-size-small * 0.85) / 4);
+			font-size: ceil(@font-size-small * 0.85);
+			color: fadeout(@grey-light, 10%);
+
+			.type-specimen-lg & {
+				left: ceil((@font-size-small * 0.85) / 4);
+			}
+		}
+
+		& > &-id {
+			font-weight: bold;
+			position: static;
+		}
 	}
 }
 
