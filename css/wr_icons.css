@@ -73,7 +73,8 @@ p .wr-icon {
 .wr-icon-guides {
   background-image: url(../icons/wr-icon-guides.svg);
 }
-.wr-icon-incubator {
+.wr-icon-incubator,
+.wr-icon-accelerator {
   background-image: url(../icons/wr-icon-incubator.svg);
 }
 .wr-icon-investor {

@@ -13,7 +13,7 @@
 
 @brand-primary-txt:		@brand-primary;
 @wr-spruce-txt:			@wr-spruce;
-@wr-red-txt:			lighten(@wr-red,5%);
+@wr-red-txt:			lighten(@wr-red,7%);
 @wr-pink-txt:			darken(@wr-pink,8%);
 @wr-orange-txt:			darken(saturate(@wr-orange,15%),5%);
 @wr-green-txt:			darken(saturate(@wr-green,20%),10%);
@@ -74,14 +74,14 @@
 .inline-tagged-text() {
 	.font-smoothing();
 	font-weight: bold;
-	// margin: 0 0.25em;
-	padding-top: 0.175em;
+	padding-top: 0.15em;
 	padding-bottom: 0.075em;
 	border-width: 1px;
 	border-style: solid;
 	font-family: @font-family-sans-serif;
 	display: inline;
 	white-space: nowrap;
+	text-decoration: none;
 
 	.wr-icon {
 		margin-right: 0.2em;
@@ -92,16 +92,26 @@
 .entity-link(@txt-color) {
 	color: @txt-color;
 	@entity-bg-color: mix(fadeout(desaturate(@txt-color,10%),90%),rgba(255,255,255,0.5));
-	background-color: @entity-bg-color;
+	// background-color: @entity-bg-color;
+	background-color: fadeout(#fff,90%);
 	border: 1px solid fadeout(@txt-color,80%);
 
 	&:hover {
-		background-color: fadein(@entity-bg-color,30%);
+		// background-color: fadein(@entity-bg-color,30%);
+		background-color: @entity-bg-color;
+	}
+
+	&,
+	&:link,
+	&:hover {
+		.wr-transition(color);
+		.wr-transition(background-color);
 	}
 }
 
 a.entity {
 	.inline-tagged-text();
+	.remove-fancy-underline();
 	border-radius: @border-radius-small;
 	padding-right: 0.3em;
 	padding-left: 0.3em;
@@ -114,7 +124,7 @@ a.entity {
 		// filter: grayscale();
 	}
 
-	&.link {
+	&-link {
 		background-color: rgba(255,255,255,0.7);
 		border-bottom-style: none;
 		.fancy-underline(@underline-position-v: 100%);
@@ -129,19 +139,29 @@ a.entity {
 			background-color: @entity-bg-color;
 		}
 	}
-}
 
-a.tag {
-	.inline-tagged-text();
-	@tag-colour: fadeout(@link-color,80%);
+	&-tag {
+		@tag-colour: fadeout(@link-color,80%);
 
-	border-radius: 1em;
-	border-color: @tag-colour;
-	padding-right: 0.6em;
-	padding-left: 0.6em;
+		border-radius: 1em;
+		border-color: @tag-colour;
+		padding-right: 0.6em;
+		padding-left: 0.6em;
 
-	&:hover {
-		background-color: @tag-colour;
+		&,
+		&:link,
+		&:hover {
+			.wr-transition(color);
+			.wr-transition(background-color);
+		}
+
+		&:hover {
+			background-color: @tag-colour;
+		}
+
+		.wr-icon {
+			margin-left: 0;
+		}
 	}
 }
 
@@ -152,7 +172,7 @@ a.tag {
 	a&,
 	& a {
 		color: @txt-color;
-		@underline-colour: @color;
+		@underline-colour: @txt-color;
 
 		&:visited {
 			color: lighten(desaturate(@txt-color,40%),25%);
@@ -165,6 +185,10 @@ a.tag {
 		&.entity {
 			.entity-link(@txt-color);
 		}
+
+		p & {
+			.fancy-underline(@underline-colour: @txt-color);
+		}
 	}
 }
 
@@ -172,11 +196,13 @@ a.tag {
 
 	&-advisor,
 	&-advisor-av,
+	&-guide,
 	&-guides {
 		.wr-link-colour(@wr-colour-advisor, @wr-colour-advisor-txt);
 	}
 
-	&-event {
+	&-event,
+	&-events {
 		.wr-link-colour(@wr-colour-event, @wr-colour-event-txt);
 	}
 
@@ -187,7 +213,9 @@ a.tag {
 
 	&-startup,
 	&-incubator,
-	&-vc {
+	&-accelerator,
+	&-vc,
+	&-venture-capital {
 		.wr-link-colour(@wr-colour-startup, @wr-colour-startup-txt);
 	}
 
@@ -202,6 +230,8 @@ a.tag {
 	&-investor-av,
 	&-angel-investor,
 	&-angel-investor-av,
+	&-angel,
+	&-angel-av,
 	&-funding,
 	&-series-a,
 	&-series-b,
@@ -210,6 +240,7 @@ a.tag {
 		.wr-link-colour(@wr-colour-investor, @wr-colour-investor-txt);
 	}
 
+	&-job,
 	&-jobs {
 		.wr-link-colour(@wr-colour-jobs, @wr-colour-jobs-txt);
 	}
@@ -313,7 +344,7 @@ a.tag {
 
 	&-white {
 		// .btn-primary;
-		.wr-btn-variant(@bg-color: #fff; @text-color: #000; @border-color: #999;);
+		.wr-btn-variant(@bg-color: #fff; @text-color: #222; @border-color: #999;);
 
 		&:hover {
 			background-color: #999;

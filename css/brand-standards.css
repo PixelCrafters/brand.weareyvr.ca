@@ -293,6 +293,7 @@ h4.swatch-colour,
 .swatch-icon {
   width: 32px;
   height: 32px;
+  -webkit-background-size: 32px 32px;
   background-size: 32px 32px;
   width: 48px;
   height: 48px;
@@ -337,63 +338,101 @@ h4.swatch-colour,
     top: 0;
   }
 }
-.type-specimen {
-  background-color: rgba(248, 248, 248, 0.9);
+.specimen {
   border-radius: 6px;
-  padding: 16px 0 16px 16px;
+  border: 1px solid rgba(242, 245, 245, 0.9);
+  padding: 16px;
   margin-bottom: 8px;
   width: 100%;
+  position: relative;
+}
+.specimen-section {
+  display: block;
+}
+.specimen-id {
+  display: block;
+  font-family: "Fort", Fort, "Helvetica Neue", HelveticaNeue, Helvetica, Verdana, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  color: rgba(146, 170, 167, 0.6);
+  margin: 6px 0 12px;
+}
+.specimen-id:first-child {
+  margin-top: 0;
+}
+.specimen > .specimen-id:last-child,
+.specimen-section:last-child > .specimen-id:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 991px) {
+  [class*=col-md] > .specimen-id:last-child {
+    margin-bottom: 12px;
+  }
+  [class*=col-md]:last-child > .specimen-id:last-child {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 992px) {
+  [class*=col-md] > .specimen-id:last-child {
+    margin-bottom: 0;
+  }
+}
+.specimen-type {
+  border-right-style: none;
+  background-color: rgba(248, 248, 248, 0.9);
   -webkit-font-smoothing: antialiased;
   line-height: 1.45;
   color: #282828;
   overflow: scroll;
   position: relative;
+  padding-right: 0;
 }
-.type-specimen-sans {
+.specimen-type-sans {
   font-family: "Fort", Fort, "Helvetica Neue", HelveticaNeue, Helvetica, Verdana, sans-serif;
   font-size: 17px;
 }
-.type-specimen-serif {
+.specimen-type-serif {
   font-family: "Arnhem Pro", ArnhemPro, Arnhem, Georgia, serif;
   font-size: 19px;
 }
-.type-specimen-md,
-.type-specimen-lg {
+.specimen-type-md,
+.specimen-type-lg {
   line-height: 1.1;
   overflow: hidden;
   white-space: nowrap;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
-.type-specimen-md {
+.specimen-type-md {
   font-size: 225%;
 }
-.type-specimen-md.type-specimen-section + .type-specimen-md.type-specimen-section {
+.specimen-type-md.type-specimen-section + .specimen-type-md.type-specimen-section {
   margin-top: 7px;
 }
-.type-specimen-lg {
+.specimen-type-lg {
   font-size: 300%;
 }
-.type-specimen-lg.type-specimen-section + .type-specimen-lg.type-specimen-section {
+.specimen-type-lg.type-specimen-section + .specimen-type-lg.type-specimen-section {
   margin-top: 0;
 }
-.type-specimen-section {
+.specimen-type-section {
   display: block;
   position: relative;
   margin-top: 12px;
   padding-bottom: 19px;
 }
-.type-specimen-section p {
+.specimen-type-section p {
   margin: 6px 0;
   padding-right: 16px;
 }
-.type-specimen-lg .type-specimen-section {
+.type-specimen-lg .specimen-type-section {
   padding-bottom: 15px;
 }
-.type-specimen-section:first-child {
+.specimen-type-section:first-child {
   margin-top: 0;
 }
-.type-specimen-id {
+.specimen-type-id {
   display: block;
   font-family: "Fort", Fort, "Helvetica Neue", HelveticaNeue, Helvetica, Verdana, sans-serif;
   text-transform: uppercase;
@@ -404,23 +443,12 @@ h4.swatch-colour,
   font-size: 12px;
   color: rgba(146, 170, 167, 0.9);
 }
-.type-specimen-lg .type-specimen-id {
+.type-specimen-lg .specimen-type-id {
   left: 3px;
 }
-.type-specimen > .type-specimen-id {
+.specimen-type > .specimen-type-id {
   font-weight: bold;
   position: static;
-}
-.type-specimen:before {
-  font-family: "Fort", Fort, "Helvetica Neue", HelveticaNeue, Helvetica, Verdana, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 12px;
-  color: rgba(146, 170, 167, 0.9);
-  content: "Specimen";
-  margin: 0;
-  position: absolute;
-  top: -13px;
 }
 .hll {
   background-color: #ffffcc;
