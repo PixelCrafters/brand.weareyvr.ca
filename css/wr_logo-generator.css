@@ -156,6 +156,16 @@ body.logo-generator .slider-value {
     font-weight: normal;
   }
 }
+body.logo-generator .row#pattern {
+  display: block;
+  height: 500px;
+  overflow: hidden;
+  background-color: #fff;
+}
+body.logo-generator .row#pattern .weareyvr-mark > svg {
+  margin: 0 auto;
+  display: block;
+}
 @media screen and (max-width: 991px) {
   body.logo-generator #radius-text > label {
     display: block;
