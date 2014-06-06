@@ -1,16 +1,28 @@
 @import "_wr_mixins";
 
-@-webkit-keyframes refresh {
+@keyframes refresh {
   from {
-    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 
   to {
-    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes reset {
+  from {
+    transform: rotate(0deg) scaleX(-1);
+  }
+
+  to {
+    transform: rotate(-359deg) scaleX(-1);
   }
 }
 
 body.logo-generator {
+
+  background-color: @grey-lighter;
 
   // Heading
 
@@ -181,13 +193,26 @@ body.logo-generator {
     }
   }
 
+  // Other Size
+
+  .form-control#height-other {
+    visibility: hidden;
+  }
+
+  // Reset
+
+  #reset .glyphicon-repeat {
+    transform: scaleX(-1);
+  }
+
+  #reset:hover .glyphicon-repeat {
+    .animation(reset 0.6s ease-in-out);
+  }
+
   // Reshuffle
 
   #reshuffle:hover .glyphicon-refresh {
-    -webkit-animation: refresh 0.4s ease-in-out;
-    // display: inline-block;
-    // width: 20px;
-    // height: 20px;
+    .animation(refresh 0.4s ease-in-out);
   }
 
   // Download Button

@@ -6367,6 +6367,34 @@ input[type=number]:focus::-webkit-outer-spin-button {
   -webkit-transition: opacity 0.15s ease-in-out;
   transition: opacity 0.15s ease-in-out;
 }
+label h1,
+label .h1,
+label h2,
+label .h2,
+label h3,
+label .h3,
+label h4,
+label .h4,
+label h5,
+label .h5,
+label h6,
+label .h6 {
+  margin-bottom: 6.5px;
+}
+h1 label,
+.h1 label,
+h2 label,
+.h2 label,
+h3 label,
+.h3 label,
+h4 label,
+.h4 label,
+h5 label,
+.h5 label,
+h6 label,
+.h6 label {
+  margin-bottom: 0;
+}
 .glyphicon {
   top: 3px;
 }

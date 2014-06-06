@@ -1,10 +1,45 @@
 @-webkit-keyframes refresh {
   from {
     -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
     -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
   }
+}
+@keyframes refresh {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+@-webkit-keyframes reset {
+  from {
+    -webkit-transform: rotate(0deg) scaleX(-1);
+    transform: rotate(0deg) scaleX(-1);
+  }
+  to {
+    -webkit-transform: rotate(-359deg) scaleX(-1);
+    transform: rotate(-359deg) scaleX(-1);
+  }
+}
+@keyframes reset {
+  from {
+    -webkit-transform: rotate(0deg) scaleX(-1);
+    transform: rotate(0deg) scaleX(-1);
+  }
+  to {
+    -webkit-transform: rotate(-359deg) scaleX(-1);
+    transform: rotate(-359deg) scaleX(-1);
+  }
+}
+body.logo-generator {
+  background-color: #f2f5f5;
 }
 body.logo-generator .header.row {
   padding-top: 1.25em;
@@ -152,8 +187,21 @@ body.logo-generator #size-px .form-control {
   text-rendering: optimizeSpeed;
   letter-spacing: 1px;
 }
+body.logo-generator .form-control#height-other {
+  visibility: hidden;
+}
+body.logo-generator #reset .glyphicon-repeat {
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+body.logo-generator #reset:hover .glyphicon-repeat {
+  -webkit-animation: reset 0.6s ease-in-out;
+  animation: reset 0.6s ease-in-out;
+}
 body.logo-generator #reshuffle:hover .glyphicon-refresh {
   -webkit-animation: refresh 0.4s ease-in-out;
+  animation: refresh 0.4s ease-in-out;
 }
 body.logo-generator section.row#downloads {
   border-top-style: none;
