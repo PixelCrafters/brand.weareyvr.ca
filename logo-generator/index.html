@@ -93,9 +93,8 @@
       </div>
       <div class="clearfix visible-xs"></div>
       <div class="col-sm-3" id="size-px">
-        <h3>Size <small>(px)</small></h3>
+        <h3>Size<!--  <small>(px)</small> --></h3>
         <!-- <input type="range" min="50" max="750" step="1" value="100" name="height" id="height"><span class="slider-value height-value">100</span></label> -->
-        <input class="form-control input-lg" name="height" type="number" value="100" min="50" max="750" step="5">
         <div class="checklist">
           <label>
             <input type="radio" value="50" name="height"> X-Small <small>(50px)</small>
@@ -112,6 +111,10 @@
           <label>
             <input type="radio" value="750" name="height"> X-Large <small>(750px)</small>
           </label>
+          <label>
+            <input type="radio" name="height"> Other
+          </label>
+          <input class="form-control input-lg" name="height" id="height-other" type="number" value="100" min="50" max="750" step="5">
         </div>
       </div>
     </section>

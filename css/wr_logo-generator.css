@@ -188,7 +188,7 @@ body.logo-generator #size-px .form-control {
   letter-spacing: 1px;
 }
 body.logo-generator .form-control#height-other {
-  visibility: hidden;
+  display: none;
 }
 body.logo-generator #reset .glyphicon-repeat {
   -webkit-transform: scaleX(-1);
