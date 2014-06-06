@@ -49,7 +49,9 @@
 .panel-body:before,
 .panel-body:after,
 .modal-footer:before,
-.modal-footer:after {
+.modal-footer:after,
+.media-colour dl dd:before,
+.media-colour dl dd:after {
   content: " ";
   display: table;
 }
@@ -65,7 +67,8 @@
 .navbar-collapse:after,
 .pager:after,
 .panel-body:after,
-.modal-footer:after {
+.modal-footer:after,
+.media-colour dl dd:after {
   clear: both;
 }
 @media (max-width: 767px) {
@@ -299,6 +302,41 @@ h4.swatch-colour,
     margin-top: 15px;
   }
 }
+.media-colour dl {
+  -moz-font-feature-settings: "tnum" 1, "lnum" 1;
+  -ms-font-feature-settings: "tnum" 1, "lnum" 1;
+  -o-font-feature-settings: "tnum" 1, "lnum" 1;
+  -webkit-font-feature-settings: "tnum" 1, "lnum" 1;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+  text-rendering: optimizeSpeed;
+  margin: 0;
+  font-size: 15px;
+  line-height: 24px;
+}
+.media-colour dl dt {
+  float: left;
+  clear: left;
+  width: 40px;
+  text-align: left;
+  color: #506563;
+  -webkit-font-smoothing: antialiased;
+  font-size: 13px;
+}
+.media-colour dl dd {
+  margin-left: 50px;
+  font-family: "Source Code Pro", SourceCodePro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  position: relative;
+  top: -3px;
+}
+@media (min-width: 768px) {
+  .media-colour dl {
+    font-size: 13px;
+    line-height: 21px;
+  }
+  .media-colour dl dd {
+    top: 0;
+  }
+}
 .type-specimen {
   background-color: rgba(248, 248, 248, 0.9);
   border-radius: 6px;
@@ -327,17 +365,17 @@ h4.swatch-colour,
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
-.type-specimen-md.type-specimen-section + .type-specimen-md.type-specimen-section,
-.type-specimen-md.type-specimen-section + .type-specimen-lg.type-specimen-section,
-.type-specimen-lg.type-specimen-section + .type-specimen-md.type-specimen-section,
-.type-specimen-lg.type-specimen-section + .type-specimen-lg.type-specimen-section {
-  margin-top: 7px;
-}
 .type-specimen-md {
   font-size: 225%;
 }
+.type-specimen-md.type-specimen-section + .type-specimen-md.type-specimen-section {
+  margin-top: 7px;
+}
 .type-specimen-lg {
   font-size: 300%;
+}
+.type-specimen-lg.type-specimen-section + .type-specimen-lg.type-specimen-section {
+  margin-top: 0;
 }
 .type-specimen-section {
   display: block;
