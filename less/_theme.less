@@ -464,6 +464,7 @@ section {
 .label {
 	padding-top: 0.25em;
 	padding-bottom: 0.25em;
+	.font-smoothing;
 }
 
 // ==================== navbar.less
@@ -471,15 +472,6 @@ section {
 body>.navbar+* {
 	margin-top: 0;
 }
-
-body>.navbar.affix+* {
-	margin-top: (@navbar-height * 2);
-}
-
-// body>.navbar+.jumbotron {
-// 	padding-top: (@navbar-height * 4);
-// 	height: 500px + (@navbar-height * 4);
-// }
 
 .navbar-inverse input {
 	.input-inverse;

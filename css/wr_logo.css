@@ -1,7 +1,3 @@
-.wr-navbar:not(.affix) {
-  margin-top: 50px;
-  margin-bottom: 0;
-}
 .wr-navbar .navbar-brand .weareyvr-mark {
   z-index: 13;
   margin: 0 1em 0 0;

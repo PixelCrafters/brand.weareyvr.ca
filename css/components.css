@@ -683,7 +683,7 @@ a.entity-link:active {
 }
 a.entity-link:hover,
 a.entity-link:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 a.entity-link:visited {
   background-image: -webkit-linear-gradient(top, transparent 0%, rgba(16, 152, 139, 0.6) 100%);
@@ -873,7 +873,7 @@ p .wr-link-advisor a:active,
 p .wr-link-advisor-av a:active,
 p .wr-link-guide a:active,
 p .wr-link-guides a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 p a.wr-link-advisor:visited,
 p a.wr-link-advisor-av:visited,
@@ -979,7 +979,7 @@ p a.wr-link-event:active,
 p a.wr-link-events:active,
 p .wr-link-event a:active,
 p .wr-link-events a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 p a.wr-link-event:visited,
 p a.wr-link-events:visited,
@@ -1081,7 +1081,7 @@ p a.wr-link-founder:active,
 p a.wr-link-founder-av:active,
 p .wr-link-founder a:active,
 p .wr-link-founder-av a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 p a.wr-link-founder:visited,
 p a.wr-link-founder-av:visited,
@@ -1279,7 +1279,7 @@ p .wr-link-incubator a:active,
 p .wr-link-accelerator a:active,
 p .wr-link-vc a:active,
 p .wr-link-venture-capital a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 p a.wr-link-startup:visited,
 p a.wr-link-incubator:visited,
@@ -1451,7 +1451,7 @@ p .wr-link-employee a:active,
 p .wr-link-employee-av a:active,
 p .wr-link-newbie a:active,
 p .wr-link-newbie-av a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 p a.wr-link-employee:visited,
 p a.wr-link-employee-av:visited,
@@ -1845,7 +1845,7 @@ p .wr-link-series-a a:active,
 p .wr-link-series-b a:active,
 p .wr-link-series-c a:active,
 p .wr-link-series-d a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 p a.wr-link-investor:visited,
 p a.wr-link-investor-av:visited,
@@ -1965,7 +1965,7 @@ p a.wr-link-job:active,
 p a.wr-link-jobs:active,
 p .wr-link-job a:active,
 p .wr-link-jobs a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 p a.wr-link-job:visited,
 p a.wr-link-jobs:visited,
@@ -2035,7 +2035,7 @@ p a.wr-link-spruce:hover,
 p .wr-link-spruce a:hover,
 p a.wr-link-spruce:active,
 p .wr-link-spruce a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 p a.wr-link-spruce:visited,
 p .wr-link-spruce a:visited {
@@ -2103,7 +2103,7 @@ p a.wr-link-red:hover,
 p .wr-link-red a:hover,
 p a.wr-link-red:active,
 p .wr-link-red a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 p a.wr-link-red:visited,
 p .wr-link-red a:visited {
@@ -2171,7 +2171,7 @@ p a.wr-link-pink:hover,
 p .wr-link-pink a:hover,
 p a.wr-link-pink:active,
 p .wr-link-pink a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 p a.wr-link-pink:visited,
 p .wr-link-pink a:visited {
@@ -2239,7 +2239,7 @@ p a.wr-link-orange:hover,
 p .wr-link-orange a:hover,
 p a.wr-link-orange:active,
 p .wr-link-orange a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 p a.wr-link-orange:visited,
 p .wr-link-orange a:visited {
@@ -2307,7 +2307,7 @@ p a.wr-link-green:hover,
 p .wr-link-green a:hover,
 p a.wr-link-green:active,
 p .wr-link-green a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 p a.wr-link-green:visited,
 p .wr-link-green a:visited {
@@ -2375,7 +2375,7 @@ p a.wr-link-blue:hover,
 p .wr-link-blue a:hover,
 p a.wr-link-blue:active,
 p .wr-link-blue a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 p a.wr-link-blue:visited,
 p .wr-link-blue a:visited {
@@ -2443,7 +2443,7 @@ p a.wr-link-purple:hover,
 p .wr-link-purple a:hover,
 p a.wr-link-purple:active,
 p .wr-link-purple a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 p a.wr-link-purple:visited,
 p .wr-link-purple a:visited {
@@ -2511,7 +2511,7 @@ p a.wr-link-brown:hover,
 p .wr-link-brown a:hover,
 p a.wr-link-brown:active,
 p .wr-link-brown a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 p a.wr-link-brown:visited,
 p .wr-link-brown a:visited {
@@ -2774,8 +2774,8 @@ p .wr-link-brown a:visited {
     padding: 30px 0;
   }
 }
-.jumbotron.wr-jumbotron h1,
-.jumbotron.wr-jumbotron .h1 {
+.jumbotron.wr-jumbotron jumbotron-heading,
+.jumbotron.wr-jumbotron .jumbotron-heading {
   font-style: italic;
   text-align: center;
   margin: 0.5em auto;
@@ -2783,18 +2783,18 @@ p .wr-link-brown a:visited {
   max-width: 14em;
   font-weight: 200;
   text-transform: uppercase;
-  font-size: 32px;
+  font-size: 39px;
   letter-spacing: 5px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  .jumbotron.wr-jumbotron h1,
-  .jumbotron.wr-jumbotron .h1 {
+  .jumbotron.wr-jumbotron jumbotron-heading,
+  .jumbotron.wr-jumbotron .jumbotron-heading {
     font-size: 59px;
   }
 }
 @media (min-width: 992px) {
-  .jumbotron.wr-jumbotron h1,
-  .jumbotron.wr-jumbotron .h1 {
+  .jumbotron.wr-jumbotron jumbotron-heading,
+  .jumbotron.wr-jumbotron .jumbotron-heading {
     font-size: 78px;
     letter-spacing: 7px;
   }
@@ -2802,10 +2802,6 @@ p .wr-link-brown a:visited {
 .jumbotron.wr-jumbotron .lead {
   max-width: 30em;
   margin: 0 auto;
-}
-.jumbotron.wr-jumbotron form {
-  margin: 1.5em auto 0;
-  max-width: 30em;
 }
 .jumbotron.wr-jumbotron .input-group .form-control:not(:first-child),
 .jumbotron.wr-jumbotron .input-group .input-group-addon:not(:first-child) {
@@ -2822,21 +2818,44 @@ p .wr-link-brown a:visited {
   bottom: 1em;
   opacity: 0.4;
   color: #92aaa7;
-  -webkit-transition: opacity 0.15s ease-in-out, text-shadow 0.15s ease-in-out;
-  transition: opacity 0.15s ease-in-out, text-shadow 0.15s ease-in-out;
+  -webkit-transition: opacity 0.15s ease-in-out;
+  transition: opacity 0.15s ease-in-out;
 }
 .jumbotron.wr-jumbotron .image-credit a:link,
 .jumbotron.wr-jumbotron .image-credit a:visited {
-  color: #f2f5f5;
+  color: #fff;
 }
 .jumbotron.wr-jumbotron:hover .image-credit {
   opacity: 0.9;
 }
 .jumbotron.wr-jumbotron-blank .form-control,
+.jumbotron.wr-jumbotron-blank .jumbotron-overlay .form-control,
 .jumbotron.wr-jumbotron-blank .input-group-addon,
+.jumbotron.wr-jumbotron-blank .jumbotron-overlay .input-group-addon,
 .jumbotron.wr-jumbotron-blank .form-control:focus,
-.jumbotron.wr-jumbotron-blank .input-group-addon:focus {
-  border-color: #fff;
+.jumbotron.wr-jumbotron-blank .jumbotron-overlay .form-control:focus,
+.jumbotron.wr-jumbotron-blank .input-group-addon:focus,
+.jumbotron.wr-jumbotron-blank .jumbotron-overlay .input-group-addon:focus {
+  background-color: #fff;
+}
+.jumbotron.wr-jumbotron-blank .jumbotron-overlay-dark .form-control::-moz-placeholder,
+.jumbotron.wr-jumbotron-blank .jumbotron-overlay-dark .input-group-addon::-moz-placeholder,
+.jumbotron.wr-jumbotron-blank .jumbotron-overlay-dark .form-control:focus::-moz-placeholder,
+.jumbotron.wr-jumbotron-blank .jumbotron-overlay-dark .input-group-addon:focus::-moz-placeholder {
+  color: rgba(146, 170, 167, 0.9);
+  opacity: 1;
+}
+.jumbotron.wr-jumbotron-blank .jumbotron-overlay-dark .form-control:-ms-input-placeholder,
+.jumbotron.wr-jumbotron-blank .jumbotron-overlay-dark .input-group-addon:-ms-input-placeholder,
+.jumbotron.wr-jumbotron-blank .jumbotron-overlay-dark .form-control:focus:-ms-input-placeholder,
+.jumbotron.wr-jumbotron-blank .jumbotron-overlay-dark .input-group-addon:focus:-ms-input-placeholder {
+  color: rgba(146, 170, 167, 0.9);
+}
+.jumbotron.wr-jumbotron-blank .jumbotron-overlay-dark .form-control::-webkit-input-placeholder,
+.jumbotron.wr-jumbotron-blank .jumbotron-overlay-dark .input-group-addon::-webkit-input-placeholder,
+.jumbotron.wr-jumbotron-blank .jumbotron-overlay-dark .form-control:focus::-webkit-input-placeholder,
+.jumbotron.wr-jumbotron-blank .jumbotron-overlay-dark .input-group-addon:focus::-webkit-input-placeholder {
+  color: rgba(146, 170, 167, 0.9);
 }
 .jumbotron.wr-jumbotron-lighten {
   box-shadow: 0px 0px 300px 50px rgba(255, 255, 255, 0.6) inset;
@@ -2894,14 +2913,35 @@ p .wr-link-brown a:visited {
   box-shadow: 0px 0px 500px 100px rgba(0, 0, 0, 0.6) inset;
 }
 .jumbotron.wr-jumbotron .jumbotron-overlay {
-  background-color: rgba(242, 245, 245, 0.4);
+  background-color: rgba(242, 245, 245, 0.5);
   padding: 9.375px 9.375px 4.6875px;
   margin-bottom: 0;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .jumbotron.wr-jumbotron .jumbotron-overlay {
     margin: 48px -30px 18.75px -30px;
     padding: 9.375px 30px 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container .jumbotron.wr-jumbotron .jumbotron-overlay {
+    margin-left: -60px;
+    margin-right: -60px;
+  }
+}
+.jumbotron.wr-jumbotron .jumbotron-overlay-form {
+  padding: 0 10px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .jumbotron.wr-jumbotron .jumbotron-overlay-form {
+    padding: 0 30px;
+    max-width: 30em;
+  }
+}
+@media screen and (min-width: 992px) {
+  .jumbotron.wr-jumbotron .jumbotron-overlay-form {
+    margin: 1.5em auto 0;
   }
 }
 .jumbotron.wr-jumbotron .jumbotron-overlay .form-control::-moz-placeholder,
@@ -2935,16 +2975,37 @@ p .wr-link-brown a:visited {
   border-color: transparent;
 }
 .jumbotron.wr-jumbotron .jumbotron-overlay-dark {
-  background-color: rgba(242, 245, 245, 0.4);
+  background-color: rgba(242, 245, 245, 0.5);
   padding: 9.375px 9.375px 4.6875px;
   margin-bottom: 0;
-  background-color: rgba(35, 44, 43, 0.3);
+  background-color: rgba(35, 44, 43, 0.4);
   color: #fff;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .jumbotron.wr-jumbotron .jumbotron-overlay-dark {
     margin: 48px -30px 18.75px -30px;
     padding: 9.375px 30px 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container .jumbotron.wr-jumbotron .jumbotron-overlay-dark {
+    margin-left: -60px;
+    margin-right: -60px;
+  }
+}
+.jumbotron.wr-jumbotron .jumbotron-overlay-dark-form {
+  padding: 0 10px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .jumbotron.wr-jumbotron .jumbotron-overlay-dark-form {
+    padding: 0 30px;
+    max-width: 30em;
+  }
+}
+@media screen and (min-width: 992px) {
+  .jumbotron.wr-jumbotron .jumbotron-overlay-dark-form {
+    margin: 1.5em auto 0;
   }
 }
 .jumbotron.wr-jumbotron .jumbotron-overlay-dark .form-control::-moz-placeholder,
@@ -3268,9 +3329,12 @@ p .wr-link-brown a:visited {
   border-style: none;
   background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 1px 2px rgba(146, 170, 167, 0.5);
-  height: 100px;
+  height: 150px;
+  padding-top: 50px;
+  margin-bottom: 0;
+  z-index: 10;
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .wr-navbar .container {
     padding: 0;
     margin: 0 auto;
@@ -3317,7 +3381,7 @@ p .wr-link-brown a:visited {
   margin-top: 3em;
 }
 .navbar-link,
-.navbar-link .navbar-default * {
+.navbar-default .navbar-link {
   padding-bottom: 0.125em;
   background-size: 1px 1px;
   text-shadow: 1px 0 transparent, 2px 0 transparent, -1px 0 transparent, -2px 0 transparent;
@@ -3328,26 +3392,26 @@ p .wr-link-brown a:visited {
   background-position: 0 90%;
 }
 .navbar-link,
-.navbar-link .navbar-default *,
+.navbar-default .navbar-link,
 .navbar-link:link,
-.navbar-link .navbar-default *:link,
+.navbar-default .navbar-link:link,
 .navbar-link:visited,
-.navbar-link .navbar-default *:visited,
+.navbar-default .navbar-link:visited,
 .navbar-link:hover,
-.navbar-link .navbar-default *:hover,
+.navbar-default .navbar-link:hover,
 .navbar-link:active,
-.navbar-link .navbar-default *:active {
+.navbar-default .navbar-link:active {
   -webkit-transition: background-position 0.15s ease-in-out, color 0.15s ease-in-out;
   transition: background-position 0.15s ease-in-out, color 0.15s ease-in-out;
 }
 .navbar-link:hover,
-.navbar-link .navbar-default *:hover,
+.navbar-default .navbar-link:hover,
 .navbar-link:active,
-.navbar-link .navbar-default *:active {
-  background-position: 0 99%;
+.navbar-default .navbar-link:active {
+  background-position: 0 100%;
 }
 .navbar-link:visited,
-.navbar-link .navbar-default *:visited {
+.navbar-default .navbar-link:visited {
   background-image: -webkit-linear-gradient(top, transparent 0%, rgba(119, 119, 119, 0.6) 100%);
   background-image: linear-gradient(to bottom, transparent 0%, rgba(119, 119, 119, 0.6) 100%);
   background-repeat: repeat-x;
@@ -3373,7 +3437,7 @@ p .wr-link-brown a:visited {
 }
 .navbar-inverse .navbar-link:hover,
 .navbar-inverse .navbar-link:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 .navbar-inverse .navbar-link:visited {
   background-image: -webkit-linear-gradient(top, transparent 0%, rgba(146, 170, 167, 0.6) 100%);
@@ -3416,7 +3480,7 @@ body > footer a:active {
 }
 body > footer a:hover,
 body > footer a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 body > footer a:visited {
   background-image: -webkit-linear-gradient(top, transparent 0%, rgba(16, 152, 139, 0.6) 100%);
