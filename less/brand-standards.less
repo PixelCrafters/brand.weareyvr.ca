@@ -1,4 +1,6 @@
-@import (reference) 'weareyvr';
+@import (reference) '../bower_components/bootstrap/less/mixins';
+@import (reference) '_wr_mixins';
+@import (reference) 'components';
 
 @media (max-width: @screen-xs-max) {
 	.wr-jumbotron-brand {
@@ -109,9 +111,11 @@
 
 .specimen {
 
+	@specimen-padding: 16px;
+
 	border-radius: @border-radius-base;
 	border: 1px solid fadeout((@grey-lighter),10%);
-	padding: 16px;
+	padding: @specimen-padding;
 	margin-bottom: 8px;
 	width: 100%;
 	position: relative;
@@ -239,6 +243,20 @@
 			font-weight: bold;
 			position: static;
 		}
+	}
+
+	&-fill {
+		background-color: fadeout((@grey-lighter),10%);
+	}
+
+	// > .wr-navbar {
+	// 	margin-left: -(@specimen-padding + 1px);
+	// 	margin-right: -(@specimen-padding + 1px);
+	// }
+
+	> .wr-jumbotron {
+	// 	margin: -(@specimen-padding + 1px);
+		margin: 0;
 	}
 }
 

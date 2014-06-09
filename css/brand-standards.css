@@ -71,6 +71,9 @@
 .media-colour dl dd:after {
   clear: both;
 }
+.btn-group-xs > .btn {
+  padding-top: 2px;
+}
 @media (max-width: 767px) {
   .wr-jumbotron-brand {
     text-align: center;
@@ -101,7 +104,6 @@
   font-weight: bold;
   font-size: 13px;
   -webkit-font-smoothing: antialiased;
-  line-height: 1;
 }
 .wr-nav-brand > li > a,
 .wr-nav-brand .nav > li > a {
@@ -149,7 +151,6 @@
   font-weight: bold;
   font-size: 13px;
   -webkit-font-smoothing: antialiased;
-  line-height: 1;
 }
 .wr-nav-brand > li > a,
 .wr-nav-brand .nav > li > a {
@@ -293,7 +294,6 @@ h4.swatch-colour,
 .swatch-icon {
   width: 32px;
   height: 32px;
-  -webkit-background-size: 32px 32px;
   background-size: 32px 32px;
   width: 48px;
   height: 48px;
@@ -449,6 +449,12 @@ h4.swatch-colour,
 .specimen-type > .specimen-type-id {
   font-weight: bold;
   position: static;
+}
+.specimen-fill {
+  background-color: rgba(242, 245, 245, 0.9);
+}
+.specimen > .wr-jumbotron {
+  margin: 0;
 }
 .hll {
   background-color: #ffffcc;

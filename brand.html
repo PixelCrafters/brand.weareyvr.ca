@@ -28,20 +28,6 @@
 <body class="brand-standards">
   <a class="sr-only" href="#content">Skip to main content</a>
 
-  <!-- master nav -->
-  <!-- <nav class="navbar navbar-default wr-navbar">
-    <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">
-          <div class="weareyvr-mark" data-height="100" data-colour="#10988b" data-text="black">
-            <span>WeAreYVR</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </nav> -->
-
-  <!-- <header class="jumbotron wr-jumbotron-light" style="background-image: url(img/7627655228_8b4c5d8044_h.jpg); background-position: center top;"> -->
   <header class="jumbotron wr-jumbotron-brand">
     <div class="container">
       <div class="weareyvr-mark" data-height="100" data-colour="#10988b" data-text="black">
@@ -336,7 +322,7 @@
             </div>
           </section>
 
-          <section id="colours-text">
+          <!-- <section id="colours-text">
             <h3>Text colours</h3>
             <p>For added readability when applying brand colours to text, append <code>-txt</code> to any of the Less colour variables listed above.</p>
 
@@ -447,7 +433,7 @@
                 </div>
               </div>
             </div>
-          </section>
+          </section> -->
 
         </section>
 
@@ -894,7 +880,7 @@
         <section id="bootstrap">
           <h2 class="page-header h1">Bootstrap &amp; Less</h2>
 
-          <section id="colours">
+          <section id="bootstrap-colours">
 
             <h3>Colours</h3>
             <p>Each colour is available via two Less variables: a default variable of <code>@wr-</code> followed by the colour name, and a semantic variable of <code>@wr-colour-</code> followed by the colour&rsquo;s semantic role. Use the semantic variable when using the colour for a semantic purpose; otherwise, use the devault variable.</p>
@@ -1077,6 +1063,11 @@
                 </div>
               </div>
             </section> -->
+
+          </section>
+
+          <section id="bootstrap-typography">
+            <h3>Typography</h3>
 
           </section>
 
@@ -1432,10 +1423,147 @@
 
           <section id="bootstrap-navbar">
             <h3>Navbar style</h3>
+            <p>Add <code>.wr-navbar</code> to a navbar to enable our custom appearance.</p>
+            <p>To add the dynamic WeAreYVR logo, place a <a href="#logo">logo generator instance</a> inside <code>.navbar-brand</code>.</p>
+            <div class="specimen specimen-fill">
+              <nav class="navbar navbar-default wr-navbar">
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                    <a class="navbar-brand" href="#">
+                      <div class="weareyvr-mark" data-height="100" data-colour="#10988b" data-text="black">
+                        <span>WeAreYVR</span>
+                      </div>
+                    </a>
+                  </div>
+                  <nav class="collapse navbar-collapse" role="navigation">
+                    <ul class="nav navbar-nav">
+                      <li class="active"><a href="#">Home</a></li>
+                      <li><a href="#">About</a></li>
+                      <li><a href="#">Contact</a></li>
+                    </ul>
+                    <form class="navbar-form navbar-right" role="search">
+                      <input type="search" class="form-control" placeholder="Search">
+                    </form>
+                  </nav>
+                </div>
+              </nav>
+            </div>
+            <pre><code class="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-default wr-navbar"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"navbar-header"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"navbar-toggle"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        ...
+      <span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"weareyvr-mark"</span> <span class="na">data-height=</span><span class="s">"100"</span> <span class="na">data-colour=</span><span class="s">"#10988b"</span> <span class="na">data-text=</span><span class="s">"black"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;span&gt;</span>WeAreYVR<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"collapse navbar-collapse"</span> <span class="na">role=</span><span class="s">"navigation"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav navbar-nav"</span><span class="nt">&gt;</span>
+        ...
+      <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"navbar-form navbar-right"</span> <span class="na">role=</span><span class="s">"search"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/form&gt;</span>
+    <span class="nt">&lt;/nav&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+            </code></pre>
           </section>
 
           <section id="bootstrap-jumbotron">
             <h3>Jumbotron styles</h3>
+            <p>Add <code>.wr-jumbotron</code> to a <code>.jumbotron</code> to enable our custom appearance. Add one of the following appearance classes to  modify its appearance.</p>
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Class</th>
+                    <th>Appearance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>.wr-jumbotron-blank</code></td>
+                    <td>Adds contrast to form fields, for when you&rsquo;re not using a background image</td>
+                  </tr>
+                  <tr>
+                    <td><code>.wr-jumbotron-lighten</code></td>
+                    <td>Lightens background image</td>
+                  </tr>
+                  <tr>
+                    <td><code>.wr-jumbotron-dark</code></td>
+                    <td>Dark colour scheme</td>
+                  </tr>
+                  <tr>
+                    <td><code>.wr-jumbotron-darken</code></td>
+                    <td>Dark colour scheme, darkens background image</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="specimen">
+              <div class="jumbotron wr-jumbotron" style="background-image: url(img/7627655228_8b4c5d8044_h.jpg);">
+                  <h1 class="jumbotron-heading">Opening channels for Vancouver&rsquo;s startup community</h1>
+                  <div class="jumbotron-overlay-dark">
+                    <form role="form" class="jumbotron-overlay-form">
+                      <div class="form-group">
+                        <label for="notify-me-email">Notify me on launch</label>
+                        <div class="input-group">
+                          <input type="email" class="form-control input-lg" id="notify-me-email" placeholder="Email address">
+                          <span class="input-group-btn">
+                            <input type="submit" class="btn btn-primary input-lg" value="Subscribe">
+                          </span>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                <div class="image-credit">
+                  Photo: <a href="https://www.flickr.com/photos/patdryburgh/7653923950">Pat Dryburgh</a>
+                </div>
+              </div>
+            </div>
+            <pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"jumbotron wr-jumbotron"</span> <span class="na">style=</span><span class="s">"background-image: url(img/7627655228_8b4c5d8044_h.jpg);"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h1 <span class="na">class=</span><span class="s">"jumbotron-heading"</span>&gt;</span>Opening channels for Vancouver<span class="ni">&amp;rsquo;</span>s startup community<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"jumbotron-overlay-dark"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"jumbotron-overlay-form"</span> <span class="na">role=</span><span class="s">"form"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"notify-me-email"</span><span class="nt">&gt;</span>Notify me on launch<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">class=</span><span class="s">"form-control input-lg"</span> <span class="na">id=</span><span class="s">"notify-me-email"</span> <span class="na">placeholder=</span><span class="s">"Email address"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"input-group-btn"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn btn-primary input-lg"</span> <span class="na">value=</span><span class="s">"Subscribe"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;/span&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/form&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"image-credit"</span><span class="nt">&gt;</span>
+    Photo: <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.flickr.com/photos/patdryburgh/7653923950"</span><span class="nt">&gt;</span>Pat Dryburgh<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+            </code></pre>
+            <section id="bootstrap-jumbotron-headings">
+              <h4>Headings</h4>
+              <p>Add <code>.jumbotron-heading</code> to an <code>&lt;h1&gt;</code> or <code>&lt;h2&gt;</code> to enable the light, italic, centred heading style.</p>
+            </section>
+            <section id="bootstrap-jumbotron-overlays">
+              <h4>Overlays</h4>
+              <p>Add <code>.jumbotron-overlay</code> to a <code>&lt;div&gt;</code> to add a translucent overlay to a section of content. Use <code>.jumbotron-overlay-dark</code> instead for a dark colour scheme.</p>
+              <p>Wrap forms inside overlays in <code>.jumbotron-overlay-form</code>.</p>
+            </section>
+            <section id="bootstrap-jumbotron-image-credits">
+              <h4>Image credits</h4>
+              <p>Use <code>&lt;div class="image-credit"&gt;</code> to credit an image (for example, if you&rsquo;re using a Creative Commons&ndash;licensed photo from Flickr).</p>
+            </section>
           </section>
 
         </section>
@@ -1515,7 +1643,14 @@
                 <li><a href="#bootstrap-segmented-inputs">Segmented text inputs</a></li>
                 <li><a href="#bootstrap-search">Giant search bar</a></li>
                 <li><a href="#bootstrap-navbar">Navbar style</a></li>
-                <li><a href="#bootstrap-jumbotron">Jumbotron styles</a></li>
+                <li>
+                  <a href="#bootstrap-jumbotron">Jumbotron styles</a>
+                  <ul class="nav">
+                    <li><a href="#bootstrap-jumbotron-headings">Headings</a></li>
+                    <li><a href="#bootstrap-jumbotron-overlays">Overlays</a></li>
+                    <li><a href="#bootstrap-jumbotron-image-credits">Image credits</a></li>
+                  </ul>
+                </li>
               </ul>
             </li>
 
