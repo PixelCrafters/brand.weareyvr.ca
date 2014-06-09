@@ -4644,7 +4644,7 @@ a.list-group-item.active:focus .list-group-item-heading {
 a.list-group-item.active .list-group-item-text,
 a.list-group-item.active:hover .list-group-item-text,
 a.list-group-item.active:focus .list-group-item-text {
-  color: #82f2e7;
+  color: #b7e0dc;
 }
 .list-group-item-success {
   color: #3c763d;
@@ -5811,7 +5811,7 @@ button.close {
 }
 .alert-success a.alert-link:hover,
 .alert-success a.alert-link:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 .alert-success a.alert-link:visited {
   background-image: -webkit-linear-gradient(top, transparent 0%, rgba(60, 118, 61, 0.3) 100%);
@@ -5839,7 +5839,7 @@ button.close {
 }
 .alert-info a.alert-link:hover,
 .alert-info a.alert-link:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 .alert-info a.alert-link:visited {
   background-image: -webkit-linear-gradient(top, transparent 0%, rgba(49, 112, 143, 0.3) 100%);
@@ -5867,7 +5867,7 @@ button.close {
 }
 .alert-warning a.alert-link:hover,
 .alert-warning a.alert-link:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 .alert-warning a.alert-link:visited {
   background-image: -webkit-linear-gradient(top, transparent 0%, rgba(138, 109, 59, 0.3) 100%);
@@ -5895,7 +5895,7 @@ button.close {
 }
 .alert-danger a.alert-link:hover,
 .alert-danger a.alert-link:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 .alert-danger a.alert-link:visited {
   background-image: -webkit-linear-gradient(top, transparent 0%, rgba(169, 68, 66, 0.3) 100%);
@@ -5911,6 +5911,7 @@ button.close {
   font-feature-settings: "lnum" 1;
   -webkit-font-smoothing: antialiased;
   padding-top: 4px;
+  vertical-align: baseline;
 }
 .breadcrumb a {
   padding-bottom: 0.125em;
@@ -5932,7 +5933,7 @@ button.close {
 }
 .breadcrumb a:hover,
 .breadcrumb a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 .breadcrumb a:visited {
   background-image: -webkit-linear-gradient(top, transparent 0%, rgba(16, 152, 139, 0.6) 100%);
@@ -6289,6 +6290,8 @@ samp {
 }
 .dropdown-menu {
   -webkit-font-smoothing: antialiased;
+  text-transform: none;
+  letter-spacing: 0;
   box-shadow: none;
   border-style: none;
   -webkit-transition: display 0.15s ease-in-out;
@@ -6526,7 +6529,6 @@ body > .navbar.affix + * {
   font-weight: bold;
   font-size: 13px;
   -webkit-font-smoothing: antialiased;
-  line-height: 1;
 }
 .nav-pills > li > a,
 .nav-pills .nav > li > a {
@@ -6620,7 +6622,6 @@ body > .navbar.affix + * {
   font-weight: bold;
   font-size: 13px;
   -webkit-font-smoothing: antialiased;
-  line-height: 1;
 }
 .wr-nav-vertical > li > a,
 .wr-nav-vertical .nav > li > a {
@@ -6799,7 +6800,7 @@ p a:active,
 p .btn.btn-link:active,
 a.link:active,
 .btn.btn-link.link:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 p a:visited,
 p .btn.btn-link:visited,
@@ -7234,7 +7235,7 @@ a.entity-link:active {
 }
 a.entity-link:hover,
 a.entity-link:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 a.entity-link:visited {
   background-image: -webkit-linear-gradient(top, transparent 0%, rgba(16, 152, 139, 0.6) 100%);
@@ -7424,7 +7425,7 @@ p .wr-link-advisor a:active,
 p .wr-link-advisor-av a:active,
 p .wr-link-guide a:active,
 p .wr-link-guides a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 p a.wr-link-advisor:visited,
 p a.wr-link-advisor-av:visited,
@@ -7530,7 +7531,7 @@ p a.wr-link-event:active,
 p a.wr-link-events:active,
 p .wr-link-event a:active,
 p .wr-link-events a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 p a.wr-link-event:visited,
 p a.wr-link-events:visited,
@@ -7632,7 +7633,7 @@ p a.wr-link-founder:active,
 p a.wr-link-founder-av:active,
 p .wr-link-founder a:active,
 p .wr-link-founder-av a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 p a.wr-link-founder:visited,
 p a.wr-link-founder-av:visited,
@@ -7830,7 +7831,7 @@ p .wr-link-incubator a:active,
 p .wr-link-accelerator a:active,
 p .wr-link-vc a:active,
 p .wr-link-venture-capital a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 p a.wr-link-startup:visited,
 p a.wr-link-incubator:visited,
@@ -8002,7 +8003,7 @@ p .wr-link-employee a:active,
 p .wr-link-employee-av a:active,
 p .wr-link-newbie a:active,
 p .wr-link-newbie-av a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 p a.wr-link-employee:visited,
 p a.wr-link-employee-av:visited,
@@ -8396,7 +8397,7 @@ p .wr-link-series-a a:active,
 p .wr-link-series-b a:active,
 p .wr-link-series-c a:active,
 p .wr-link-series-d a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 p a.wr-link-investor:visited,
 p a.wr-link-investor-av:visited,
@@ -8516,7 +8517,7 @@ p a.wr-link-job:active,
 p a.wr-link-jobs:active,
 p .wr-link-job a:active,
 p .wr-link-jobs a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 p a.wr-link-job:visited,
 p a.wr-link-jobs:visited,
@@ -8586,7 +8587,7 @@ p a.wr-link-spruce:hover,
 p .wr-link-spruce a:hover,
 p a.wr-link-spruce:active,
 p .wr-link-spruce a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 p a.wr-link-spruce:visited,
 p .wr-link-spruce a:visited {
@@ -8654,7 +8655,7 @@ p a.wr-link-red:hover,
 p .wr-link-red a:hover,
 p a.wr-link-red:active,
 p .wr-link-red a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 p a.wr-link-red:visited,
 p .wr-link-red a:visited {
@@ -8722,7 +8723,7 @@ p a.wr-link-pink:hover,
 p .wr-link-pink a:hover,
 p a.wr-link-pink:active,
 p .wr-link-pink a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 p a.wr-link-pink:visited,
 p .wr-link-pink a:visited {
@@ -8790,7 +8791,7 @@ p a.wr-link-orange:hover,
 p .wr-link-orange a:hover,
 p a.wr-link-orange:active,
 p .wr-link-orange a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 p a.wr-link-orange:visited,
 p .wr-link-orange a:visited {
@@ -8858,7 +8859,7 @@ p a.wr-link-green:hover,
 p .wr-link-green a:hover,
 p a.wr-link-green:active,
 p .wr-link-green a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 p a.wr-link-green:visited,
 p .wr-link-green a:visited {
@@ -8926,7 +8927,7 @@ p a.wr-link-blue:hover,
 p .wr-link-blue a:hover,
 p a.wr-link-blue:active,
 p .wr-link-blue a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 p a.wr-link-blue:visited,
 p .wr-link-blue a:visited {
@@ -8994,7 +8995,7 @@ p a.wr-link-purple:hover,
 p .wr-link-purple a:hover,
 p a.wr-link-purple:active,
 p .wr-link-purple a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 p a.wr-link-purple:visited,
 p .wr-link-purple a:visited {
@@ -9062,7 +9063,7 @@ p a.wr-link-brown:hover,
 p .wr-link-brown a:hover,
 p a.wr-link-brown:active,
 p .wr-link-brown a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 p a.wr-link-brown:visited,
 p .wr-link-brown a:visited {
@@ -10105,7 +10106,7 @@ p .wr-link-brown a:visited {
 .navbar-link .navbar-default *:hover,
 .navbar-link:active,
 .navbar-link .navbar-default *:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 .navbar-link:visited,
 .navbar-link .navbar-default *:visited {
@@ -10134,7 +10135,7 @@ p .wr-link-brown a:visited {
 }
 .navbar-inverse .navbar-link:hover,
 .navbar-inverse .navbar-link:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 .navbar-inverse .navbar-link:visited {
   background-image: -webkit-linear-gradient(top, transparent 0%, rgba(146, 170, 167, 0.6) 100%);
@@ -10177,7 +10178,7 @@ body > footer a:active {
 }
 body > footer a:hover,
 body > footer a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 body > footer a:visited {
   background-image: -webkit-linear-gradient(top, transparent 0%, rgba(16, 152, 139, 0.6) 100%);
@@ -10211,7 +10212,7 @@ body.guide > footer a:active {
 }
 body.guide > footer a:hover,
 body.guide > footer a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 body.guide > footer a:visited {
   background-image: -webkit-linear-gradient(top, transparent 0%, rgba(16, 152, 139, 0.6) 100%);
@@ -11702,7 +11703,7 @@ a.lmo-co-find-jobs-white:hover {
 }
 #lmo-co-harp .lmo-co-content p a:hover,
 #lmo-co-harp .lmo-co-content p a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 #lmo-co-harp .lmo-co-content p a:visited {
   background-image: -webkit-linear-gradient(top, transparent 0%, rgba(209, 88, 108, 0.6) 100%);
@@ -11768,7 +11769,7 @@ a.lmo-co-find-jobs-white:hover {
 }
 #lmo-co-bex .lmo-co-content p a:hover,
 #lmo-co-bex .lmo-co-content p a:active {
-  background-position: 0 99%;
+  background-position: 0 100%;
 }
 #lmo-co-bex .lmo-co-content p a:visited {
   background-image: -webkit-linear-gradient(top, transparent 0%, rgba(255, 102, 41, 0.6) 100%);

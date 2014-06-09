@@ -21,6 +21,7 @@ a.alert-link {
 	.font-feature-settings("lnum" 1);
 	.font-smoothing;
 	padding-top: 4px;
+	vertical-align: baseline;
 }
 
 // ==================== breadcrumbs.less
@@ -215,6 +216,8 @@ samp {
 
 .dropdown-menu {
 	.font-smoothing;
+	text-transform: none;
+	letter-spacing: 0;
 	box-shadow: none;
 	border-style: none;
 	.wr-transition(display);
@@ -493,7 +496,6 @@ body>.navbar.affix+* {
 		font-weight: bold;
 		font-size: @font-size-small;
 		-webkit-font-smoothing: antialiased;
-		line-height: 1;
 
 		> li {
 
