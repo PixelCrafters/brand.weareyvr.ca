@@ -18,7 +18,8 @@
     </section>
     <section id="pattern" class="row">
       <div class="col-sm-12">
-        <div class="weareyvr-mark" data-height="100"></div>
+        <canvas id="canvas"></canvas>
+        <div style="background: #efefef" id="canvas-svg"></div>
       </div>
     </section>
     <section class="row">
@@ -26,8 +27,8 @@
         <div class="row">
           <div class="col-lg-10 col-md-12">
             <div class="segmented-input-horizontal">
-              <div class="input-segment"><label for="rows"><h3>Rows</h3></label><input type="number" class="form-control input-lg" id="rows" value="8"></div>
-              <div class="input-segment"><label for="cols"><h3>Columns</h3></label><input type="number" class="form-control input-lg" id="cols" value="8"></div>
+              <div class="input-segment"><label for="rows"><h3>Rows</h3></label><input type="number" class="form-control input-lg" id="rows" name="rows" value="8"></div>
+              <div class="input-segment"><label for="cols"><h3>Columns</h3></label><input type="number" class="form-control input-lg" id="cols" name="cols" value="8"></div>
             </div>
           </div>
         </div>

@@ -18,11 +18,11 @@ var topLeft = Math.floor(Math.random()*101);
 var topRight = Math.floor(Math.random()*101);
 var bottomRight = Math.floor(Math.random()*101);
 var bottomLeft = Math.floor(Math.random()*101);
-d3.select('input[name="radius"]').property('value', radius)
-d3.select('input[name="topLeft"]').property('value', topLeft)
-d3.select('input[name="topRight"]').property('value', topRight)
-d3.select('input[name="bottomRight"]').property('value', bottomRight)
-d3.select('input[name="bottomLeft"]').property('value', bottomLeft)
+d3.select('input[name="radius"]').property('value', radius);
+d3.select('input[name="topLeft"]').property('value', topLeft);
+d3.select('input[name="topRight"]').property('value', topRight);
+d3.select('input[name="bottomRight"]').property('value', bottomRight);
+d3.select('input[name="bottomLeft"]').property('value', bottomLeft);
 
 var draw = function() {
   // Having troubling finding a nice data driven way to do this, since
@@ -71,11 +71,11 @@ d3.selectAll('input[type="text"].generate').on('keyup', function() {
   bottomRight = parseInt(crc.slice(6, 8), 10) || 0;
   bottomLeft = parseInt(crc.slice(8, 10), 10) || 0;
 
-  d3.select('input[name="radius"]').property('value', radius)
-  d3.select('input[name="topLeft"]').property('value', topLeft)
-  d3.select('input[name="topRight"]').property('value', topRight)
-  d3.select('input[name="bottomRight"]').property('value', bottomRight)
-  d3.select('input[name="bottomLeft"]').property('value', bottomLeft)
+  d3.select('input[name="radius"]').property('value', radius);
+  d3.select('input[name="topLeft"]').property('value', topLeft);
+  d3.select('input[name="topRight"]').property('value', topRight);
+  d3.select('input[name="bottomRight"]').property('value', bottomRight);
+  d3.select('input[name="bottomLeft"]').property('value', bottomLeft);
 
   draw();
 });
