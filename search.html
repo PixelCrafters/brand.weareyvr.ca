@@ -36,7 +36,7 @@
         <span class="icon-bar"></span>
       </button>
         <a class="navbar-brand" href="#">
-           <div class="weareyvr-mark" data-height="100" data-colour="#10988b" data-text="black">
+           <div class="weareyvr-mark" data-height="100">
              <span>WeAreYVR</span>
            </div>
         </a>
@@ -93,24 +93,6 @@
 
   <!-- WeAreYVR logo generator -->
   <script src="logo-generator/d3.v3.min.js"></script>
-  <script>
-    var colours = ["#10988b", // spruce
-      "#af1639", // red
-      "#ff769f", // pink
-      "#ffaf00", // orange
-      "#00d679", // green
-      "#4095c5", // blue
-      "#601ebd", // purple
-      "#8b572a"]; // brown
-    // randomize mark
-    d3.select('.weareyvr-mark')
-      .attr('data-colour', colours[Math.floor(Math.random()*colours.length)])
-      .attr('data-radius', Math.floor(Math.random()*101))
-      .attr('data-one', Math.floor(Math.random()*101))
-      .attr('data-two', Math.floor(Math.random()*101))
-      .attr('data-three', Math.floor(Math.random()*101))
-      .attr('data-four', Math.floor(Math.random()*101))
-  </script>
   <script src="logo-generator/weareyvr-mark.js"></script>
 
 </body>

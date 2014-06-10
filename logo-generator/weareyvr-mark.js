@@ -5,13 +5,23 @@ d3.selectAll(".weareyvr-mark").each(function() {
 });
 
 function drawMark(vis, height, text, colour, radius, one, two, three, four) {
+  var colours = {
+    'wr-spruce': '#10988b', 'brand-primary' : '#10988b', 'wr-primary' : '#10988b',
+    'wr-red' : '#af1639', 'wr-colour-advisor' : '#af1639',
+    'wr-pink' : '#ff769f', 'wr-colour-event' : '#ff769f',
+    'wr-orange' : '#ffaf00', 'wr-colour-founder' : '#ffaf00',
+    'wr-green' : '#00d679', 'wr-colour-startup' : '#00d679',
+    'wr-blue' : '#4095c5', 'wr-colour-employee' : '#4095c5',
+    'wr-purple' : '#601ebd', 'wr-colour-investor' : '#601ebd',
+    'wr-brown' : '#8b572a', 'wr-colour-jobs' : '#8b572a',
+  }
+  colour = colours[colour] || colour || colours['wr-spruce'];
   text = text || 'black';
-  colour = colour || '#10988b';
-  radius = radius || Math.floor(Math.random()*101);
-  one = one || Math.floor(Math.random()*101);
-  two = two || Math.floor(Math.random()*101);
-  three = three || Math.floor(Math.random()*101);
-  four = four || Math.floor(Math.random()*101);
+  radius = radius || radius === 0 ? radius % 101 : Math.floor(Math.random()*101);
+  one = one || one === 0 ? one % 101 : Math.floor(Math.random()*101);
+  two = two || two === 0 ? two % 101 : Math.floor(Math.random()*101);
+  three = three || three === 0 ? three % 101 : Math.floor(Math.random()*101);
+  four = four || four === 0 ? four % 101 : Math.floor(Math.random()*101);
 
   var scale = height/500;
   var width = height * 0.95;
@@ -189,7 +199,7 @@ function drawMark(vis, height, text, colour, radius, one, two, three, four) {
     .style("fill", colour)
     .attr("transform", "translate(" + bottomLeft.x + ',' + bottomLeft.y + ")");
 
-  if (text !== '') {
+  if (text !== 'none') {
     var letterforms = [
       { d: "M65.01 0.264l20.835 75.032L106.944 0h11.34L91.252 92.307H80.043L59.076 16.879 38.242 92.307H26.901L0 0h12l20.703 75.823 20.835-75.56H65.01z" },
       { d: "M119.997 60.263c0-22.022 10.681-33.758 30.593-33.758 18.988 0 27.428 13.187 27.428 30.989 0 1.978-0.132 3.956-0.264 6.065h-46.548c0.791 15.561 7.384 21.23 19.384 21.23 9.23 0 14.9-2.373 18.856-11.208l8.439 4.352c-5.143 11.208-14.901 15.955-27.56 15.955C131.073 93.889 119.997 83.472 119.997 60.263zM131.337 54.856h35.472c-0.528-13.846-6.593-19.384-16.747-19.384C138.985 35.472 132.523 40.879 131.337 54.856z" },

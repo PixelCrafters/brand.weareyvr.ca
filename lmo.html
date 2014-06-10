@@ -32,7 +32,7 @@
     <div class="container">
       <div class="wr-guide-badge">
         <div class="wr-guide-badge-marks">
-          <div class="weareyvr-mark" data-height="24" data-colour="#af1639" data-text=""></div>
+          <div class="weareyvr-mark" data-height="24"></div>
           <i class="wr-icon wr-icon-guides"></i>
         </div>
         <span class="wr-guide-badge-text">A <a href="http://weareyvr.ca/">WeAreYVR</a> Guide</span>
@@ -215,24 +215,6 @@
 
   <!-- WeAreYVR logo generator -->
   <script src="logo-generator/d3.v3.min.js"></script>
-  <script>
-    var colours = ["#10988b", // spruce
-      "#af1639", // red
-      "#ff769f", // pink
-      "#ffaf00", // orange
-      "#00d679", // green
-      "#4095c5", // blue
-      "#601ebd", // purple
-      "#8b572a"]; // brown
-    // randomize mark
-    d3.select('.weareyvr-mark')
-      // .attr('data-colour', colours[Math.floor(Math.random()*colours.length)])
-      .attr('data-radius', Math.floor(Math.random()*101))
-      .attr('data-one', Math.floor(Math.random()*101))
-      .attr('data-two', Math.floor(Math.random()*101))
-      .attr('data-three', Math.floor(Math.random()*101))
-      .attr('data-four', Math.floor(Math.random()*101))
-  </script>
   <script src="logo-generator/weareyvr-mark.js"></script>
 
 </body>
