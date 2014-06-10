@@ -5,6 +5,14 @@ d3.selectAll(".weareyvr-mark").each(function() {
 });
 
 function drawMark(vis, height, text, colour, radius, one, two, three, four) {
+  text = text || 'black';
+  colour = colour || '#10988b';
+  radius = radius || Math.floor(Math.random()*101);
+  one = one || Math.floor(Math.random()*101);
+  two = two || Math.floor(Math.random()*101);
+  three = three || Math.floor(Math.random()*101);
+  four = four || Math.floor(Math.random()*101);
+
   var scale = height/500;
   var width = height * 0.95;
   var radius = ((parseInt(radius, 10)*70/100)+5)*scale;
