@@ -1,5 +1,5 @@
 // This is a version of SVG crowbar with the initialize
-// and wrapping anonymous closure removed.
+// and wrapping anonymous closure removed. Also removed style support in getSources.
 // https://github.com/NYTimes/svg-crowbar
 
 var doctype = '<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">';
@@ -97,11 +97,13 @@ function cleanup() {
 }
 
 
-function getSources(doc, styles) {
+function getSources(doc, width, height) {
   var svgInfo = [],
       svgs = doc.querySelectorAll("svg");
 
-  styles = (styles === undefined) ? "" : styles;
+  // styles = (styles === undefined) ? "" : styles;
+  // var bounds = svgs[0].getBoundingClientRect();
+
 
   [].forEach.call(svgs, function (svg) {
 
@@ -111,9 +113,9 @@ function getSources(doc, styles) {
     svg.insertBefore(defsEl, svg.firstChild); //TODO   .insert("defs", ":first-child")
     // defsEl.setAttribute("class", "svg-crowbar");
 
-    var styleEl = document.createElement("style")
-    defsEl.appendChild(styleEl);
-    styleEl.setAttribute("type", "text/css");
+    // var styleEl = document.createElement("style")
+    // defsEl.appendChild(styleEl);
+    // styleEl.setAttribute("type", "text/css");
 
 
     // removing attributes so they aren't doubled up
@@ -129,16 +131,17 @@ function getSources(doc, styles) {
       svg.setAttributeNS(prefix.xmlns, "xmlns:xlink", prefix.xlink);
     }
 
-    var source = (new XMLSerializer()).serializeToString(svg).replace('</style>', '<![CDATA[' + styles + ']]></style>');
-    var rect = svg.getBoundingClientRect();
+    var source = (new XMLSerializer()).serializeToString(svg);
+    // var rect = svg.getBoundingClientRect();
+    // console.log(width, height);
     svgInfo.push({
-      top: rect.top,
-      left: rect.left,
-      width: rect.width,
-      height: rect.height,
-      class: svg.getAttribute("class"),
-      id: svg.getAttribute("id"),
-      childElementCount: svg.childElementCount,
+      // top: bounds.top,
+      // left: bounds.left,
+      width: width,
+      height: height,
+      // class: svg.getAttribute("class"),
+      // id: svg.getAttribute("id"),
+      // childElementCount: svg.childElementCount,
       source: [doctype + source]
     });
   });

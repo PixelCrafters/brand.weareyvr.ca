@@ -14,7 +14,8 @@ var colours = [
 
 function draw() {
   var scale = height/100;
-  var padding = scale * 50;
+  var paddingCol = scale * 50;
+  var paddingRow = paddingCol * 619/378; // Magic number to get vertical padding close to horizontal padding.
   var element = d3.select('#canvas-svg');
   element.selectAll('*').remove();
 
@@ -27,17 +28,20 @@ function draw() {
 
   var downloadCanvas = document.getElementById('canvas');
 
-  var sources = getSources(window.document);
-  downloadCanvas.width = (sources[0].width + padding) * cols;
-  downloadCanvas.height = (sources[0].height + padding) * rows;
+  var sources = getSources(window.document, height * 0.95, height);
+  downloadCanvas.width = (sources[0].width + paddingCol) * cols;
+  downloadCanvas.height = (sources[0].height + paddingRow) * rows;
   var ctx = downloadCanvas.getContext('2d');
+  // var ctxbg = document.getCSSCanvasContext("2d", "pattern", downloadCanvas.width, downloadCanvas.height);
   ctx.clearRect(0,0,sources[0].width*cols, sources[0].height*rows);
+  // ctxbg.clearRect(0,0,downloadCanvas.width, downloadCanvas.height);
   var currentRow = 0;
   var currentCol = 0;
   sources.forEach(function(source) {
     var img = new Image();
     img.onload = function() {
-      ctx.drawImage(img, currentCol * (source.width + padding) + padding/2, currentRow * (source.height + padding) + padding/2);
+      ctx.drawImage(img, currentCol * (source.width + paddingCol) + paddingCol/2, currentRow * (source.height + paddingRow) + paddingRow/2);
+      // ctxbg.drawImage(img, currentCol * (source.width + paddingCol) + paddingCol/2, currentRow * (source.height + paddingRow) + paddingRow/2);
       currentRow++;
       if (currentRow % rows === 0) {
         currentRow = 0;
