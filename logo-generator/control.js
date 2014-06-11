@@ -64,7 +64,7 @@ var changeHeight = function() {
 
 d3.selectAll('input[name="height"]').on('change', changeHeight);
 d3.selectAll('input[name="height"]').on('keyup', changeHeight);
-d3.selectAll('input[type="range"], input[type="radio"]:not(input[name="height"])').on('change', change);
+d3.selectAll('input[type="range"], #glyph-colours input[type="radio"], #text-colours input[type="radio"]').on('change', change);
 
 d3.selectAll('#reshuffle').on('click', function() {
   radius = Math.floor(Math.random()*101);
