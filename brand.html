@@ -99,22 +99,22 @@
             <p>Simply include <a href="http://d3js.org">d3.js</a> and <code>weareyvr-mark.js</code> into the page and any elements classed <code>weareyvr-mark</code> will be converted into a logo, for example:</p>
             <pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"weareyvr-mark"</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre>
             <p>Which generates a mark with the core brand colours:</p>
-            <div class="weareyvr-mark"></div>
+            <div class="specimen" style="width: 161px;"><div class="weareyvr-mark"></div></div>
             <p>Extending the mark is done with <code>data-</code> attributes and any of the following can be used:</p>
             <dl>
               <dt>data-height</dt>
-              <dd>The height of the logo, the width is generated automatically as the proportions are always the same. Defaults to <code>100</code>.</dd>
+              <dd>The height of the logo, in pixels. The width (about 127% of the height) is generated automatically, as the proportions are always the same. Defaults to <code>100</code>.</dd>
               <dt>data-text</dt>
-              <dd>How the type will appear, either <code>black</code>, <code>white</code>, or <code>none</code>. Defaults to <code>black</code>.</dd>
+              <dd>How the wordmark will appear, either <code>black</code>, <code>white</code>, or <code>none</code>. Defaults to <code>black</code>.</dd>
               <dt>data-colour</dt>
-              <dd>Any of the <a href="#bootstrap-colours">primary and secondary brand colours</a>, for example <code>wr-pink</code> or <code>wr-colour-event</code>. Defaults to <code>wr-spruce</code></dd>
+              <dd>Any of the <a href="#bootstrap-colours">primary and secondary brand colours</a>, for example <code>wr-pink</code> or <code>wr-colour-event</code>. Defaults to <code>wr-spruce</code>.</dd>
               <dt>data-radius, data-one, data-two, data-three, data-four</dt>
               <dd class="colour-cmyk">Explicitly set the position of the of the generated glyph. This is useful for server side code to inject consistent values on a given page (see <a href="#logo-data">below</a>). Defaults to generating a random value between 0 and 100.</dd>
             </dl>
             <p>Altogether, this might look like:</p>
             <pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"weareyvr-mark"</span> <span class="na">data-height=</span><span class="s">"72"</span> <span class="na">data-text=</span><span class="s">"black"</span> <span class="na">data-colour=</span><span class="s">"wr-pink"</span> <span class="na">data-radius=</span><span class="s">"20"</span> <span class="na">data-one=</span><span class="s">"0"</span> <span class="na">data-two=</span><span class="s">"25"</span> <span class="na">data-three=</span><span class="s">"50"</span> <span class="na">data-four=</span><span class="s">"100"</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre>
             <p>Which will generate the following mark:</p>
-            <div class="weareyvr-mark" data-height="72" data-text="black" data-colour="wr-pink" data-radius="20" data-one="0" data-two="25" data-three="50" data-four="100"></div>
+            <div class="specimen" style="width: 127px;"><div class="weareyvr-mark" data-height="72" data-text="black" data-colour="wr-pink" data-radius="20" data-one="0" data-two="25" data-three="50" data-four="100"></div></div>
           </section>
 
           <section id="logo-data">
@@ -122,16 +122,16 @@
             <p>The logo is expected to live digitally and use information from the page it's presented with. One way to do this is to take data from a company or individual and use it to influence the shape of the glyph. For example, the logo generator uses a hashing algorithm to convert text to decimal numbers of 0&ndash;100. Another example is to take the number of employees, amount of investment, months since founding, and other aspect to generate a unique stamp for a given company. These kinds of touches tell a good story and ensure that the logo is representative of its community members in novel and unique ways.</p>
           </section>
 
-          <section id="logo-dos-donts">
+<!--           <section id="logo-dos-donts">
             <h3>Logo Dos and don&rsquo;ts</h3>
             <p></p>
           </section>
-
+ -->
           <section id="logo-faq">
             <h3>Logo FAQ</h3>
             <h4>What is the WeAreYVR Logo?</h4>
             <p>The logo has two parts: an algorithmically-generated doodle, and an unchanging wordmark. Where the doodle stands for the frequent changes that characterize startups, the wordmark is stable and hand-picked to stand for the community&rsquo;s proud spirit and unity.</p> 
-            <p>The doodle can be used alone as a design motif, and works well in groups by gesturing to the many shapes and sizes of startups that, while different, have an underlying unity. <em>When used as a logo, the doodle and wordmark must both be present.</em></p>
+            <p>The doodle can be used alone as a design motif, and works well in groups by gesturing to the many shapes and sizes of startups that, while different, have an underlying unity. <strong class="text-danger">When used as a logo, the doodle and wordmark must both be present.</strong></p>
             <h4>Why a generated logo?</h4>
             <p>The logo&rsquo;s doodle is adjusted by live data from the WeAreYVR site. It speaks to how data informs what we do, and reflects the changing, active nature of the startup community.</p>
             <h4>Why is the logo so minimalist?</h4>
@@ -178,8 +178,8 @@
 
           <section id="typography-arnhem">
             <h3>Arnhem <small>(Secondary typeface)</small></h3>
-            <p>Arnhem, originally designed for newspaper and editorial use, is a typeface that&rsquo;s calm and cool, but not without any personality. It&rsquo;s authoritative and informative.</p>
-            <p>Use Arnhem for large blocks of text.</p>
+            <p>Arnhem, originally designed for newspaper and editorial use, is a typeface that&rsquo;s calm and cool, but not without a personality. It&rsquo;s authoritative and informative.</p>
+            <p>Use Arnhem for large blocks of text (reports, blog posts, guides&hellip;).</p>
 
             <div class="specimen specimen-type specimen-type-serif">
               <div class="specimen-type-section specimen-type-md"><span class="specimen-type-id">Arnhem SemiBold</span> <span style="font-weight: bold;">Five hours&rsquo; <span style="font-style: italic;">New York jet lag and</span></span></div>
@@ -1328,7 +1328,7 @@
                   </tr>
                   <tr>
                     <td>
-                      <a href="#" class="btn btn-wr-blue">Blue Suede Shoes</a>
+                      <a href="#" class="btn btn-wr-blue">Rhapsody in Blue</a>
                     </td>
                     <td>
                       <code>.btn-wr-blue</code>

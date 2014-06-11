@@ -76,8 +76,13 @@ a.alert-link {
 
 	&-default {
 		background-color: fadeout(mix(@brand-primary,@btn-primary-color,15%),10%);
-		color: @brand-primary;
 		border-color: fadeout(mix(@brand-primary,@btn-primary-color,50%),50%);
+
+		&,
+		&:link,
+		&:visited {
+			color: @brand-primary;
+		}
 
 		&:hover {
 			border-color: fadeout(@brand-primary,15%);

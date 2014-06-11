@@ -12,7 +12,12 @@
 .wr-btn-variant(@bg-color: @btn-primary-bg; @border-color: darken(@bg-color, 5%); @text-color: #fff; @hover-bg-color: @bg-color) {
 	background-color: @bg-color;
 	border-color: @border-color;
-	color: @text-color;
+
+	&,
+	&:link,
+	&:visited {
+		color: @text-color;
+	}
 
 	&:hover {
 		border-color: fadeout(@border-color,20%);
