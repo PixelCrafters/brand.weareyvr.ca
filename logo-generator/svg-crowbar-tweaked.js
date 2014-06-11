@@ -134,9 +134,10 @@ function getSources(doc, width, height) {
     var source = (new XMLSerializer()).serializeToString(svg);
     // var rect = svg.getBoundingClientRect();
     // console.log(width, height);
+    // console.log(width, height, rect.width, rect.height)
     svgInfo.push({
-      // top: bounds.top,
-      // left: bounds.left,
+      // top: rect.top,
+      // left: rect.left,
       width: width,
       height: height,
       // class: svg.getAttribute("class"),

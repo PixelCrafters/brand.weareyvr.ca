@@ -28,7 +28,9 @@ function draw() {
 
   var downloadCanvas = document.getElementById('canvas');
 
-  var sources = getSources(window.document, height * 0.95, height);
+  var scaleSize = height/500;
+  var widthSize = height * 0.95;
+  var sources = getSources(window.document, Math.ceil(widthSize + (635-475)*scaleSize), parseInt(height,10));
   downloadCanvas.width = (sources[0].width + paddingCol) * cols;
   downloadCanvas.height = (sources[0].height + paddingRow) * rows;
   var ctx = downloadCanvas.getContext('2d');
