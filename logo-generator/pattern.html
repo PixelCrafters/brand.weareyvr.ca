@@ -19,7 +19,7 @@
     <section id="pattern" class="row">
       <div class="col-sm-12">
         <canvas id="canvas"></canvas>
-        <div style="background: #efefef" id="canvas-svg"></div>
+        <div style="opacity: 0;" id="canvas-svg"></div>
       </div>
     </section>
     <section class="row">
@@ -34,35 +34,35 @@
         </div>
         <label for="reshuffle">
           <h3>Reshuffle</h3>
-          <a href="#" id="reshuffle" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-refresh"></span></a>
+          <a id="reshuffle" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-refresh"></span></a>
         </label>
       </div>
       <div class="col-sm-4 col-xs-7" id="glyph-colours">
         <h3>Colours</h3>
         <div class="checklist">
           <label>
-            <input type="checkbox" value="#10988b" name="colour" checked> Spruce (Primary)
+            <input type="checkbox" value="wr-spruce" name="colour" checked> Spruce (Primary)
           </label>
           <label>
-            <input type="checkbox" value="#af1639" name="colour" checked> Red <small>(Advisors)</small>
+            <input type="checkbox" value="wr-red" name="colour" checked> Red <small>(Advisors)</small>
           </label>
           <label>
-            <input type="checkbox" value="#ff769f" name="colour"> Pink <small>(Events)</small>
+            <input type="checkbox" value="wr-pink" name="colour"> Pink <small>(Events)</small>
           </label>
           <label>
-            <input type="checkbox" value="#ffaf00" name="colour" checked> Orange <small>(Founders)</small>
+            <input type="checkbox" value="wr-orange" name="colour" checked> Orange <small>(Founders)</small>
           </label>
           <label>
-            <input type="checkbox" value="#00d679" name="colour" checked> Green <small>(Startups)</small>
+            <input type="checkbox" value="wr-green" name="colour" checked> Green <small>(Startups)</small>
           </label>
           <label>
-            <input type="checkbox" value="#4095c5" name="colour" checked> Blue <small>(Employees)</small>
+            <input type="checkbox" value="wr-blue" name="colour" checked> Blue <small>(Employees)</small>
           </label>
           <label>
-            <input type="checkbox" value="#601ebd" name="colour" checked> Purple <small>(Investors)</small>
+            <input type="checkbox" value="wr-purple" name="colour" checked> Purple <small>(Investors)</small>
           </label>
           <label>
-            <input type="checkbox" value="#8b572a" name="colour"> Brown <small>(Jobs)</small>
+            <input type="checkbox" value="wr-brown" name="colour"> Brown <small>(Jobs)</small>
           </label>
           <label>
             <input type="checkbox" value="black" name="colour"> Black
@@ -76,22 +76,22 @@
         <h3>Size</h3>
         <div class="checklist">
           <label>
-            <input type="radio" value=""> Tiny <small>(25px)</small>
+            <input type="radio" name="height" value="25"> Tiny <small>(25px)</small>
           </label>
           <label>
-            <input type="radio" value=""> X-Small <small>(50px)</small>
+            <input type="radio" name="height" value="60"> X-Small <small>(50px)</small>
           </label>
           <label>
-            <input type="radio" value="" checked> Small <small>(100px)</small>
+            <input type="radio" name="height" value="100" checked> Small <small>(100px)</small>
           </label>
           <label>
-            <input type="radio" value=""> Medium <small>(250px)</small>
+            <input type="radio" name="height" value="250"> Medium <small>(250px)</small>
           </label>
           <label>
-            <input type="radio" value=""> Large <small>(500px)</small>
+            <input type="radio" name="height" value="500"> Large <small>(500px)</small>
           </label>
           <label>
-            <input type="radio" value=""> X-Large <small>(750px)</small>
+            <input type="radio" name="height" value="750"> X-Large <small>(750px)</small>
           </label>
           <label>
             <input type="radio" name="height"> Other
@@ -103,7 +103,6 @@
     </section>
     <section id="downloads" class="row">
       <div class="col-sm-12 col-md-6 col-md-offset-3">
-        <a id="download-svg" class="btn btn-primary btn-lg btn-block"><span class="glyphicon glyphicon-save"></span> Download <small>(SVG)</small></a>
         <a id="download-png" class="btn btn-primary btn-lg btn-block"><span class="glyphicon glyphicon-save"></span> Download <small>(PNG)</small></a>
         <div id="download-use-chrome">PNG download is available in Google Chrome.</div>
       </div>

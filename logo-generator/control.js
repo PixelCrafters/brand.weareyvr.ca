@@ -53,6 +53,15 @@ d3.selectAll('input[name="height"]').on('change', change);
 d3.selectAll('input[name="height"]').on('keyup', change);
 d3.selectAll('input[type="range"], input[type="radio"]').on('change', change);
 
+d3.selectAll('#reshuffle').on('click', function() {
+  radius = Math.floor(Math.random()*101);
+  topLeft = Math.floor(Math.random()*101);
+  topRight = Math.floor(Math.random()*101);
+  bottomRight = Math.floor(Math.random()*101);
+  bottomLeft = Math.floor(Math.random()*101);
+  draw();
+});
+
 d3.selectAll('#reset').on('click', function() {
   radius = 50;
   topLeft = 50;
