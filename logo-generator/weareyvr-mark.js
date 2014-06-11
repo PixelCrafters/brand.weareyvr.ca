@@ -15,6 +15,7 @@ function drawMark(vis, height, text, colour, radius, one, two, three, four) {
     'wr-purple' : '#601ebd', 'wr-colour-investor' : '#601ebd',
     'wr-brown' : '#8b572a', 'wr-colour-jobs' : '#8b572a',
   }
+  height = height || 100;
   colour = colours[colour] || colour || colours['wr-spruce'];
   text = text || 'black';
   radius = radius || radius === 0 ? radius % 101 : Math.floor(Math.random()*101);

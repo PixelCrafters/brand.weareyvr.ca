@@ -80,32 +80,46 @@
 
         <section id="logo">
           <h2 class="page-header h1">Logo</h2>
-
-          <section id="logo-glyph">
-            <h3>The glyph</h3>
-            <p></p>
-          </section>
-
+          <p>The logo is based on an inverted hourglass shape, which is transformed using different values that are either set or randomly generated. As the values increase, the points that underpin each corner of the shape travel around the outside of the bounding box, generating unique but constrained shapes.</p>
+          <img src="img/how-to-draw-glyph.svg" alt="How the glyph is drawn">
           <section id="logo-generating">
             <h3>Generating a logo</h3>
-            <p>Todd/Tylor:</p>
-            <ul>
-              <li>short explanation of rationale/process behind creating logo</li>
-              <li>how to use logo generator, download logo</li>
-            </ul>
+            <p>Use the logo generator to tweak the positions of the values, choose colours and size, and generate logos from arbitrary text:</p>
+            <a href="logo-generator/" class="btn btn-primary">Logo Generator</a>
           </section>
 
           <section id="logo-patterns">
-            <h3>Patterns</h3>
-            <p></p>
+            <h3>Generating a pattern</h3>
+            <p>The pattern generator can be used to make background patterns that might be used for the back of business cards, banners, or even t-shirts.</p>
+            <a href="logo-generator/pattern.html" class="btn btn-primary">Pattern Generator</a>
+          </section>
+
+          <section id="logo-inserting">
+            <h3>Inserting into a page</h3>
+            <p>Simply include <a href="http://d3js.org">d3.js</a> and <code>weareyvr-mark.js</code> into the page and any elements classed <code>weareyvr-mark</code> will be converted into a logo, for example:</p>
+            <pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"weareyvr-mark"</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre>
+            <p>Which generates a mark with the core brand colours:</p>
+            <div class="weareyvr-mark"></div>
+            <p>Extending the mark is done with <code>data-</code> attributes and any of the following can be used:</p>
+            <dl>
+              <dt>data-height</dt>
+              <dd>The height of the logo, the width is generated automatically as the proportions are always the same. Defaults to <code>100</code>.</dd>
+              <dt>data-text</dt>
+              <dd>How the type will appear, either <code>black</code>, <code>white</code>, or <code>none</code>. Defaults to <code>black</code>.</dd>
+              <dt>data-colour</dt>
+              <dd>Any of the <a href="#bootstrap-colours">primary and secondary brand colours</a>, for example <code>wr-pink</code> or <code>wr-colour-event</code>. Defaults to <code>wr-spruce</code></dd>
+              <dt>data-radius, data-one, data-two, data-three, data-four</dt>
+              <dd class="colour-cmyk">Explicitly set the position of the of the generated glyph. This is useful for server side code to inject consistent values on a given page (see <a href="#logo-data">below</a>). Defaults to generating a random value between 0 and 100.</dd>
+            </dl>
+            <p>Altogether, this might look like:</p>
+            <pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"weareyvr-mark"</span> <span class="na">data-height=</span><span class="s">"72"</span> <span class="na">data-text=</span><span class="s">"black"</span> <span class="na">data-colour=</span><span class="s">"wr-pink"</span> <span class="na">data-radius=</span><span class="s">"20"</span> <span class="na">data-one=</span><span class="s">"0"</span> <span class="na">data-two=</span><span class="s">"25"</span> <span class="na">data-three=</span><span class="s">"50"</span> <span class="na">data-four=</span><span class="s">"100"</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre>
+            <p>Which will generate the following mark:</p>
+            <div class="weareyvr-mark" data-height="72" data-text="black" data-colour="wr-pink" data-radius="20" data-one="0" data-two="25" data-three="50" data-four="100"></div>
           </section>
 
           <section id="logo-data">
             <h3>Working with live data</h3>
-            <p>Todd/Tylor:</p>
-            <ul>
-              <li>how to override logo randomizer &mdash; set values/colour from data points</li>
-            </ul>
+            <p>The logo is expected to live digitally and use information from the page it's presented with. One way to do this is to take data from a company or individual and use it to influence the shape of the glyph. For example, the logo generator uses a hashing algorithm to convert text to decimal numbers of 0&ndash;100. Another example is to take the number of employees, amount of investment, months since founding, and other aspect to generate a unique stamp for a given company. These kinds of touches tell a good story and ensure that the logo is representative of its community members in novel and unique ways.</p>
           </section>
 
           <section id="logo-dos-donts">
