@@ -93,9 +93,20 @@ d3.selectAll('input[name="colour"]').on('change', function() {
   });
 });
 
-d3.selectAll('input[name="height"]').on('change', function() {
-  height = this.value;
-  draw();
-});
+var changeHeight = function() {
+  if (this.value === 'other') {
+    d3.select('#height-other').classed('show', true);
+  }
+  else {
+    if (this.id !== 'height-other') {
+      d3.select('#height-other').classed('show', false);
+    }
+    height = this.value;
+    draw();
+  }
+}
+
+d3.selectAll('input[name="height"]').on('change', changeHeight);
+d3.selectAll('input[name="height"]').on('keyup', changeHeight);
 
 draw();

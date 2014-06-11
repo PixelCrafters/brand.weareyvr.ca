@@ -49,9 +49,22 @@ var change = function() {
   draw();
 };
 
-d3.selectAll('input[name="height"]').on('change', change);
-d3.selectAll('input[name="height"]').on('keyup', change);
-d3.selectAll('input[type="range"], input[type="radio"]').on('change', change);
+var changeHeight = function() {
+  if (this.value === 'other') {
+    d3.select('#height-other').classed('show', true);
+  }
+  else {
+    if (this.id !== 'height-other') {
+      d3.select('#height-other').classed('show', false);
+    }
+    height = this.value;
+    draw();
+  }
+}
+
+d3.selectAll('input[name="height"]').on('change', changeHeight);
+d3.selectAll('input[name="height"]').on('keyup', changeHeight);
+d3.selectAll('input[type="range"], input[type="radio"]:not(input[name="height"])').on('change', change);
 
 d3.selectAll('#reshuffle').on('click', function() {
   radius = Math.floor(Math.random()*101);
