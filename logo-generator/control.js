@@ -103,7 +103,9 @@ d3.selectAll('input[type="text"].generate').on('keyup', function() {
 });
 
 d3.selectAll('#download-svg').on('click', function() {
-  var sources = getSources(window.document);
+  var scaleSize = height/500;
+  var widthSize = height * 0.95;
+  var sources = getSources(window.document, Math.ceil(widthSize + (635-475)*scaleSize), parseInt(height,10));
   download(sources[0]);
 });
 
@@ -112,7 +114,9 @@ var downloadCanvas = document.createElement('canvas');
 // Canvas needs a tick to draw the SVG to canvas, do
 // this on hover and then download on click.
 d3.selectAll('#download-png').on('mouseover', function() {
-  var sources = getSources(window.document);
+  var scaleSize = height/500;
+  var widthSize = height * 0.95;
+  var sources = getSources(window.document, Math.ceil(widthSize + (635-475)*scaleSize), parseInt(height,10));
   downloadCanvas.width = sources[0].width;
   downloadCanvas.height = sources[0].height;
   var ctx = downloadCanvas.getContext('2d');
