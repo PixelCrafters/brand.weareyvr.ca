@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jobs &mdash; WeAreYVR</title>
+    <link href="../css/weareyvr.css" rel="stylesheet">
+    <link href="../css/fonts.css" rel="stylesheet">
+    <link href="../css/wr_icons.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="wrap">
+
+      <!-- master nav -->
+      <nav class="navbar navbar-default wr-navbar">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://www.weareyvr.ca/">
+            <div class="weareyvr-mark" data-height="100">
+              <span>WeAreYVR</span>
+            </div>
+            </a>
+          </div>
+          <nav class="collapse navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav">
+              <li><a href="/search/organizations">Organizations</a></li>
+              <li><a href="/search/people">People</a></li>
+              <li class="active"><a href="/search/jobs">Jobs</a></li>
+            </ul>
+            <div class="navbar-right">
+              <div class="auth-btns pull-right">
+                <button onclick="widget.signin({ scope: 'openid profile' })" class="btn btn-primary" >Login</button>
+              </div>
+              <form accept-charset="UTF-8" action="/search" class="navbar-form pull-right" method="get" role="form">
+                <div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+                <div class="form-group form-group-buffer">
+                  <input class="form-control" id="query" name="query" placeholder="Search jobs" type="search" />
+                </div>
+              </form>
+            </div>
+          </nav>
+        </div>
+      </nav>
+
+      <div class="container job-board">
+        <header class="row job-board__header">
+          <div class="col-xs-12">
+            <h2>
+              <i class="wr-icon wr-icon-jobs"></i>Job Board <small>47 jobs (23 new)</small>
+            </h2>
+            <a href="#" class="btn btn-primary pull-right" role="button"><i class="fa fa-fw fa-plus"></i> Add a job</a>
+          </div>
+        </header>
+
+        <div class="row job-board__presented">
+          <div class="col-sm-6 col-sm-offset-3">
+            <a href="#"><img src="http://d9hhrg4mnvzow.cloudfront.net/www.startupweekvancouver.ca/d04e9e2b-logo.png" alt="Startup Week Vancouver"></a>
+            <h3 class="job-board__presented__by"><span>Presented by</span> <a href="#">Startup Week Vancouver</a></h3>
+            <p>A week-long series of events around the city to celebrate our tech community and startup ecosystem. #startupweekvan</p>
+          </div>
+        </div>
+
+        <div class="row job-board__job job-board__job--premium">
+          <div class="job-board__title col-md-4 col-sm-8 col-xs-12">
+            <a href="#">
+              <h3>UX Designer</h3>
+              <p>The world&rsquo;s most successful retailers and brands use Mobify&rsquo;s mobile commerce platform to go responsive.</p>
+            </a>
+          </div>
+          <div class="job-board__org col-md-2 col-sm-4 col-xs-12">
+            <a href="#"><img src="http://www.mobify.com/static/img/logo-mobify-spark-black.png" alt="Mobify" class="job-board__org__logo"></a>
+          </div>
+          <div class="job-board__meta col-md-6 col-xs-12">
+            <div class="row">
+              <div class="job-board__location col-xs-3">
+                Yaletown
+              </div>
+              <div class="job-board__level col-xs-3">
+                Junior
+              </div>
+              <div class="job-board__type col-xs-3">
+                Design
+              </div>
+              <div class="job-board__posted col-xs-3">
+                Today <br><div class="label label-success">New</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row job-board__job job-board__job--premium">
+          <div class="job-board__title col-md-4 col-sm-8 col-xs-12">
+            <a href="#">
+              <h3>Sales Representative</h3>
+              <p>Empower the world&rsquo;s top brands to deliver quality customer experiences through social media.</p>
+            </a>
+          </div>
+          <div class="job-board__org col-md-2 col-sm-4 col-xs-12">
+            <a href="#"><img src="https://d12qyuqyvqjkw5.cloudfront.net/v2/images/static/navigation/header-logo.a07b1edd.png" alt="Hootsuite"></a>
+          </div>
+          <div class="job-board__meta col-md-6 col-xs-12">
+            <div class="row">
+              <div class="job-board__location col-xs-3">
+                Mount Pleasant
+              </div>
+              <div class="job-board__level col-xs-3">
+                Intermediate
+              </div>
+              <div class="job-board__type col-xs-3">
+                Sales
+              </div>
+              <div class="job-board__posted col-xs-3">
+                Today
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row job-board__sponsors">
+          <div class="col-xs-12">
+            <h3>Sponsored by</h3>
+            <a href="#"><img src="http://www.mobify.com/static/img/logo-mobify-spark-black.png"></a>
+            <a href="#"><img src="https://d12qyuqyvqjkw5.cloudfront.net/v2/images/static/navigation/header-logo.a07b1edd.png"></a>
+            <a href="#"><img src="http://caliper.io/img/logotype_dark_48.png"></a>
+          </div>
+        </div>
+
+        <div class="row job-board__job">
+          <div class="job-board__title col-md-4 col-sm-8 col-xs-12">
+            <a href="#">
+              <h3>Web Developer</h3>
+              <p>Our know-how, experience, and energy turns back-of-napkin ideas into experiences with heart.</p>
+            </a>
+          </div>
+          <div class="job-board__org col-md-2 col-sm-4 col-xs-12">
+            <a href="#" class="entity wr-link-services"><i class="wr-icon wr-icon-services"></i>Denim &amp; Steel</a>
+          </div>
+          <div class="job-board__meta col-md-6 col-xs-12">
+            <div class="row">
+              <div class="job-board__location col-xs-3">
+                Mount Pleasant
+              </div>
+              <div class="job-board__level col-xs-3">
+                Junior
+              </div>
+              <div class="job-board__type col-xs-3">
+                Development
+              </div>
+              <div class="job-board__posted col-xs-3">
+                Today <br><div class="label label-success">New</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row job-board__job">
+          <div class="job-board__title col-md-4 col-sm-8 col-xs-12">
+            <a href="#">
+              <h3>Rails Developer</h3>
+              <p>Our team is all about innovation, collaboration and making life a little (or a lot) easier.</p>
+            </a>
+          </div>
+          <div class="job-board__org col-md-2 col-sm-4 col-xs-12">
+            <a href="#" class="entity wr-link-startup"><i class="wr-icon wr-icon-startup"></i>Contractually</a>
+          </div>
+          <div class="job-board__meta col-md-6 col-xs-12">
+            <div class="row">
+              <div class="job-board__location col-xs-3">
+                Gastown
+              </div>
+              <div class="job-board__level col-xs-3">
+                Senior
+              </div>
+              <div class="job-board__type col-xs-3">
+                Development
+              </div>
+              <div class="job-board__posted col-xs-3">
+                Yesterday
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row job-board__job">
+          <div class="job-board__title col-md-4 col-sm-8 col-xs-12">
+            <a href="#">
+              <h3>Advisor</h3>
+              <p>Napkin capital: Early stage investments in tech startups.</p>
+            </a>
+          </div>
+          <div class="job-board__org col-md-2 col-sm-4 col-xs-12">
+            <a href="#" class="entity wr-link-incubator"><i class="wr-icon wr-icon-incubator"></i>Full Stack</a>
+          </div>
+          <div class="job-board__meta col-md-6 col-xs-12">
+            <div class="row">
+              <div class="job-board__location col-xs-3">
+                Gastown
+              </div>
+              <div class="job-board__level col-xs-3">
+                Executive
+              </div>
+              <div class="job-board__type col-xs-3">
+                Business
+              </div>
+              <div class="job-board__posted col-xs-3">
+                Yesterday
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12">
+            <ul class="pagination">
+              <li class="page active">
+                <a href="#">1</a>
+              </li>
+
+              <li class="page">
+                <a href="#" rel="next">2</a>
+              </li>
+
+              <li class="page">
+                <a href="#">3</a>
+              </li>
+
+              <li class="page">
+                <a href="#">4</a>
+              </li>
+
+              <li class="page">
+                <a href="#">5</a>
+              </li>
+
+              <li class="page gap disabled"><a href="#">&hellip;</a></li>
+
+                
+              <li class="next">
+                <a href="#" rel="next">Next &rsaquo;</a>
+              </li>
+
+              <li class="last">
+                <a href="#">Last &raquo;</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+      </div><!-- /.container -->
+
+    </div><!-- /.wrap -->
+
+    <footer>
+      <div class="container">
+        WeAreYVR &mdash; A community project by <a href="http://launchacademy.ca">Launch Academy</a> &copy; 2014 &#8226; Thanks to <a href="http://startupgenome.com">StartupGenome</a> &#8226; <a href="/about">About</a> &#8226; <a href="/contact">Contact</a>
+      </div>
+    </footer>
+    <script src="http://www.weareyvr.ca/assets/weareyvr/all-f9e41d5f29f8e5dd89171e2dbab87d10.js"></script>
+  </body>
+</html>

@@ -4389,4 +4389,287 @@ body > footer a:visited {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#9910988b', GradientType=0);
 }
+.job-board {
+  color: #506563;
+}
+.job-board__header h2 {
+  display: inline-block;
+  margin-top: 0;
+}
+.job-board__presented,
+.job-board__sponsors {
+  border-bottom: 1px solid #c2cfce;
+  padding-top: 2em;
+  padding-bottom: 2.25em;
+  background-color: rgba(64, 149, 197, 0.03);
+}
+.job-board__presented h3,
+.job-board__sponsors h3 {
+  color: #92aaa7;
+  font-weight: bold;
+  font-size: 19px;
+  margin: 0.25em 0 0;
+}
+.job-board__presented img,
+.job-board__sponsors img {
+  max-height: 64px;
+  display: inline-block;
+  border-radius: 4px;
+}
+.job-board__presented p,
+.job-board__sponsors p {
+  font-size: 85%;
+  margin-top: 0.75em;
+  margin-bottom: 0;
+}
+.job-board__presented a {
+  display: block;
+  margin-top: 0.25em;
+}
+.job-board__presented img {
+  float: left !important;
+  max-height: 96px;
+  display: block;
+  margin-right: 1.25em;
+}
+.job-board__presented__by {
+  display: block;
+  vertical-align: middle;
+  margin-left: 1em;
+}
+.job-board__presented__by span {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 85%;
+}
+.job-board__sponsors {
+  text-align: center;
+  padding-bottom: 1.5em;
+}
+.job-board__sponsors h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 85%;
+  margin: 0 0 0.5em;
+}
+.job-board__sponsors img {
+  max-height: 64px;
+  max-width: 160px;
+  margin: 1em 1.5em 0.5em;
+}
+.job-board__job {
+  border-bottom: 1px solid #c2cfce;
+  padding-top: 0.25em;
+  padding-bottom: 1.25em;
+}
+.job-board__job--premium {
+  background-color: rgba(255, 175, 0, 0.05);
+}
+.job-board__title,
+.job-board__org,
+.job-board__meta {
+  padding-top: 1.25em;
+}
+a.job-board__title,
+.job-board__title a {
+  color: #8b572a;
+}
+a.job-board__title:visited,
+.job-board__title a:visited {
+  color: #a8998d;
+}
+a.job-board__title:hover,
+.job-board__title a:hover {
+  color: #291a0c;
+}
+a.job-board__title.entity,
+.job-board__title a.entity,
+a.job-board__title.entity-lg,
+.job-board__title a.entity-lg {
+  color: #8b572a;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(139, 87, 42, 0.2);
+}
+a.job-board__title.entity:hover,
+.job-board__title a.entity:hover,
+a.job-board__title.entity-lg:hover,
+.job-board__title a.entity-lg:hover {
+  background-color: rgba(217, 205, 194, 0.3);
+}
+a.job-board__title.entity,
+.job-board__title a.entity,
+a.job-board__title.entity-lg,
+.job-board__title a.entity-lg,
+a.job-board__title.entity:link,
+.job-board__title a.entity:link,
+a.job-board__title.entity-lg:link,
+.job-board__title a.entity-lg:link,
+a.job-board__title.entity:hover,
+.job-board__title a.entity:hover,
+a.job-board__title.entity-lg:hover,
+.job-board__title a.entity-lg:hover {
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+p a.job-board__title,
+p .job-board__title a {
+  padding-bottom: 0.125em;
+  background-size: 1px 1px;
+  text-shadow: 1px 0 transparent, 2px 0 transparent, -1px 0 transparent, -2px 0 transparent;
+  background-image: -webkit-linear-gradient(top, transparent 0%, #8b572a 100%);
+  background-image: linear-gradient(to bottom, transparent 0%, #8b572a 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#ff8b572a', GradientType=0);
+  background-position: 0 90%;
+}
+p a.job-board__title,
+p .job-board__title a,
+p a.job-board__title:link,
+p .job-board__title a:link,
+p a.job-board__title:visited,
+p .job-board__title a:visited,
+p a.job-board__title:hover,
+p .job-board__title a:hover,
+p a.job-board__title:active,
+p .job-board__title a:active {
+  -webkit-transition: background-position 0.15s ease-in-out, color 0.15s ease-in-out;
+  transition: background-position 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+p a.job-board__title:hover,
+p .job-board__title a:hover,
+p a.job-board__title:active,
+p .job-board__title a:active {
+  background-position: 0 100%;
+}
+p a.job-board__title:visited,
+p .job-board__title a:visited {
+  background-image: -webkit-linear-gradient(top, transparent 0%, rgba(139, 87, 42, 0.6) 100%);
+  background-image: linear-gradient(to bottom, transparent 0%, rgba(139, 87, 42, 0.6) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#998b572a', GradientType=0);
+}
+.job-board__title a h3 {
+  margin-top: 0;
+  font-weight: normal;
+}
+.job-board__title a p {
+  font-size: 85%;
+  color: #506563;
+  margin-bottom: 0;
+}
+a.job-board__job--premium .job-board__title,
+.job-board__job--premium .job-board__title a {
+  color: #10988b;
+}
+a.job-board__job--premium .job-board__title:visited,
+.job-board__job--premium .job-board__title a:visited {
+  color: #68c0b7;
+}
+a.job-board__job--premium .job-board__title:hover,
+.job-board__job--premium .job-board__title a:hover {
+  color: #042522;
+}
+a.job-board__job--premium .job-board__title.entity,
+.job-board__job--premium .job-board__title a.entity,
+a.job-board__job--premium .job-board__title.entity-lg,
+.job-board__job--premium .job-board__title a.entity-lg {
+  color: #10988b;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(16, 152, 139, 0.2);
+}
+a.job-board__job--premium .job-board__title.entity:hover,
+.job-board__job--premium .job-board__title a.entity:hover,
+a.job-board__job--premium .job-board__title.entity-lg:hover,
+.job-board__job--premium .job-board__title a.entity-lg:hover {
+  background-color: rgba(186, 222, 218, 0.3);
+}
+a.job-board__job--premium .job-board__title.entity,
+.job-board__job--premium .job-board__title a.entity,
+a.job-board__job--premium .job-board__title.entity-lg,
+.job-board__job--premium .job-board__title a.entity-lg,
+a.job-board__job--premium .job-board__title.entity:link,
+.job-board__job--premium .job-board__title a.entity:link,
+a.job-board__job--premium .job-board__title.entity-lg:link,
+.job-board__job--premium .job-board__title a.entity-lg:link,
+a.job-board__job--premium .job-board__title.entity:hover,
+.job-board__job--premium .job-board__title a.entity:hover,
+a.job-board__job--premium .job-board__title.entity-lg:hover,
+.job-board__job--premium .job-board__title a.entity-lg:hover {
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+p a.job-board__job--premium .job-board__title,
+p .job-board__job--premium .job-board__title a {
+  padding-bottom: 0.125em;
+  background-size: 1px 1px;
+  text-shadow: 1px 0 transparent, 2px 0 transparent, -1px 0 transparent, -2px 0 transparent;
+  background-image: -webkit-linear-gradient(top, transparent 0%, #10988b 100%);
+  background-image: linear-gradient(to bottom, transparent 0%, #10988b 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#ff10988b', GradientType=0);
+  background-position: 0 90%;
+}
+p a.job-board__job--premium .job-board__title,
+p .job-board__job--premium .job-board__title a,
+p a.job-board__job--premium .job-board__title:link,
+p .job-board__job--premium .job-board__title a:link,
+p a.job-board__job--premium .job-board__title:visited,
+p .job-board__job--premium .job-board__title a:visited,
+p a.job-board__job--premium .job-board__title:hover,
+p .job-board__job--premium .job-board__title a:hover,
+p a.job-board__job--premium .job-board__title:active,
+p .job-board__job--premium .job-board__title a:active {
+  -webkit-transition: background-position 0.15s ease-in-out, color 0.15s ease-in-out;
+  transition: background-position 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+p a.job-board__job--premium .job-board__title:hover,
+p .job-board__job--premium .job-board__title a:hover,
+p a.job-board__job--premium .job-board__title:active,
+p .job-board__job--premium .job-board__title a:active {
+  background-position: 0 100%;
+}
+p a.job-board__job--premium .job-board__title:visited,
+p .job-board__job--premium .job-board__title a:visited {
+  background-image: -webkit-linear-gradient(top, transparent 0%, rgba(16, 152, 139, 0.6) 100%);
+  background-image: linear-gradient(to bottom, transparent 0%, rgba(16, 152, 139, 0.6) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#9910988b', GradientType=0);
+}
+.job-board__job--premium .job-board__title a h3 {
+  font-size: 32px;
+}
+.job-board__job--premium .job-board__title a p {
+  font-size: 100%;
+  color: #313f3d;
+}
+.job-board__org__logo {
+  max-width: 95%;
+  max-height: 2.5em;
+}
+.job-board__meta {
+  font-size: 85%;
+  padding-top: 1.5em;
+}
+@media (max-width: 767px) {
+  .job-board__meta > .row > div {
+    display: inline !important;
+    width: auto !important;
+    margin-right: 0.5em !important;
+    padding-right: 0 !important;
+  }
+}
+.job-board__location:before,
+.job-board__posted:before {
+  color: #92aaa7;
+}
+.job-board__location:before {
+  font-family: "Font Awesome", FontAwesome;
+  content: "\f041\00A0";
+  display: inline-block;
+}
+.job-board__posted:before {
+  font-family: "Font Awesome", FontAwesome;
+  content: "\f017\00A0";
+  display: inline-block;
+}
 /*# sourceMappingURL=components.css.map */

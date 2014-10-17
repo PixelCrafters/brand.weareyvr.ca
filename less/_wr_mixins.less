@@ -249,6 +249,31 @@
 @glyphicon-size-base: 12px; // Glyphicons Halflings icons are built on a 12px grid
 @fa-size-base: 14px; // Font Awesome icons are built on a 14px grid
 
+// Font Awesome icons as mixins
+
+.fa-icon(@unicode) {
+	font-family: "Font Awesome", FontAwesome;
+	content: "\@{unicode}";
+	display: inline-block;
+}
+
+.fa-icon(@unicode, before) {
+	font-family: "Font Awesome", FontAwesome;
+	content: "\@{unicode}\00A0";
+	display: inline-block;
+}
+
+.fa-icon(@unicode, after) {
+	font-family: "Font Awesome", FontAwesome;
+	content: "\00A0\@{unicode}";
+	display: inline-block;
+}
+
+.fa-icon-fw() {
+	width: (18em / 14);
+	text-align: center;
+}
+
 // Colours
 
 @grey-base:		@gray-base; // otherwise, constant annoying typos
